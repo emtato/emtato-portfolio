@@ -1,0 +1,36 @@
+apps(dock): browser, settings, photos(view my photos), calendar(open tempo), mail/messages(open sum 2 contact me)
+apps(desktop): tempo, girlmath, munchables, columns?, website?, Steam rec project?
+other icons: potato icon (big and small) battery, close, minimize, fullscreen
+
+colour palette
+
+photo colours: foundation:
+- skyline black: #050E03
+- smoky charcoal: #332F2D
+- dusk plum: #4D3C3C
+- dusty mauve: #6C4C4B
+- cloud coral: #C95848
+- ember orange: #F08A5D
+- golden highlight: #F4C56A
+- warm cream: #FFF0E6
+
+brighter companion colours:
+- dark plum: #2E1424
+- deep plum: #5A2F4A
+- vivid plum: #8C4668
+- bright plum: #B85C8A
+- bright coral: #EF6356
+- orange red: #F65A3A
+- tangerine: #FF7A3D
+- bright orange: #FF914D
+- apricot: #FFB36B
+- marigold: #F6B73C
+- sun yellow: #FFD166
+- butter yellow: #FFE29A
+- blush pink: #F79AAA
+
+palette roles:
+- browser chrome, menu bar, and dock: photo-derived foundation
+- active tabs, buttons, hover, and focus: brighter companion colours
+- readable content surfaces: warm cream with skyline black text
+- project app icons can use their own colours, but share the same pixel grid, outlines, and shadows

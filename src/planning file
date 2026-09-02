@@ -1,0 +1,13 @@
+  Mac-style startup: potato logo + “Emtato loading…”; ~1 second, skippable, once per session.
+* Desktop with pixel icons, dock, menu bar, and Potato Browser inspired by arc + chrome browser window.(make icon understandable so users can reopen browser)
+* Menu bar: potato logo, app name, resume, GitHub, linkedin, email (redirect),  ? (help) | (right side) battery, theme (day/night) clock + date
+* Browser opens by default to about me. Other tab is projects, contact,
+    * Project tab in browser is great for fast browsing (recruiters) skim projects, stack, title, cover image in a 2x3 grid)
+    * Projects also appear as desktop apps (fun /interactivity aspect); clicking either the card or app opens a detailed project window.
+    * Hover bubbles over desktop “apps”  provide quick previews, but no essential information is hover-only.
+* Projects page can hint: “Each project is also an app—close this window to explore.”
+* About tab opens a pixelated diary with photos, alongside an immediately readable short bio.
+    * Introduces me,  (picture of me) my hobbies (photos of food, gym, photography) a brief timeline below of my history?
+* Keep resume, GitHub, LinkedIn, and email permanently accessible. (Menu bar?)
+* Interactivity: whatever url entered into the tab and enter makes the actual portfolio website redirect to that url completely
+* Support mobile, keyboard navigation, real URLs, and the browser back button.

@@ -31,10 +31,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: lts
+          node-version: 'lts/*'
           cache: npm
       - name: Install dependencies
-        run: npm ci #npm install, except cannot rewrite package-lock: just purely installs dependencies 
+        run: npm ci #npm install, except cannot rewrite package-lock: just purely installs dependencies
       - name: Build website
         run: npm run build
       - name: Set up GitHub Pages #built (in /dist), now upload it from computer to ghp

@@ -47,17 +47,34 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 0;
-    font: 100% "Dogica Pixel";
+    font: 80% "Dogica Pixel";
 }
 
 .potato-icon {
     width: 10vh;
     height: 10vh;
     image-rendering: pixelated;
-    margin-bottom: 2vh;
+    margin-top: 35vh;
+    margin-bottom: 10vh;
 }
 
 .loading-text {
     color: var(--color-warm-cream);
     font: inherit;
+}
+
+.loading-bar {
+    width: 240px;
+    height: 6px;
+    margin-top: 2vh;
+    background-color: var(--color-smoky-charcoal);
+    overflow: hidden;
+    border-radius: 3px;
+    margin-bottom: 30vh;
+}
+
+.loading-bar-fill {
+    width: 0;
+    height: 100%;
+    background-color: var(--color-warm-cream);
 }

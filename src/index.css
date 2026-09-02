@@ -1,6 +1,14 @@
+@font-face {
+    font-family: "Dogica Pixel";
+    src: url("./assets/font/dogica/dogicapixel.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     /* Photo colours: foundation */
-    --color-skyline-black: #050e03;
+    --color-black: #000000;
     --color-smoky-charcoal: #332f2d;
     --color-dusk-plum: #4d3c3c;
     --color-dusty-mauve: #6c4c4b;
@@ -23,4 +31,33 @@
     --color-sun-yellow: #ffd166;
     --color-butter-yellow: #ffe29a;
     --color-blush-pink: #f79aaa;
+}
+
+/* loading */
+body {
+    margin: 0;
+}
+
+.loading-main {
+    background-color: var(--color-black);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Vertically aligns the children */
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    font: 100% "Dogica Pixel";
+}
+
+.potato-icon {
+    width: 10vh;
+    height: 10vh;
+    image-rendering: pixelated;
+    margin-bottom: 2vh;
+}
+
+.loading-text {
+    color: var(--color-warm-cream);
+    font: inherit;
 }

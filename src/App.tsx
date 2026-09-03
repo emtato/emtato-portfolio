@@ -22,7 +22,10 @@ export default function App() {
             </div>
         </div>
     } else {
-        return <h1>Hello World!</h1>
+        return <div className="os-main">
+            <div className="menu-bar"></div>
+            <img className="os-main-background" alt="a" src="/assets/system-assets/toronto.jpg"/>
+        </div>
     }
 }
 

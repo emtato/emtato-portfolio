@@ -80,7 +80,11 @@ body {
 }
 
 
-/* main contents */
+/* ------------------------------------------------------------------------------------------- -v-
+
+                                        main contents
+
+----------------------------------------------------------------------------------------------- -o- */
 .os-main {
     width: 100vw;
     height: 100vh;
@@ -91,6 +95,9 @@ body {
     height: 100vh;
 }
 
+/* ------------------------------------------------------------------------------------------- -v-
+                                        menu bar
+----------------------------------------------------------------------------------------------- -o- */
 .menu-bar {
     position: absolute;
     top: 0;
@@ -98,4 +105,46 @@ body {
     width: 100%;
     height: 30px;
     background-color: var(--color-smoky-charcoal);
+}
+
+.menu-bar-icon { /* squished potato */
+    width: 30px;
+    height: 20px;
+    image-rendering: pixelated;
+    top: 5px;
+    left: 6px;
+    position: absolute;
+}
+
+/* ------------------------------------------------------------------------------------------- -v-
+                                        dock
+----------------------------------------------------------------------------------------------- -o- */
+.dock-left {
+    position: absolute;
+    bottom: 0;
+    left: 10vw;
+    width: 40px; /* end caps 5x9 scaled up to 40x72 */
+    image-rendering: pixelated;
+}
+
+.dock-middle {
+    width: 75vw; /* BUG HERE WHEN TALL AND NARROW IDKY*/
+    height: 72px;
+    position: absolute;
+    bottom: 0;
+    left: 12.5vw;
+
+    background-image: url("/assets/system-assets/dock-middle.png");
+    background-repeat: repeat-x;
+    background-size: 8px 72px;
+
+    image-rendering: pixelated;
+}
+
+.dock-right {
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+    width: 40px;
+    image-rendering: pixelated;
 }

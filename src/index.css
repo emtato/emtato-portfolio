@@ -77,8 +77,35 @@ body {
     width: 0;
     height: 100%;
     background-color: var(--color-warm-cream);
+    animation: fake-loading 900ms linear forwards;
 }
 
+@keyframes fake-loading {
+    0% { /* percent of animation duration passed*/
+        width: 0; /* percent bar filled*/
+    }
+    20% {
+        width: 35%;
+    }
+
+    40% {
+        width: 65%;
+    }
+
+    60% {
+        width: 70%;
+    }
+
+    80% {
+        width: 95%;
+    }
+    90% {
+        width: 96%;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
 /* ------------------------------------------------------------------------------------------- -v-
 
@@ -108,10 +135,10 @@ body {
 }
 
 .menu-bar-icon { /* squished potato */
-    width: 30px;
-    height: 20px;
+    width: 26px;
+    height: 18px;
     image-rendering: pixelated;
-    top: 5px;
+    top: 6px;
     left: 6px;
     position: absolute;
 }

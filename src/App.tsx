@@ -8,7 +8,7 @@ export default function App() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false) //function to call when timer runs out
-        }, 4)
+        }, 1067) //change back to 1567 when done
 
         return () => clearTimeout(timer)
     }, []) //empty dependency array means this effect runs only once, not every react render

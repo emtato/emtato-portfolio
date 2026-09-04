@@ -13,7 +13,7 @@ export default function App() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false) //function to call when timer runs out
-        }, 1067) //TODO: add load only the first 2 times of visit
+        }, 967) //TODO: add load only the first 2 times of visit
 
         return () => clearTimeout(timer)
     }, []) //empty dependency array means this effect runs only once, not every react render
@@ -24,13 +24,8 @@ export default function App() {
         const clockInterval = setInterval(() => {
             const now = new Date()
             const shortMonth = now.toLocaleDateString(undefined, {
-                weekday: "short",
-                month: "short",
-                day: "numeric",
-                hour: "numeric",
-                minute: "numeric",
-                second: "numeric",
-            })
+                weekday: "short", month: "short", day: "numeric",
+                hour: "numeric", minute: "numeric", second: "numeric"})
             setCurrentTimeString(shortMonth)
         }, 1000)
 

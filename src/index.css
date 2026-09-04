@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Dogica Pixel";
-    src: url("/assets/font/dogica/dogicapixel.ttf") format("truetype");
+    font-family: "Emtato Pixel";
+    src: url("/assets/font/dogica/emtato-pixel.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -47,7 +47,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 0;
-    font: 80% "Dogica Pixel";
+    font: 80% "Emtato Pixel";
 }
 
 .potato-icon {
@@ -144,7 +144,7 @@ body {
 
 .menu-bar-text {
     color: var(--color-warm-cream);
-    font: 12px "Dogica Pixel";
+    font: 12px "Emtato Pixel";
     margin-top: 10px;
 }
 
@@ -154,7 +154,7 @@ body {
     border: none;
     background-color: transparent;
     color: var(--color-warm-cream);
-    font: 12px "Dogica Pixel";
+    font: 12px "Emtato Pixel";
     margin-top: 9px;
     margin-left: 0.8vw;
     padding: 0;
@@ -217,7 +217,7 @@ body {
 }
 
 .potatospeak {
-    font: 12px "Dogica Pixel";
+    font: 12px "Emtato Pixel";
     position: absolute;
     top: 5.4vh;
     left: 1.25vw;

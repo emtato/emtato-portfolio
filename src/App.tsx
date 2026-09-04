@@ -1,12 +1,14 @@
 import {useEffect, useState, useRef} from 'react'
 import './index.css'
 
+
 export default function App() {
     const [loading, setLoading] = useState(true)
     const [browserOpen, setBrowserOpen] = useState(false)
     const [focusedAppName, setFocusedAppName] = useState<string | null>("placeholder")
     const [helpOpen, setHelpOpen] = useState(false)
     const [potatoIsSpeaking, setPotatoIsSpeaking] = useState(false)
+    const [currentTimeString, setCurrentTimeString] = useState<string | null>("")
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -17,9 +19,25 @@ export default function App() {
     }, []) //empty dependency array means this effect runs only once, not every react render
     //TODO: fix backgrund image dimensions upon window resize
     //TODO: remeber to add website to resume and cover letter and github and linkedin when done
-    //TODO: potato menu bar clickable,  something cool? text bubble +" meow"?)
 
-    function potatoed() {
+    useEffect(() => { //update clock time every second
+        const clockInterval = setInterval(() => {
+            const now = new Date()
+            const shortMonth = now.toLocaleDateString(undefined, {
+                weekday: "short",
+                month: "short",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+                second: "numeric",
+            })
+            setCurrentTimeString(shortMonth)
+        }, 1000)
+
+        return () => clearInterval(clockInterval)
+    }, [])
+
+    function potatoed() { //potato clicked
         setPotatoIsSpeaking(true)
         setTimeout(() => {
             setPotatoIsSpeaking(false)
@@ -37,6 +55,8 @@ export default function App() {
     } else {
         return <div className="os-main">
             <div className="menu-bar">
+
+                {/* left side menu bar*/}
                 <button className="potato-button" onClick={potatoed}>
                     <img className="menu-bar-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
                 </button>
@@ -107,6 +127,13 @@ export default function App() {
                 }}>?
                 </button>
             </div>
+            {/* right side menu bar*/}
+            <div className="right-side-menu-bar">
+                <div className="menu-bar-text">{currentTimeString}</div>
+
+            </div>
+
+            {/* rest of OS*/}
             <img className="os-main-background" alt="a" src="/assets/system-assets/toronto.jpg"/>
             <div className="dock">
                 <img className="dock-left" alt="doc" src="/assets/system-assets/dock-left.png"/>

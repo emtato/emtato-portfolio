@@ -6,6 +6,8 @@ export default function App() {
     const [browserOpen, setBrowserOpen] = useState(false)
     const [focusedAppName, setFocusedAppName] = useState<string | null>("placeholder")
     const [helpOpen, setHelpOpen] = useState(false)
+    const [potatoIsSpeaking, setPotatoIsSpeaking] = useState(false)
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false) //function to call when timer runs out
@@ -16,6 +18,14 @@ export default function App() {
     //TODO: fix backgrund image dimensions upon window resize
     //TODO: remeber to add website to resume and cover letter and github and linkedin when done
     //TODO: potato menu bar clickable,  something cool? text bubble +" meow"?)
+
+    function potatoed() {
+        setPotatoIsSpeaking(true)
+        setTimeout(() => {
+            setPotatoIsSpeaking(false)
+        }, 1000)
+    }
+
     if (loading) {
         return <div className="loading-main">
             <img className="potato-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
@@ -27,9 +37,16 @@ export default function App() {
     } else {
         return <div className="os-main">
             <div className="menu-bar">
-                <img className="menu-bar-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
+                <button className="potato-button" onClick={potatoed}>
+                    <img className="menu-bar-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
+                </button>
+                {potatoIsSpeaking && <>
+                    <img className="potatomeow" alt="a" src="/assets/system-assets/speech-bubble.png"></img>
+                    <div className="potatospeak">meow</div>
+                </>
+                }
                 <div className="menu-bar-text">{focusedAppName}</div>
-                <a className="menu-bar-button" href="/assets/files/Emilia%20Ma%20resume.pdf">Resume
+                <a className="menu-bar-button" href="/assets/files/Emilia%20Ma%20resume.pdf" target="_blank">Resume
                     <span className="link-icon-stack">
                         <img
                             className="link-icon-menubar link-icon-default"
@@ -43,7 +60,7 @@ export default function App() {
                         />
                     </span>
                 </a>
-                <a className="menu-bar-button" href="https://github.com/emtato">GitHub
+                <a className="menu-bar-button" href="https://github.com/emtato" target="_blank">GitHub
                     <span className="link-icon-stack">
                         <img
                             className="link-icon-menubar link-icon-default"
@@ -57,7 +74,7 @@ export default function App() {
                         />
                     </span>
                 </a>
-                <a className="menu-bar-button" href="https://linkedin.com/in/emilia-ma">LinkedIn
+                <a className="menu-bar-button" href="https://linkedin.com/in/emilia-ma" target="_blank">LinkedIn
                     <span className="link-icon-stack">
                         <img
                             className="link-icon-menubar link-icon-default"
@@ -85,7 +102,10 @@ export default function App() {
                         />
                     </span>
                 </a>
-                <button className="menu-bar-button" onClick={() => {setHelpOpen(true)}}>?</button>
+                <button className="menu-bar-button" onClick={() => {
+                    setHelpOpen(true)
+                }}>?
+                </button>
             </div>
             <img className="os-main-background" alt="a" src="/assets/system-assets/toronto.jpg"/>
             <div className="dock">

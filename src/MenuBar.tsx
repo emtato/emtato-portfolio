@@ -55,7 +55,7 @@ export default function MenuBar({
                 <img className="menu-bar-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
             </button>
             {potatoIsSpeaking && <>
-                <img className="potatomeow" alt="a" src="/assets/system-assets/speech-bubble.png"/>
+                <img className="potatomeow" alt="a" src="/assets/system-assets/menu-bar/speech-bubble.png"/>
                 <div className="potatospeak">meow</div>
             </>}
             <div className="menu-bar-text">{focusedAppName}</div>
@@ -122,24 +122,24 @@ export default function MenuBar({
         {/* right side menu bar*/}
         <div className="right-side-menu-bar">
             <button className="wifi-button" onClick={wified}>
-                <img className="menu-bar-icon" alt="a" src="/assets/system-assets/wifi-icon.png"/>
+                <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/wifi-icon.png"/>
             </button>
             {miguIsSpeaking && <>
-                <img className="migu" alt="a" src="/assets/system-assets/speech-bubble.png"/>
+                <img className="migu" alt="a" src="/assets/system-assets/menu-bar/speech-bubble.png"/>
                 <div className="miguspeak">hiding in your wifi</div>
             </>}
             <div className="battery-percentage">{batteryPercentage}</div>
-            <img className="menu-bar-icon" alt="a" src="/assets/system-assets/battery-icon.png"/>
+            <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/battery-icon.png"/>
             <button className="menu-bar-button" onClick={onToggleMode}>
                 <span className="link-icon-stack">
                     {!currentModeIsDark && <img
                         className=" light-mode-button"
-                        src="/assets/system-assets/light-mode-icon.png"
+                        src="/assets/system-assets/menu-bar/light-mode-icon.png"
                         alt=""
                     />}
                     {currentModeIsDark && <img
                         className="dark-mode-button"
-                        src="/assets/system-assets/dark-mode-icon.png"
+                        src="/assets/system-assets/menu-bar/dark-mode-icon.png"
                         alt=""
                     />}
                 </span>

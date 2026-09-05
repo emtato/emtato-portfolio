@@ -14,6 +14,7 @@ export default function BrowserWindow() {
         <div className="browser-window-left"></div>
         <div className="browser-window-center">
             <div className="browser-window-search-layer">
+                <div className="browser-window-search-bar"></div>
             </div>
             <div className="browser-window-page-content"></div>
 
@@ -23,6 +24,8 @@ export default function BrowserWindow() {
             <img className="browser-window-render-bottom-row" alt="a" src="/assets/browser/frame/bottom-left-corner-browser.png"/>
         </div>
         <div className="browser-window-bottom"></div>
-        <div className="browser-window-bottomright"></div>
+        <div className="browser-window-bottomright">
+            <img className="browser-window-render-bottom-row" alt="a" src="/assets/browser/frame/bottom-right-corner-browser.png"/>
+        </div>
     </div>
 }

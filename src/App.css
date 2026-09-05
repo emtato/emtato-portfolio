@@ -10,7 +10,7 @@
     position: absolute;
     top: 40px;
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: 7px minmax(0, 1fr) 14px;
     grid-template-rows: auto minmax(0, 1fr) auto;
 }
 
@@ -25,7 +25,7 @@
 .browser-window-render-bottom-row {
     position: relative;
     z-index: 10;
-    height: 28px;
+    height: 21px;
     image-rendering: pixelated;
     display: block;
 }
@@ -36,6 +36,7 @@
 
 .browser-window-top {
     height: 56px;
+    margin-inline: 7px;
 
     background-image: url("/assets/browser/frame/top-side-browser.png");
     background-repeat: repeat-x;
@@ -44,17 +45,31 @@
 }
 
 .browser-window-topright {
-    right: 0;
-
+    display: flex;
+    justify-content: flex-end;
 }
 
 .browser-window-search-layer {
     height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background-image: url("/assets/browser/toolbar/browser-search-bar-layer.png");
     background-repeat: repeat-x;
     background-size: 7px 42px;
     image-rendering: pixelated;
+}
+
+.browser-window-search-bar {
+    width: 75%;
+    height: 34px;
+
+    background-image: url("/assets/browser/toolbar/search-bar.png");
+    background-repeat: repeat-x;
+    background-size: 4px 34px;
+    image-rendering: pixelated;
+    margin-top: -5px;
 }
 
 .browser-window-center {
@@ -79,32 +94,34 @@
 }
 
 .browser-window-right {
-    width: 14px;
+    width: 7px;
     justify-self: end;
 
     background-image: url("/assets/browser/frame/right-side-browser.png");
     background-repeat: repeat-y;
-    background-size: 14px 7px;
+    background-size: 7px 7px;
     image-rendering: pixelated;
 }
 
 .browser-window-bottomleft {
     position: relative;
     bottom: 0;
+
 }
 
 .browser-window-bottom {
-    height: 14px;
+    height: 7px;
     align-self: end;
+    margin-inline: 7px;
 
-    background-image: url("/assets/browser/frame/bottom-side-browser.png");
+    background-image: url("/assets/browser/frame/right-side-browser.png");
     background-repeat: repeat-x;
-    background-size: 7px 14px;
+    background-size: 7px 7px;
     image-rendering: pixelated;
 }
 
 .browser-window-bottomright {
-
+  display: flex;
+    justify-content: flex-end;
 }
-
 

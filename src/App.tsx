@@ -1,5 +1,6 @@
 import {useEffect, useState, useRef} from 'react'
 import './index.css'
+import {useBattery} from 'react-use';
 
 
 export default function App() {
@@ -10,6 +11,10 @@ export default function App() {
     const [potatoIsSpeaking, setPotatoIsSpeaking] = useState(false)
     const [currentTimeString, setCurrentTimeString] = useState<string | null>("")
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
+    const battery = useBattery()
+
+
+    const batteryPercentage = battery.isSupported && battery.fetched ? Math.round(battery.level * 100) : 68
     //TODO: modify things for dark/light mode visually
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -126,6 +131,8 @@ export default function App() {
             </div>
             {/* right side menu bar*/}
             <div className="right-side-menu-bar">
+                <div className="battery-percentage">{batteryPercentage}</div>
+                <img className="menu-bar-icon" alt="a" src="/assets/system-assets/battery-icon.png"/>
                 <button className="menu-bar-button" onClick={() => setCurrentModeIsDark(!currentModeIsDark)}>
                     <span className="link-icon-stack">
                         {!currentModeIsDark && <img

@@ -1,6 +1,6 @@
-import {useEffect, useState, useRef} from 'react'
+import {useEffect, useState} from 'react'
 import './index.css'
-import {useBattery} from 'react-use';
+import MenuBar from './MenuBar'
 
 
 export default function App() {
@@ -8,13 +8,8 @@ export default function App() {
     const [browserOpen, setBrowserOpen] = useState(false)
     const [focusedAppName, setFocusedAppName] = useState<string | null>("placeholder")
     const [helpOpen, setHelpOpen] = useState(false)
-    const [potatoIsSpeaking, setPotatoIsSpeaking] = useState(false)
-    const [currentTimeString, setCurrentTimeString] = useState<string | null>("")
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
-    const battery = useBattery()
-    const [miguIsSpeaking, setMiguIsSpeaking] = useState(false)
 
-    const batteryPercentage = battery.isSupported && battery.fetched ? Math.round(battery.level * 100) : 68
     //TODO: modify things for dark/light mode visually
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -26,33 +21,6 @@ export default function App() {
     //TODO: fix backgrund image dimensions upon window resize
     //TODO: remeber to add website to resume and cover letter and github and linkedin when done
 
-    useEffect(() => { //update clock time every second
-        const clockInterval = setInterval(() => {
-            const now = new Date()
-            const shortMonth = now.toLocaleDateString(undefined, {
-                weekday: "short", month: "short", day: "numeric",
-                hour: "numeric", minute: "numeric", second: "numeric"
-            })
-            setCurrentTimeString(shortMonth)
-        }, 1000)
-
-        return () => clearInterval(clockInterval)
-    }, [])
-
-    function potatoed() { //potato clicked
-        setPotatoIsSpeaking(true)
-        setTimeout(() => {
-            setPotatoIsSpeaking(false)
-        }, 1000)
-    }
-
-    function wified() {
-        setMiguIsSpeaking(true)
-        setTimeout(() => {
-            setMiguIsSpeaking(false)
-        }, 1000)
-    }
-
     if (loading) {
         return <div className="loading-main">
             <img className="potato-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
@@ -63,110 +31,12 @@ export default function App() {
         </div>
     } else {
         return <div className="os-main">
-            <div className="menu-bar">
-
-                {/* left side menu bar*/}
-                <button className="potato-button" onClick={potatoed}>
-                    <img className="menu-bar-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
-                </button>
-                {potatoIsSpeaking && <>
-                    <img className="potatomeow" alt="a" src="/assets/system-assets/speech-bubble.png"></img>
-                    <div className="potatospeak">meow</div>
-                </>
-                }
-                <div className="menu-bar-text">{focusedAppName}</div>
-                <a className="menu-bar-button" href="/assets/files/Emilia%20Ma%20resume.pdf" target="_blank">Resume
-                    <span className="link-icon-stack">
-                        <img
-                            className="link-icon-menubar link-icon-default"
-                            src="/assets/system-assets/link-icon.png"
-                            alt=""
-                        />
-                        <img
-                            className="link-icon-menubar link-icon-hover"
-                            src="/assets/system-assets/link-icon-hover.png"
-                            alt=""
-                        />
-                    </span>
-                </a>
-                <a className="menu-bar-button" href="https://github.com/emtato" target="_blank">GitHub
-                    <span className="link-icon-stack">
-                        <img
-                            className="link-icon-menubar link-icon-default"
-                            src="/assets/system-assets/link-icon.png"
-                            alt=""
-                        />
-                        <img
-                            className="link-icon-menubar link-icon-hover"
-                            src="/assets/system-assets/link-icon-hover.png"
-                            alt=""
-                        />
-                    </span>
-                </a>
-                <a className="menu-bar-button" href="https://linkedin.com/in/emilia-ma" target="_blank">LinkedIn
-                    <span className="link-icon-stack">
-                        <img
-                            className="link-icon-menubar link-icon-default"
-                            src="/assets/system-assets/link-icon.png"
-                            alt=""
-                        />
-                        <img
-                            className="link-icon-menubar link-icon-hover"
-                            src="/assets/system-assets/link-icon-hover.png"
-                            alt=""
-                        />
-                    </span>
-                </a>
-                <a className="menu-bar-button" href="mailto:emilia.ma@mail.utoronto.ca">Email Me!
-                    <span className="link-icon-stack">
-                        <img
-                            className="link-icon-menubar link-icon-default"
-                            src="/assets/system-assets/link-icon.png"
-                            alt=""
-                        />
-                        <img
-                            className="link-icon-menubar link-icon-hover"
-                            src="/assets/system-assets/link-icon-hover.png"
-                            alt=""
-                        />
-                    </span>
-                </a>
-                <button className="menu-bar-button" onClick={() => {
-                    setHelpOpen(true)
-                }}>?
-                </button>
-            </div>
-            {/* right side menu bar*/}
-            <div className="right-side-menu-bar">
-                <button className="wifi-button" onClick={wified}>
-                    <img className="menu-bar-icon" alt="a" src="/assets/system-assets/wifi-icon.png"/>
-                </button>
-                {miguIsSpeaking && <>
-                    <img className="migu" alt="a" src="/assets/system-assets/speech-bubble.png"></img>
-                    <div className="miguspeak">hiding in your wifi</div>
-                </>
-                }
-                <div className="battery-percentage">{batteryPercentage}</div>
-                <img className="menu-bar-icon" alt="a" src="/assets/system-assets/battery-icon.png"/>
-                <button className="menu-bar-button" onClick={() => setCurrentModeIsDark(!currentModeIsDark)}>
-                    <span className="link-icon-stack">
-                        {!currentModeIsDark && <img
-                            className=" light-mode-button"
-                            src="/assets/system-assets/light-mode-icon.png"
-                            alt=""
-                        />}
-                        {currentModeIsDark && <img
-                            className="dark-mode-button"
-                            src="/assets/system-assets/dark-mode-icon.png"
-                            alt=""
-                        />}
-                            </span>
-                </button>
-
-                <div className="menu-bar-text">{currentTimeString}</div>
-
-
-            </div>
+            <MenuBar
+                focusedAppName={focusedAppName}
+                currentModeIsDark={currentModeIsDark}
+                onToggleMode={() => setCurrentModeIsDark(modeIsDark => !modeIsDark)}
+                onOpenHelp={() => setHelpOpen(true)}
+            />
 
             {/* rest of OS*/
             }
@@ -179,4 +49,3 @@ export default function App() {
         </div>
     }
 }
-

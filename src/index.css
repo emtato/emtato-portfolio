@@ -139,14 +139,14 @@ body {
     top: 6px;
     left: 6px;
     position: relative;
-    padding-right: 1vw;
+    padding-right: 14px;
 }
 
 .menu-bar-text {
     color: var(--color-warm-cream);
     font: 12px "Emtato Pixel";
     margin-top: 10px;
-    margin-left: 0.2vw;
+    margin-left: 3px;
 }
 
 .menu-bar-button {
@@ -157,7 +157,7 @@ body {
     color: var(--color-warm-cream);
     font: 12px "Emtato Pixel";
     margin-top: 9px;
-    margin-left: 0.8vw;
+    margin-left: 12px;
     padding: 0;
     display: inline-flex;
     align-items: center;
@@ -175,7 +175,7 @@ body {
 }
 
 .link-icon-menubar {
-    margin-left: 0.2vw;
+    margin-left: 3px;
     image-rendering: pixelated;
     width: 12px;
     height: 12px;
@@ -205,7 +205,7 @@ body {
     border: none;
     padding: 0;
     margin-top: -0.7vh;
-    margin-left: 0.1vw;
+    margin-left: 1px;
 }
 
 .potatomeow {
@@ -214,20 +214,20 @@ body {
     image-rendering: pixelated;
     position: absolute;
     top: 3.5vh;
-    left: 0.8vw;
+    left: 12px;
 }
 
 .potatospeak {
     font: 12px "Emtato Pixel";
     position: absolute;
     top: 5.4vh;
-    left: 1.25vw;
+    left: 18px;
 }
 
 .right-side-menu-bar {
     position: absolute;
     top: 0;
-    right: 0.5vw;
+    right: 7px;
     display: flex;
 }
 
@@ -235,7 +235,7 @@ body {
     width: 16px;
     height: 16px;
     image-rendering: pixelated;
-    left: -0.5vw;
+    left: -7px;
     top: -0.3vh;
     position: absolute;
 }
@@ -244,7 +244,7 @@ body {
     width: 12px;
     height: 16px;
     image-rendering: pixelated;
-    margin-left: -0.8vw;
+    margin-left: -12px;
     margin-top: -0.2vh;
 }
 
@@ -253,7 +253,7 @@ body {
     color: var(--color-smoky-charcoal);
     margin-top: 10.5px;
     position: absolute;
-    right: 16.1vw;
+    right: 239.5px;
     z-index: 1;
     font-weight: bold;
 }
@@ -261,7 +261,7 @@ body {
 .wifi-button {
     border: none;
     background-color: transparent;
-    margin-right: -0.7vw;
+    margin-right: -10px;
     margin-top: -0.2vh;
 }
 
@@ -271,14 +271,14 @@ body {
     image-rendering: pixelated;
     position: absolute;
     top: 3.5vh;
-    right: 13vw;
+    right: 187px;
 }
 
 .miguspeak {
     font: 12px "Emtato Pixel";
     position: absolute;
-    top: 7vh;
-    right: 12.5vw;
+    top: 6.7vh;
+    right: 180px;
     width: 105px;
 }
 

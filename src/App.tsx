@@ -12,7 +12,7 @@ export default function App() {
     const [currentTimeString, setCurrentTimeString] = useState<string | null>("")
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
     const battery = useBattery()
-
+    const [miguIsSpeaking, setMiguIsSpeaking] = useState(false)
 
     const batteryPercentage = battery.isSupported && battery.fetched ? Math.round(battery.level * 100) : 68
     //TODO: modify things for dark/light mode visually
@@ -43,6 +43,13 @@ export default function App() {
         setPotatoIsSpeaking(true)
         setTimeout(() => {
             setPotatoIsSpeaking(false)
+        }, 1000)
+    }
+
+    function wified() {
+        setMiguIsSpeaking(true)
+        setTimeout(() => {
+            setMiguIsSpeaking(false)
         }, 1000)
     }
 
@@ -131,6 +138,14 @@ export default function App() {
             </div>
             {/* right side menu bar*/}
             <div className="right-side-menu-bar">
+                <button className="wifi-button" onClick={wified}>
+                    <img className="menu-bar-icon" alt="a" src="/assets/system-assets/wifi-icon.png"/>
+                </button>
+                {miguIsSpeaking && <>
+                    <img className="migu" alt="a" src="/assets/system-assets/speech-bubble.png"></img>
+                    <div className="miguspeak">hiding in your wifi</div>
+                </>
+                }
                 <div className="battery-percentage">{batteryPercentage}</div>
                 <img className="menu-bar-icon" alt="a" src="/assets/system-assets/battery-icon.png"/>
                 <button className="menu-bar-button" onClick={() => setCurrentModeIsDark(!currentModeIsDark)}>

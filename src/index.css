@@ -256,7 +256,30 @@ body {
     right: 16.1vw;
     z-index: 1;
     font-weight: bold;
+}
 
+.wifi-button {
+    border: none;
+    background-color: transparent;
+    margin-right: -0.7vw;
+    margin-top: -0.2vh;
+}
+
+.migu {
+    width: 110px;
+    height: 70px;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 3.5vh;
+    right: 13vw;
+}
+
+.miguspeak {
+    font: 12px "Emtato Pixel";
+    position: absolute;
+    top: 7vh;
+    right: 12.5vw;
+    width: 105px;
 }
 
 /* ------------------------------------------------------------------------------------------- -v-

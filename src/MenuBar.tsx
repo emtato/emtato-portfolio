@@ -9,11 +9,11 @@ interface MenuBarProps {
 }
 
 export default function MenuBar({
-    focusedAppName,
-    currentModeIsDark,
-    onToggleMode,
-    onOpenHelp,
-}: MenuBarProps) {
+                                    focusedAppName,
+                                    currentModeIsDark,
+                                    onToggleMode,
+                                    onOpenHelp,
+                                }: MenuBarProps) {
     const [potatoIsSpeaking, setPotatoIsSpeaking] = useState(false)
     const [currentTimeString, setCurrentTimeString] = useState<string | null>("")
     const [miguIsSpeaking, setMiguIsSpeaking] = useState(false)
@@ -50,89 +50,91 @@ export default function MenuBar({
 
     return <>
         <div className="menu-bar">
-            {/* left side menu bar*/}
             <button className="potato-button" onClick={potatoed}>
-                <img className="menu-bar-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
+                <img className="menu-bar-potato-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
             </button>
             {potatoIsSpeaking && <>
                 <img className="potatomeow" alt="a" src="/assets/system-assets/menu-bar/speech-bubble.png"/>
                 <div className="potatospeak">meow</div>
             </>}
-            <div className="menu-bar-text">{focusedAppName}</div>
-            <a className="menu-bar-button" href="/assets/files/Emilia%20Ma%20resume.pdf" target="_blank">Resume
-                <span className="link-icon-stack">
-                    <img
-                        className="link-icon-menubar link-icon-default"
-                        src="/assets/system-assets/link-icon.png"
-                        alt=""
-                    />
-                    <img
-                        className="link-icon-menubar link-icon-hover"
-                        src="/assets/system-assets/link-icon-hover.png"
-                        alt=""
-                    />
-                </span>
-            </a>
-            <a className="menu-bar-button" href="https://github.com/emtato" target="_blank">GitHub
-                <span className="link-icon-stack">
-                    <img
-                        className="link-icon-menubar link-icon-default"
-                        src="/assets/system-assets/link-icon.png"
-                        alt=""
-                    />
-                    <img
-                        className="link-icon-menubar link-icon-hover"
-                        src="/assets/system-assets/link-icon-hover.png"
-                        alt=""
-                    />
-                </span>
-            </a>
-            <a className="menu-bar-button" href="https://linkedin.com/in/emilia-ma" target="_blank">LinkedIn
-                <span className="link-icon-stack">
-                    <img
-                        className="link-icon-menubar link-icon-default"
-                        src="/assets/system-assets/link-icon.png"
-                        alt=""
-                    />
-                    <img
-                        className="link-icon-menubar link-icon-hover"
-                        src="/assets/system-assets/link-icon-hover.png"
-                        alt=""
-                    />
-                </span>
-            </a>
-            <a className="menu-bar-button" href="mailto:emilia.ma@mail.utoronto.ca">Email Me!
-                <span className="link-icon-stack">
-                    <img
-                        className="link-icon-menubar link-icon-default"
-                        src="/assets/system-assets/link-icon.png"
-                        alt=""
-                    />
-                    <img
-                        className="link-icon-menubar link-icon-hover"
-                        src="/assets/system-assets/link-icon-hover.png"
-                        alt=""
-                    />
-                </span>
-            </a>
-            <button className="menu-bar-button" onClick={onOpenHelp}>?
-            </button>
-        </div>
+            <div className="left-menu-bar">
+                {/* left side menu bar*/}
 
-        {/* right side menu bar*/}
-        <div className="right-side-menu-bar">
-            <button className="wifi-button" onClick={wified}>
-                <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/wifi-icon.png"/>
-            </button>
-            {miguIsSpeaking && <>
-                <img className="migu" alt="a" src="/assets/system-assets/menu-bar/speech-bubble.png"/>
-                <div className="miguspeak">hiding in your wifi</div>
-            </>}
-            <div className="battery">
-                <div className="battery-percentage">{batteryPercentage}</div>
-                <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/battery-icon.png"/>
+                <div className="menu-bar-text">{focusedAppName}</div>
+                <a className="menu-bar-button" href="/assets/files/Emilia%20Ma%20resume.pdf" target="_blank">Resume
+                    <span className="link-icon-stack">
+                    <img
+                        className="link-icon-menubar link-icon-default"
+                        src="/assets/system-assets/link-icon.png"
+                        alt=""
+                    />
+                    <img
+                        className="link-icon-menubar link-icon-hover"
+                        src="/assets/system-assets/link-icon-hover.png"
+                        alt=""
+                    />
+                </span>
+                </a>
+                <a className="menu-bar-button" href="https://github.com/emtato" target="_blank">GitHub
+                    <span className="link-icon-stack">
+                    <img
+                        className="link-icon-menubar link-icon-default"
+                        src="/assets/system-assets/link-icon.png"
+                        alt=""
+                    />
+                    <img
+                        className="link-icon-menubar link-icon-hover"
+                        src="/assets/system-assets/link-icon-hover.png"
+                        alt=""
+                    />
+                </span>
+                </a>
+                <a className="menu-bar-button" href="https://linkedin.com/in/emilia-ma" target="_blank">LinkedIn
+                    <span className="link-icon-stack">
+                    <img
+                        className="link-icon-menubar link-icon-default"
+                        src="/assets/system-assets/link-icon.png"
+                        alt=""
+                    />
+                    <img
+                        className="link-icon-menubar link-icon-hover"
+                        src="/assets/system-assets/link-icon-hover.png"
+                        alt=""
+                    />
+                </span>
+                </a>
+                <a className="menu-bar-button" href="mailto:emilia.ma@mail.utoronto.ca">Email Me!
+                    <span className="link-icon-stack">
+                    <img
+                        className="link-icon-menubar link-icon-default"
+                        src="/assets/system-assets/link-icon.png"
+                        alt=""
+                    />
+                    <img
+                        className="link-icon-menubar link-icon-hover"
+                        src="/assets/system-assets/link-icon-hover.png"
+                        alt=""
+                    />
+                </span>
+                </a>
+                <button className="menu-bar-button" onClick={onOpenHelp}>?
+                </button>
             </div>
-            <button className="menu-bar-button" onClick={onToggleMode}>
+
+            {/* right side menu bar*/}
+            <div className="right-side-menu-bar">
+                <button className="wifi-button" onClick={wified}>
+                    <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/wifi-icon.png"/>
+                </button>
+                {miguIsSpeaking && <>
+                    <img className="migu" alt="a" src="/assets/system-assets/menu-bar/speech-bubble.png"/>
+                    <div className="miguspeak">hiding in your wifi</div>
+                </>}
+                <div className="battery">
+                    <div className="battery-percentage">{batteryPercentage}</div>
+                    <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/battery-icon.png"/>
+                </div>
+                <button className="menu-bar-button" onClick={onToggleMode}>
                 <span className="link-icon-stack">
                     {!currentModeIsDark && <img
                         className=" light-mode-button"
@@ -145,9 +147,10 @@ export default function MenuBar({
                         alt=""
                     />}
                 </span>
-            </button>
+                </button>
 
-            <div className="menu-bar-text">{currentTimeString}</div>
+                <div className="menu-bar-text">{currentTimeString}</div>
+            </div>
         </div>
     </>
 }

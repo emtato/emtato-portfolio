@@ -125,16 +125,29 @@ body {
                                         menu bar
 ----------------------------------------------------------------------------------------------- -o- */
 .menu-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 30px;
     background-color: var(--color-smoky-charcoal);
+}
+
+.left-menu-bar {
+    position: absolute;
+    top: 0;
+    left: 40px;
     display: flex;
 }
 
-.menu-bar-icon { /* squished potato */
+.menu-bar-potato-icon { /* squished potato */
+    width: 26px;
+    height: 18px;
+    image-rendering: pixelated;
+    top: 10px;
+    left: 6px;
+    position: relative;
+    padding-right: 14px;
+}
+
+.menu-bar-icon {
     width: 26px;
     height: 18px;
     image-rendering: pixelated;
@@ -287,6 +300,49 @@ body {
     top: 6.7vh;
     right: 180px;
     width: 105px;
+}
+
+/* mobile/small screen ui to prevent menu bar collision */
+@media (max-width: 910px) {
+    .left-menu-bar {
+        transform-origin: top left;
+        position: absolute;
+        top: 30px;
+        left: -5px;
+        display: flex;
+        padding-right: 10px;
+        transform: rotate(-90deg) translateX(-100%);
+        flex-direction: row-reverse;
+        width: 530px;
+        background-color: var(--color-smoky-charcoal);
+        opacity: 0.8;
+    }
+
+    .menu-bar-text { /* add left padding to app name (menu bar text)*/
+        margin-left: 15px;
+    }
+
+    .light-mode-button { /* reverse change in menu-bar-text padding for time text */
+        width: 16px;
+        height: 16px;
+        image-rendering: pixelated;
+        margin-left: 10px;
+        top: -0.3vh;
+        position: absolute;
+    }
+
+    .dark-mode-button {
+        width: 12px;
+        height: 16px;
+        image-rendering: pixelated;
+        margin-left: 5px;
+        margin-top: -0.2vh;
+    }
+
+    .battery {
+        position: relative;
+        margin-right: -10px;
+    }
 }
 
 /* ------------------------------------------------------------------------------------------- -v-

@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import './index.css'
 import MenuBar from './MenuBar'
+import BrowserWindow from './BrowserWindow'
 
 
 export default function App() {
@@ -41,6 +42,7 @@ export default function App() {
             {/* rest of OS*/
             }
             <img className="os-main-background" alt="a" src="/assets/system-assets/toronto.jpg"/>
+            <BrowserWindow/>
             <div className="dock">
                 <img className="dock-left" alt="doc" src="/assets/system-assets/dock-left.png"/>
                 <div className="dock-middle"></div>

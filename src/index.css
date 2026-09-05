@@ -11,7 +11,7 @@
     --color-black: #000000;
     --color-smoky-charcoal: #332f2d;
     --color-dusk-plum: #4d3c3c;
-    --color-dusty-mauve: #6c4c4b;
+    --color-brown: #6c4c4b;
     --color-cloud-coral: #c95848;
     --color-ember-orange: #f08a5d;
     --color-golden-highlight: #f4c56a;
@@ -20,17 +20,18 @@
     /* Brighter companion colours */
     --color-dark-plum: #2e1424;
     --color-deep-plum: #5a2f4a;
-    --color-vivid-plum: #8c4668;
+    --color-plum: #8c4668;
     --color-bright-plum: #b85c8a;
+    --color-grey-plum: #7d6c77;
     --color-bright-coral: #ef6356;
     --color-orange-red: #f65a3a;
     --color-tangerine: #ff7a3d;
     --color-bright-orange: #ff914d;
     --color-apricot: #ffb36b;
     --color-marigold: #f6b73c;
-    --color-sun-yellow: #ffd166;
+    --color-yellow: #ffd166;
     --color-butter-yellow: #ffe29a;
-    --color-blush-pink: #f79aaa;
+    --color-blush: #f79aaa;
 }
 
 /* loading */

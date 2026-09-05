@@ -25,7 +25,7 @@ export default function App() {
 
     if (loading) {
         return <div className="loading-main">
-            <img className="potato-icon" alt="a" src="/assets/system/shared/potato-icon.png"/>
+            <img className="potato-icon" alt="a" src="/assets/system/potato-icon.png"/>
             <div className="loading-text">emtato loading..</div>
             <div className="loading-bar">
                 <div className="loading-bar-fill"></div>

@@ -51,7 +51,7 @@ export default function MenuBar({
     return <>
         <div className="menu-bar">
             <button className="potato-button" onClick={potatoed}>
-                <img className="menu-bar-potato-icon" alt="a" src="/assets/system/shared/potato-icon.png"/>
+                <img className="menu-bar-potato-icon" alt="a" src="/assets/system/potato-icon.png"/>
             </button>
             {potatoIsSpeaking && <>
                 <img className="potatomeow" alt="a" src="/assets/system/menu-bar/speech-bubble.png"/>
@@ -65,12 +65,12 @@ export default function MenuBar({
                     <span className="link-icon-stack">
                     <img
                         className="link-icon-menubar link-icon-default"
-                        src="/assets/system/shared/link-icon.png"
+                        src="/assets/system/link-icon.png"
                         alt=""
                     />
                     <img
                         className="link-icon-menubar link-icon-hover"
-                        src="/assets/system/shared/link-icon-hover.png"
+                        src="/assets/system/link-icon-hover.png"
                         alt=""
                     />
                 </span>
@@ -79,12 +79,12 @@ export default function MenuBar({
                     <span className="link-icon-stack">
                     <img
                         className="link-icon-menubar link-icon-default"
-                        src="/assets/system/shared/link-icon.png"
+                        src="/assets/system/link-icon.png"
                         alt=""
                     />
                     <img
                         className="link-icon-menubar link-icon-hover"
-                        src="/assets/system/shared/link-icon-hover.png"
+                        src="/assets/system/link-icon-hover.png"
                         alt=""
                     />
                 </span>
@@ -93,12 +93,12 @@ export default function MenuBar({
                     <span className="link-icon-stack">
                     <img
                         className="link-icon-menubar link-icon-default"
-                        src="/assets/system/shared/link-icon.png"
+                        src="/assets/system/link-icon.png"
                         alt=""
                     />
                     <img
                         className="link-icon-menubar link-icon-hover"
-                        src="/assets/system/shared/link-icon-hover.png"
+                        src="/assets/system/link-icon-hover.png"
                         alt=""
                     />
                 </span>
@@ -107,12 +107,12 @@ export default function MenuBar({
                     <span className="link-icon-stack">
                     <img
                         className="link-icon-menubar link-icon-default"
-                        src="/assets/system/shared/link-icon.png"
+                        src="/assets/system/link-icon.png"
                         alt=""
                     />
                     <img
                         className="link-icon-menubar link-icon-hover"
-                        src="/assets/system/shared/link-icon-hover.png"
+                        src="/assets/system/link-icon-hover.png"
                         alt=""
                     />
                 </span>

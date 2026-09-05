@@ -3,14 +3,63 @@
 ----------------------------------------------------------------------------------------------- -o- */
 
 .browser-window {
+    width: 97vw;
+    left: 1.5vw;
+    height: 87.4vh;
+    z-index: 10;
+    position: absolute;
+    top: 40px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+}
 
+.browser-window-render-top-row {
+    position: relative;
+    z-index: 10;
+    height: 60px;
+    image-rendering: pixelated;
 }
 
 .browser-window-topleft {
+    position: relative;
+}
 
+.browser-window-top {
+    height: 60px;
+
+    background-image: url("/assets/browser/frame/top-side-browser.png");
+    background-repeat: repeat-x;
+    background-size: 8px 60px;
+    image-rendering: pixelated;
 }
 
 .browser-window-topright {
+    right: 0;
+
+}
+
+.browser-window-center {
+
+}
+
+.browser-window-search-layer {
+
+}
+
+.browser-window-page-content {
+}
+
+
+.browser-window-left {
+ height: 60px;
+
+    background-image: url("/assets/browser/frame/left-side-browser.png");
+    background-repeat: repeat-x;
+    background-size: 8px 60px;
+    image-rendering: pixelated;
+}
+
+.browser-window-right {
 
 }
 
@@ -18,21 +67,11 @@
 
 }
 
+.browser-window-bottom {
+}
+
 .browser-window-bottomright {
 
 }
 
-.browser-window-left {
 
-}
-
-.browser-window-right {
-
-}
-
-.browser-window-top {
-
-}
-
-.browser-window-bottom {
-}

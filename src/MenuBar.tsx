@@ -51,26 +51,26 @@ export default function MenuBar({
     return <>
         <div className="menu-bar">
             <button className="potato-button" onClick={potatoed}>
-                <img className="menu-bar-potato-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
+                <img className="menu-bar-potato-icon" alt="a" src="/assets/system/shared/potato-icon.png"/>
             </button>
             {potatoIsSpeaking && <>
-                <img className="potatomeow" alt="a" src="/assets/system-assets/menu-bar/speech-bubble.png"/>
+                <img className="potatomeow" alt="a" src="/assets/system/menu-bar/speech-bubble.png"/>
                 <div className="potatospeak">meow</div>
             </>}
             <div className="left-menu-bar">
                 {/* left side menu bar*/}
 
                 <div className="menu-bar-text">{focusedAppName}</div>
-                <a className="menu-bar-button" href="/assets/files/Emilia%20Ma%20resume.pdf" target="_blank">Resume
+                <a className="menu-bar-button" href="/assets/documents/Emilia%20Ma%20resume.pdf" target="_blank">Resume
                     <span className="link-icon-stack">
                     <img
                         className="link-icon-menubar link-icon-default"
-                        src="/assets/system-assets/link-icon.png"
+                        src="/assets/system/shared/link-icon.png"
                         alt=""
                     />
                     <img
                         className="link-icon-menubar link-icon-hover"
-                        src="/assets/system-assets/link-icon-hover.png"
+                        src="/assets/system/shared/link-icon-hover.png"
                         alt=""
                     />
                 </span>
@@ -79,12 +79,12 @@ export default function MenuBar({
                     <span className="link-icon-stack">
                     <img
                         className="link-icon-menubar link-icon-default"
-                        src="/assets/system-assets/link-icon.png"
+                        src="/assets/system/shared/link-icon.png"
                         alt=""
                     />
                     <img
                         className="link-icon-menubar link-icon-hover"
-                        src="/assets/system-assets/link-icon-hover.png"
+                        src="/assets/system/shared/link-icon-hover.png"
                         alt=""
                     />
                 </span>
@@ -93,12 +93,12 @@ export default function MenuBar({
                     <span className="link-icon-stack">
                     <img
                         className="link-icon-menubar link-icon-default"
-                        src="/assets/system-assets/link-icon.png"
+                        src="/assets/system/shared/link-icon.png"
                         alt=""
                     />
                     <img
                         className="link-icon-menubar link-icon-hover"
-                        src="/assets/system-assets/link-icon-hover.png"
+                        src="/assets/system/shared/link-icon-hover.png"
                         alt=""
                     />
                 </span>
@@ -107,12 +107,12 @@ export default function MenuBar({
                     <span className="link-icon-stack">
                     <img
                         className="link-icon-menubar link-icon-default"
-                        src="/assets/system-assets/link-icon.png"
+                        src="/assets/system/shared/link-icon.png"
                         alt=""
                     />
                     <img
                         className="link-icon-menubar link-icon-hover"
-                        src="/assets/system-assets/link-icon-hover.png"
+                        src="/assets/system/shared/link-icon-hover.png"
                         alt=""
                     />
                 </span>
@@ -124,26 +124,26 @@ export default function MenuBar({
             {/* right side menu bar*/}
             <div className="right-side-menu-bar">
                 <button className="wifi-button" onClick={wified}>
-                    <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/wifi-icon.png"/>
+                    <img className="menu-bar-icon" alt="a" src="/assets/system/menu-bar/wifi-icon.png"/>
                 </button>
                 {miguIsSpeaking && <>
-                    <img className="migu" alt="a" src="/assets/system-assets/menu-bar/speech-bubble.png"/>
+                    <img className="migu" alt="a" src="/assets/system/menu-bar/speech-bubble.png"/>
                     <div className="miguspeak">hiding in your wifi</div>
                 </>}
                 <div className="battery">
                     <div className="battery-percentage">{batteryPercentage}</div>
-                    <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/battery-icon.png"/>
+                    <img className="menu-bar-icon" alt="a" src="/assets/system/menu-bar/battery-icon.png"/>
                 </div>
                 <button className="menu-bar-button" onClick={onToggleMode}>
                 <span className="link-icon-stack">
                     {!currentModeIsDark && <img
                         className=" light-mode-button"
-                        src="/assets/system-assets/menu-bar/light-mode-icon.png"
+                        src="/assets/system/menu-bar/light-mode-icon.png"
                         alt=""
                     />}
                     {currentModeIsDark && <img
                         className="dark-mode-button"
-                        src="/assets/system-assets/menu-bar/dark-mode-icon.png"
+                        src="/assets/system/menu-bar/dark-mode-icon.png"
                         alt=""
                     />}
                 </span>

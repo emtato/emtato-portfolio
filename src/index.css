@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Emtato Pixel";
-    src: url("/assets/font/dogica/emtato-pixel.ttf") format("truetype");
+    src: url("/assets/fonts/dogica/emtato-pixel.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -363,6 +363,7 @@ body {
     left: 10vw;
     position: absolute;
     display: flex;
+    z-index: 15;
 }
 
 .dock-left {
@@ -376,7 +377,7 @@ body {
     height: 72px;
     bottom: 0;
 
-    background-image: url("/assets/system-assets/dock-middle.png");
+    background-image: url("/assets/system/dock/dock-middle.png");
     background-repeat: repeat-x;
     background-size: 8px 72px;
 

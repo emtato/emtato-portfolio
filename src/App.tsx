@@ -2,11 +2,12 @@ import {useEffect, useState} from 'react'
 import './index.css'
 import MenuBar from './MenuBar'
 import BrowserWindow from './BrowserWindow'
+import {browser} from "globals";
 
 
 export default function App() {
     const [loading, setLoading] = useState(true)
-    const [browserOpen, setBrowserOpen] = useState(false)
+    const [browserOpen, setBrowserOpen] = useState(true)
     const [focusedAppName, setFocusedAppName] = useState<string | null>("placeholder")
     const [helpOpen, setHelpOpen] = useState(false)
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
@@ -24,7 +25,7 @@ export default function App() {
 
     if (loading) {
         return <div className="loading-main">
-            <img className="potato-icon" alt="a" src="/assets/system-assets/potato-icon.png"/>
+            <img className="potato-icon" alt="a" src="/assets/system/shared/potato-icon.png"/>
             <div className="loading-text">emtato loading..</div>
             <div className="loading-bar">
                 <div className="loading-bar-fill"></div>
@@ -41,12 +42,12 @@ export default function App() {
 
             {/* rest of OS*/
             }
-            <img className="os-main-background" alt="a" src="/assets/system-assets/toronto.jpg"/>
-            <BrowserWindow/>
+            <img className="os-main-background" alt="a" src="/assets/system/desktop/toronto.jpg"/>
+            {browserOpen && <BrowserWindow/>}
             <div className="dock">
-                <img className="dock-left" alt="doc" src="/assets/system-assets/dock-left.png"/>
+                <img className="dock-left" alt="doc" src="/assets/system/dock/dock-left.png"/>
                 <div className="dock-middle"></div>
-                <img className="dock-right" alt="doc" src="/assets/system-assets/dock-right.png"/>
+                <img className="dock-right" alt="doc" src="/assets/system/dock/dock-right.png"/>
             </div>
         </div>
     }

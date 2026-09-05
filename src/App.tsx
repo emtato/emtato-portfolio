@@ -9,7 +9,7 @@ export default function App() {
     const [focusedAppName, setFocusedAppName] = useState<string | null>("placeholder")
     const [helpOpen, setHelpOpen] = useState(false)
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
-
+    //battey thng not work outside localhost
     //TODO: modify things for dark/light mode visually
     useEffect(() => {
         const timer = setTimeout(() => {

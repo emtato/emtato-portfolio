@@ -226,8 +226,25 @@ body {
 .right-side-menu-bar {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 0.5vw;
     display: flex;
+}
+
+.light-mode-button {
+    width: 16px;
+    height: 16px;
+    image-rendering: pixelated;
+    left: -0.7vw;
+    top: -0.3vh;
+    position: absolute;
+}
+
+.dark-mode-button {
+    width: 12px;
+    height: 16px;
+    image-rendering: pixelated;
+    margin-left: -0.8vw;
+    margin-top: -0.2vh;
 }
 
 /* ------------------------------------------------------------------------------------------- -v-

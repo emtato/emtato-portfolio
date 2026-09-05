@@ -9,7 +9,8 @@ export default function App() {
     const [helpOpen, setHelpOpen] = useState(false)
     const [potatoIsSpeaking, setPotatoIsSpeaking] = useState(false)
     const [currentTimeString, setCurrentTimeString] = useState<string | null>("")
-
+    const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
+    //TODO: modify things for dark/light mode visually
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false) //function to call when timer runs out
@@ -25,7 +26,8 @@ export default function App() {
             const now = new Date()
             const shortMonth = now.toLocaleDateString(undefined, {
                 weekday: "short", month: "short", day: "numeric",
-                hour: "numeric", minute: "numeric", second: "numeric"})
+                hour: "numeric", minute: "numeric", second: "numeric"
+            })
             setCurrentTimeString(shortMonth)
         }, 1000)
 
@@ -124,11 +126,28 @@ export default function App() {
             </div>
             {/* right side menu bar*/}
             <div className="right-side-menu-bar">
+                <button className="menu-bar-button" onClick={() => setCurrentModeIsDark(!currentModeIsDark)}>
+                    <span className="link-icon-stack">
+                        {!currentModeIsDark && <img
+                            className=" light-mode-button"
+                            src="/assets/system-assets/light-mode-icon.png"
+                            alt=""
+                        />}
+                        {currentModeIsDark && <img
+                            className="dark-mode-button"
+                            src="/assets/system-assets/dark-mode-icon.png"
+                            alt=""
+                        />}
+                            </span>
+                </button>
+
                 <div className="menu-bar-text">{currentTimeString}</div>
+
 
             </div>
 
-            {/* rest of OS*/}
+            {/* rest of OS*/
+            }
             <img className="os-main-background" alt="a" src="/assets/system-assets/toronto.jpg"/>
             <div className="dock">
                 <img className="dock-left" alt="doc" src="/assets/system-assets/dock-left.png"/>

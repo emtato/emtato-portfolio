@@ -250,12 +250,17 @@ body {
     margin-top: -0.2vh;
 }
 
+.battery {
+    position: relative;
+}
+
 .battery-percentage {
-    font: 11px "Emtato Pixel";
+    font: 10px "Emtato Pixel";
     color: var(--color-smoky-charcoal);
-    margin-top: 10.5px;
     position: absolute;
-    right: 239.5px;
+    top: 11px;
+    left: 19px;
+    transform: translateX(-50%);
     z-index: 1;
     font-weight: bold;
 }
@@ -287,20 +292,24 @@ body {
 /* ------------------------------------------------------------------------------------------- -v-
                                         dock
 ----------------------------------------------------------------------------------------------- -o- */
-.dock-left {
-    position: absolute;
+.dock {
+    width: 80vw;
     bottom: 0;
     left: 10vw;
+    position: absolute;
+    display: flex;
+}
+
+.dock-left {
+    bottom: 0;
     width: 40px; /* end caps 5x9 scaled up to 40x72 */
     image-rendering: pixelated;
 }
 
 .dock-middle {
-    width: 75vw; /* BUG HERE WHEN TALL AND NARROW IDKY*/
+    width: 75vw;
     height: 72px;
-    position: absolute;
     bottom: 0;
-    left: 12.5vw;
 
     background-image: url("/assets/system-assets/dock-middle.png");
     background-repeat: repeat-x;
@@ -310,9 +319,7 @@ body {
 }
 
 .dock-right {
-    position: absolute;
     bottom: 0;
-    right: 10vw;
     width: 40px;
     image-rendering: pixelated;
 }

@@ -128,8 +128,10 @@ export default function MenuBar({
                 <img className="migu" alt="a" src="/assets/system-assets/menu-bar/speech-bubble.png"/>
                 <div className="miguspeak">hiding in your wifi</div>
             </>}
-            <div className="battery-percentage">{batteryPercentage}</div>
-            <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/battery-icon.png"/>
+            <div className="battery">
+                <div className="battery-percentage">{batteryPercentage}</div>
+                <img className="menu-bar-icon" alt="a" src="/assets/system-assets/menu-bar/battery-icon.png"/>
+            </div>
             <button className="menu-bar-button" onClick={onToggleMode}>
                 <span className="link-icon-stack">
                     {!currentModeIsDark && <img

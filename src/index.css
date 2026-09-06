@@ -5,6 +5,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 html,
 body,
 #root {
@@ -19,6 +20,7 @@ body,
     height: 100dvh;
     overflow: hidden;
 }
+
 :root {
     /* Photo colours: foundation */
     --color-black: #000000;
@@ -26,6 +28,7 @@ body,
     --color-smoky-charcoal: #332f2d;
     --color-dusk-plum: #4d3c3c;
     --color-brown: #6c4c4b;
+    --colour-brick: #894742;
     --color-cloud-coral: #c95848;
     --color-ember-orange: #f08a5d;
     --color-golden-highlight: #f4c56a;
@@ -38,13 +41,15 @@ body,
     --color-bright-plum: #b85c8a;
     --color-grey-plum: #7d6c77;
     --color-bright-coral: #ef6356;
-    --color-orange-red: #f65a3a;
+    --colour-orange-red: #CE4C40;
+    --color-orange: #f65a3a;
     --color-tangerine: #ff7a3d;
     --color-bright-orange: #ff914d;
     --color-apricot: #ffb36b;
     --color-marigold: #f6b73c;
     --color-yellow: #ffd166;
     --color-butter-yellow: #ffe29a;
+    --colour-peach: #F0DABD;
     --color-blush: #f79aaa;
 }
 

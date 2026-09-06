@@ -27,12 +27,26 @@ export default function BrowserWindow() {
         <div className="browser-window-left"></div>
         <div className="browser-window-center">
             <div className="browser-window-search-layer">
-                <div className="browser-window-search-bar"></div>
+                <div className="browser-window-toolbar">
+                    <button className="browser-nav-button">
+                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/back.png"/>
+                    </button>
+                    <button className="browser-nav-button">
+                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/next.png"/>
+                    </button>
+                    <button className="browser-nav-button">
+                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/reload.png"/>
+                    </button>
+                    <button className="browser-nav-button">
+                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>
+                    </button>
+                    <div className="browser-window-search-bar"></div>
+                </div>
             </div>
             <div className="browser-window-page-content"></div>
-
         </div>
         <div className="browser-window-right"></div>
+
         <div className="browser-window-bottomleft">
             <img className="browser-window-render-bottom-row" alt="a"
                  src="/assets/browser/frame/bottom-left-corner-browser.png"/>

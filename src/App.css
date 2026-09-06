@@ -11,7 +11,7 @@
     top: 40px;
     box-shadow: 7px 21px 0 rgba(5, 14, 3, 0.5);
     display: grid;
-    grid-template-columns: 7px minmax(0, 1fr) 14px;
+    grid-template-columns: 7px minmax(0, 1fr) 7px;
     grid-template-rows: auto minmax(0, 1fr) auto;
 }
 
@@ -112,7 +112,7 @@
     position: absolute;
     top: 3.3px;
     left: 5px;
-    right: 5px;
+    right: 15px;
 }
 
 .browser-nav-button {
@@ -147,7 +147,7 @@
 }
 
 .browser-tiled-search-bar {
-    width: 75%;
+    width: 100%;
     position: relative;
     background-image: url("/assets/browser/toolbar/search-bar.png");
     background-repeat: repeat-x;
@@ -202,4 +202,14 @@
 .browser-window-bottomright {
     display: flex;
     justify-content: flex-end;
+}
+
+
+/*mobile ui css changes*/
+@media (max-width: 910px) {
+    .browser-window {
+        width: 95vw;
+        left: 5vw;
+        top: 30px;
+    }
 }

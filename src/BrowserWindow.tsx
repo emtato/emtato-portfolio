@@ -38,12 +38,16 @@ export default function BrowserWindow() {
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/reload.png"/>
                     </button>
                     <button className="browser-nav-button">
-                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>
+                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/home-icon.png"/>
                     </button>
                     <div className="browser-search-bar-combined">
-                        <img className="browser-search-bar-bounds" alt="a" src="/assets/browser/toolbar/search-bar-bound.png"/>
+                        <img className="browser-search-bar-bounds" alt="a"
+                             src="/assets/browser/toolbar/search-bar-bound.png"/>
                         <div className="browser-tiled-search-bar"></div>
                     </div>
+                    <button className="browser-nav-button">
+                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>
+                    </button>
                 </div>
             </div>
             <div className="browser-window-page-content"></div>

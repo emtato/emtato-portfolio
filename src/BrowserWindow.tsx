@@ -44,6 +44,8 @@ export default function BrowserWindow() {
                         <img className="browser-search-bar-bounds" alt="a"
                              src="/assets/browser/toolbar/search-bar-bound.png"/>
                         <div className="browser-tiled-search-bar"></div>
+                        <img className="browser-search-icon" alt=""
+                             src="/assets/browser/toolbar/search-icon.png"/>
                     </div>
                     <button className="browser-nav-button">
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>

@@ -40,7 +40,10 @@ export default function BrowserWindow() {
                     <button className="browser-nav-button">
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>
                     </button>
-                    <div className="browser-window-search-bar"></div>
+                    <div className="browser-search-bar-combined">
+                        <img className="browser-search-bar-bounds" alt="a" src="/assets/browser/toolbar/search-bar-bound.png"/>
+                        <div className="browser-tiled-search-bar"></div>
+                    </div>
                 </div>
             </div>
             <div className="browser-window-page-content"></div>

@@ -115,13 +115,26 @@
     margin-left: 15px;
 }
 
-.browser-window-search-bar {
-    width: 75%;
-    height: 34px;
+.browser-search-bar-combined {
+    display: flex;
+    position: relative;
+    width: 100%;
+    gap: 0;
+    top: -1px;
+    margin-left: 15px;
+    height: 30px;
 
+}
+
+.browser-search-bar-bounds { /*1x15 -> 36/15 =2.4: 1pixel is 2.4px*/
+}
+
+.browser-tiled-search-bar {
+    width: 75%;
+    position: relative;
     background-image: url("/assets/browser/toolbar/search-bar.png");
     background-repeat: repeat-x;
-    background-size: 4px 34px;
+    background-size: 4px 36px;
     image-rendering: pixelated;
     z-index: 15;
 }

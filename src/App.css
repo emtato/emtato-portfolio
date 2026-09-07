@@ -140,6 +140,51 @@
     margin-left: 15px;
 }
 
+/* -------------------------------- tabs  --------------------------------------- */
+.browser-tabs-list {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    left: 150px;
+    top: 4px;
+    gap: 15px;
+}
+
+.browser-tab-button {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    z-index: 16;
+    top: 10px;
+    left: 10px;
+}
+
+.browser-tab-label {
+    color: var(--colour-peach);
+    font: 13px "Emtato Pixel";
+    z-index: 17;
+    position: relative;
+
+}
+
+.browser-tab-button:hover {
+    cursor: pointer;
+}
+
+.browser-tab-button:hover .browser-tab-label {
+    color: var(--color-warm-cream);
+    cursor: pointer;
+}
+
+.browser-tab-img {
+    width: 150px;
+    top: 0;
+    position: absolute;
+    z-index: 16;
+}
+
 /* -------------------------------- toolbar search bar + page content --------------------------------------- */
 
 .browser-search-bar-combined {
@@ -147,7 +192,7 @@
     position: relative;
     width: 100%;
     gap: 0;
-    top: -1px;
+    top: -0.5px;
     margin-left: 15px;
     height: 30px;
 }

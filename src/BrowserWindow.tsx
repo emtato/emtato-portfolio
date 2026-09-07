@@ -2,26 +2,32 @@ import './App.css'
 import {useState} from "react";
 import BrowserTab from "./BrowserTab.tsx";
 
+export interface BrowserWindowProps {
+    isOpen: boolean
+    onClose: () => void
+    isBig: boolean
+    maximize: () => void //maximize window
+    minimize: () => void
+}
 
-export default function BrowserWindow() {
+export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize, minimize}: BrowserWindowProps) {
     const [activeTab, setActiveTab] = useState(0) //0 -> about me, 1 -> projects, 2 -> contact
 
     /* main browser window render
     * top row */
-    return <div className="browser-window">
+    return <div className={isBig ? "browser-window-big" : "browser-window"}>
         <div className="browser-window-topleft">
             <img className="browser-window-render-top-row" alt="a"
                  src="/assets/browser/frame/top-left-corner-browser.png"/>
             <div className="browser-window-traffic-lights">
-                <button className="circle-button" onClick={() => {
-                }}>
+                <button className="circle-button" onClick={onClose}>
                     <img className="browser-window-traffic-light" alt="a" src="/assets/system/close-icon.png"/>
                 </button>
-                <button className="circle-button" onClick={() => {
-                }}>
+                <button className="circle-button" onClick={minimize}>
                     <img className="browser-window-traffic-light" alt="a" src="/assets/system/min-icon.png"/></button>
-                <button className="circle-button" onClick={() => {
-                }}><img className="browser-window-traffic-light" alt="a" src="/assets/system/max-icon.png"/></button>
+                <button className="circle-button" onClick={maximize}>
+                    <img className="browser-window-traffic-light" alt="a" src="/assets/system/max-icon.png"/>
+                </button>
             </div>
         </div>
         <div className="browser-window-top">
@@ -30,7 +36,6 @@ export default function BrowserWindow() {
                 <BrowserTab id={0} label="About Me" isActive={activeTab === 0} onSelect={() => setActiveTab(0)}/>
                 <BrowserTab id={1} label="Projects" isActive={activeTab === 1} onSelect={() => setActiveTab(1)}/>
                 <BrowserTab id={2} label="Contact" isActive={activeTab === 2} onSelect={() => setActiveTab(2)}/>
-
             </div>
         </div>
         <div className="browser-window-topright">
@@ -51,7 +56,9 @@ export default function BrowserWindow() {
                     <button className="browser-nav-button">
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/reload.png"/>
                     </button>
-                    <button className="browser-nav-button">
+                    <button className="browser-nav-button" onClick={() => {
+                        setActiveTab(0)
+                    }}>
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/home-icon.png"/>
                     </button>
                     <div className="browser-search-bar-combined">
@@ -66,7 +73,15 @@ export default function BrowserWindow() {
                     </button>
                 </div>
             </div>
-            <div className="browser-window-page-content"></div>
+            <div className="browser-window-page-content">
+                {/* render pages*/}
+                <div className="browser-window-page">
+                    {activeTab === 0 && <div>
+
+
+                    </div>}
+                </div>
+            </div>
         </div>
         <div className="browser-window-right"></div>
         {/* bottom row*/}

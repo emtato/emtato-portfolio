@@ -404,7 +404,7 @@ body {
     left: 10vw;
     position: absolute;
     display: flex;
-    z-index: 15;
+    z-index: 10;
 }
 
 .dock-left {

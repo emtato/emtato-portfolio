@@ -11,7 +11,8 @@ export default function App() {
     const [focusedAppName, setFocusedAppName] = useState<string | null>("placeholder")
     const [helpOpen, setHelpOpen] = useState(false)
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
-    //battey thng not work outside localhost
+    const [isMaximized, setIsMaximized] = useState(false)
+
     //TODO: modify things for dark/light mode visually
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -43,7 +44,14 @@ export default function App() {
             {/* rest of OS*/
             }
             <img className="os-main-background" alt="a" src="/assets/system/desktop/toronto.jpg"/>
-            {browserOpen && <BrowserWindow/>}
+            {browserOpen && <BrowserWindow
+                isOpen={browserOpen}
+                onClose={() => setBrowserOpen(false)}
+                isBig={isMaximized}
+                maximize={() => setIsMaximized(true)}
+                minimize = {() => setIsMaximized(false)}
+
+            />}
             <div className="dock">
                 <img className="dock-left" alt="doc" src="/assets/system/dock/dock-left.png"/>
                 <div className="dock-middle"></div>

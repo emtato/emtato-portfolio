@@ -410,24 +410,26 @@ body {
 
 .dock-left {
     bottom: 0;
-    width: 40px; /* end caps 5x9 scaled up to 40x72 */
+    height: 63px;
+    width: 35px; /* end caps 5x9 scaled up to 35x63 */
     image-rendering: pixelated;
 }
 
 .dock-middle {
     width: 75vw;
-    height: 72px;
+    height: 63px;
     bottom: 0;
 
     background-image: url("/assets/system/dock/dock-middle.png");
     background-repeat: repeat-x;
-    background-size: 8px 72px;
+    background-size: 8px 63px;
 
     image-rendering: pixelated;
 }
 
 .dock-right {
     bottom: 0;
-    width: 40px;
+    height: 63px;
+    width: 35px;
     image-rendering: pixelated;
 }

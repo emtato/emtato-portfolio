@@ -5,7 +5,7 @@
 .browser-window {
     width: 97vw;
     left: 1.5vw;
-    height: 87.4vh;
+    height: 89vh;
     z-index: 10;
     position: absolute;
     top: 40px;
@@ -44,16 +44,20 @@
 .browser-window-traffic-lights {
     display: flex;
     position: absolute;
-    top: 21px;
+    top: 23px;
     z-index: 15;
-    left: 6px;
+    left: 27px;
     image-rendering: pixelated;
+    gap: 15px;
 }
 
 .circle-button {
     background-color: transparent;
     border: none;
     padding: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
 }
 
 .circle-button:hover {
@@ -62,9 +66,9 @@
 }
 
 .browser-window-traffic-light {
+    display: block;
     width: 22px;
     height: 22px;
-    margin-left: 12px;
 }
 
 .browser-window-top {
@@ -287,9 +291,9 @@
 
 .aboutme-background-img {
     transform: rotate(6.7deg);
-    width: 170%;
-    margin-left: 60%;
-    margin-top: 58%;
+    width: 175%;
+    margin-left: 70%;
+    margin-top: 63%;
     object-fit: cover;
     z-index: 3;
     position: absolute;
@@ -335,5 +339,6 @@
         width: 95vw;
         left: 5vw;
         top: 30px;
+        height: 90vh;
     }
 }

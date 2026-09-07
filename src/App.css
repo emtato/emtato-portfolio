@@ -147,7 +147,7 @@
     width: 100%;
     left: 150px;
     top: 4px;
-    gap: 15px;
+    gap: 20px;
 }
 
 .browser-tab-button {
@@ -163,9 +163,10 @@
 
 .browser-tab-label {
     color: var(--colour-peach);
-    font: 13px "Emtato Pixel";
+    font: 14px "Emtato Pixel";
     z-index: 17;
     position: relative;
+    top: 3px;
 
 }
 
@@ -183,6 +184,7 @@
     top: 0;
     position: absolute;
     z-index: 16;
+    left: 0;
 }
 
 /* -------------------------------- toolbar search bar + page content --------------------------------------- */

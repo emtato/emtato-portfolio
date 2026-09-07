@@ -28,7 +28,9 @@ export default function BrowserWindow() {
             {/* render tabs*/}
             <div className="browser-tabs-list">
                 <BrowserTab id={0} label="About Me" isActive={activeTab === 0} onSelect={() => setActiveTab(0)}/>
-                <BrowserTab id={0} label="About Me" isActive={activeTab === 0} onSelect={() => setActiveTab(0)}/>
+                <BrowserTab id={1} label="Projects" isActive={activeTab === 1} onSelect={() => setActiveTab(1)}/>
+                <BrowserTab id={2} label="Contact" isActive={activeTab === 2} onSelect={() => setActiveTab(2)}/>
+
             </div>
         </div>
         <div className="browser-window-topright">

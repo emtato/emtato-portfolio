@@ -61,7 +61,7 @@ export default function MenuBar({
                 {/* left side menu bar*/}
 
                 <div className="menu-bar-text">{focusedAppName}</div>
-                <a className="menu-bar-button" href="/assets/documents/Emilia%20Ma%20resume.pdf" target="_blank">Resume
+                <a className="menu-bar-button" href="/assets/Emilia%20Ma%20resume.pdf" target="_blank">Resume
                     <span className="link-icon-stack">
                     <img
                         className="link-icon-menubar link-icon-default"

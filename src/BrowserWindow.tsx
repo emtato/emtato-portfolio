@@ -1,6 +1,7 @@
 import './App.css'
 import {useState} from "react";
 import BrowserTab from "./components/BrowserTab.tsx";
+import AboutMe from "./components/AboutMe.tsx";
 
 export interface BrowserWindowProps {
     isOpen: boolean
@@ -76,8 +77,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
             <div className="browser-window-page-content">
                 {/* render pages*/}
                 <div className="browser-window-page">
-                    {activeTab === 0 && <div>
-                    </div>}
+                    {activeTab === 0 && <AboutMe/>}
                 </div>
             </div>
         </div>

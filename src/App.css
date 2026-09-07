@@ -263,8 +263,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
+/* --------------------------------- about me page --------------------------------- */
+.outer-aboutme-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* defined position + overflw hidden will make children overflow cut off. without position, children look for higher parent*/
+}
+
+.aboutme-behindnotebook {
+    z-index: 1;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutme-background-img {
+    transform: rotate(6.7deg);
+    width: 170%;
+    margin-left: 60%;
+    margin-top: 58%;
+    object-fit: cover;
+    z-index: 3;
+    position: absolute;
+}
 
 /* -------------------------------- browser window bottom row ------------------------------- */
 

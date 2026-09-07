@@ -53,6 +53,7 @@ export default function MenuBar({
             <button className="potato-button" onClick={potatoed}>
                 <img className="menu-bar-potato-icon" alt="a" src="/assets/system/potato-icon.png"/>
             </button>
+            <div className="potato-click-hint">click me!</div>
             {potatoIsSpeaking && <>
                 <img className="potatomeow" alt="a" src="/assets/system/menu-bar/speech-bubble.png"/>
                 <div className="potatospeak">meow</div>

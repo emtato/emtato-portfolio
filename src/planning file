@@ -11,3 +11,21 @@
 * Keep resume, GitHub, LinkedIn, and email permanently accessible. (Menu bar?)
 * Interactivity: whatever url entered into the tab and enter makes the actual portfolio website redirect to that url completely
 * Support mobile, keyboard navigation, real URLs, and the browser back button.
+
+
+
+about me:
+* one wide pixel notebook background asset with both pages + spine visible. zoom/pan to one half at a time. text, photos, doodles etc are placed over it later so i can draw the notebook before deciding exact content
+* first view is the left page: about me part 1 + immediately readable short bio
+* scrolling down/right arrow/on-screen arrow pans the camera across the spine to the right page: about me part 2
+    * need a visual arrow/doodle/button so its obvious theres more content
+    * arrow, keyboard, and scrolling should all control the same transition
+* scrolling again pans back left and stops with the spine centred
+* as scrolling continues, notebook background fades and the spiral slowly unravels into a straight line for my timeline
+    * scroll controls animation progress at the users own pace; scrolling backwards should rewind it
+    * spiral should be its own transparent layer/animation frames instead of redrawing the whole notebook every frame (maybe 12-24 frames)
+* visual layers: notebook background, html text/photos/doodles, spiral animation, timeline
+* keep each notebook half mostly inside one browser view so scrolling means advance the scene instead of scroll through a long page
+* hover over photos: zoom slightly, rotate/straighten a little, bring to front. tap alternative on mobile and no important info only on hover
+* decorative arrows, drawings, tape, shadows, page thickness, bookmarks etc to make it feel like a physical scrapbook instead of plain lined paper
+* reduced-motion/mobile fallback can use simple fades/page switches instead of the full camera + spiral animation

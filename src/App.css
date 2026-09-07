@@ -111,8 +111,9 @@
 }
 
 .browser-window-center {
-    width: 100%;
     height: 100%;
+    display: grid;
+    grid-template-rows: 42px minmax(0, 1fr); /* dvide centre space into two stacked rows: 42px toolbar height, rest for page content */
 }
 
 .browser-window-search-layer {
@@ -236,9 +237,6 @@
     image-rendering: pixelated;
 }
 
-.browser-window-page-content {
-}
-
 .browser-window-right {
     width: 7px;
     justify-self: end;
@@ -252,6 +250,12 @@
 /* ------------------------------------------------------------------------------------------- -v-
                                     browser main page contents
 ----------------------------------------------------------------------------------------------- -o- */
+
+.browser-window-page-content {
+    height: calc(100% + 14px); /* add 14 px to the page content's height to account for the bottom row's space taken */
+
+}
+
 .browser-window-page {
     width: 100%;
     height: 100%;
@@ -259,7 +263,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-black);
 }
 
 

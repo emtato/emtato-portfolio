@@ -247,7 +247,7 @@ body {
     position: absolute;
     top: 33px;
     left: 3px;
-    z-index: 21;
+    z-index: 16;
     color: var(--color-warm-cream);
     font: 6.3px "Emtato Pixel";
     white-space: nowrap;

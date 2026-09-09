@@ -309,7 +309,7 @@
     transform: rotate(6.7deg);
     width: 175%;
     left: -4%;
-    top: 6%;
+    top: 6.7%;
     object-fit: cover;
     position: absolute;
     z-index: 2;
@@ -339,7 +339,7 @@
 .aboutme-title-1 {
     font: 5cqw "NYCD";
     position: absolute;
-    top: 0%;
+    top: 0.3%;
     left: 35%;
 }
 
@@ -347,13 +347,29 @@
     width: 25%;
     aspect-ratio: 3213 / 4388;
     position: absolute;
-    top: 8%;
-    left: 67%;
+    top: 7.17%;
+    left: 66.7%;
     z-index: 5;
 }
 
-.aboutme-portrait-frame {
+.aboutme-tape {
+    image-rendering: pixelated;
+    z-index: 6;
+    width: 8%;
+    position: absolute;
+    top: 6%;
+    left: 77%;
+    opacity: 0.5;
+}
 
+.aboutme-plant {
+    image-rendering: pixelated;
+    z-index: 6;
+    width: 3%;
+    position: absolute;
+    top: 10.3%;
+    left: 78.6%;
+    transform: rotate(-10deg);
 }
 
 .aboutme-text {

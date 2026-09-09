@@ -7,7 +7,9 @@ export default function AboutMe() {
             <div className="aboutme-page1-container">
                 <div className="aboutme-title-1"> hello! :)</div>
                 <div className="aboutme-text-withstar">i'm emilia ☆</div>
-                <img className="aboutme-portrait" alt="a" src="/assets/browser/content/about-me/me.jpg"/>
+                <img className="aboutme-portrait" alt="a" src="/assets/browser/content/about-me/me 2.jpg"/>
+                <img className="aboutme-tape" alt="a" src="/assets/browser/content/about-me/tape.png"/>
+                <img className="aboutme-plant" alt="a" src="/assets/browser/content/about-me/plant.png"/>
                 <div className="aboutme-text">welcome to my portfolio</div>
                 <div className="aboutme-text">i love cats</div>
                 <div className="aboutme-text">i love 2d men</div>
@@ -18,3 +20,4 @@ export default function AboutMe() {
     </div>
 }
 
+3

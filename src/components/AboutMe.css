@@ -53,6 +53,22 @@
     z-index: 3;
 }
 
+/* panning */
+
+.notebook-pan {
+    position: absolute;
+    inset: 0;
+    transition: transform 600ms ease;
+    z-index: 2;
+}
+
+.notebook-pan-page-1 {
+    transform: translateX(0);
+}
+
+.notebook-pan-page-2 {
+    transform: translate(-50%, -18%);
+}
 
 /* ------------------------------------------------------------------------------------------- -v-
                                   notebook page layouts
@@ -221,15 +237,51 @@
     box-sizing: border-box;
     padding: 5.3% 4.2% 0 6%;
 }
-.aboutme-title-2{
-     font: 4cqw "NYCD";
+
+.aboutme-title-2 {
+    font: 4cqw "NYCD";
     position: absolute;
     top: 1.5%;
     left: 23%;
 }
+
 /* custom single placement */
 
+.aboutme-page2-gif-group {
+    position: absolute;
+    width: 22%;
+    height: 22.5%;
+    top: 6.2%;
+    left: 69.5%;
+}
 
+.aboutme-page2-tape-placement {
+    width: 50%;
+    left: 30%;
+    top: 0;
+    z-index: 6;
+}
+
+.aboutme-page2-gif-placement {
+    top: 5%;
+    width: 100.8%;
+}
+
+.aboutme-page2-caption-placement {
+    top: 64%;
+    left: 63%;
+    width: 100%;
+    z-index: 6;
+    font: 1.6cqw "Caveat";
+    color: var(--color-warm-cream);
+}
+
+.aboutme-arrow-placement-1 {
+    width: 20%;
+    top: 55%;
+    left: 57%;
+    transform: rotate(-10deg);
+}
 
 /* ————————————————————————————————————————— mobile ———————————————————————————————————————————————————————————— */
 
@@ -258,21 +310,20 @@
         width: 80%;
         height: 10%;
     }
-}
 
-/* panning */
+    .notebook-pan {
+        position: absolute;
+        inset: 0;
+        transition: transform 600ms ease;
+        z-index: 2;
+    }
 
-.notebook-pan {
-    position: absolute;
-    inset: 0;
-    transition: transform 600ms ease;
-    z-index: 2;
-}
+    .notebook-pan-page-1 {
+        transform: translateX(0);
+    }
 
-.notebook-pan-page-1 {
-    transform: translateX(0);
-}
+    .notebook-pan-page-2 {
+        transform: translate(-110%, -8%);
+    }
 
-.notebook-pan-page-2 {
-    transform: translate(-50%, -18%);
 }

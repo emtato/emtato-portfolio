@@ -13,6 +13,11 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: "Caveat";
+    src: url("/assets/fonts/Caveat/static/Caveat-Regular.ttf") format("truetype");
+    font-weight: 600;
+}
 
 /* ------------------------------------------------------------------------------------------- -v-
                                        browser window

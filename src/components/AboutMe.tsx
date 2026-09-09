@@ -54,7 +54,15 @@ export default function AboutMe() {
                     <div className="aboutme-page2-container">
                         <div className="aboutme-title-2"> bits of my life</div>
                         <div className="aboutme-text">Outside of coding, I’m usually lifting,</div>
-                        <div className="aboutme-text">i love 2d men</div>
+                        <div className="aboutme-page2-gif-group">
+                            <img className="aboutme-placed-item aboutme-page2-gif-placement" alt="a"
+                                 src="/assets/browser/content/about-me/cat-gym.gif"/>
+                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement" alt="a"
+                                 src="/assets/browser/content/about-me/big-tape.png"/>
+                            <div className="aboutme-page2-caption-placement aboutme-placed-item">me btw</div>
+                            <img className="aboutme-placed-item aboutme-arrow-placement-1" alt="a" src="/assets/browser/content/about-me/white-arrow.png"/>
+                        </div>
+                        {/*<div className="aboutme-text">i love 2d men</div>*/}
                     </div>
                 </div>
             </div>

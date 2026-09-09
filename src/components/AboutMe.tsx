@@ -26,17 +26,20 @@ export default function AboutMe() {
                     <a className="aboutme-link" href="https://github.com/emtato/tempo." target="_blank">tempo.</a>
                     <span>,</span>
                 </div>
-                <div className="aboutme-text"> and my software dev internship at ontario gov</div>
-                 <img className="aboutme-placed-item page1-longhighlight-2 aboutme-highlight" alt="a"
+                <div className="aboutme-text"> and my software dev internship</div>
+                <img className="aboutme-placed-item page1-longhighlight-2 aboutme-highlight" alt="a"
                      src="/assets/browser/content/about-me/long-highlight.png"/>
-                <div className="aboutme-text"> </div>
-
-                <div className="aboutme-text">i love cats</div>
-                <div className="aboutme-text">i love 2d men</div>
-
-
+                <div className="aboutme-text">at the ontario government</div>
+                <div className="aboutme-text">☆</div>
+                <div className="aboutme-text">i love making things that feel fun and meaningful to me</div>
+                <div className="aboutme-text"> and nothing beats seeing all the pieces finally come together ☆</div>
             </div>
+            <div className="aboutme-text">i love cats</div>
+            <div className="aboutme-text">i love 2d men</div>
+
+
         </div>
+
     </div>
 }
 

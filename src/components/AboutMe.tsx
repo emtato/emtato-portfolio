@@ -1,7 +1,8 @@
 import './AboutMe.css'
+import {useState} from "react";
 
 export default function AboutMe() {
-
+    const [pageNumber, setPageNumber] = useState(1) /* 1,2,3*/
     return <div className="aboutme-scroll-container">
         <div className="outer-aboutme-container">
             <img className="aboutme-behindnotebook" alt="a" src="/assets/browser/content/about-me/desk.webp"/>
@@ -33,22 +34,27 @@ export default function AboutMe() {
                     <div className="aboutme-text">at the ontario government</div>
                     <div className="aboutme-text">☆</div>
                     <div className="aboutme-text">i ♥ making things that feel fun & meaningful to me</div>
-                    <div className="aboutme-text"> </div>
+                    <div className="aboutme-text"></div>
                     <img className="aboutme-placed-item page1-underline-1" alt="a"
                          src="/assets/browser/content/about-me/underline.png"/>
                     <div className="aboutme-text">
                         <span> and nothing beats seeing it all come together</span>
                         <span className="aboutme-text-withstar">‎ ☆</span>
                     </div>
+                    <button className="next-page-button" onClick={() => {
+                        setPageNumber(2)
+                    }}><span className="next-page-desktop-text">next page -&gt;</span>
+                        <span className="next-page-mobile-text">more about me! (press) -&gt;</span>
+                    </button>
                 </div>
-                <div className="aboutme-text">i love cats</div>
-                <div className="aboutme-text">i love 2d men</div>
-
-
+                <div className="aboutme-page2-container">
+                    <div className="aboutme-text">i love cats</div>
+                    <div className="aboutme-text">i love 2d men</div>
+                </div>
             </div>
 
         </div>
-         <div className="aboutme-scroll-space" />
+        <div className="aboutme-scroll-space"/>
 
     </div>
 }

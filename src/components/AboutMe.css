@@ -104,10 +104,32 @@
     }
 
     .aboutme-text-withstar {
-        font: 1.6cqw "Arvo";
+        font: 1.6cqw "arvo";
         color: var(--color-bright-plum);
         line-height: 2.2cqw;
+
     }
+}
+
+.next-page-button {
+    position: absolute;
+
+    left: 10%;
+    top: 43.5%;
+
+    z-index: 5;
+    border: none;
+    background-color: transparent;
+    font: 2.2cqw "NYCD";
+    color: var(--color-bright-plum);
+}
+
+.next-page-mobile-text {
+    position: absolute;
+    left: 15%;
+    top: 43.5%;
+    width: 100%;
+    display: none;
 }
 
 /* Future page 2 layout:
@@ -183,12 +205,39 @@
     left: 63.4%;
 }
 
+/* ------------------------------------------------------------------------------------------- -v-
+                                             page 2
+----------------------------------------------------------------------------------------------- -o- */
+
+.aboutme-page2-container {
+
+}
+
+
+/* ————————————————————————————————————————— mobile ———————————————————————————————————————————————————————————— */
+
 @media (max-width: 910px) {
     .notebook-anchor { /* adjust zoom and positioning on mobile*/
         left: -11%;
     }
 
     .aboutme-page1-container {
-         padding: 5.3% 3% 0 6%;
+        padding: 5.3% 3% 0 6%;
+    }
+
+    .next-page-desktop-text { /* toggle display depending on dimensions */
+        display: none;
+    }
+
+    .next-page-mobile-text {
+        display: inline;
+        position: absolute;
+        top: 95%;
+    }
+
+    .next-page-button {
+        font: 2.6cqw "NYCD";
+        width: 80%;
+        height: 10%;
     }
 }

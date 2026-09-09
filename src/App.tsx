@@ -33,7 +33,7 @@ export default function App() {
                 <div className="loading-bar-fill"></div>
             </div>
         </div>}
-        return <div className="os-main">
+        <div className="os-main">
             <MenuBar
                 focusedAppName={focusedAppName}
                 currentModeIsDark={currentModeIsDark}
@@ -57,5 +57,6 @@ export default function App() {
                 <div className="dock-middle"></div>
                 <img className="dock-right" alt="doc" src="/assets/system/dock/dock-right.png"/>
             </div>
-        </div></>
+        </div>
+    </>
 }

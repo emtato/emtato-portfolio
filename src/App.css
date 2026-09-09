@@ -309,7 +309,7 @@
     transform: rotate(6.7deg);
     width: 175%;
     left: -4%;
-    top: -6%;
+    top: 6%;
     object-fit: cover;
     position: absolute;
     z-index: 2;
@@ -323,7 +323,6 @@
     position: absolute;
     left: 0;
     top: 0;
-
 }
 
 .aboutme-page1-container {
@@ -333,19 +332,39 @@
     flex-direction: column;
     position: relative;
     z-index: 4;
+    box-sizing: border-box; /* box + paddingto start text off in writeable areas of notebook*/
+    padding: 5.8% 6.5%;
 }
 
-.aboutme-title {
+.aboutme-title-1 {
     font: 5cqw "NYCD";
-    z-index: 40;
     position: absolute;
-    top: 5.8%;
+    top: 0%;
     left: 35%;
 }
 
-.aboutme-text {
-    font: 12px "Arvo"
+.aboutme-portrait { /* source dimensions: 3213 × 4388 */
+    width: 25%;
+    aspect-ratio: 3213 / 4388;
+    position: absolute;
+    top: 8%;
+    left: 67%;
+    z-index: 5;
+}
 
+.aboutme-portrait-frame {
+
+}
+
+.aboutme-text {
+    font: 1.6cqw "Arvo";
+    margin-bottom: 2.25%;
+}
+
+.aboutme-text-withstar { /* for some reason the star formats weird*/
+    font: 1.6cqw "Arvo";
+    margin-bottom: 2%;
+    color: var(--color-bright-plum);
 }
 
 /* -------------------------------- browser window bottom row ------------------------------- */

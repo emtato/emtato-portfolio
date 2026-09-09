@@ -1,3 +1,19 @@
+@font-face {
+    font-family: "Arvo";
+    src: url("/assets/fonts/Arvo/Arvo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "NYCD";
+    src: url("/assets/fonts/Nothing_You_Could_Do/NothingYouCouldDo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* ------------------------------------------------------------------------------------------- -v-
                                        browser window
 ----------------------------------------------------------------------------------------------- -o- */
@@ -289,14 +305,40 @@
     height: 100%;
 }
 
-.aboutme-background-img {
+.notebook-anchor { /*one shared coordinate system so that all elements can be glued to it, no drift when different aspect ratios*/
     transform: rotate(6.7deg);
     width: 175%;
-    margin-left: 70%;
-    margin-top: 63%;
+    left: 15%;
+    top: -5%;
     object-fit: cover;
-    z-index: 3;
     position: absolute;
+    z-index: 2;
+    aspect-ratio: 3 / 2;
+    container-type: inline-size; /* make text be able to reference sizeof ocntainer*/
+}
+
+.aboutme-background-img { /* since notebook anchor occupies the same box as the notebook image,left 50% would mean middle of notebook, easy*/
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    left: -8%;
+    top: -7%;
+}
+
+.aboutme-page1-container {
+}
+
+.aboutme-title {
+    font: 5cqw "NYCD";
+
+    z-index: 40;
+    position: absolute;
+    top: 30%;
+}
+
+.aboutme-text {
+    font: 12px "Arvo"
+
 }
 
 /* -------------------------------- browser window bottom row ------------------------------- */

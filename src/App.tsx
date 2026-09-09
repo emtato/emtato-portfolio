@@ -24,15 +24,15 @@ export default function App() {
     //TODO: fix backgrund image dimensions upon window resize
     //TODO: remeber to add website to resume and cover letter and github and linkedin when done
 
-    if (loading) {
-        return <div className="loading-main">
+
+    return <>  {loading &&
+        <div className="loading-main">
             <img className="potato-icon" alt="a" src="/assets/system/potato-icon.png"/>
             <div className="loading-text">emtato loading..</div>
             <div className="loading-bar">
                 <div className="loading-bar-fill"></div>
             </div>
-        </div>
-    } else {
+        </div>}
         return <div className="os-main">
             <MenuBar
                 focusedAppName={focusedAppName}
@@ -49,7 +49,7 @@ export default function App() {
                 onClose={() => setBrowserOpen(false)}
                 isBig={isMaximized}
                 maximize={() => setIsMaximized(true)}
-                minimize = {() => setIsMaximized(false)}
+                minimize={() => setIsMaximized(false)}
 
             />}
             <div className="dock">
@@ -57,6 +57,5 @@ export default function App() {
                 <div className="dock-middle"></div>
                 <img className="dock-right" alt="doc" src="/assets/system/dock/dock-right.png"/>
             </div>
-        </div>
-    }
+        </div></>
 }

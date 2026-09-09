@@ -33,7 +33,7 @@
 }
 
 .notebook-anchor {
-    width: max(140%, 130cqh); /* prevent additional shrinking of anchor when narrow window*/
+    width: max(140%, 135cqh); /* prevent additional shrinking of anchor when narrow window*/
     aspect-ratio: 3 / 2;
     position: absolute;
     left: 5%;
@@ -41,12 +41,6 @@
     z-index: 2;
     transform: rotate(6.7deg);
     container-type: inline-size; /* Text can scale from this */
-}
-
-@media (max-width: 910px) {
-    .notebook-anchor { /* adjust zoom and positioning on mobile*/
-        left: -10%;
-    }
 }
 
 .aboutme-background-img {
@@ -187,4 +181,14 @@
     width: 19%;
     top: 40.15%;
     left: 63.4%;
+}
+
+@media (max-width: 910px) {
+    .notebook-anchor { /* adjust zoom and positioning on mobile*/
+        left: -11%;
+    }
+
+    .aboutme-page1-container {
+         padding: 5.3% 3% 0 6%;
+    }
 }

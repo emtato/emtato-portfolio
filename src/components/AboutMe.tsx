@@ -73,15 +73,39 @@ export default function AboutMe() {
                             <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-4" alt="a"
                                  src="/assets/browser/content/about-me/drawings/small-tape.png"/>
                         </div>
-                        <div className="aboutme-text aboutme-page2-food-line">looking for good food,</div>
+                        <div className="aboutme-text aboutme-page2-food-line1">looking for</div>
+                        <div className="aboutme-text aboutme-page2-food-line2">good food,</div>
+                        <div className="aboutme-page2-photography-group">
+                            <img className="aboutme-placed-item aboutme-page2-image-relative-placement" alt="a"
+                                 src="/assets/browser/content/about-me/fuji.jpg"/>
+                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-2 rot180"
+                                 alt="a"
+                                 src="/assets/browser/content/about-me/drawings/tape.png"/>
+                        </div>
+                        <div className="aboutme-placed-item aboutme-page2-photo2-group">
+                            <img className="aboutme-placed-item aboutme-page2-image-relative-placement" alt="a"
+                                 src="/assets/browser/content/about-me/folwer.jpg"/>
+                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-2 expandTape"
+                                 alt="a"
+                                 src="/assets/browser/content/about-me/drawings/big-tape.png"/>
+                        </div>
+                        <div className="aboutme-page2-photography-group aboutme-page2-fuji-tape-overlay">
+                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement rot180"
+                                 alt="a"
+                                 src="/assets/browser/content/about-me/drawings/big-tape.png"/>
+                        </div>
+                        <div className="aboutme-placed-item photgraphy-text1">or stopping to</div>
+                        <div className="aboutme-placed-item photgraphy-text2">take a photo of</div>
+                        <div className="aboutme-placed-item photgraphy-text3">whatever catches</div>
+                        <div className="aboutme-placed-item photgraphy-text4">my eye</div>
+
                         {/*<div className="aboutme-text">i love 2d men</div>*/}
                     </div>
                 </div>
             </div>
-            {/* Outside of coding, I’m usually lifting, wandering around for good food, or stopping to take a photo because the
-            light looked nice. My camera roll is mostly cats, outfits, and little scenes I didn’t want to forget.*/}
+            {/* or stopping to take a poto of whatever catches my eye
+            . My camera roll is mostly cats, outfits, and little scenes I didn’t want to forget.*/}
         </div>
         <div className="aboutme-scroll-space"/>
     </div>
 }
-

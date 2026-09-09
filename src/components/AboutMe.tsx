@@ -31,8 +31,14 @@ export default function AboutMe() {
                      src="/assets/browser/content/about-me/long-highlight.png"/>
                 <div className="aboutme-text">at the ontario government</div>
                 <div className="aboutme-text">☆</div>
-                <div className="aboutme-text">i love making things that feel fun and meaningful to me</div>
-                <div className="aboutme-text"> and nothing beats seeing all the pieces finally come together ☆</div>
+                <div className="aboutme-text">i love making things that feel fun</div>
+                <div className="aboutme-text"> and meaningful to me</div>
+                <img className="aboutme-placed-item page1-underline-1" alt="a"
+                     src="/assets/browser/content/about-me/underline.png"/>
+                <div className="aboutme-text">
+                    <span> and nothing beats seeing it all come together</span>
+                    <span className="aboutme-text-withstar">‎ ☆</span>
+                </div>
             </div>
             <div className="aboutme-text">i love cats</div>
             <div className="aboutme-text">i love 2d men</div>

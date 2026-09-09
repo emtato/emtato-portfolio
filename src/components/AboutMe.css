@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden; /* This positioned box is both the clipping boundary and coordinate system. */
+    overflow: hidden; /* This positioned box is both the boundary and coordinate system */
 }
 
 .aboutme-behindnotebook {
@@ -28,7 +28,7 @@
     top: 6.7%;
     z-index: 2;
     transform: rotate(6.7deg);
-    container-type: inline-size; /* Text can scale from this shared notebook coordinate system. */
+    container-type: inline-size; /* Text can scale from this */
 }
 
 .aboutme-background-img {
@@ -51,7 +51,7 @@
     position: relative;
     z-index: 4;
     box-sizing: border-box;
-    padding: 5.8% 6.5%; /* Start normal-flow text inside the page's writable area. */
+    padding: 5.53% 6.5%; /* box + paddingto start text off in writeable areas of notebook*/
 }
 
 .aboutme-title-1 {
@@ -63,39 +63,38 @@
 
 .aboutme-text {
     font: 1.6cqw "Arvo";
-    margin-bottom: 2.25%;
+    line-height: 2.82cqw; /*calculated from notebok size and physical line height between lines*/
 }
 
-.aboutme-text-withstar { /* The star needs slightly different spacing from the normal text. */
+.aboutme-text-withstar { /* for some reason the star formats weird*/
     font: 1.6cqw "Arvo";
-    margin-bottom: 2%;
     color: var(--color-bright-plum);
-}
-
-/* Future page 2 layout:
-   Add its 50%-wide page container and normal-flow text styles in this section. */
-
-/* ------------------------------------------------------------------------------------------- -v-
-                               reusable placed-item appearance
------------------------------------------------------------------------------------------------ -o- */
-
-/* Every freely placed overlay gets this class. Its other classes describe what it looks like
-   and where this particular instance belongs. */
-.aboutme-placed-item {
-    position: absolute;
+    line-height: 2.82cqw;
 }
 
 .aboutme-portrait { /* Source dimensions: 3213 × 4388. */
     aspect-ratio: 3213 / 4388;
 }
 
+.aboutme-plant {
+    image-rendering: pixelated;
+}
+
+/* Future page 2 layout:
+
+/* ------------------------------------------------------------------------------------------- -v-
+                               reusable placed-item appearance
+----------------------------------------------------------------------------------------------- -o- */
+
+/* reusable classes to give placed items behaviour without rewriting behaviour into each object's positioning class*/
+.aboutme-placed-item {
+    position: absolute;
+}
+
+
 .aboutme-tape {
     image-rendering: pixelated;
     opacity: 0.5;
-}
-
-.aboutme-plant {
-    image-rendering: pixelated;
 }
 
 /* Future reusable appearances:
@@ -128,6 +127,3 @@
     z-index: 6;
     transform: rotate(-10deg);
 }
-
-/* Future page 2 and transition placement data:
-   Keep their coordinate-only classes in separate sections below this one. */

@@ -262,7 +262,28 @@
     z-index: 6;
 }
 
-.aboutme-page2-gif-placement {
+.aboutme-page2-tape-placement-2 {
+    width: 36%;
+    left: 30%;
+    bottom: 3%;
+    z-index: 6;
+}
+
+.aboutme-page2-tape-placement-3 {
+    width: 16%;
+    top: 3%;
+    left: -5%;
+    transform: rotate(-45deg);
+}
+
+.aboutme-page2-tape-placement-4 {
+    width: 18%;
+    bottom: 1%;
+    right: -7%;
+    transform: rotate(-40deg);
+}
+
+.aboutme-page2-image-relative-placement {
     top: 5%;
     width: 100.8%;
 }
@@ -283,6 +304,23 @@
     transform: rotate(-10deg);
 }
 
+.aboutme-page2-image2group-placement {
+    position: absolute;
+    width: 34%;
+    height: 18%;
+    top: 10%;
+    left: 7%;
+}
+
+.aboutme-page2-food-line {
+    position: absolute;
+    top: 11.2%;
+    left: 41.5%;
+    font-size: 1.25cqw;
+    white-space: nowrap;
+}
+
+
 /* ————————————————————————————————————————— mobile ———————————————————————————————————————————————————————————— */
 
 @media (max-width: 910px) {
@@ -302,13 +340,14 @@
     .next-page-mobile-text {
         display: inline;
         position: absolute;
-        top: 95%;
     }
 
     .next-page-button {
         font: 2.6cqw "NYCD";
         width: 80%;
         height: 10%;
+        position: absolute;
+        top: 51.8%;
     }
 
     .notebook-pan {
@@ -323,7 +362,6 @@
     }
 
     .notebook-pan-page-2 {
-        transform: translate(-110%, -8%);
+        transform: translate(-150%, -8%);
     }
-
 }

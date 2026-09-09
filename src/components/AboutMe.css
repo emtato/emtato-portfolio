@@ -21,10 +21,10 @@
 }
 
 .notebook-anchor {
-    width: 175%;
+    width: 140%;
     aspect-ratio: 3 / 2;
     position: absolute;
-    left: -4%;
+    left: 5%;
     top: 6.7%;
     z-index: 2;
     transform: rotate(6.7deg);
@@ -51,7 +51,7 @@
     position: relative;
     z-index: 4;
     box-sizing: border-box;
-    padding: 5.53% 6.5%; /* box + paddingto start text off in writeable areas of notebook*/
+    padding: 5.53% 6%; /* box + paddingto start text off in writeable areas of notebook*/
 }
 
 .aboutme-title-1 {
@@ -63,13 +63,13 @@
 
 .aboutme-text {
     font: 1.6cqw "Arvo";
-    line-height: 2.82cqw; /*calculated from notebok size and physical line height between lines*/
+    line-height: 2.81cqw; /*calculated from notebok size and physical line height between lines*/
 }
 
-.aboutme-text-withstar { /* for some reason the star formats weird*/
+.aboutme-text-withstar {
     font: 1.6cqw "Arvo";
     color: var(--color-bright-plum);
-    line-height: 2.82cqw;
+    line-height: 2.81cqw;
 }
 
 .aboutme-portrait { /* Source dimensions: 3213 × 4388. */
@@ -78,6 +78,24 @@
 
 .aboutme-plant {
     image-rendering: pixelated;
+}
+
+.aboutme-link {
+    color: skyblue;
+    font: 1.6cqw "Arvo";
+}
+
+@media (max-width: 910px) {
+    .aboutme-text {
+        font: 1.6cqw "Arvo";
+        line-height: 2.86cqw; /*calculated from notebok size and physical line height between lines*/
+    }
+
+    .aboutme-text-withstar {
+        font: 1.6cqw "Arvo";
+        color: var(--color-bright-plum);
+        line-height: 2.86cqw;
+    }
 }
 
 /* Future page 2 layout:
@@ -91,10 +109,14 @@
     position: absolute;
 }
 
-
 .aboutme-tape {
     image-rendering: pixelated;
     opacity: 0.5;
+}
+
+.aboutme-highlight {
+    image-rendering: pixelated;
+    opacity: 0.7;
 }
 
 /* Future reusable appearances:
@@ -126,4 +148,19 @@
     left: 78.6%;
     z-index: 6;
     transform: rotate(-10deg);
+}
+
+.page1-longhighlight-1 {
+    width: 34%;
+    top: 21.5%;
+    left: 30.7%;
+    z-index: 6;
+}
+
+.page1-longhighlight-2 {
+    width: 38.6%;
+    top: 34%;
+    left: 23.3%;
+    z-index: 6;
+
 }

@@ -15,7 +15,22 @@ export default function AboutMe() {
                      src="/assets/browser/content/about-me/tape.png"/>
                 <img className="aboutme-placed-item aboutme-plant aboutme-page1-plant-placement" alt="a"
                      src="/assets/browser/content/about-me/plant.png"/>
-                <div className="aboutme-text">welcome to my portfolio</div>
+                <div className="aboutme-text">welcome to my portfolio!</div>
+                <div className="aboutme-text">i'm a 3rd year computer science</div>
+                <div className="aboutme-text">major at the university of toronto</div>
+                <img className="aboutme-placed-item page1-longhighlight-1 aboutme-highlight" alt="a"
+                     src="/assets/browser/content/about-me/long-highlight.png"/>
+                <div className="aboutme-text">☆</div>
+                <div className="aboutme-text">
+                    <span>currently working on </span>
+                    <a className="aboutme-link" href="https://github.com/emtato/tempo." target="_blank">tempo.</a>
+                    <span>,</span>
+                </div>
+                <div className="aboutme-text"> and my software dev internship at ontario gov</div>
+                 <img className="aboutme-placed-item page1-longhighlight-2 aboutme-highlight" alt="a"
+                     src="/assets/browser/content/about-me/long-highlight.png"/>
+                <div className="aboutme-text"> </div>
+
                 <div className="aboutme-text">i love cats</div>
                 <div className="aboutme-text">i love 2d men</div>
 

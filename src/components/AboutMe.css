@@ -41,6 +41,8 @@
     z-index: 2;
     transform: rotate(6.7deg);
     container-type: inline-size; /* Text can scale from this */
+    display: flex;
+    flex-direction: row;
 }
 
 .aboutme-background-img {
@@ -50,6 +52,7 @@
     top: 0;
     z-index: 3;
 }
+
 
 /* ------------------------------------------------------------------------------------------- -v-
                                   notebook page layouts
@@ -107,7 +110,6 @@
         font: 1.6cqw "arvo";
         color: var(--color-bright-plum);
         line-height: 2.2cqw;
-
     }
 }
 
@@ -210,15 +212,31 @@
 ----------------------------------------------------------------------------------------------- -o- */
 
 .aboutme-page2-container {
-
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 4;
+    box-sizing: border-box;
+    padding: 5.3% 4.2% 0 6%;
 }
+.aboutme-title-2{
+     font: 4cqw "NYCD";
+    position: absolute;
+    top: 1.5%;
+    left: 23%;
+}
+/* custom single placement */
+
 
 
 /* ————————————————————————————————————————— mobile ———————————————————————————————————————————————————————————— */
 
 @media (max-width: 910px) {
     .notebook-anchor { /* adjust zoom and positioning on mobile*/
-        left: -11%;
+        left: -13%;
+        top: 10%;
     }
 
     .aboutme-page1-container {
@@ -240,4 +258,21 @@
         width: 80%;
         height: 10%;
     }
+}
+
+/* panning */
+
+.notebook-pan {
+    position: absolute;
+    inset: 0;
+    transition: transform 600ms ease;
+    z-index: 2;
+}
+
+.notebook-pan-page-1 {
+    transform: translateX(0);
+}
+
+.notebook-pan-page-2 {
+    transform: translate(-50%, -18%);
 }

@@ -94,17 +94,25 @@ export default function AboutMe() {
                                  alt="a"
                                  src="/assets/browser/content/about-me/drawings/big-tape.png"/>
                         </div>
-                        <div className="aboutme-placed-item photgraphy-text1">or stopping to</div>
-                        <div className="aboutme-placed-item photgraphy-text2">take a photo of</div>
-                        <div className="aboutme-placed-item photgraphy-text3">whatever catches</div>
-                        <div className="aboutme-placed-item photgraphy-text4">my eye</div>
-
+                        <div className="aboutme-placed-item photgraphy-text1">or stopping 📸</div>
+                        <div className="aboutme-placed-item photgraphy-text2">for whatever</div>
+                        <div className="aboutme-placed-item photgraphy-text3"> catches my eye.</div>
+                        <div className="aboutme-placed-item photgraphy-text4"></div>
+                        <div className="bottom-line aboutme-text">My camera roll is mostly cats, ‎ outfits,
+                        </div>
+                        <div className="bottom-line2 aboutme-text"> and other spontaneous musings day to day</div>
+                        <div className="cat-photo-group">
+                            <img className="aboutme-placed-item aboutme-page2-image-relative-placement" alt="a"
+                                 src="/assets/browser/content/about-me/car.jpg"/>
+                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-2 rot180"
+                                 src="/assets/browser/content/about-me/drawings/tape.png" alt="a"/>
+                              <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement shrinkTape"
+                                 src="/assets/browser/content/about-me/drawings/small-tape.png" alt="a"/>
+                        </div>
                         {/*<div className="aboutme-text">i love 2d men</div>*/}
                     </div>
                 </div>
             </div>
-            {/* or stopping to take a poto of whatever catches my eye
-            . My camera roll is mostly cats, outfits, and little scenes I didn’t want to forget.*/}
         </div>
         <div className="aboutme-scroll-space"/>
     </div>

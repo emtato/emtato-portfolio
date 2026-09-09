@@ -1,0 +1,133 @@
+/* ------------------------------------------------------------------------------------------- -v-
+                              about me scene and notebook canvas
+----------------------------------------------------------------------------------------------- -o- */
+
+.outer-aboutme-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* This positioned box is both the clipping boundary and coordinate system. */
+}
+
+.aboutme-behindnotebook {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.notebook-anchor {
+    width: 175%;
+    aspect-ratio: 3 / 2;
+    position: absolute;
+    left: -4%;
+    top: 6.7%;
+    z-index: 2;
+    transform: rotate(6.7deg);
+    container-type: inline-size; /* Text can scale from this shared notebook coordinate system. */
+}
+
+.aboutme-background-img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
+/* ------------------------------------------------------------------------------------------- -v-
+                                  notebook page layouts
+----------------------------------------------------------------------------------------------- -o- */
+
+.aboutme-page1-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 4;
+    box-sizing: border-box;
+    padding: 5.8% 6.5%; /* Start normal-flow text inside the page's writable area. */
+}
+
+.aboutme-title-1 {
+    font: 5cqw "NYCD";
+    position: absolute;
+    top: 0.3%;
+    left: 35%;
+}
+
+.aboutme-text {
+    font: 1.6cqw "Arvo";
+    margin-bottom: 2.25%;
+}
+
+.aboutme-text-withstar { /* The star needs slightly different spacing from the normal text. */
+    font: 1.6cqw "Arvo";
+    margin-bottom: 2%;
+    color: var(--color-bright-plum);
+}
+
+/* Future page 2 layout:
+   Add its 50%-wide page container and normal-flow text styles in this section. */
+
+/* ------------------------------------------------------------------------------------------- -v-
+                               reusable placed-item appearance
+----------------------------------------------------------------------------------------------- -o- */
+
+/* Every freely placed overlay gets this class. Its other classes describe what it looks like
+   and where this particular instance belongs. */
+.aboutme-placed-item {
+    position: absolute;
+}
+
+.aboutme-portrait { /* Source dimensions: 3213 × 4388. */
+    aspect-ratio: 3213 / 4388;
+}
+
+.aboutme-tape {
+    image-rendering: pixelated;
+    opacity: 0.5;
+}
+
+.aboutme-plant {
+    image-rendering: pixelated;
+}
+
+/* Future reusable appearances:
+   Add shared styles for arrows, captions, doodles, photos, and other repeated asset types here. */
+
+/* ------------------------------------------------------------------------------------------- -v-
+                                  page 1 placement data
+----------------------------------------------------------------------------------------------- -o- */
+
+/* These classes contain only values unique to one placement. Reusing an asset only requires
+   another small placement class instead of duplicating all of the asset's styling. */
+.aboutme-page1-portrait-placement {
+    width: 25%;
+    top: 7.17%;
+    left: 66.7%;
+    z-index: 5;
+}
+
+.aboutme-page1-tape-placement {
+    width: 8%;
+    top: 6%;
+    left: 77%;
+    z-index: 6;
+}
+
+.aboutme-page1-plant-placement {
+    width: 3%;
+    top: 10.3%;
+    left: 78.6%;
+    z-index: 6;
+    transform: rotate(-10deg);
+}
+
+/* Future page 2 and transition placement data:
+   Keep their coordinate-only classes in separate sections below this one. */

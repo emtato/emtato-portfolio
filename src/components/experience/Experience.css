@@ -1,28 +1,109 @@
 
 .experience-container {
-    width: 98%;
+    width: 100%;
     height: 100%;
-    background-color: var(--color-grey-plum);
+    box-sizing: border-box;
+    background: radial-gradient(circle at 12% 15%, rgba(247, 154, 170, 0.25), transparent 28%),
+    radial-gradient(circle at 88% 88%, rgba(244, 197, 106, 0.13), transparent 30%),
+    linear-gradient(135deg, #55404e 0%, var(--color-grey-plum) 48%, #604657 100%);
     z-index: 1;
-    overflow-y: scroll;
+    overflow: hidden;
 
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1%;
-    padding: 1%;
+    grid-template-columns: 1.3fr 2fr;
+    gap: 1.2vw;
+    padding: 1.5vw;
     container-type: size; /* scale for children to reference */
+    position: relative;
+}
 
+.experience-container::before { /* circle background */
+    content: "";
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+    border: 7px solid rgba(255, 240, 230, 0.25);
+    position: absolute;
+    top: -50px;
+    left: -30%;
+}
+
+.experience-container::after { /* dark circle background */
+    content: "";
+    width: 100vw;
+    height: 100vw;
+    border: 10px solid rgba(100, 70, 95, 1);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100%;
+    right: -70%;
+}
+
+
+.section-header {
+    padding: 3cqw;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.section-number {
+    position: absolute;
+    top: 24px;
+    right: clamp(20px, 3cqw, 40px);
+}
+
+.section-uppertext {
+    color: var(--section-colour);
+    font: 700 clamp(10px, 1.15cqw, 13px) "Arvo";
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+}
+
+.section-title {
+    color: var(--color-dark-plum);
+    font: 700 clamp(29px, 4.5cqw, 52px) "Arvo";
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    margin: 0;
+    max-width: 85%;
+}
+
+
+.section-accent {
+    width: clamp(48px, 7cqw, 78px);
+    height: 4px;
+    background: var(--section-colour);
+    margin-top: 12px;
+    border-radius: 100px;
+    box-shadow: 12px 0 0 rgba(46, 20, 36, 0.1);
 }
 
 /* ------------------------------------------------------------------------------------------- -v-
   work experience
 ----------------------------------------------------------------------------------------------- -o- */
 .work-experience-container {
+    --section-colour: var(--color-cloud-coral);
     width: 100%;
     height: 100%;
-    background-color: #fff0e6;
-    z-index: 1;
-    border-radius: 1.5cqmin;
+    min-width: 0;
+    min-height: 0;
+    background: linear-gradient(160deg, #fff8f2 0%, var(--color-warm-cream) 100%);
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: clamp(14px, 1.5cqmin, 24px);
+    box-shadow: 0 18px 45px rgba(46, 20, 36, 0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-experience-timeline {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0 clamp(22px, 3cqw, 42px) clamp(22px, 3cqw, 42px);
 }
 
 /* ------------------------------------------------------------------------------------------- -v-
@@ -30,10 +111,61 @@
 ----------------------------------------------------------------------------------------------- -o- */
 
 .projects-container {
+    --section-colour: var(--color-bright-plum);
+    z-index: 2;
     width: 100%;
     height: 100%;
-    background-color: #fff0e6;
-    display: grid;
+    min-width: 0;
+    min-height: 0;
+    background: linear-gradient(145deg, #fffaf6 0%, #f8e9e4 100%);
     gap: 20px;
-    border-radius: 1.5cqmin;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: clamp(14px, 1.5cqmin, 24px);
+    box-shadow: 0 18px 45px rgba(46, 20, 36, 0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.projects-grid {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: minmax(250px, auto);
+    gap: 20px;
+    padding: 0 clamp(22px, 3cqw, 42px) clamp(22px, 3cqw, 42px);
+}
+
+@media (max-width: 910px) {
+    .experience-container {
+        height: auto;
+        min-height: 100%;
+        overflow-y: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding: 14px;
+    }
+
+    .work-experience-container,
+    .projects-container {
+        height: auto;
+        min-height: 430px;
+    }
+
+    .work-experience-timeline,
+    .projects-grid {
+        overflow-y: visible;
+    }
+
+    .section-header {
+        padding: 25px 23px 18px;
+    }
+
+    .section-number {
+        right: 23px;
+    }
 }

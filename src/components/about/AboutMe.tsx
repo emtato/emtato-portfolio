@@ -127,8 +127,8 @@ export default function AboutMe() {
                         </div>
 
                         <div className="aboutme-page2-closing-copy">
-                            my camera roll is mostly cats, outfits, and little day-<br/>
-                            to-day musings.
+                            and most importantly,<br/>
+            i love cats and 2d men <3
                         </div>
                     </div>
                 </div>

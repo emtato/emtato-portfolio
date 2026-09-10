@@ -15,6 +15,18 @@ export interface BrowserWindowProps {
 
 export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize, minimize}: BrowserWindowProps) {
     const [activeTab, setActiveTab] = useState(0) //0 -> about me, 1 -> projects, 2 -> contact
+    const [url, setUrl] = useState("emtato://about-me")
+
+    function changeTab(tab: number) {
+        setActiveTab(tab)
+        if (tab === 0) {
+            setUrl("emtato://about-me")
+        } else if (tab === 1) {
+            setUrl("emtato://projects")
+        } else if (tab === 2) {
+            setUrl("emtato://contact")
+        }
+    }
 
     /* main browser window render
     * top row */
@@ -36,9 +48,9 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
         <div className="browser-window-top">
             {/* render tabs*/}
             <div className="browser-tabs-list">
-                <BrowserTab id={0} label="About Me" isActive={activeTab === 0} onSelect={() => setActiveTab(0)}/>
-                <BrowserTab id={1} label="Projects" isActive={activeTab === 1} onSelect={() => setActiveTab(1)}/>
-                <BrowserTab id={2} label="Contact" isActive={activeTab === 2} onSelect={() => setActiveTab(2)}/>
+                <BrowserTab id={0} label="About Me" isActive={activeTab === 0} onSelect={() => changeTab(0)}/>
+                <BrowserTab id={1} label="Projects" isActive={activeTab === 1} onSelect={() => changeTab(1)}/>
+                <BrowserTab id={2} label="Contact" isActive={activeTab === 2} onSelect={() => changeTab(2)}/>
             </div>
         </div>
         <div className="browser-window-topright">
@@ -60,7 +72,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/reload.png"/>
                     </button>
                     <button className="browser-nav-button" onClick={() => {
-                        setActiveTab(0)
+                        changeTab(0)
                     }}>
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/home-icon.png"/>
                     </button>
@@ -70,6 +82,8 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                         <div className="browser-tiled-search-bar"></div>
                         <img className="browser-search-icon" alt=""
                              src="/assets/browser/toolbar/search-icon.png"/>
+                        <span className="browser-search-bar-text">{url}</span> {/*TODO eventually into input->gogole*/}
+
                     </div>
                     <button className="browser-nav-button">
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>

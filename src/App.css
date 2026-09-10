@@ -273,6 +273,20 @@
     image-rendering: pixelated;
 }
 
+.browser-search-bar-text {
+    position: absolute;
+    top: 35%;
+    left: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--color-smoky-charcoal);
+    font: 14px "Emtato Pixel";
+    z-index: 16;
+}
+
 /* ------------------------------------------------------------------------------------------- -v-
                                     browser main page contents
 ----------------------------------------------------------------------------------------------- -o- */
@@ -368,4 +382,17 @@
         left: 0;
     }
 
+    .browser-search-bar-text {
+        position: absolute;
+        top: 45%;
+        left: 30px;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: var(--color-smoky-charcoal);
+        font: 8px "Emtato Pixel";
+        z-index: 16;
+    }
 }

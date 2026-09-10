@@ -38,7 +38,7 @@ export default function AboutMe() {
                         <div className="aboutme-page1-body-line">at the ontario government</div>
                         <div className="aboutme-page1-body-line">☆</div>
                         <div className="aboutme-page1-values-line">i love making things that feel <span
-                            className="aboutme-page1-handwritten-emphasis">fun & meaningful</span> to me
+                            className="aboutme-page1-handwritten-emphasis">fun & meaningful</span> to me,
                         </div>
                         <div className="aboutme-page1-body-line"></div>
                         <div className="aboutme-page1-body-line">
@@ -50,7 +50,7 @@ export default function AboutMe() {
                         }}><span className="aboutme-page1-next-desktop-label">next page -&gt;</span>
                             <span className="aboutme-page1-next-mobile-label">more about me! (press) -&gt;</span>
                         </button>
-                        <div className="aboutme-page1-footer">fefee</div>
+                        <div className="aboutme-page1-footer">... or explore the rest of my website freely :)</div>
                     </div>
                     {/* page 2 */}
                     <div className="aboutme-page2-container">

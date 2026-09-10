@@ -52,7 +52,7 @@
 }
 
 .aboutme-notebook {
-    width: max(140%, 135cqh); /* Prevent additional shrinking when the viewport is narrow */
+    width: clamp(120cqh, 140%, 300cqh); /* Prevent additional shrinking when the viewport is narrow */
     aspect-ratio: 3 / 2;
     position: absolute;
     left: 5%;
@@ -224,6 +224,14 @@
     position: absolute;
     left: 15%;
     top: 43.5%;
+}
+
+.aboutme-page1-footer {
+    font: 1cqw "Arvo";
+    position: absolute;
+    bottom: 49.88%;
+    left: 11%;
+    z-index: 5;
 }
 
 /* ------------------------------------------------------------------------------------------- -v-

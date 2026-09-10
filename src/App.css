@@ -336,7 +336,8 @@
     display: flex;
     justify-content: flex-end;
 }
-.mobile-tip{
+
+.mobile-tip {
     display: none;
 }
 
@@ -398,11 +399,15 @@
         font: 8px "Emtato Pixel";
         z-index: 16;
     }
-    .mobile-tip{
+
+    .mobile-tip {
         display: block;
         position: absolute;
-        bottom: 30%;
+        bottom: 20%;
         color: var(--color-warm-cream);
         font: 13px "Emtato Pixel";
+    }
+    .dock-tip-text{
+        bottom:5px;
     }
 }

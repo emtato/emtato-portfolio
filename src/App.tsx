@@ -58,6 +58,7 @@ export default function App() {
                 <img className="dock-left" alt="doc" src="/assets/system/dock/dock-left.png"/>
                 <div className="dock-middle"></div>
                 <img className="dock-right" alt="doc" src="/assets/system/dock/dock-right.png"/>
+                <div className="dock-tip-text">note: this website is still under construction. buttons that don't work/tabs that don't load aren't completed yet</div>
             </div>
         </div>
     </>

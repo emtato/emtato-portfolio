@@ -439,3 +439,12 @@ body {
     flex: 0 0 calc(var(--dock-height) * 5/9);
     image-rendering: pixelated;
 }
+
+.dock-tip-text{
+    font: 14px "Emtato Pixel";
+    color: var(--color-warm-cream);
+    position: absolute;
+    bottom: 15px;
+    left: 4%;
+    z-index: 1;
+}

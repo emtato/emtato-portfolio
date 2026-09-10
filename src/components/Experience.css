@@ -1,16 +1,28 @@
 
 .experience-container {
-    width: 100%;
+    width: 98%;
     height: 100%;
-    background-color: var(--colour-pale-lavender);
+    background-color: var(--color-grey-plum);
     z-index: 1;
+    overflow-y: scroll;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1%;
+    padding: 1%;
+    container-type: size; /* scale for children to reference */
+
 }
 
 /* ------------------------------------------------------------------------------------------- -v-
   work experience
 ----------------------------------------------------------------------------------------------- -o- */
 .work-experience-container {
-
+    width: 100%;
+    height: 100%;
+    background-color: #fff0e6;
+    z-index: 1;
+    border-radius: 1.5cqmin;
 }
 
 /* ------------------------------------------------------------------------------------------- -v-
@@ -18,6 +30,10 @@
 ----------------------------------------------------------------------------------------------- -o- */
 
 .projects-container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff0e6;
     display: grid;
     gap: 20px;
+    border-radius: 1.5cqmin;
 }

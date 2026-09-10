@@ -22,7 +22,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
         if (tab === 0) {
             setUrl("emtato://about-me")
         } else if (tab === 1) {
-            setUrl("emtato://projects")
+            setUrl("emtato://experience")
         } else if (tab === 2) {
             setUrl("emtato://contact")
         }

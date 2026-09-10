@@ -4,112 +4,121 @@ import {useState} from "react";
 export default function AboutMe() {
     const [pageNumber, setPageNumber] = useState(1) /* 1,2,3*/
     return <div className="aboutme-scroll-container">
-        <div className="outer-aboutme-container">
-            <img className="aboutme-behindnotebook" alt="a" src="/assets/browser/content/about-me/desk.webp"/>
-            <div className={`notebook-pan notebook-pan-page-${pageNumber}`}>
-                <div className="notebook-anchor">
-                    <img className="aboutme-background-img" alt="a"
+        <div className="aboutme-scene">
+            <img className="aboutme-desk-background" alt="" src="/assets/browser/content/about-me/desk.webp"/>
+            <div className={`aboutme-notebook-pan aboutme-notebook-pan-page-${pageNumber}`}>
+                <div className="aboutme-notebook">
+                    <img className="aboutme-notebook-background" alt=""
                          src="/assets/browser/content/about-me/Notebook.webp"/>
                     <div className="aboutme-page1-container">
-                        <div className="aboutme-title-1"> hello! :)</div>
-                        <div className="aboutme-text-withstar">i'm emilia ☆</div>
-                        <img className="aboutme-placed-item aboutme-portrait aboutme-page1-portrait-placement" alt="a"
-                             src="/assets/browser/content/about-me/me-2.webp"/>
-                        <img className="aboutme-placed-item aboutme-tape aboutme-page1-tape-placement" alt="a"
+                        <div className="aboutme-page1-greeting"> hello! :)</div>
+                        <div className="aboutme-page1-name-intro">i'm emilia ☆</div>
+                        <img className="aboutme-page1-portrait-photo"
+                            alt="Emilia overlooking Niagara Falls"
+                            src="/assets/browser/content/about-me/me-2.webp"/>
+                        <img className="aboutme-page1-portrait-tape" alt=""
                              src="/assets/browser/content/about-me/drawings/tape.png"/>
-                        <img className="aboutme-placed-item aboutme-plant aboutme-page1-plant-placement" alt="a"
+                        <img className="aboutme-page1-portrait-sprout" alt=""
                              src="/assets/browser/content/about-me/drawings/plant.png"/>
-                        <div className="aboutme-text">welcome to my portfolio!</div>
-                        <div className="aboutme-text">i'm a 3rd year computer science</div>
-                        <div className="aboutme-text">major at the university of toronto</div>
-                        <img className="aboutme-placed-item page1-longhighlight-1 aboutme-highlight" alt="a"
+                        <div className="aboutme-page1-body-line">welcome to my portfolio!</div>
+                        <div className="aboutme-page1-body-line">i'm a 3rd year computer science</div>
+                        <div className="aboutme-page1-body-line">major at the university of toronto</div>
+                        <img className="aboutme-page1-university-highlight" alt=""
                              src="/assets/browser/content/about-me/drawings/long-highlight.png"/>
-                        <div className="aboutme-text">☆</div>
-                        <div className="aboutme-text">
+                        <div className="aboutme-page1-body-line">☆</div>
+                        <div className="aboutme-page1-body-line">
                             <span>currently working on </span>
-                            <a className="aboutme-link" href="https://github.com/emtato/tempo."
+                            <a className="aboutme-page1-tempo-link" href="https://github.com/emtato/tempo."
                                target="_blank">tempo.</a>
                             <span>,</span>
                         </div>
-                        <div className="aboutme-text"> and my software dev internship</div>
-                        <img className="aboutme-placed-item page1-longhighlight-2 aboutme-highlight" alt="a"
+                        <div className="aboutme-page1-body-line"> and my software dev internship</div>
+                        <img className="aboutme-page1-internship-highlight" alt=""
                              src="/assets/browser/content/about-me/drawings/long-highlight.png"/>
-                        <div className="aboutme-text">at the ontario government</div>
-                        <div className="aboutme-text">☆</div>
-                        <div className="aboutme-text">i ♥ making things that feel fun & meaningful to me</div>
-                        <div className="aboutme-text"></div>
-                        <img className="aboutme-placed-item page1-underline-1" alt="a"
-                             src="/assets/browser/content/about-me/drawings/underline.png"/>
-                        <div className="aboutme-text">
+                        <div className="aboutme-page1-body-line">at the ontario government</div>
+                        <div className="aboutme-page1-body-line">☆</div>
+                        <div className="aboutme-page1-values-line">i love making things that feel <span
+                            className="aboutme-page1-handwritten-emphasis">fun & meaningful</span> to me
+                        </div>
+                        <div className="aboutme-page1-body-line"></div>
+                        <div className="aboutme-page1-body-line">
                             <span> and nothing beats seeing it all come together</span>
-                            <span className="aboutme-text-withstar">‎ ☆</span>
+                            <span className="aboutme-page1-closing-star">‎ ☆</span>
                         </div>
-                        <button className="next-page-button" onClick={() => {
+                        <button className="aboutme-page1-next-button" onClick={() => {
                             setPageNumber(2)
-                        }}><span className="next-page-desktop-text">next page -&gt;</span>
-                            <span className="next-page-mobile-text">more about me! (press) -&gt;</span>
+                        }}><span className="aboutme-page1-next-desktop-label">next page -&gt;</span>
+                            <span className="aboutme-page1-next-mobile-label">more about me! (press) -&gt;</span>
                         </button>
+                        <div className="aboutme-page1-footer">fefee</div>
                     </div>
-
+                    {/* page 2 */}
                     <div className="aboutme-page2-container">
-                        <div className="aboutme-title-2"> bits of my life</div>
-                        <div className="aboutme-text">Outside of coding, I’m usually lifting,</div>
-                        <div className="aboutme-page2-gif-group">
-                            <img className="aboutme-placed-item aboutme-page2-image-relative-placement" alt="a"
+                        <div className="aboutme-page2-heading">bits of my life</div>
+                        <div className="aboutme-page2-intro">outside of coding, i’m usually...</div>
+
+                        <div className="aboutme-page2-lifting-story">
+                            <span className="aboutme-page2-lifting-star">☆</span>
+                            <span className="aboutme-page2-lifting-emphasis">surviving leg day,</span>
+                        </div>
+                        <div className="aboutme-page2-gym-photo-group">
+                            <img className="aboutme-page2-gym-gif"
+                                 alt="Animated cat hyping itself up at the gym"
                                  src="/assets/browser/content/about-me/cat-gym.gif"/>
-                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement" alt="a"
+                            <img className="aboutme-page2-gym-tape" alt=""
                                  src="/assets/browser/content/about-me/drawings/big-tape.png"/>
-                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-2" alt="a"
-                                 src="/assets/browser/content/about-me/drawings/tape.png"/>
-                            <div className="aboutme-page2-caption-placement aboutme-placed-item">me btw</div>
-                            <img className="aboutme-placed-item aboutme-arrow-placement-1" alt="a"
+                            <img className="aboutme-page2-gym-arrow" alt=""
                                  src="/assets/browser/content/about-me/drawings/white-arrow.png"/>
+                            <span className="aboutme-page2-gym-caption">me btw</span>
                         </div>
-                        <div className="aboutme-page2-image2group-placement">
-                            <img className="aboutme-placed-item aboutme-page2-image-relative-placement" alt="a"
+
+                        <div className="aboutme-page2-food-photo-group">
+                            <img className="aboutme-page2-food-photo"
+                                 alt="Dessert, drinks, and baked pasta at a cafe"
                                  src="/assets/browser/content/about-me/food.jpg"/>
-                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-3" alt="a"
+                            <img className="aboutme-page2-food-tape-left" alt=""
                                  src="/assets/browser/content/about-me/drawings/small-tape.png"/>
-                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-4" alt="a"
+                            <img className="aboutme-page2-food-tape-right" alt=""
                                  src="/assets/browser/content/about-me/drawings/small-tape.png"/>
                         </div>
-                        <div className="aboutme-text aboutme-page2-food-line1">looking for</div>
-                        <div className="aboutme-text aboutme-page2-food-line2">good food,</div>
-                        <div className="aboutme-page2-photography-group">
-                            <img className="aboutme-placed-item aboutme-page2-image-relative-placement" alt="a"
+                        <div className="aboutme-page2-food-story">
+                            <span className="aboutme-page2-food-star">☆</span>
+                            <span className="aboutme-page2-food-label">looking for</span>
+                            <span className="aboutme-page2-food-emphasis">good food,</span>
+                        </div>
+
+                        <div className="aboutme-page2-camera-story">
+                            <span className="aboutme-page2-camera-star">☆</span>
+                            <span className="aboutme-page2-camera-label">or photographing</span>
+                            <span className="aboutme-page2-camera-emphasis">whatever catches my eye.</span>
+                        </div>
+
+                        <div className="aboutme-page2-fuji-photo-group">
+                            <img className="aboutme-page2-fuji-photo"
+                                 alt="Mount Fuji above a lantern-lined street"
                                  src="/assets/browser/content/about-me/fuji.jpg"/>
-                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-2 rot180"
-                                 alt="a"
+                            <img className="aboutme-page2-fuji-tape" alt=""
+                                 src="/assets/browser/content/about-me/drawings/big-tape.png"/>
+                        </div>
+                        <div className="aboutme-page2-flower-photo-group">
+                            <img className="aboutme-page2-flower-photo"
+                                 alt="Close-up photograph of a blue flower"
+                                 src="/assets/browser/content/about-me/folwer.jpg"/>
+                            <img className="aboutme-page2-flower-tape" alt=""
+                                 src="/assets/browser/content/about-me/drawings/small-tape.png"/>
+                        </div>
+                        <div className="aboutme-page2-cat-photo-group">
+                            <img className="aboutme-page2-cat-photo"
+                                 alt="A small cat perched on a railing"
+                                 src="/assets/browser/content/about-me/car.jpg"/>
+                            <img className="aboutme-page2-cat-tape" alt=""
                                  src="/assets/browser/content/about-me/drawings/tape.png"/>
                         </div>
-                        <div className="aboutme-placed-item aboutme-page2-photo2-group">
-                            <img className="aboutme-placed-item aboutme-page2-image-relative-placement" alt="a"
-                                 src="/assets/browser/content/about-me/folwer.jpg"/>
-                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-2 expandTape"
-                                 alt="a"
-                                 src="/assets/browser/content/about-me/drawings/big-tape.png"/>
+
+                        <div className="aboutme-page2-closing-copy">
+                            my camera roll is mostly cats, outfits, and little day-<br/>
+                            to-day musings.
                         </div>
-                        <div className="aboutme-page2-photography-group aboutme-page2-fuji-tape-overlay">
-                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement rot180"
-                                 alt="a"
-                                 src="/assets/browser/content/about-me/drawings/big-tape.png"/>
-                        </div>
-                        <div className="aboutme-placed-item photgraphy-text1">or stopping 📸</div>
-                        <div className="aboutme-placed-item photgraphy-text2">for whatever</div>
-                        <div className="aboutme-placed-item photgraphy-text3"> catches my eye.</div>
-                        <div className="aboutme-placed-item photgraphy-text4"></div>
-                        <div className="bottom-line aboutme-text">My camera roll is mostly cats, ‎ outfits,
-                        </div>
-                        <div className="bottom-line2 aboutme-text"> and other spontaneous musings day to day</div>
-                        <div className="cat-photo-group">
-                            <img className="aboutme-placed-item aboutme-page2-image-relative-placement" alt="a"
-                                 src="/assets/browser/content/about-me/car.jpg"/>
-                            <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement-2 rot180"
-                                 src="/assets/browser/content/about-me/drawings/tape.png" alt="a"/>
-                              <img className="aboutme-placed-item aboutme-tape aboutme-page2-tape-placement shrinkTape"
-                                 src="/assets/browser/content/about-me/drawings/small-tape.png" alt="a"/>
-                        </div>
-                        {/*<div className="aboutme-text">i love 2d men</div>*/}
                     </div>
                 </div>
             </div>

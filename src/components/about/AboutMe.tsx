@@ -128,7 +128,7 @@ export default function AboutMe() {
 
                         <div className="aboutme-page2-closing-copy">
                             and most importantly,<br/>
-            i love cats and 2d men <3
+            i love cats and 2d men &lt;3
                         </div>
                     </div>
                 </div>

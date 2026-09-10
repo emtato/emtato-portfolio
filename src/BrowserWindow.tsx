@@ -2,7 +2,7 @@ import './App.css'
 import {useState} from "react";
 import BrowserTab from "./components/BrowserTab.tsx";
 import AboutMe from "./components/AboutMe.tsx";
-import Projects from "./components/Projects.tsx";
+import Experience from "./components/Experience.tsx";
 import Contact from "./components/Contact.tsx";
 
 export interface BrowserWindowProps {
@@ -49,7 +49,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
             {/* render tabs*/}
             <div className="browser-tabs-list">
                 <BrowserTab id={0} label="About Me" isActive={activeTab === 0} onSelect={() => changeTab(0)}/>
-                <BrowserTab id={1} label="Projects" isActive={activeTab === 1} onSelect={() => changeTab(1)}/>
+                <BrowserTab id={1} label="Experience" isActive={activeTab === 1} onSelect={() => changeTab(1)}/>
                 <BrowserTab id={2} label="Contact" isActive={activeTab === 2} onSelect={() => changeTab(2)}/>
             </div>
         </div>
@@ -94,7 +94,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                 {/* render pages*/}
                 <div className="browser-window-page">
                     {activeTab === 0 && <AboutMe/>}
-                    {activeTab === 1 && <Projects/>}
+                    {activeTab === 1 && <Experience/>}
                     {activeTab === 2 && <Contact/>}
                 </div>
             </div>

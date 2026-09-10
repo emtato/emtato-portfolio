@@ -8,7 +8,7 @@ interface ProjectProps {
 }
 
 
-export default function Project({title, description, card_image_source, assets}: ProjectProps) {
+export default function ProjectCard({title, description, card_image_source, assets}: ProjectProps) {
     const [isHovered, setIsHovered] = useState(false)
     const [isOpen, setisOpen] = useState(false)
 

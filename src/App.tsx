@@ -32,6 +32,8 @@ export default function App() {
             <div className="loading-bar">
                 <div className="loading-bar-fill"></div>
             </div>
+            <div className="mobile-tip">tip: Best viewed on a computer</div>
+
         </div>}
         <div className="os-main">
             <MenuBar

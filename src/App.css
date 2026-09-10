@@ -336,6 +336,9 @@
     display: flex;
     justify-content: flex-end;
 }
+.mobile-tip{
+    display: none;
+}
 
 /* ------------------------------------------------------------------------------------------- -v-
                                     mobile browser window
@@ -394,5 +397,12 @@
         color: var(--color-smoky-charcoal);
         font: 8px "Emtato Pixel";
         z-index: 16;
+    }
+    .mobile-tip{
+        display: block;
+        position: absolute;
+        bottom: 30%;
+        color: var(--color-warm-cream);
+        font: 13px "Emtato Pixel";
     }
 }

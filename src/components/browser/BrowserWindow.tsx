@@ -1,9 +1,9 @@
-import './App.css'
+import './BrowserWindow.css'
 import {useState} from "react";
-import BrowserTab from "./components/BrowserTab.tsx";
-import AboutMe from "./components/AboutMe.tsx";
-import Experience from "./components/Experience.tsx";
-import Contact from "./components/Contact.tsx";
+import BrowserTab from "./BrowserTab.tsx";
+import AboutMe from "../about/AboutMe.tsx";
+import Experience from "../experience/Experience.tsx";
+import Contact from "../contact/Contact.tsx";
 
 export interface BrowserWindowProps {
     isOpen: boolean

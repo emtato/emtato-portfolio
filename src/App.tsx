@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
-import './index.css'
-import MenuBar from './MenuBar'
-import BrowserWindow from './BrowserWindow'
+import './App.css'
+import MenuBar from './components/menu-bar/MenuBar'
+import BrowserWindow from './components/browser/BrowserWindow'
 import {browser} from "globals";
 
 

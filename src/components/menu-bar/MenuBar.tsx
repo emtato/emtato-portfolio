@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import {useBattery} from 'react-use'
+import './MenuBar.css'
 
 interface MenuBarProps {
     focusedAppName: string | null

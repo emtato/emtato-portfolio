@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Emtato Pixel";
+    src: url("/assets/fonts/dogica/emtato-pixel.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Arvo";
+    src: url("/assets/fonts/Arvo/Arvo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "NYCD";
+    src: url("/assets/fonts/Nothing_You_Could_Do/NothingYouCouldDo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Caveat";
+    src: url("/assets/fonts/Caveat/static/Caveat-Regular.ttf") format("truetype");
+    font-weight: 600;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+:root {
+    /* Photo colours: foundation */
+    --color-black: #000000;
+    --color-dark-brown: #2e2226;
+    --color-smoky-charcoal: #332f2d;
+    --color-dusk-plum: #4d3c3c;
+    --color-brown: #6c4c4b;
+    --colour-wood: #603935;
+    --colour-brick: #894742;
+    --color-cloud-coral: #c95848;
+    --color-ember-orange: #f08a5d;
+    --color-golden-highlight: #f4c56a;
+    --color-warm-cream: #fff0e6;
+
+    /* Brighter companion colours */
+    --color-dark-plum: #2e1424;
+    --color-deep-plum: #5a2f4a;
+    --color-plum: #8c4668;
+    --color-bright-plum: #b85c8a;
+    --color-grey-plum: #7d6c77;
+    --color-bright-coral: #ef6356;
+    --colour-orange-red: #CE4C40;
+    --color-orange: #f65a3a;
+    --color-tangerine: #ff7a3d;
+    --color-bright-orange: #ff914d;
+    --color-apricot: #ffb36b;
+    --color-marigold: #f6b73c;
+    --color-yellow: #ffd166;
+    --color-butter-yellow: #ffe29a;
+    --colour-peach: #F0DABD;
+    --color-blush: #f79aaa;
+    --colour-pale-lavender: #d8cdd5;
+}
+
+body {
+    margin: 0;
+}

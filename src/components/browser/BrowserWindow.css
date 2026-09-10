@@ -328,13 +328,23 @@
     }
 
     .browser-tabs-list {
-        left: 120px;
+        left: 95px;
         gap: 7px;
+    }
+
+    .browser-window-traffic-lights {
+        gap: 8px;
+        left:16px;
+    }
+
+    .browser-window-traffic-light {
+        transform: scale(0.9);
+
     }
 
     .browser-tab-button {
         position: relative;
-        width: 80px;
+        width: 95px;
         height: 30px;
         background-color: transparent;
         border: none;
@@ -345,14 +355,16 @@
 
     .browser-tab-label {
         color: var(--colour-peach);
-        font: 9px "Emtato Pixel";
+        font: 10px "Emtato Pixel";
         z-index: 17;
         position: relative;
-        top: 3px;
+        top: 8px;
+        margin-left: -4%;
+
     }
 
     .browser-tab-img {
-        width: 80px;
+        width: 95px;
         height: 50px;
         top: -3px;
         position: absolute;

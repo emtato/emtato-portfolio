@@ -14,8 +14,8 @@ export default function AboutMe() {
                         <div className="aboutme-page1-greeting"> hello! :)</div>
                         <div className="aboutme-page1-name-intro">i'm emilia ☆</div>
                         <img className="aboutme-page1-portrait-photo"
-                            alt="Emilia overlooking Niagara Falls"
-                            src="/assets/browser/content/about-me/me-2.webp"/>
+                             alt=""
+                             src="/assets/browser/content/about-me/me-2.webp"/>
                         <img className="aboutme-page1-portrait-tape" alt=""
                              src="/assets/browser/content/about-me/drawings/tape.png"/>
                         <img className="aboutme-page1-portrait-sprout" alt=""
@@ -53,7 +53,18 @@ export default function AboutMe() {
                         <div className="aboutme-page1-footer">... or explore the rest of my website freely :)</div>
                     </div>
                     {/* page 2 */}
+
                     <div className="aboutme-page2-container">
+                        <div className="back-next-button-container">
+                            <button className="back-next-button" onClick={
+                                () => {
+                                    setPageNumber(1)
+                                }}>&lt;</button>
+                            <button className="back-next-button" onClick={
+                                () => {
+                                    setPageNumber(3)
+                                }}>&gt;</button>
+                        </div>
                         <div className="aboutme-page2-heading">bits of my life</div>
                         <div className="aboutme-page2-intro">outside of coding, i’m usually...</div>
 
@@ -63,7 +74,7 @@ export default function AboutMe() {
                         </div>
                         <div className="aboutme-page2-gym-photo-group">
                             <img className="aboutme-page2-gym-gif"
-                                 alt="Animated cat hyping itself up at the gym"
+                                 alt=""
                                  src="/assets/browser/content/about-me/cat-gym.gif"/>
                             <img className="aboutme-page2-gym-tape" alt=""
                                  src="/assets/browser/content/about-me/drawings/big-tape.png"/>
@@ -74,7 +85,7 @@ export default function AboutMe() {
 
                         <div className="aboutme-page2-food-photo-group">
                             <img className="aboutme-page2-food-photo"
-                                 alt="Dessert, drinks, and baked pasta at a cafe"
+                                 alt=""
                                  src="/assets/browser/content/about-me/food.jpg"/>
                             <img className="aboutme-page2-food-tape-left" alt=""
                                  src="/assets/browser/content/about-me/drawings/small-tape.png"/>
@@ -95,21 +106,21 @@ export default function AboutMe() {
 
                         <div className="aboutme-page2-fuji-photo-group">
                             <img className="aboutme-page2-fuji-photo"
-                                 alt="Mount Fuji above a lantern-lined street"
+                                 alt=""
                                  src="/assets/browser/content/about-me/fuji.jpg"/>
                             <img className="aboutme-page2-fuji-tape" alt=""
                                  src="/assets/browser/content/about-me/drawings/big-tape.png"/>
                         </div>
                         <div className="aboutme-page2-flower-photo-group">
                             <img className="aboutme-page2-flower-photo"
-                                 alt="Close-up photograph of a blue flower"
+                                 alt=""
                                  src="/assets/browser/content/about-me/folwer.jpg"/>
                             <img className="aboutme-page2-flower-tape" alt=""
                                  src="/assets/browser/content/about-me/drawings/small-tape.png"/>
                         </div>
                         <div className="aboutme-page2-cat-photo-group">
                             <img className="aboutme-page2-cat-photo"
-                                 alt="A small cat perched on a railing"
+                                 alt=""
                                  src="/assets/browser/content/about-me/car.jpg"/>
                             <img className="aboutme-page2-cat-tape" alt=""
                                  src="/assets/browser/content/about-me/drawings/tape.png"/>

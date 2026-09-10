@@ -400,36 +400,42 @@ body {
                                         dock
 ----------------------------------------------------------------------------------------------- -o- */
 .dock {
+    --dock-height: clamp(42px, 7.5vh, 58px);
+
     width: 80vw;
     bottom: 0;
-    left: 10vw;
+    left: 50%;
     position: absolute;
     display: flex;
     z-index: 10;
+    transform: translateX(-50%);
 }
 
 .dock-left {
     bottom: 0;
-    height: 63px;
-    width: 35px; /* end caps 5x9 scaled up to 35x63 */
+    width: calc(var(--dock-height) * 5/9); /* Preserve the end caps' 5:9 aspect ratio */
+    height: var(--dock-height);
+    flex: 0 0 calc(var(--dock-height) * 5/9);
     image-rendering: pixelated;
 }
 
 .dock-middle {
-    width: 75vw;
-    height: 63px;
+    min-width: 0;
+    height: var(--dock-height);
     bottom: 0;
+    flex: 1;
 
     background-image: url("/assets/system/dock/dock-middle.png");
     background-repeat: repeat-x;
-    background-size: 8px 63px;
+    background-size: calc(var(--dock-height) * 0.127) var(--dock-height);
 
     image-rendering: pixelated;
 }
 
 .dock-right {
     bottom: 0;
-    height: 63px;
-    width: 35px;
+    width: calc(var(--dock-height) * 5/9);
+    height: var(--dock-height);
+    flex: 0 0 calc(var(--dock-height) * 5/9);
     image-rendering: pixelated;
 }

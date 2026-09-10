@@ -13,6 +13,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "Caveat";
     src: url("/assets/fonts/Caveat/static/Caveat-Regular.ttf") format("truetype");
@@ -333,4 +334,38 @@
         top: 30px;
         height: 90vh;
     }
+
+    .browser-tabs-list {
+        left: 120px;
+        gap: 7px;
+    }
+
+    .browser-tab-button {
+        position: relative;
+        width: 80px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        z-index: 16;
+        top: 10px;
+        left: 10px;
+    }
+
+    .browser-tab-label {
+        color: var(--colour-peach);
+        font: 9px "Emtato Pixel";
+        z-index: 17;
+        position: relative;
+        top: 3px;
+    }
+
+    .browser-tab-img {
+        width: 80px;
+        height: 50px;
+        top: -3px;
+        position: absolute;
+        z-index: 16;
+        left: 0;
+    }
+
 }

@@ -413,16 +413,16 @@
 
 .aboutme-page2-food-tape-left {
     width: 18%;
-    top: -5%;
+    bottom: -5%;
     left: -6%;
-    transform: rotate(-35deg);
+    transform: rotate(+35deg);
 }
 
 .aboutme-page2-food-tape-right {
     width: 18%;
-    right: -10%;
-    bottom: 27%;
-    transform: rotate(100deg);
+    right: -8%;
+    top: -4%;
+    transform: rotate(50deg);
 }
 
 /* Food story: star -> label -> handwritten emphasis */

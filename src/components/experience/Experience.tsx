@@ -13,14 +13,17 @@ export default function Experience() {
                     <div className="section-accent"/>
                 </header>
                 <div className="work-experience-timeline">
-
+                    <div className="work-experience-timeline-line-container">
+                    <div className="timeline-segment season-spring"/>
+                        <div className="timeline-segment segment-long season-fall"/>
+                    </div>
                 </div>
             </section>
             <section className="projects-container">
                 <header className="section-header">
                     <img className="section-image" alt="a" src="/assets/browser/content/experience/code.png"/>
-                    <div className="section-uppertext">Selected projects</div>
-                    <h2 className="section-title">Things I’ve Built</h2>
+                    <div className="section-uppertext">My Code Babies</div>
+                    <h2 className="section-title">Projects</h2>
                     <div className="section-accent"/>
                 </header>
                 <div className="projects-grid">

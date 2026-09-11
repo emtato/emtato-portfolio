@@ -101,6 +101,77 @@
 
 .work-experience-timeline {
     overflow-y: scroll;
+}
+
+.work-experience-timeline-line-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 8%;
+    width: 2%;
+    height: 160vh;
+    overflow-y: scroll;
+    background: #2e1424;
+}
+
+/* timeline segments */
+.timeline-segment {
+    width: 100%;
+    height: 10%;
+}
+
+
+/* timeline segment colours */
+.season-spring {
+    background: lawngreen;
+}
+
+.season-summer {
+    background: yellow;
+}
+
+.season-fall {
+    background: #f36f3a;
+}
+
+.season-winter {
+    background: lightskyblue;
+}
+
+/* timeline segment lengths:  small ½ of medium, medium ½ of long. medium long: 75% of long  */
+.segment-small {
+    height: 5%;
+}
+
+.segment-medium-long {
+    height: 15%;
+}
+
+.segment-long {
+    height: 20%;
+
+}
+
+/* timeline segment caps */
+.segment-top-cap {
+    border-radius: 999px 999px 0 0;
+}
+
+.segment-bottom-cap {
+    border-radius: 0 0 999px 999px;
+}
+
+/* timeline points of interest */
+.timeline-marker {
+
+}
+
+.timeline-dot {
+
+}
+
+.timeline-card {
 
 }
 

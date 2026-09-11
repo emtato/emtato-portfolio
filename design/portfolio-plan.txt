@@ -38,3 +38,5 @@ TODO: page 3 about me
 TODO: about me scroll
 TODO: scroll connects about me, projects, contact? once reach bottom of about me, switch to projects automatically with maybe a colour gradient to transition colour to not make it jarring
 TODO:
+
+timeline:  tutoring, ib ee, tfs, shad, chess club co lead, uot, ops

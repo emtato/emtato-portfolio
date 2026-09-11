@@ -101,24 +101,40 @@
 
 .work-experience-timeline {
     overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+.work-experience-timeline::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE and Edge */
+.work-experience-timeline {
+    -ms-overflow-style: none;
+}
+
+/* For Firefox */
+.work-experience-timeline {
+    scrollbar-width: none;
 }
 
 .work-experience-timeline-line-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    right: 8%;
-    width: 2%;
+    margin-left: auto;
+    width: 1.2%;
+    margin-right: 10%;
     height: 160vh;
-    overflow-y: scroll;
-    background: #2e1424;
 }
 
 /* timeline segments */
 .timeline-segment {
     width: 100%;
     height: 10%;
+    border-radius: 9999px;
+    margin-bottom: 1cqw;
 }
 
 
@@ -153,25 +169,33 @@
 
 }
 
-/* timeline segment caps */
-.segment-top-cap {
-    border-radius: 999px 999px 0 0;
-}
-
-.segment-bottom-cap {
-    border-radius: 0 0 999px 999px;
-}
-
 /* timeline points of interest */
 .timeline-marker {
 
 }
 
 .timeline-dot {
-
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
 }
 
-.timeline-card {
+.timeline-year-text {
+    height: 0;
+    flex: 0 0 0;
+    width: 100%;
+    overflow: visible;
+    white-space: nowrap;
+    font: 1.5cqw "Arvo";
+    color: slategrey;
+}
+
+.TYT-right { /* timeline year text*/
+    transform: translateX(150%) translateY(-0.4em);
+}
+
+.TYT-left {
+    transform: translateX(-800%) translateY(-0.4em);
 
 }
 
@@ -195,7 +219,6 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
-
 }
 
 .projects-grid {
@@ -207,6 +230,8 @@
     grid-auto-rows: minmax(250px, auto);
     gap: 20px;
 }
+
+/* TODO: fix rules for this new layout for new code/timeline behaviour*/
 
 @media (max-width: 910px) {
     .experience-container {

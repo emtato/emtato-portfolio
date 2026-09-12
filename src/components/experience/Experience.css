@@ -131,7 +131,7 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    height: 300vh;
+    height: 310vh;
 }
 
 /* timeline segments */
@@ -162,28 +162,28 @@
     background: #638eff;
 }
 
-.segment-xxs {
+.segment-xs {
     height: 1%;
 }
 
-.segment-xs {
+.segment-small {
     height: 2%;
 }
 
-.segment-small {
+.segment-medium {
     height: 4%;
 }
 
-.segment-small-medium {
+.segment-medium-long {
     height: 6%;
 }
 
-.segment-medium-long {
+.segment-long {
     height: 10%;
 }
 
-.segment-long {
-    height: 12%;
+.segment-xl {
+    height: 16%;
 
 }
 
@@ -299,7 +299,7 @@
 }
 
 .timeline-card-mini { /* for smaller milestones */
-    --timeline-card-scale: 0.8;
+    --timeline-card-scale: 0.9;
     left: 7cqw;
     right: calc(14% + 2.5cqw);
     padding: 1.15em;
@@ -382,10 +382,33 @@
 
 .timeline-card-context {
     color: var(--color-grey-plum);
-    font: 400 0.8em "Arvo";
+    font: 400 0.9em "Arvo";
     line-height: 1.4;
     z-index: 2;
 
+}
+
+.timeline-card-achievement {
+    align-self: flex-start;
+    padding: 0.4em 0.65em;
+    color: var(--timeline-card-accent-ink);
+    background: white;
+    border: calc(1px * var(--timeline-card-scale)) solid var(--timeline-card-accent);
+    border-left-width: calc(4px * var(--timeline-card-scale));
+    border-radius: 0.5em;
+    font: 700 0.9em "Arvo";
+    line-height: 1.3;
+    z-index: 2;
+}
+
+.timeline-card-achievement::before {
+    content: "✦";
+    margin-right: 0.45em;
+}
+
+.timeline-card-mini .timeline-card-context,
+.timeline-card-mini .timeline-card-achievement {
+    font-size: 1em;
 }
 
 .timeline-card-description {
@@ -397,7 +420,7 @@
 
 }
 
-.timeline-card-highlights {
+.timeline-card-bullets {
     color: var(--color-smoky-charcoal);
     font: 400 0.9em "Arvo";
     line-height: 1.5;
@@ -406,7 +429,7 @@
     z-index: 2;
 }
 
-.timeline-card-highlights li + li {
+.timeline-card-bullets li + li {
     margin-top: calc(5px * var(--timeline-card-scale));
 }
 

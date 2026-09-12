@@ -27,7 +27,7 @@ export default function Experience() {
 
                 <div className="work-experience-timeline">
                     <div className="work-experience-timeline-line-container">
-                        <div className="timeline-segment segment-small season-fall"/>
+                        <div className="timeline-segment segment-medium season-fall"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-fall2026" alt="a"
                                  src="/assets/browser/content/experience/fall-1.png"/>
@@ -39,15 +39,15 @@ export default function Experience() {
                                 tags={["Java", "Backend", "E2E testing", "Playwright"]}
                                 dateRange="Sept 2026 - Present"
                                 season="fall"
-                                highlights={["AHDIAHIDA", "ANJKANKJAA"]}
+                                bullets={["i barely got onboarded yet ill do something soon!"]}
                                 mini={false}
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-small season-fall"/>
-                        <div className="timeline-segment segment-small season-summer"/>
-                        <div className="timeline-segment segment-small season-spring"/>
-                        <div className="timeline-segment segment-small season-winter"/>
+                        <div className="timeline-segment segment-medium season-fall"/>
+                        <div className="timeline-segment segment-medium season-summer"/>
+                        <div className="timeline-segment segment-medium season-spring"/>
+                        <div className="timeline-segment segment-medium season-winter"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-winter2026" alt="a"
                                  src="/assets/browser/content/experience/winter.png"/>
@@ -55,24 +55,25 @@ export default function Experience() {
                                 title="GirlMath"
                                 organization="ElleHacks · York University"
                                 context="36-hour hackathon · 4-person team"
+                                achievement="Led backend development"
                                 description="Built an AI-powered journaling app that helps girls in STEM track confidence, motivation, and learning patterns."
                                 tags={["Python", "FastAPI", "Gemini API", "MongoDB"]}
                                 dateRange="Jan 30 - Feb 1, 2026"
                                 season="winter"
-                                highlights={[
-                                    "Led backend development and built the app’s REST endpoints with FastAPI.",
+                                bullets={[
+                                    "Built the app’s REST endpoints with FastAPI.",
                                     "Integrated Gemini for journal analysis and deployed the API to DigitalOcean."
                                 ]}
                                 mini={true}
                             />
                             <div className="timeline-marker season-winter"/>
                         </div>
-                        <div className="timeline-segment segment-xs season-winter"/>
+                        <div className="timeline-segment segment-medium season-winter"/>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2026</div>
-                        <div className="timeline-segment segment-small season-winter"/>
-                        <div className="timeline-segment segment-small season-fall"/>
-                        <div className="timeline-segment segment-xs season-summer"/>
+                        <div className="timeline-segment segment-medium season-winter"/>
+                        <div className="timeline-segment segment-medium season-fall"/>
+                        <div className="timeline-segment segment-medium season-summer"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-winter2026" alt="a"
                                  src="/assets/browser/content/experience/summer.png"/>
@@ -80,28 +81,29 @@ export default function Experience() {
                                 title="Dean’s List Scholar"
                                 organization="University of Toronto"
                                 context="Academic distinction"
-                                description="Earned after completing my fifth U of T credit with a 3.75+ cumulative GPA, exceeding the 3.5 requirement."
-                                tags={["3.75+ GPA"]}
+                                achievement="3.75+ cumulative GPA · 3.5 required"
+                                description="Earned after completing my fifth U of T credit."
                                 dateRange="Summer 2025"
                                 season="summer"
                                 mini={true}
                             />
                             <div className="timeline-marker season-summer"/>
                         </div>
-                        <div className="timeline-segment segment-xs season-summer"/>
+                        <div className="timeline-segment segment-small season-summer"/>
                         <div className="timeline-segment segment-small season-spring"/>
-                        <div className="timeline-segment segment-xs season-winter"/>
+                        <div className="timeline-segment segment-small season-winter"/>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2025</div>
-                        <div className="timeline-segment segment-xs season-winter"/>
+                        <div className="timeline-segment segment-small season-winter"/>
                         <div className="timeline-segment segment-small season-fall"/>
                         <div className="timeline-insertion-point">
                             <TimelineCard
                                 title="B.Sc. in Computer Science"
                                 organization="University of Toronto"
-                                context="Computer Science Specialist · 3.76/4.0 GPA"
+                                context="Computer Science Specialist"
+                                achievement="3.76/4.0 cumulative GPA"
                                 description="Coursework spans data structures and algorithms, software design, systems programming, computer organization, theory of computation, and human-computer interaction."
-                                highlights={[
+                                bullets={[
                                     "Finished above average in 11 of 12 technical courses.", "Earned an A+ in Systems Programming vs a B- average."
                                 ]}
                                 tags={["Data Structures", "Software Design", "Systems", "HCI"]}
@@ -111,16 +113,17 @@ export default function Experience() {
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-small season-fall"/>
+                        <div className="timeline-segment segment-medium season-fall"/>
                         <div className="timeline-segment season-summer"/>
-                        <div className="timeline-segment segment-small season-spring"/>
+                        <div className="timeline-segment season-spring"/>
                         <div className="timeline-insertion-point">
                             <TimelineCard
                                 title="Toronto French School Graduate"
                                 organization="TFS - Canada’s International School"
                                 context="Advanced Bilingual IB Diploma · French International Brevet"
-                                description="Completed an English-French bilingual education and earned a 97% university admissions average."
-                                highlights={[
+                                achievement="97% university admissions average"
+                                description="Completed a rigorous English-French bilingual education."
+                                bullets={[
                                     "Completed Higher Level courses in Physics, Chemistry, and Geography.",
                                     "Co-founded the school chess club and participated in the Canadian Computing Competition."
                                 ]}
@@ -131,19 +134,20 @@ export default function Experience() {
                             />
                             <div className="timeline-marker season-spring"/>
                         </div>
-                        <div className="timeline-segment segment-xs season-spring"/>
-                        <div className="timeline-segment segment-small season-winter"/>
+                        <div className="timeline-segment season-spring"/>
+                        <div className="timeline-segment segment-medium season-winter"/>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2024</div>
-                        <div className="timeline-segment segment-small season-winter"/>
-                        <div className="timeline-segment segment-xs season-fall"/>
+                        <div className="timeline-segment segment-medium season-winter"/>
+                        <div className="timeline-segment segment-medium season-fall"/>
                         <div className="timeline-insertion-point">
                             <TimelineCard
                                 title="Physics Extended Essay"
                                 organization="International Baccalaureate"
-                                context="Independent experimental research · Grade A"
+                                context="Independent experimental research"
+                                achievement="Grade A"
                                 description="Investigated how increasing the density of sucrose solutions affected the terminal velocity of a falling glass marble."
-                                highlights={[
+                                bullets={[
                                     "Recorded trials at 240 fps and extracted position-time data with Tracker.",
                                     "Found an overall decrease in terminal velocity, with the sharpest drop at the highest tested densities."
                                 ]}
@@ -158,8 +162,8 @@ export default function Experience() {
                         <div className="custom-year-placement2023 timeline-year-text">2023</div>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2022</div>
-                        <div className="timeline-segment segment-xxs season-winter"/>
-                        <div className="timeline-segment segment-xs season-fall"/>
+                        <div className="timeline-segment segment-small season-winter"/>
+                        <div className="timeline-segment segment-medium season-fall"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-winter2026" alt="a"
                                  src="/assets/browser/content/experience/fall-1.png"/>
@@ -171,14 +175,14 @@ export default function Experience() {
                                 tags={["French", "English", "Mentorship", "Remote Teaching"]}
                                 dateRange="2021 - 2024"
                                 season="fall"
-                                highlights={[
+                                bullets={[
                                     "Adapted and reframed explanations around each learner until difficult ideas clicked."
                                 ]}
                                 mini={true}
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-medium-long season-fall"/>
+                        <div className="timeline-segment segment-xl season-fall"/>
 
                     </div>
                 </div>

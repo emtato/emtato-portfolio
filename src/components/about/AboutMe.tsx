@@ -28,7 +28,7 @@ export default function AboutMe() {
                         <div className="aboutme-page1-body-line">☆</div>
                         <div className="aboutme-page1-body-line">
                             <span>currently working on </span>
-                            <a className="aboutme-page1-tempo-link" href="https://github.com/emtato/tempo."
+                            <a className="aboutme-page1-tempo-link" href="https://tempo.ems.lol"
                                target="_blank">tempo.</a>
                             <span>,</span>
                         </div>

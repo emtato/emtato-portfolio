@@ -50,9 +50,10 @@
 .aboutme-notebook-pan-page-2 {
     transform: translate(-50%, -20%);
 }
- .aboutme-notebook-pan-page-3{
-        transform: translate(-180%, -300%)  scale(300%);
-    }
+
+.aboutme-notebook-pan-page-3 {
+    transform: translate(-180%, -300%) scale(300%);
+}
 
 .aboutme-notebook {
     width: clamp(120cqh, 140%, 300cqh); /* Prevent additional shrinking when the viewport is narrow */
@@ -174,12 +175,12 @@
 }
 
 .aboutme-page1-portrait-sprout {
-    width: 3%;
+    width: 3.5%;
     top: 10.3%;
-    left: 78.6%;
+    left: 78.5%;
     z-index: 6;
     image-rendering: pixelated;
-    transform: rotate(-10deg);
+    transform: rotate(-7deg);
 }
 
 /* Highlight overlays for the two professional facts */
@@ -215,6 +216,7 @@
     background-color: transparent;
     color: var(--color-bright-plum);
     font: 2.2cqw "NYCD";
+    cursor: pointer;
 }
 
 .aboutme-page1-next-desktop-label {
@@ -243,19 +245,22 @@
 
 .back-next-button-container {
     position: absolute;
-    top:0.2%;
+    top: 0.2%;
     right: 11%;
     z-index: 5;
     display: flex;
     flex-direction: row;
     gap: 1.5cqw;
 }
+
 .back-next-button {
     border: none;
     background-color: transparent;
     color: var(--color-bright-plum);
     font: 4cqw "Caveat";
+    cursor: pointer;
 }
+
 /* Page container and heading */
 
 .aboutme-page2-container {
@@ -539,7 +544,8 @@
     .aboutme-notebook-pan-page-2 {
         transform: translate(-99%, -8%);
     }
-    .aboutme-notebook-pan-page-3{
+
+    .aboutme-notebook-pan-page-3 {
         transform: translate(-224%, -16%);
     }
 

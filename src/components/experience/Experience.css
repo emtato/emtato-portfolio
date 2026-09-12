@@ -125,7 +125,7 @@
     align-items: center;
     margin-left: auto;
     width: 1.2%;
-    margin-right: 10%;
+    margin-right: 14%;
     height: 160vh;
 }
 
@@ -140,19 +140,19 @@
 
 /* timeline segment colours */
 .season-spring {
-    background: lawngreen;
+    background: #7bfc01;
 }
 
 .season-summer {
-    background: yellow;
+    background: #ffff00;
 }
 
 .season-fall {
-    background: #f36f3a;
+    background: #e06f3a;
 }
 
 .season-winter {
-    background: lightskyblue;
+    background: #638eff;
 }
 
 /* timeline segment lengths:  small ½ of medium, medium ½ of long. medium long: 75% of long  */
@@ -170,7 +170,18 @@
 }
 
 /* timeline points of interest */
+.timeline-insertion-point {
+    width: 100%;
+    flex: 0 0 0;
+
+    position: relative;
+    overflow: visible;
+}
+
 .timeline-marker {
+    width: 200%;
+    aspect-ratio: 1;
+    margin-bottom: 1cqw;
 
 }
 
@@ -178,6 +189,7 @@
     width: 100%;
     aspect-ratio: 1;
     border-radius: 50%;
+    margin-bottom: 1cqw;
 }
 
 .timeline-year-text {
@@ -190,13 +202,46 @@
     color: slategrey;
 }
 
-.TYT-right { /* timeline year text*/
-    transform: translateX(150%) translateY(-0.4em);
+.TYT-right { /* timeline year text. place text right below item wanna be next to in html*/
+    transform: translateX(300%) translateY(-1.58em);
 }
 
 .TYT-left {
-    transform: translateX(-800%) translateY(-0.4em);
+    transform: translateX(-1000%) translateY(-1.58em);
 
+}
+
+/* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */
+
+.timeline-card {
+    width: 10cqw;
+    height: 15cqw;
+    transform: translateX(-115%);
+
+    border-radius: 1.5cqmin;
+    box-shadow: 0 8px 10px -6px rgba(46, 20, 36, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.TLC-spring { /* timeline card colour theme to match season it occured in */
+    background: #f6ffed;
+    border: 2px solid #7bfc01;
+}
+
+.TLC-summer {
+    background: #fff8e1;
+    border: 2px solid #ffff00;
+}
+
+.TLC-fall {
+    background: #fff0f5;
+    border: 2px solid #e06f3a;
+}
+
+.TLC-winter {
+    background: #f0f5ff;
+    border: 2px solid #638EFF;
 }
 
 /* ------------------------------------------------------------------------------------------- -v-

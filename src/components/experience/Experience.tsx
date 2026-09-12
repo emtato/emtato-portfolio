@@ -3,17 +3,6 @@ import TimelineCard from "./TimelineCard.tsx";
 
 export default function Experience() {
 
-    /*
-                              <TimelineCard
-                                title="Software Development Intern"
-                                organization="Ontario Public Service"
-                                context="Digital Solutions Branch · 8-month internship"
-                                description="My team is modernizing the Java backend supporting Ontario’s driver and vehicle services."
-                                tags={["Java", "Backend systems", "Public services"]}
-                                dateRange="Sept 2023 - Dec 2023"
-                                season="fall"
-                            />
-     */
     return (
 
         <div className="experience-container">
@@ -47,6 +36,10 @@ export default function Experience() {
                         <div className="timeline-segment segment-medium season-fall"/>
                         <div className="timeline-segment segment-medium season-summer"/>
                         <div className="timeline-segment segment-medium season-spring"/>
+                        <div className="timeline-insertion-point">
+                            <img className="TLA-spring2026 timeline-art" alt="a"
+                                 src="/assets/browser/content/experience/spring.png"/>
+                        </div>
                         <div className="timeline-segment segment-medium season-winter"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-winter2026" alt="a"
@@ -73,9 +66,12 @@ export default function Experience() {
                         <div className="timeline-year-text TYT-right">2026</div>
                         <div className="timeline-segment segment-medium season-winter"/>
                         <div className="timeline-segment segment-medium season-fall"/>
+                        <div className="timeline-insertion-point">
+                            <img className="TLA-fall2025 timeline-art" alt="a" src="/assets/browser/content/experience/fall-2.png"/>
+                        </div>
                         <div className="timeline-segment segment-medium season-summer"/>
                         <div className="timeline-insertion-point">
-                            <img className="timeline-art TLA-winter2026" alt="a"
+                            <img className="timeline-art TLA-summer2025" alt="a"
                                  src="/assets/browser/content/experience/summer.png"/>
                             <TimelineCard
                                 title="Dean’s List Scholar"
@@ -92,11 +88,16 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-summer"/>
                         <div className="timeline-segment segment-small season-spring"/>
                         <div className="timeline-segment segment-small season-winter"/>
+                        <div className="timeline-insertion-point">
+                            <img className="TLA-winter2025 timeline-art" alt="a"
+                                 src="/assets/browser/content/experience/winter-2.png"/>
+                        </div>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2025</div>
                         <div className="timeline-segment segment-small season-winter"/>
                         <div className="timeline-segment segment-small season-fall"/>
                         <div className="timeline-insertion-point">
+                            <img className="TLA-fall2024 timeline-art" alt="a" src="/assets/browser/content/experience/fall-2.png"/>
                             <TimelineCard
                                 title="B.Sc. in Computer Science"
                                 organization="University of Toronto"

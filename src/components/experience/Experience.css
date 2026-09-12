@@ -257,19 +257,32 @@
 }
 
 .TLA-fall2026 {
-    transform: translateX(975%) translateY(-50%) rotate(80deg);
+    transform: translateX(975%) translateY(-50%) rotate(80deg) scale(130%);
 }
 
-.TLA-summer2026 {
-    transform: translateX(30cqw) translateY(1em) rotate(80deg);
-}
 
 .TLA-spring2026 {
-    transform: translateX(100%) translateY(-100%) rotate(80deg);
+    transform: translateX(1150%) translateY(-130%) rotate(15deg);
 }
 
 .TLA-winter2026 {
-    transform: translateX(970%) translateY(80%) rotate(15deg);
+    transform: translateX(970%) translateY(80%) rotate(15deg) scale(110%);
+}
+
+.TLA-fall2025 {
+    transform: translateX(1145%) translateY(-160%) rotate(-10deg) scale(130%);
+}
+
+.TLA-summer2025 {
+    transform: translateX(145%) translateY(-30%) rotate(-10deg) scale(130%);
+}
+
+.TLA-winter2025 {
+    transform: translateX(1130%) translateY(-90%) rotate(14deg);
+}
+
+.TLA-fall2024 {
+    transform: translateX(505%) translateY(210%) rotate(10deg) scale(110%) scaleX(-1);
 }
 
 /* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */

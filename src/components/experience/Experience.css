@@ -131,7 +131,7 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    height: 310vh;
+    height: 315vh;
 }
 
 /* timeline segments */
@@ -189,13 +189,13 @@
 
 /* Condenses two full years into one continuous seasonal ribbon */
 .segment-condensed-years {
-    height: 12%;
+    height: 6%;
     background: repeating-linear-gradient(
             to bottom,
-            #e06f3a 0 12.5%,
-            #ffff00 12.5% 25%,
-            #7bfc01 25% 37.5%,
-            #638eff 37.5% 50%
+            #e06f3a 0 25%,
+            #ffff00 25% 50%,
+            #7bfc01 50% 75%,
+            #638eff 75% 100%
     );
 }
 
@@ -241,10 +241,6 @@
     transform: translateX(88.5%) translateY(-1.15em);
 }
 
-.custom-year-placement2023 {
-    transform: translateX(88.5%) translateY(-8.4em);
-}
-
 
 /* timeline decorative pixel art placements*/
 .timeline-art {
@@ -283,6 +279,14 @@
 
 .TLA-fall2024 {
     transform: translateX(505%) translateY(210%) rotate(10deg) scale(110%) scaleX(-1);
+}
+
+.TLA-spring2024 {
+    transform: translateX(900%) translateY(-95%) rotate(10deg) scale(110%) scaleX(-1);
+}
+
+.TLA-fall2023 {
+    transform: translateX(900%) translateY(950%) rotate(40deg) scale(110%);
 }
 
 /* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */

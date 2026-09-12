@@ -67,7 +67,8 @@ export default function Experience() {
                         <div className="timeline-segment segment-medium season-winter"/>
                         <div className="timeline-segment segment-medium season-fall"/>
                         <div className="timeline-insertion-point">
-                            <img className="TLA-fall2025 timeline-art" alt="a" src="/assets/browser/content/experience/fall-2.png"/>
+                            <img className="TLA-fall2025 timeline-art" alt="a"
+                                 src="/assets/browser/content/experience/fall-2.png"/>
                         </div>
                         <div className="timeline-segment segment-medium season-summer"/>
                         <div className="timeline-insertion-point">
@@ -97,7 +98,8 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-winter"/>
                         <div className="timeline-segment segment-small season-fall"/>
                         <div className="timeline-insertion-point">
-                            <img className="TLA-fall2024 timeline-art" alt="a" src="/assets/browser/content/experience/fall-2.png"/>
+                            <img className="TLA-fall2024 timeline-art" alt="a"
+                                 src="/assets/browser/content/experience/fall-2.png"/>
                             <TimelineCard
                                 title="B.Sc. in Computer Science"
                                 organization="University of Toronto"
@@ -118,8 +120,10 @@ export default function Experience() {
                         <div className="timeline-segment season-summer"/>
                         <div className="timeline-segment season-spring"/>
                         <div className="timeline-insertion-point">
+                            <img className="TLA-spring2024 timeline-art" alt="a"
+                                 src="/assets/browser/content/experience/spring.png"/>
                             <TimelineCard
-                                title="Toronto French School Graduate"
+                                title="Graduating Toronto French School"
                                 organization="TFS - Canada’s International School"
                                 context="Advanced Bilingual IB Diploma · French International Brevet"
                                 achievement="97% university admissions average"
@@ -135,13 +139,23 @@ export default function Experience() {
                             />
                             <div className="timeline-marker season-spring"/>
                         </div>
-                        <div className="timeline-segment season-spring"/>
-                        <div className="timeline-segment segment-medium season-winter"/>
+                        <div className="timeline-segment segment-medium season-spring"/>
+                        <div className="timeline-segment segment-small season-winter"/>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2024</div>
-                        <div className="timeline-segment segment-medium season-winter"/>
-                        <div className="timeline-segment segment-medium season-fall"/>
+                        <div className="timeline-segment segment-small season-winter"/>
+                        <div className="timeline-segment segment-small season-fall"/>
+                        <div className="timeline-segment segment-small season-summer"/>
+                        <div className="timeline-segment segment-small season-spring"/>
+                        <div className="timeline-segment segment-xs season-winter"/>
+                        <div className="timeline-dot season-winter"/>
+                        <div className="timeline-year-text TYT-right">2023</div>
+                        <div className="timeline-segment segment-xs season-winter"/>
+                        <div className="timeline-segment segment-small season-fall"/>
+
                         <div className="timeline-insertion-point">
+                            <img className="timeline-art TLA-fall2023" alt="a"
+                                 src="/assets/browser/content/experience/fall-1.png"/>
                             <TimelineCard
                                 title="Physics Extended Essay"
                                 organization="International Baccalaureate"
@@ -159,15 +173,18 @@ export default function Experience() {
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-condensed-years"/>
-                        <div className="custom-year-placement2023 timeline-year-text">2023</div>
+                        <div className="timeline-segment segment-small season-fall"/>
+                        <div className="timeline-segment segment-medium season-summer"/>
+
+                        <div className="timeline-segment segment-medium season-spring"/>
+                        <div className="timeline-segment segment-small season-winter"/>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2022</div>
                         <div className="timeline-segment segment-small season-winter"/>
-                        <div className="timeline-segment segment-medium season-fall"/>
+                        <div className="timeline-segment segment-small season-fall"/>
+
                         <div className="timeline-insertion-point">
-                            <img className="timeline-art TLA-winter2026" alt="a"
-                                 src="/assets/browser/content/experience/fall-1.png"/>
+
                             <TimelineCard
                                 title="French Tutor & English Volunteer"
                                 organization="Independent & volunteer tutoring"

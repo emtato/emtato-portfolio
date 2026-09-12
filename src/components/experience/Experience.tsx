@@ -3,6 +3,17 @@ import TimelineCard from "./TimelineCard.tsx";
 
 export default function Experience() {
 
+    /*
+                              <TimelineCard
+                                title="Software Development Intern"
+                                organization="Ontario Public Service"
+                                context="Digital Solutions Branch · 8-month internship"
+                                description="My team is modernizing the Java backend supporting Ontario’s driver and vehicle services."
+                                tags={["Java", "Backend systems", "Public services"]}
+                                dateRange="Sept 2023 - Dec 2023"
+                                season="fall"
+                            />
+     */
     return (
 
         <div className="experience-container">
@@ -16,8 +27,8 @@ export default function Experience() {
                 <div className="work-experience-timeline">
                     <div className="work-experience-timeline-line-container">
                         <div className="timeline-segment season-spring"/>
-                         <div className="timeline-insertion-point">
-                            <TimelineCard></TimelineCard>
+                        <div className="timeline-insertion-point">
+
                             <div className="timeline-marker season-fall"/>
                         </div>
                         <div className="timeline-segment segment-long season-fall"/>

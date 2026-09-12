@@ -221,39 +221,149 @@
 /* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */
 
 .timeline-card { /* place timeline card immediately before the timeline marker */
+
     left: 1.5cqw;
     right: calc(14% + 2cqw);
     width: auto;
     height: auto;
-    min-height: 15cqw;
     position: absolute;
     top: 0;
-
     transform: none;
+    box-sizing: border-box;
+    padding: 1.35cqw;
+
+    background: var(--timeline-card-background);
+    border: 2px solid var(--timeline-card-accent);
     border-radius: 1.5cqmin;
-    box-shadow: 0 8px 10px -6px rgba(46, 20, 36, 0.2);
+    box-shadow: 0 7px 16px -10px lightslategrey;
     display: flex;
     flex-direction: column;
+    gap: 0.45cqw;
+    overflow: hidden;
 }
 
-.TLC-spring { /* timeline card colour theme to match season it occured in */
-    background: #f6ffed;
-    border: 2px solid #7bfc01;
+.timeline-card::before {
+    content: "";
+    width: 50cqmin;
+    height: 50cqmin;
+    border-radius: 50%;
+    border: 7px solid var(--timeline-card-accent);
+    opacity: 0.4;
+    position: absolute;
+    bottom: -27cqmin;
+    z-index: 1;
+    right: -27cqmin;
+}
+
+.TLC-spring { /* timeline card colour theme to match season it occured in. provides colour to class + descendants for them to use */
+    --timeline-card-accent: #7bfc01;
+    --timeline-card-accent-ink: #397407;
+    --timeline-card-background: #f6ffed;
 }
 
 .TLC-summer {
-    background: #fff8e1;
-    border: 2px solid #ffff00;
+    --timeline-card-accent: #e0c700;
+    --timeline-card-accent-ink: #766900;
+    --timeline-card-background: #fff8e1;
 }
 
 .TLC-fall {
-    background: #fff0f5;
-    border: 2px solid #e06f3a;
+    --timeline-card-accent: #e06f3a;
+    --timeline-card-accent-ink: #93421f;
+    --timeline-card-background: #fff0f5;
 }
 
 .TLC-winter {
-    background: #f0f5ff;
-    border: 2px solid #638EFF;
+    --timeline-card-accent: #638eff;
+    --timeline-card-accent-ink: #345bbf;
+    --timeline-card-background: #f0f5ff;
+}
+
+.timeline-card-heading {
+    min-height: 1.7cqw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.timeline-card-date {
+    padding: 5px 9px;
+    color: var(--timeline-card-accent-ink);
+    background: white;
+    border: 1px solid var(--timeline-card-accent);
+    border-radius: 999px;
+    font: 400 0.8cqw "Emtato Pixel";
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    position: absolute;
+    right: 1.5cqw;
+}
+
+.timeline-card-title {
+    color: var(--color-dark-plum);
+    font: 700 1.8cqw "Arvo";
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    margin: 0;
+    z-index: 2;
+}
+
+.timeline-card-organization {
+    color: var(--color-deep-plum);
+    font: 700 1.1cqw "Arvo";
+    line-height: 1.25;
+    z-index: 2;
+}
+
+.timeline-card-context {
+    color: var(--color-grey-plum);
+    font: 400 0.8cqw "Arvo";
+    line-height: 1.4;
+    z-index: 2;
+
+}
+
+.timeline-card-description {
+    color: var(--color-smoky-charcoal);
+    font: 400 1cqw "Arvo";
+    line-height: 1.55;
+    margin: 0.35cqw;
+    z-index: 2;
+
+}
+
+.timeline-card-highlights {
+    color: var(--color-smoky-charcoal);
+    font: 400 0.9cqw "Arvo";
+    line-height: 1.5;
+    margin: 3px 0 0;
+    padding-left: 1.2em;
+    z-index: 2;
+}
+
+.timeline-card-highlights li + li {
+    margin-top: 5px;
+}
+
+.timeline-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.35cqw;
+    z-index: 2;
+
+}
+
+.timeline-card-tag {
+    padding: 4px 9px;
+    color: var(--timeline-card-accent-ink);
+    background: white;
+    border: 1px solid var(--timeline-card-accent);
+    border-radius: 999px;
+    font: 400 0.7cqw "Emtato Pixel";
+    line-height: 1.2;
 }
 
 /* ------------------------------------------------------------------------------------------- -v-
@@ -290,7 +400,7 @@
 
 /* TODO: fix rules for this new layout for new code/timeline behaviour*/
 
-@media (max-width: 910px) {
+@media (max-width: 710px) {
     .experience-container {
         height: auto;
         min-height: 100%;
@@ -304,6 +414,10 @@
     .projects-container {
         height: auto;
         min-height: 430px;
+    }
+
+    .work-experience-container {
+        min-height: 510px;
     }
 
     .work-experience-timeline,

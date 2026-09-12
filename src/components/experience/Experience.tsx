@@ -34,7 +34,7 @@ export default function Experience() {
                         <div className="timeline-segment segment-long season-fall"/>
                         <div className="timeline-dot season-fall"/>
 
-                        <div className="timeline-year-text TYT-right">2204</div>
+                        <div className="timeline-year-text TYT-left">2204</div>
                     </div>
                 </div>
             </section>

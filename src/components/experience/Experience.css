@@ -102,6 +102,8 @@
 .work-experience-timeline {
     overflow-y: scroll;
     height: 100%;
+    overflow-x: hidden;
+
     width: 100%;
 }
 
@@ -210,11 +212,11 @@
 }
 
 .TYT-right { /* timeline year text. place text right below item wanna be next to in html*/
-    transform: translateX(300%) translateY(-1.58em);
+    transform: translateX(88.5%) translateY(-1.45em);
 }
 
 .TYT-left {
-    transform: translateX(-1000%) translateY(-1.58em);
+    transform: translateX(74%) translateY(-1.45em);
 
 }
 

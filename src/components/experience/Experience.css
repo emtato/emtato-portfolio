@@ -41,16 +41,18 @@
 
 
 .section-header {
-    padding: 3cqw;
+    padding: 2.5cqw;
     position: relative;
     flex-shrink: 0;
+    box-shadow: 0 4px 30px rgba(46, 20, 36, 0.05);
 }
 
 .section-image {
     position: absolute;
-    top: 24px;
-    right: 2.5cqw;
+    top: 12px;
+    right: 2cqw;
     width: 27%;
+    image-rendering: pixelated;
 }
 
 .section-uppertext {
@@ -129,7 +131,7 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    height: 160vh;
+    height: 260vh;
 }
 
 /* timeline segments */
@@ -166,6 +168,11 @@
 
 .segment-small {
     height: 4%;
+}
+
+.segment-small-medium {
+    height: 6%;
+
 }
 
 .segment-medium-long {
@@ -218,9 +225,31 @@
     transform: translateX(88.5%) translateY(-1.15em);
 }
 
-.TYT-left {
-    transform: translateX(74%) translateY(-1.15em);
 
+/* timeline decorative pixel art placements*/
+.timeline-art {
+    position: absolute;
+    opacity: 0.8;
+    width: 3cqw;
+    height: auto;
+    z-index: 4;
+    image-rendering: pixelated;
+}
+
+.TLA-fall2026 {
+    transform: translateX(975%) translateY(-50%) rotate(80deg);
+}
+
+.TLA-summer2026 {
+    transform: translateX(30cqw) translateY(1em) rotate(80deg);
+}
+
+.TLA-spring2026 {
+    transform: translateX(100%) translateY(-100%) rotate(80deg);
+}
+
+.TLA-winter2026 {
+    transform: translateX(970%) translateY(80%) rotate(15deg);
 }
 
 /* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */

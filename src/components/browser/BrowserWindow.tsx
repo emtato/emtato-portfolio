@@ -93,7 +93,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
             <div className="browser-window-page-content">
                 {/* render pages*/}
                 <div className="browser-window-page">
-                    {activeTab === 0 && <AboutMe/>}
+                    {activeTab === 0 && <AboutMe nextTab={() => changeTab(1)}/>}
                     {activeTab === 1 && <Experience/>}
                     {activeTab === 2 && <Contact/>}
                 </div>

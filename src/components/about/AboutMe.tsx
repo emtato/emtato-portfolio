@@ -1,7 +1,11 @@
 import './AboutMe.css'
 import {useState} from "react";
 
-export default function AboutMe() {
+interface AboutMeProps {
+    nextTab: () => void //automatically goed to experience tab upon continuous scrolling/button
+}
+
+export default function AboutMe({nextTab}: AboutMeProps) {
     const [pageNumber, setPageNumber] = useState(1) /* 1,2,3*/
     return <div className="aboutme-scroll-container">
         <div className="aboutme-scene">
@@ -60,10 +64,7 @@ export default function AboutMe() {
                                 () => {
                                     setPageNumber(1)
                                 }}>&lt;</button>
-                            <button className="back-next-button" onClick={
-                                () => {
-                                    setPageNumber(3)
-                                }}>&gt;</button>
+                            <button className="back-next-button" onClick={nextTab}>&gt;</button>
                         </div>
                         <div className="aboutme-page2-heading">bits of my life</div>
                         <div className="aboutme-page2-intro">outside of coding, i’m usually...</div>
@@ -128,7 +129,7 @@ export default function AboutMe() {
 
                         <div className="aboutme-page2-closing-copy">
                             and most importantly,<br/>
-            i love cats and 2d men &lt;3
+                            i love cats and 2d men &lt;3
                         </div>
                     </div>
                 </div>

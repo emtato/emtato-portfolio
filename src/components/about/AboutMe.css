@@ -261,6 +261,9 @@
     cursor: pointer;
 }
 
+.aboutme-page1-next-button:hover, .back-next-button:hover {
+    color: var(--color-blush);
+}
 /* Page container and heading */
 
 .aboutme-page2-container {
@@ -572,6 +575,7 @@
         top: 51.8%;
         font: 2.6cqw "NYCD";
     }
+
 
     .aboutme-page1-next-desktop-label {
         display: none;

@@ -52,14 +52,17 @@ export default function Experience() {
                             <img className="timeline-art TLA-winter2026" alt="a"
                                  src="/assets/browser/content/experience/winter.png"/>
                             <TimelineCard
-                                title="hackathon"
-                                organization="Ontario asdasdada Service"
-                                context="Digital adasdas Branch · 4-8 month internship"
-                                description="Working on adasdasdas Java backend behind Ontario’s driver and vehicle services, with a focus on system modernization, testing, and core business logic."
-                                tags={["a"]}
-                                dateRange="jan"
+                                title="GirlMath"
+                                organization="ElleHacks · York University"
+                                context="36-hour hackathon · 4-person team"
+                                description="Built an AI-powered journaling app that helps girls in STEM track confidence, motivation, and learning patterns."
+                                tags={["Python", "FastAPI", "Gemini API", "MongoDB"]}
+                                dateRange="Jan 30 - Feb 1, 2026"
                                 season="winter"
-                                highlights={["AHDIAHIDA", "ANJKANKJAA"]}
+                                highlights={[
+                                    "Led backend development and built the app’s REST endpoints with FastAPI.",
+                                    "Integrated Gemini for journal analysis and deployed the API to DigitalOcean."
+                                ]}
                                 mini={true}
                             />
                             <div className="timeline-marker season-winter"/>
@@ -74,14 +77,13 @@ export default function Experience() {
                             <img className="timeline-art TLA-winter2026" alt="a"
                                  src="/assets/browser/content/experience/summer.png"/>
                             <TimelineCard
-                                title="deans list scholar"
-                                organization="Ontario asdasdada Service"
-                                context="Digital adasdas Branch · 4-8 month internship"
-                                description="Working on adasdasdas Java backend behind Ontario’s driver and vehicle services, with a focus on system modernization, testing, and core business logic."
-                                tags={["a"]}
-                                dateRange="summer idk"
+                                title="Dean’s List Scholar"
+                                organization="University of Toronto"
+                                context="Academic distinction"
+                                description="Earned after completing my fifth U of T credit with a 3.75+ cumulative GPA, exceeding the 3.5 requirement."
+                                tags={["3.75+ GPA"]}
+                                dateRange="Summer 2025"
                                 season="summer"
-                                highlights={["AHDIAHIDA", "ANJKANKJAA"]}
                                 mini={true}
                             />
                             <div className="timeline-marker season-summer"/>
@@ -95,12 +97,15 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-fall"/>
                         <div className="timeline-insertion-point">
                             <TimelineCard
-                                title="Uoft"
-                                organization="aa"
-                                context="Computer Science Specialist"
-                                description="asdddddd"
-                                tags={["UOP"]}
-                                dateRange="Sept 2024 - Present"
+                                title="B.Sc. in Computer Science"
+                                organization="University of Toronto"
+                                context="Computer Science Specialist · 3.76/4.0 GPA"
+                                description="Coursework spans data structures and algorithms, software design, systems programming, computer organization, theory of computation, and human-computer interaction."
+                                highlights={[
+                                    "Finished above average in 11 of 12 technical courses.", "Earned an A+ in Systems Programming vs a B- average."
+                                ]}
+                                tags={["Data Structures", "Software Design", "Systems", "HCI"]}
+                                dateRange="Sept 2024 - Expected May 2029"
                                 season="fall"
                                 mini={false}
                             />
@@ -111,12 +116,16 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-spring"/>
                         <div className="timeline-insertion-point">
                             <TimelineCard
-                                title="graduated tfs"
-                                organization="aa"
-                                context=""
-                                description="asdddddd"
-                                tags={["UOP"]}
-                                dateRange="Sept 2024 - Present"
+                                title="Toronto French School Graduate"
+                                organization="TFS - Canada’s International School"
+                                context="Advanced Bilingual IB Diploma · French International Brevet"
+                                description="Completed an English-French bilingual education and earned a 97% university admissions average."
+                                highlights={[
+                                    "Completed Higher Level courses in Physics, Chemistry, and Geography.",
+                                    "Co-founded the school chess club and participated in the Canadian Computing Competition."
+                                ]}
+                                tags={["Bilingual IB", "HL Physics", "HL Chemistry", "HL Geography"]}
+                                dateRange="Sept 2016 - May 2024"
                                 season="spring"
                                 mini={false}
                             />
@@ -127,20 +136,50 @@ export default function Experience() {
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2024</div>
                         <div className="timeline-segment segment-small season-winter"/>
-                        <div className="timeline-segment segment-small season-fall"/>
+                        <div className="timeline-segment segment-xs season-fall"/>
                         <div className="timeline-insertion-point">
                             <TimelineCard
-                                title="submitted EE"
-                                organization="aa"
-                                context=""
-                                description="A"
-                                tags={["UOP"]}
+                                title="Physics Extended Essay"
+                                organization="International Baccalaureate"
+                                context="Independent experimental research · Grade A"
+                                description="Investigated how increasing the density of sucrose solutions affected the terminal velocity of a falling glass marble."
+                                highlights={[
+                                    "Recorded trials at 240 fps and extracted position-time data with Tracker.",
+                                    "Found an overall decrease in terminal velocity, with the sharpest drop at the highest tested densities."
+                                ]}
+                                tags={["Fluid Mechanics", "Experimental Design", "Data Analysis"]}
                                 dateRange="Fall 2022 - Fall 2023"
                                 season="fall"
                                 mini={true}
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
+                        <div className="timeline-segment segment-condensed-years"/>
+                        <div className="custom-year-placement2023 timeline-year-text">2023</div>
+                        <div className="timeline-dot season-winter"/>
+                        <div className="timeline-year-text TYT-right">2022</div>
+                        <div className="timeline-segment segment-xxs season-winter"/>
+                        <div className="timeline-segment segment-xs season-fall"/>
+                        <div className="timeline-insertion-point">
+                            <img className="timeline-art TLA-winter2026" alt="a"
+                                 src="/assets/browser/content/experience/fall-1.png"/>
+                            <TimelineCard
+                                title="French Tutor & English Volunteer"
+                                organization="Independent & volunteer tutoring"
+                                context="One-on-one and remote instruction"
+                                description="Tutored a local younger student in French and taught conversational English to children in China over video calls."
+                                tags={["French", "English", "Mentorship", "Remote Teaching"]}
+                                dateRange="2021 - 2024"
+                                season="fall"
+                                highlights={[
+                                    "Adapted and reframed explanations around each learner until difficult ideas clicked."
+                                ]}
+                                mini={true}
+                            />
+                            <div className="timeline-marker season-fall"/>
+                        </div>
+                        <div className="timeline-segment segment-medium-long season-fall"/>
+
                     </div>
                 </div>
             </section>

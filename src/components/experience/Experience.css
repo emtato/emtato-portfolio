@@ -131,7 +131,7 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    height: 260vh;
+    height: 300vh;
 }
 
 /* timeline segments */
@@ -162,6 +162,10 @@
     background: #638eff;
 }
 
+.segment-xxs {
+    height: 1%;
+}
+
 .segment-xs {
     height: 2%;
 }
@@ -172,7 +176,6 @@
 
 .segment-small-medium {
     height: 6%;
-
 }
 
 .segment-medium-long {
@@ -183,6 +186,19 @@
     height: 12%;
 
 }
+
+/* Condenses two full years into one continuous seasonal ribbon */
+.segment-condensed-years {
+    height: 12%;
+    background: repeating-linear-gradient(
+            to bottom,
+            #e06f3a 0 12.5%,
+            #ffff00 12.5% 25%,
+            #7bfc01 25% 37.5%,
+            #638eff 37.5% 50%
+    );
+}
+
 
 /* timeline points of interest */
 .timeline-insertion-point {
@@ -223,6 +239,10 @@
 
 .TYT-right { /* timeline year text. place text right below item wanna be next to in html*/
     transform: translateX(88.5%) translateY(-1.15em);
+}
+
+.custom-year-placement2023 {
+    transform: translateX(88.5%) translateY(-8.4em);
 }
 
 

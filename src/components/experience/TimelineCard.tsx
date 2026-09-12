@@ -9,13 +9,14 @@ interface TimelineCardProps {
     tags?: string[]
     dateRange: string
     season: "spring" | "fall" | "winter" | "summer"
+    mini: boolean
 }
 
 export default function TimelineCard({
                                          title, organization, context, description, highlights = [], tags = [],
-                                         dateRange, season,
+                                         dateRange, season, mini
                                      }: TimelineCardProps) {
-    return <article className={`timeline-card TLC-${season}`}>
+    return <article className={`${mini ? "timeline-card timeline-card-mini" : "timeline-card"} TLC-${season}`}>
         <div className="timeline-card-heading">
             <span className="timeline-card-date">{dateRange}</span>
         </div>

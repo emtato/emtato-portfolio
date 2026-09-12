@@ -48,3 +48,6 @@ Full experience cards
 Compact academic milestones
 - TFS — 97% average, with HL Physics, Chemistry, and Geography
 - University of Toronto — Computer Science, 3.76/4.0 GPA
+
+    Dean’s list: little milestone rather than a full card
+hackathons

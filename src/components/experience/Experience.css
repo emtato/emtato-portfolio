@@ -137,9 +137,9 @@
     width: 1.2%;
     margin-left: auto;
     margin-right: 14%;
-    height: 10%;
+    height: 8%;
     border-radius: 9999px;
-    margin-bottom: 1cqw;
+    margin-bottom: 0.5cqw;
 }
 
 
@@ -160,17 +160,20 @@
     background: #638eff;
 }
 
-/* timeline segment lengths:  small ½ of medium, medium ½ of long. medium long: 75% of long  */
+.segment-xs {
+    height: 2%;
+}
+
 .segment-small {
-    height: 5%;
+    height: 4%;
 }
 
 .segment-medium-long {
-    height: 15%;
+    height: 10%;
 }
 
 .segment-long {
-    height: 20%;
+    height: 12%;
 
 }
 
@@ -186,7 +189,7 @@
 .timeline-marker {
     width: 2.4%;
     aspect-ratio: 1;
-    margin-bottom: 1cqw;
+    margin-bottom: 0.5cqw;
     margin-left: auto;
     margin-right: calc(14% - 0.6%);
 
@@ -196,7 +199,7 @@
     width: 1.5%;
     aspect-ratio: 1;
     border-radius: 50%;
-    margin-bottom: 1cqw;
+    margin-bottom: 0.5cqw;
     margin-left: auto;
     margin-right: calc(14% - 0.15%);
 }
@@ -212,17 +215,18 @@
 }
 
 .TYT-right { /* timeline year text. place text right below item wanna be next to in html*/
-    transform: translateX(88.5%) translateY(-1.45em);
+    transform: translateX(88.5%) translateY(-1.15em);
 }
 
 .TYT-left {
-    transform: translateX(74%) translateY(-1.45em);
+    transform: translateX(74%) translateY(-1.15em);
 
 }
 
 /* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */
 
 .timeline-card { /* place timeline card immediately before the timeline marker */
+    --timeline-card-scale: 1;
 
     left: 1.5cqw;
     right: calc(14% + 2cqw);
@@ -232,29 +236,37 @@
     top: 0;
     transform: none;
     box-sizing: border-box;
-    padding: 1.35cqw;
+    padding: 1.35em;
+    font-size: calc(1cqw * var(--timeline-card-scale));
 
     background: var(--timeline-card-background);
-    border: 2px solid var(--timeline-card-accent);
-    border-radius: 1.5cqmin;
+    border: calc(2px * var(--timeline-card-scale)) solid var(--timeline-card-accent);
+    border-radius: calc(1.5cqmin * var(--timeline-card-scale));
     box-shadow: 0 7px 16px -10px lightslategrey;
     display: flex;
     flex-direction: column;
-    gap: 0.45cqw;
+    gap: 0.45em;
     overflow: hidden;
+}
+
+.timeline-card-mini { /* for smaller milestones */
+    --timeline-card-scale: 0.8;
+    left: 7cqw;
+    right: calc(14% + 2.5cqw);
+    padding: 1.15em;
 }
 
 .timeline-card::before {
     content: "";
-    width: 50cqmin;
-    height: 50cqmin;
+    width: calc(50cqmin * var(--timeline-card-scale));
+    height: calc(50cqmin * var(--timeline-card-scale));
     border-radius: 50%;
-    border: 7px solid var(--timeline-card-accent);
-    opacity: 0.4;
+    border: calc(7px * var(--timeline-card-scale)) solid var(--timeline-card-accent);
+    opacity: 0.35;
     position: absolute;
-    bottom: -27cqmin;
+    bottom: calc(-27cqmin * var(--timeline-card-scale));
     z-index: 1;
-    right: -27cqmin;
+    right: calc(-27cqmin * var(--timeline-card-scale));
 }
 
 .TLC-spring { /* timeline card colour theme to match season it occured in. provides colour to class + descendants for them to use */
@@ -282,30 +294,30 @@
 }
 
 .timeline-card-heading {
-    min-height: 1.7cqw;
+    min-height: 1.7em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: calc(10px * var(--timeline-card-scale));
 }
 
 
 .timeline-card-date {
-    padding: 5px 9px;
+    padding: calc(5px * var(--timeline-card-scale)) calc(9px * var(--timeline-card-scale));
     color: var(--timeline-card-accent-ink);
     background: white;
-    border: 1px solid var(--timeline-card-accent);
+    border: calc(1px * var(--timeline-card-scale)) solid var(--timeline-card-accent);
     border-radius: 999px;
-    font: 400 0.8cqw "Emtato Pixel";
+    font: 400 0.8em "Emtato Pixel";
     letter-spacing: 0.03em;
     text-transform: uppercase;
     position: absolute;
-    right: 1.5cqw;
+    right: 1.5em;
 }
 
 .timeline-card-title {
     color: var(--color-dark-plum);
-    font: 700 1.8cqw "Arvo";
+    font: 700 1.8em "Arvo";
     line-height: 1.12;
     letter-spacing: -0.025em;
     margin: 0;
@@ -314,14 +326,14 @@
 
 .timeline-card-organization {
     color: var(--color-deep-plum);
-    font: 700 1.1cqw "Arvo";
+    font: 700 1.1em "Arvo";
     line-height: 1.25;
     z-index: 2;
 }
 
 .timeline-card-context {
     color: var(--color-grey-plum);
-    font: 400 0.8cqw "Arvo";
+    font: 400 0.8em "Arvo";
     line-height: 1.4;
     z-index: 2;
 
@@ -329,42 +341,42 @@
 
 .timeline-card-description {
     color: var(--color-smoky-charcoal);
-    font: 400 1cqw "Arvo";
+    font: 400 1em "Arvo";
     line-height: 1.55;
-    margin: 0.35cqw;
+    margin: 0.35em;
     z-index: 2;
 
 }
 
 .timeline-card-highlights {
     color: var(--color-smoky-charcoal);
-    font: 400 0.9cqw "Arvo";
+    font: 400 0.9em "Arvo";
     line-height: 1.5;
-    margin: 3px 0 0;
+    margin: calc(3px * var(--timeline-card-scale)) 0 0;
     padding-left: 1.2em;
     z-index: 2;
 }
 
 .timeline-card-highlights li + li {
-    margin-top: 5px;
+    margin-top: calc(5px * var(--timeline-card-scale));
 }
 
 .timeline-card-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 0.35cqw;
+    gap: calc(6px * var(--timeline-card-scale));
+    margin-top: 0.35em;
     z-index: 2;
 
 }
 
 .timeline-card-tag {
-    padding: 4px 9px;
+    padding: calc(4px * var(--timeline-card-scale)) calc(9px * var(--timeline-card-scale));
     color: var(--timeline-card-accent-ink);
     background: white;
-    border: 1px solid var(--timeline-card-accent);
+    border: calc(1px * var(--timeline-card-scale)) solid var(--timeline-card-accent);
     border-radius: 999px;
-    font: 400 0.7cqw "Emtato Pixel";
+    font: 400 0.7em "Emtato Pixel";
     line-height: 1.2;
 }
 

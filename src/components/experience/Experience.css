@@ -1,5 +1,7 @@
 
 .experience-container {
+    --timeline-unit: min(1cqw, 1.6vh); /* global sync variable to display correctly for various browser dimensions*/
+
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -41,7 +43,7 @@
 
 
 .section-header {
-    padding: 2.5cqw;
+    padding: calc(2.5 * var(--timeline-unit));
     position: relative;
     flex-shrink: 0;
     box-shadow: 0 4px 30px rgba(46, 20, 36, 0.05);
@@ -49,23 +51,24 @@
 
 .section-image {
     position: absolute;
-    top: 12px;
-    right: 2cqw;
-    width: 27%;
+    top: calc(0.833 * var(--timeline-unit));
+    right: calc(2 * var(--timeline-unit));
+    width: min(27%, calc(16 * var(--timeline-unit)));
     image-rendering: pixelated;
+    z-index: 2;
 }
 
 .section-uppertext {
     color: var(--section-colour);
-    font: 700 clamp(10px, 1.15cqw, 13px) "Arvo";
+    font: 700 clamp(10px, calc(0.9 * var(--timeline-unit)), 15px) "Arvo";
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    margin-bottom: 9px;
+    margin-bottom: calc(0.625 * var(--timeline-unit));
 }
 
 .section-title {
     color: var(--color-dark-plum);
-    font: 700 clamp(29px, 4.5cqw, 52px) "Arvo";
+    font: 700 clamp(29px, calc(3.6 * var(--timeline-unit)), 64px) "Arvo";
     line-height: 1;
     letter-spacing: -0.035em;
     margin: 0;
@@ -73,12 +76,12 @@
 }
 
 .section-accent {
-    width: clamp(48px, 7cqw, 78px);
-    height: 4px;
+    width: clamp(48px, calc(5.4 * var(--timeline-unit)), 96px);
+    height: clamp(3px, calc(0.278 * var(--timeline-unit)), 5px);
     background: var(--section-colour);
-    margin-top: 12px;
+    margin-top: calc(0.833 * var(--timeline-unit));
     border-radius: 100px;
-    box-shadow: 12px 0 0 rgba(46, 20, 36, 0.1);
+    box-shadow: calc(0.833 * var(--timeline-unit)) 0 0 rgba(46, 20, 36, 0.1);
 }
 
 /* ------------------------------------------------------------------------------------------- -v-
@@ -123,6 +126,7 @@
     scrollbar-width: none;
 }
 
+
 .work-experience-timeline-line-container {
     width: 100%;
     margin-right: 0;
@@ -131,7 +135,14 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    height: 315vh;
+    --timeline-length: 196.875;
+    height: calc(var(--timeline-length) * var(--timeline-unit));
+}
+@container (max-width: 1100px) {
+    /* increase line height: narrower screen -> more text wrapping -> longer cards -> longer vertical spacing required*/
+    .work-experience-timeline-line-container {
+        --timeline-length: 215;
+    }
 }
 
 /* timeline segments */
@@ -141,7 +152,7 @@
     margin-right: 14%;
     height: 8%;
     border-radius: 9999px;
-    margin-bottom: 0.5cqw;
+    margin-bottom: calc(0.5 * var(--timeline-unit));
 }
 
 
@@ -212,7 +223,7 @@
 .timeline-marker {
     width: 2.4%;
     aspect-ratio: 1;
-    margin-bottom: 0.5cqw;
+    margin-bottom: calc(0.5 * var(--timeline-unit));
     margin-left: auto;
     margin-right: calc(14% - 0.6%);
 
@@ -222,7 +233,7 @@
     width: 1.5%;
     aspect-ratio: 1;
     border-radius: 50%;
-    margin-bottom: 0.5cqw;
+    margin-bottom: calc(0.5 * var(--timeline-unit));
     margin-left: auto;
     margin-right: calc(14% - 0.15%);
 }
@@ -233,7 +244,7 @@
     width: 100%;
     overflow: visible;
     white-space: nowrap;
-    font: 1.5cqw "Arvo";
+    font: calc(1.5 * var(--timeline-unit)) "Arvo";
     color: slategrey;
 }
 
@@ -246,47 +257,65 @@
 .timeline-art {
     position: absolute;
     opacity: 0.8;
-    width: 3cqw;
+    width: calc(3 * var(--timeline-unit));
     height: auto;
     z-index: 4;
     image-rendering: pixelated;
 }
 
 .TLA-fall2026 {
-    transform: translateX(975%) translateY(-50%) rotate(80deg) scale(130%);
+    left: 29.25cqw;
+    top: -1.295cqw;
+    transform: rotate(80deg) scale(130%);
 }
 
 
 .TLA-spring2026 {
-    transform: translateX(1150%) translateY(-130%) rotate(15deg);
+    left: 34.5cqw;
+    top: -4.55cqw;
+    transform: rotate(15deg);
 }
 
 .TLA-winter2026 {
-    transform: translateX(970%) translateY(80%) rotate(15deg) scale(110%);
+    left: 29.1cqw;
+    top: 2.4cqw;
+    transform: rotate(15deg) scale(110%);
 }
 
 .TLA-fall2025 {
-    transform: translateX(1145%) translateY(-160%) rotate(-10deg) scale(130%);
+    left: 34.35cqw;
+    top: -4.32cqw;
+    transform: rotate(-10deg) scale(130%);
 }
 
 .TLA-summer2025 {
-    transform: translateX(145%) translateY(-30%) rotate(-10deg) scale(130%);
+    left: 4.35cqw;
+    top: -0.847cqw;
+    transform: rotate(-10deg) scale(130%);
 }
 
 .TLA-winter2025 {
-    transform: translateX(1130%) translateY(-90%) rotate(14deg);
+    left: 33.9cqw;
+    top: -2.7cqw;
+    transform: rotate(14deg);
 }
 
 .TLA-fall2024 {
-    transform: translateX(505%) translateY(210%) rotate(10deg) scale(110%) scaleX(-1);
+    left: 15.15cqw;
+    top: 5.67cqw;
+    transform: rotate(10deg) scale(110%) scaleX(-1);
 }
 
 .TLA-spring2024 {
-    transform: translateX(900%) translateY(-95%) rotate(10deg) scale(110%) scaleX(-1);
+    left: 27cqw;
+    top: -3.325cqw;
+    transform: rotate(10deg) scale(110%) scaleX(-1);
 }
 
 .TLA-fall2023 {
-    transform: translateX(900%) translateY(950%) rotate(40deg) scale(110%);
+    left: 27cqw;
+    top: 24.614cqw;
+    transform: rotate(40deg) scale(110%);
 }
 
 /* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */
@@ -303,7 +332,7 @@
     transform: none;
     box-sizing: border-box;
     padding: 1.35em;
-    font-size: calc(1cqw * var(--timeline-card-scale));
+    font-size: calc(var(--timeline-unit) * var(--timeline-card-scale));
 
     background: var(--timeline-card-background);
     border: calc(2px * var(--timeline-card-scale)) solid var(--timeline-card-accent);

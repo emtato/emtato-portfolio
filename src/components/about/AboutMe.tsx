@@ -127,10 +127,11 @@ export default function AboutMe({nextTab}: AboutMeProps) {
                                  src="/assets/browser/content/about-me/drawings/tape.png"/>
                         </div>
 
-                        <div className="aboutme-page2-closing-copy">
+                        <div className="aboutme-page2-closing-line">
                             and most importantly,<br/>
                             i love cats and 2d men &lt;3
                         </div>
+                        <img className="page2-signature" alt="" src="/assets/browser/content/about-me/Signature.png"/>
                     </div>
                 </div>
             </div>

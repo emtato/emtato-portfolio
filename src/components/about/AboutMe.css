@@ -264,6 +264,7 @@
 .aboutme-page1-next-button:hover, .back-next-button:hover {
     color: var(--color-blush);
 }
+
 /* Page container and heading */
 
 .aboutme-page2-container {
@@ -512,7 +513,7 @@
 
 /* Closing camera-roll note */
 
-.aboutme-page2-closing-copy {
+.aboutme-page2-closing-line {
     width: 30%;
     position: absolute;
     top: 44.2%;
@@ -520,6 +521,15 @@
     z-index: 8;
     font: 1.08cqw "Arvo";
     line-height: 2.2cqw;
+}
+
+.page2-signature {
+    position: absolute;
+    top: 47.2%;
+    left: 11%;
+    width: 20%;
+    z-index: 8;
+
 }
 
 /* ------------------------------------------------------------------------------------------- -v-

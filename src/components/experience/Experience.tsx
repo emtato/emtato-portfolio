@@ -89,10 +89,6 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-summer"/>
                         <div className="timeline-segment segment-small season-spring"/>
                         <div className="timeline-segment segment-small season-winter"/>
-                        <div className="timeline-insertion-point">
-                            <img className="TLA-winter2025 timeline-art" alt="a"
-                                 src="/assets/browser/content/experience/winter-2.png"/>
-                        </div>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2025</div>
                         <div className="timeline-segment segment-small season-winter"/>
@@ -148,13 +144,17 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-summer"/>
                         <div className="timeline-segment segment-small season-spring"/>
                         <div className="timeline-segment segment-xs season-winter"/>
+                         <div className="timeline-insertion-point">
+                            <img className="TLA-winter2023 timeline-art" alt="a"
+                                 src="/assets/browser/content/experience/winter-2.png"/>
+                        </div>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2023</div>
                         <div className="timeline-segment segment-xs season-winter"/>
                         <div className="timeline-segment segment-small season-fall"/>
 
                         <div className="timeline-insertion-point">
-                            <img className="timeline-art TLA-fall2023" alt="a"
+                            <img className="timeline-art TLA-fall2022" alt="a"
                                  src="/assets/browser/content/experience/fall-1.png"/>
                             <TimelineCard
                                 title="Physics Extended Essay"
@@ -175,7 +175,9 @@ export default function Experience() {
                         </div>
                         <div className="timeline-segment segment-small season-fall"/>
                         <div className="timeline-segment segment-medium season-summer"/>
-
+                      <div className="timeline-insertion-point">
+                          <img className="TLA-summer2022 timeline-art" alt="a" src="/assets/browser/content/experience/summer.png"/>
+                      </div>
                         <div className="timeline-segment segment-medium season-spring"/>
                         <div className="timeline-segment segment-small season-winter"/>
                         <div className="timeline-dot season-winter"/>
@@ -184,7 +186,6 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-fall"/>
 
                         <div className="timeline-insertion-point">
-
                             <TimelineCard
                                 title="French Tutor & English Volunteer"
                                 organization="Independent & volunteer tutoring"

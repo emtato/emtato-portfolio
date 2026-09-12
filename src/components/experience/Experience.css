@@ -138,6 +138,7 @@
     --timeline-length: 196.875;
     height: calc(var(--timeline-length) * var(--timeline-unit));
 }
+
 @container (max-width: 1100px) {
     /* increase line height: narrower screen -> more text wrapping -> longer cards -> longer vertical spacing required*/
     .work-experience-timeline-line-container {
@@ -294,11 +295,6 @@
     transform: rotate(-10deg) scale(130%);
 }
 
-.TLA-winter2025 {
-    left: 33.9cqw;
-    top: -2.7cqw;
-    transform: rotate(14deg);
-}
 
 .TLA-fall2024 {
     left: 15.15cqw;
@@ -312,10 +308,23 @@
     transform: rotate(10deg) scale(110%) scaleX(-1);
 }
 
-.TLA-fall2023 {
+.TLA-winter2023 {
+    left: 30.5cqw;
+    top: -2.7cqw;
+    transform: rotate(-14deg);
+}
+
+.TLA-fall2022 {
     left: 27cqw;
     top: 24.614cqw;
     transform: rotate(40deg) scale(110%);
+}
+
+.TLA-summer2022 {
+    left: 34cqw;
+    top: -4.614cqw;
+    transform: rotate(40deg) scale(120%);
+    filter: brightness(150%);
 }
 
 /* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */

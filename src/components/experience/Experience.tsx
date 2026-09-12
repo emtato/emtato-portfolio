@@ -16,12 +16,13 @@ export default function Experience() {
                 <div className="work-experience-timeline">
                     <div className="work-experience-timeline-line-container">
                         <div className="timeline-segment season-spring"/>
-                        <div className="timeline-segment segment-long season-fall"/>
-                        <div className="timeline-dot season-fall"/>
-                        <div className="timeline-insertion-point">
+                         <div className="timeline-insertion-point">
                             <TimelineCard></TimelineCard>
                             <div className="timeline-marker season-fall"/>
                         </div>
+                        <div className="timeline-segment segment-long season-fall"/>
+                        <div className="timeline-dot season-fall"/>
+
                         <div className="timeline-year-text TYT-right">2204</div>
                     </div>
                 </div>

@@ -120,18 +120,21 @@
 }
 
 .work-experience-timeline-line-container {
+    width: 100%;
+    margin-right: 0;
+    align-items: stretch;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-left: auto;
-    width: 1.2%;
-    margin-right: 14%;
     height: 160vh;
 }
 
 /* timeline segments */
 .timeline-segment {
-    width: 100%;
+    width: 1.2%;
+    margin-left: auto;
+    margin-right: 14%;
     height: 10%;
     border-radius: 9999px;
     margin-bottom: 1cqw;
@@ -179,17 +182,21 @@
 }
 
 .timeline-marker {
-    width: 200%;
+    width: 2.4%;
     aspect-ratio: 1;
     margin-bottom: 1cqw;
+    margin-left: auto;
+    margin-right: calc(14% - 0.6%);
 
 }
 
 .timeline-dot {
-    width: 100%;
+    width: 1.5%;
     aspect-ratio: 1;
     border-radius: 50%;
     margin-bottom: 1cqw;
+    margin-left: auto;
+    margin-right: calc(14% - 0.15%);
 }
 
 .timeline-year-text {
@@ -213,11 +220,16 @@
 
 /* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */
 
-.timeline-card {
-    width: 10cqw;
-    height: 15cqw;
-    transform: translateX(-115%);
+.timeline-card { /* place timeline card immediately before the timeline marker */
+    left: 1.5cqw;
+    right: calc(14% + 2cqw);
+    width: auto;
+    height: auto;
+    min-height: 15cqw;
+    position: absolute;
+    top: 0;
 
+    transform: none;
     border-radius: 1.5cqmin;
     box-shadow: 0 8px 10px -6px rgba(46, 20, 36, 0.2);
     display: flex;

@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: 1.3fr 2fr;
     gap: 1.2vw;
-    padding: 1.5vw;
+    padding: 1vw;
     container-type: size; /* scale for children to reference */
     position: relative;
 }
@@ -315,9 +315,16 @@
 }
 
 .TLA-fall2022 {
-    left: 27cqw;
-    top: 24.614cqw;
-    transform: rotate(40deg) scale(110%);
+    right: 0;
+    bottom: 0;
+    transform: rotate(-10deg) scale(120%);
+    z-index: 15;
+}
+
+.TLA-fall2022-2 {
+    right: 1.5cqw;
+    bottom: -0.8cqw;
+    transform: rotate(0deg) scale(110%) scaleY(40%);
 }
 
 .TLA-summer2022 {
@@ -358,6 +365,25 @@
     left: 7cqw;
     right: calc(14% + 2.5cqw);
     padding: 1.15em;
+}
+
+.timeline-card-wrapper {
+    position: absolute;
+    left: 1.5cqw;
+    top: 0;
+    right: calc(14% + 2cqw);
+    width: auto;
+}
+
+.timeline-card-wrapper-mini {
+    left: 7cqw;
+    right: calc(14% + 2.5cqw);
+}
+
+.timeline-card-wrapper > .timeline-card {
+    position: relative;
+    inset: auto;
+    width: 100%;
 }
 
 .timeline-card::before {

@@ -8,7 +8,8 @@ export default function Experience() {
         <div className="experience-container">
             <section className="work-experience-container">
                 <header className="section-header">
-                    <img className="section-image" alt="a" src="/assets/browser/content/experience/prof-experience/work.png"/>
+                    <img className="section-image" alt="a"
+                         src="/assets/browser/content/experience/prof-experience/work.png"/>
                     <div className="section-uppertext">My Career so far</div>
                     <h2 className="section-title">Experience</h2>
                     <div className="section-accent"/>
@@ -144,7 +145,7 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-summer"/>
                         <div className="timeline-segment segment-small season-spring"/>
                         <div className="timeline-segment segment-xs season-winter"/>
-                         <div className="timeline-insertion-point">
+                        <div className="timeline-insertion-point">
                             <img className="TLA-winter2023 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/winter-2.png"/>
                         </div>
@@ -154,30 +155,36 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-fall"/>
 
                         <div className="timeline-insertion-point">
-                            <img className="timeline-art TLA-fall2022" alt="a"
-                                 src="/assets/browser/content/experience/prof-experience/fall-1.png"/>
-                            <TimelineCard
-                                title="Physics Extended Essay"
-                                organization="International Baccalaureate"
-                                context="Independent experimental research"
-                                achievement="Grade A"
-                                description="Investigated how increasing the density of sucrose solutions affected the terminal velocity of a falling glass marble."
-                                bullets={[
-                                    "Recorded trials at 240 fps and extracted position-time data with Tracker.",
-                                    "Found an overall decrease in terminal velocity, with the sharpest drop at the highest tested densities."
-                                ]}
-                                tags={["Fluid Mechanics", "Experimental Design", "Data Analysis"]}
-                                dateRange="Fall 2022 - Fall 2023"
-                                season="fall"
-                                mini={true}
-                            />
+                            <div className="timeline-card-wrapper timeline-card-wrapper-mini">
+                                <img className="timeline-art TLA-fall2022" alt="a"
+                                     src="/assets/browser/content/experience/prof-experience/fall-1.png"/>
+                                <img className="TLA-fall2022-2 timeline-art" alt="a"
+                                     src="/assets/browser/content/experience/prof-experience/fall-2.png"/>
+                                <TimelineCard
+                                    title="Physics Extended Essay"
+                                    organization="International Baccalaureate"
+                                    context="Independent experimental research"
+                                    achievement="Grade A"
+                                    description="Investigated how increasing the density of sucrose solutions affected the terminal velocity of a falling glass marble."
+                                    bullets={[
+                                        "Recorded trials at 240 fps and extracted position-time data with Tracker.",
+                                        "Found an overall decrease in terminal velocity, with the sharpest drop at the highest tested densities."
+                                    ]}
+                                    tags={["Fluid Mechanics", "Experimental Design", "Data Analysis"]}
+                                    dateRange="Fall 2022 - Fall 2023"
+                                    season="fall"
+                                    mini={true}
+                                />
+                            </div>
                             <div className="timeline-marker season-fall"/>
+
                         </div>
                         <div className="timeline-segment segment-small season-fall"/>
                         <div className="timeline-segment segment-medium season-summer"/>
-                      <div className="timeline-insertion-point">
-                          <img className="TLA-summer2022 timeline-art" alt="a" src="/assets/browser/content/experience/prof-experience/summer.png"/>
-                      </div>
+                        <div className="timeline-insertion-point">
+                            <img className="TLA-summer2022 timeline-art" alt="a"
+                                 src="/assets/browser/content/experience/prof-experience/summer.png"/>
+                        </div>
                         <div className="timeline-segment segment-medium season-spring"/>
                         <div className="timeline-segment segment-small season-winter"/>
                         <div className="timeline-dot season-winter"/>

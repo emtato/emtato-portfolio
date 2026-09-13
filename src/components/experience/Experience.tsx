@@ -3,7 +3,7 @@ import TimelineCard from "./TimelineCard.tsx";
 import ProjectCard from "./ProjectCard.tsx";
 
 export default function Experience() {
-
+    const mediaFilePath = "/assets/browser/content/experience/project/"
     return (
 
         <div className="experience-container">
@@ -218,7 +218,7 @@ export default function Experience() {
 
             <section className="projects-container">
                 <header className="section-header">
-                    <img className="section-image" alt="a" src="/assets/browser/content/experience/project/code.png"/>
+                    <img className="section-image" alt="a" src={`${mediaFilePath}code.png`}/>
                     <div className="section-uppertext">My Code Babies</div>
                     <h2 className="section-title">Projects</h2>
                     <div className="section-accent"/>
@@ -231,11 +231,11 @@ export default function Experience() {
                             stack={["React", "TypeScript", "FullCalendar", "Node.js", "Express", "MongoDB", "Better Auth", "Railway"]}
                             standout="Independently designed, developed, and deployed end to end."
                             description="Combines responsive calendar views with deterministic natural-language date and time parsing, account authentication, user-scoped event storage, and a one-click time-entry workflow with instant AM/PM toggling."
-                            cardImg="/assets/browser/content/experience/project/tempo/img1.png"
+                            cardImg={`${mediaFilePath}tempo/img1.png`}
                             expandedImgs={[
-                                "/assets/browser/content/experience/project/tempo/img2.png",
-                                "/assets/browser/content/experience/project/tempo/img3.png",
-                                "/assets/browser/content/experience/project/tempo/img4.png"
+                                `${mediaFilePath}tempo/img2.png`,
+                                `${mediaFilePath}tempo/img3.png`,
+                                `${mediaFilePath}tempo/img4.png`
                             ]}
                             timeInfo="2026 - Present"
                             github="https://github.com/emtato/tempo."
@@ -247,11 +247,22 @@ export default function Experience() {
                             stack={["React", "TypeScript", "HTML/CSS", "Vite", "GitHub Pages"]}
                             standout="Reduced five large media assets by 94%, cutting initial load time to under one second."
                             description="Features original pixel art, custom animations, and responsive React components inside a playful desktop and browser interface designed to remain recruiter-readable."
-                            cardImg="/assets/browser/content/experience/project/emportfolio/portfolio.png"
+                            cardImg={`${mediaFilePath}emportfolio/portfolio.png`}
                             expandedImgs={[]}
                             timeInfo="2026 - Present"
                             github="https://github.com/emtato/emtato-portfolio"
                             projectLink="https://ems.lol"
+                        />
+                        <ProjectCard
+                            title="Columns"
+                            shortDesc="Classic Columns puzzle game rendered pixel by pixel in MIPS assembly with real-time input and cascading match logic."
+                            stack={["MIPS Assembly", "MARS", "Bitmap Display", "Memory-Mapped I/O", "Recursion"]}
+                            standout="Implemented recursive eight-direction match detection and cascade resolution."
+                            description="Rendered the board, gems, interface, and animations directly to bitmap memory while handling keyboard input, gravity, tile rotation, randomized pieces, scoring, increasing difficulty, and sound effects."
+                            cardImg={`${mediaFilePath}columns/img1.png`}
+                            expandedImgs={[]}
+                            timeInfo="2025"
+                            github="https://github.com/amansdali/Columns"
                         />
                     </div>
                     <div className="project-column">
@@ -261,7 +272,7 @@ export default function Experience() {
                             stack={["Python", "FastAPI", "React Native", "Expo", "TypeScript", "MongoDB", "DigitalOcean", "Gemini API"]}
                             standout="Led backend development in a 36-hour hackathon."
                             description="Built FastAPI logic and REST endpoints for a four-person team, integrated Gemini to derive trends from journal entries, created the frontend API client, and deployed the service to DigitalOcean."
-                            cardImg="/assets/browser/content/experience/project/girlmath/girlmath.png"
+                            cardImg={`${mediaFilePath}girlmath/girlmath.png`}
                             expandedImgs={[]}
                             timeInfo="2026"
                             github="https://github.com/emtato/girlmath"
@@ -273,13 +284,24 @@ export default function Experience() {
                             stack={["Java", "Swing", "OkHttp", "JSON", "Spoonacular API", "HTML/CSS", "JUnit"]}
                             standout="Designed a reusable post component used across every post view."
                             description="Centralized image rendering, comments, likes, and interaction logic; integrated Spoonacular nutrition data; and isolated domain logic from storage through repository interfaces."
-                            cardImg="https://github.com/user-attachments/assets/0df8e097-8150-4fb9-917c-766c011ef027"
+                            cardImg={`${mediaFilePath}munchables/img1.png`}
                             expandedImgs={[
                                 "https://github.com/user-attachments/assets/aeac076b-7e8a-461c-b101-459d615db1f1",
                                 "https://github.com/user-attachments/assets/bab91924-794d-41ac-ab5f-863a4b645341"
                             ]}
                             timeInfo="2025"
                             github="https://github.com/emtato/munchables"
+                        />
+                        <ProjectCard
+                            title="Networked Connect 4"
+                            shortDesc="Terminal-based multiplayer Connect 4 game that synchronizes two players and an optional spectator over TCP sockets."
+                            stack={["C", "TCP Sockets", "Client-Server", "select()", "Makefile", "Recursion"]}
+                            standout="Built a select()-driven server supporting players, spectators, disconnects, and rematches."
+                            description="Uses a text protocol to validate turns, serialize and broadcast board state, handle disconnect and rejoin flows, restart matches, and detect wins or ties through recursive directional checks."
+                            cardImg={`${mediaFilePath}connect4/img1.png`}
+                            expandedImgs={[]}
+                            timeInfo="2026"
+                            github="https://github.com/nyu24/Connect4"
                         />
                     </div>
                 </div>

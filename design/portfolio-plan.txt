@@ -53,3 +53,17 @@ Compact academic milestones
 hackathons
 
 future: 2026 sumer dean's list
+
+
+mobile work to do:
+make section image bigger
+set position of timeline art properly
+make timeline cards bigger
+fix timeline card's date bubble and stakc bubble
+reduce spacing between timeline cards
+
+fix container for projects; make it one column
+
+
+c: https://youtu.be/EZ3oZ-FG4FA
+

@@ -21,17 +21,14 @@ export default function AboutMe({nextTab}: AboutMeProps) {
         setScrollProgress(progress)  //useful ot save progress (no lnoger local var that poofs after scrolling stops)
     }
 
-    const translateX = -50 * scrollProgress //calculate scroll progress from current pos to page 2:
-    const translateY = -18 * scrollProgress
-
     return <div className="aboutme-scroll-container" onScroll={handleScroll} ref={scrollContainerRef}>
         <div className="aboutme-scene">
             <img className="aboutme-desk-background" alt="" src="/assets/browser/content/about-me/desk.webp"/>
             <div
                 className={`aboutme-notebook-pan aboutme-notebook-pan-page-${pageNumber}`}
                 style={{
-                    transform: `translate(${translateX}%, ${translateY}%)`
-                }}>
+                    "--scroll-progress": scrollProgress
+                } as React.CSSProperties}>
                 <div className="aboutme-notebook">
                     <img className="aboutme-notebook-background" alt=""
                          src="/assets/browser/content/about-me/Notebook.webp"/>
@@ -83,7 +80,7 @@ export default function AboutMe({nextTab}: AboutMeProps) {
                             <span className="aboutme-page1-next-mobile-label">more about me! (press) -&gt;</span>
                         </button>
                         <div className="aboutme-page1-footer">... or explore the rest of my website freely :)</div>
-                        <div className="page1-note-formobile">if youre seeing this, you might be confused ( ꩜ ᯅ
+                        <div className="page1-note-formobile">if you're seeing this, you may be confused ( ꩜ ᯅ
                             ꩜;) <br/>
                             why only half page? computer screen dimensions <br/> can only see the top half. i did warn
                             you!

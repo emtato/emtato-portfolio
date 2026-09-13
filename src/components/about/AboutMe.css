@@ -8,6 +8,7 @@
     overflow-y: auto;
     overscroll-behavior-y: none;
 }
+
 .aboutme-scroll-container::-webkit-scrollbar {
     display: none;
 }
@@ -50,22 +51,18 @@
    NOTEBOOK CANVAS, PAGE PANNING Pan wrapper -> notebook canvas -> notebook background and page containers
 ----------------------------------------------------------------------------------------------- -o- */
 
-.aboutme-notebook-pan {
+.aboutme-notebook-pan { /*calculate scroll progress from current pos to page 2:*/
+    --pan-end-x: -50%;
+    --pan-end-y: -18%;
+
     position: absolute;
     inset: 0;
     z-index: 2;
-}
 
-.aboutme-notebook-pan-page-1 {
-    transform: translateX(0);
-}
-
-.aboutme-notebook-pan-page-2 {
-    transform: translate(-50%, -18%);
-}
-
-.aboutme-notebook-pan-page-3 {
-    transform: translate(-180%, -300%) scale(300%);
+    transform: translate(
+            calc(var(--pan-end-x) * var(--scroll-progress)),
+            calc(var(--pan-end-y) * var(--scroll-progress))
+    );
 }
 
 .aboutme-notebook {
@@ -263,7 +260,7 @@
     font: 1.6cqw "Arvo";
     position: absolute;
     bottom: 20%;
-    left: 11%;
+    left: 16.5%;
     z-index: 5;
     line-height: 2.192cqw;
 }
@@ -571,16 +568,9 @@
         top: 10%;
     }
 
-    .aboutme-notebook-pan-page-1 {
-        transform: translateX(0);
-    }
-
-    .aboutme-notebook-pan-page-2 {
-        transform: translate(-99%, -8%);
-    }
-
-    .aboutme-notebook-pan-page-3 {
-        transform: translate(-224%, -16%);
+    .aboutme-notebook-pan { /*calculate scroll progress from current pos to page 2:*/
+        --pan-end-x: -99%;
+        --pan-end-y: -8%;
     }
 
     /* Page 1 text and navigation */

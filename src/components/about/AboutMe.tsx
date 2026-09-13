@@ -51,10 +51,12 @@ export default function AboutMe({nextTab}: AboutMeProps) {
                         </div>
                         <button className="aboutme-page1-next-button" onClick={() => {
                             setPageNumber(2)
-                        }}><span className="aboutme-page1-next-desktop-label">next page -&gt;</span>
+                        }}><span className="aboutme-page1-next-desktop-label">next page (press or scroll) -&gt;</span>
                             <span className="aboutme-page1-next-mobile-label">more about me! (press) -&gt;</span>
                         </button>
                         <div className="aboutme-page1-footer">... or explore the rest of my website freely :)</div>
+                        <div className="page1-note-formobile">if youre seeing this, you might be confused ( ꩜ ᯅ ꩜;) <br/>
+                        why only half page? computer screen dimensions <br/> can only see the top half. i did warn you! </div>
                     </div>
                     {/* page 2 */}
 

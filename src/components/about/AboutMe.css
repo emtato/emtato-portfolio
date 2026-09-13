@@ -80,12 +80,19 @@
    photo classes: Used by the page 1 portrait and every page 2 scrapbook photograph
 ----------------------------------------------------------------------------------------------- -o- */
 
-.aboutme-page1-portrait-photo, .aboutme-page2-gym-gif, .aboutme-page2-food-photo,
+.aboutme-page1-portrait-photo, .aboutme-page2-gym-gif,
 .aboutme-page2-fuji-photo, .aboutme-page2-flower-photo, .aboutme-page2-cat-photo {
     display: block;
     box-sizing: border-box;
     border: 0.22cqw solid var(--color-warm-cream);
     box-shadow: 0.28cqw 0.34cqw 0 rgba(51, 47, 45, 0.22);
+}
+
+.aboutme-page2-food-photo { /* smaller shadow since taped on both ends*/
+    display: block;
+    box-sizing: border-box;
+    border: 0.22cqw solid var(--color-warm-cream);
+    box-shadow: 0.12cqw 0.14cqw 0 rgba(51, 47, 45, 0.22);
 }
 
 /* ------------------------------------------------------------------------------------------- -v-
@@ -237,6 +244,14 @@
     bottom: 49.88%;
     left: 11%;
     z-index: 5;
+}
+.page1-note-formobile{
+    font: 1.6cqw "Arvo";
+    position: absolute;
+    bottom: 29.88%;
+    left: 11%;
+    z-index: 5;
+    line-height: 2.192cqw;
 }
 
 /* ------------------------------------------------------------------------------------------- -v-
@@ -529,7 +544,6 @@
     left: 11%;
     width: 20%;
     z-index: 8;
-
 }
 
 /* ------------------------------------------------------------------------------------------- -v-

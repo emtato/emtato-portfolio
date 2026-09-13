@@ -8,7 +8,7 @@ export default function Experience() {
         <div className="experience-container">
             <section className="work-experience-container">
                 <header className="section-header">
-                    <img className="section-image" alt="a" src="/assets/browser/content/experience/work.png"/>
+                    <img className="section-image" alt="a" src="/assets/browser/content/experience/prof-experience/work.png"/>
                     <div className="section-uppertext">My Career so far</div>
                     <h2 className="section-title">Experience</h2>
                     <div className="section-accent"/>
@@ -19,7 +19,7 @@ export default function Experience() {
                         <div className="timeline-segment segment-medium season-fall"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-fall2026" alt="a"
-                                 src="/assets/browser/content/experience/fall-1.png"/>
+                                 src="/assets/browser/content/experience/prof-experience/fall-1.png"/>
                             <TimelineCard
                                 title="Backend developer / Junior Technical Analyst"
                                 organization="Ontario Public Service"
@@ -38,12 +38,12 @@ export default function Experience() {
                         <div className="timeline-segment segment-medium season-spring"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-spring2026 timeline-art" alt="a"
-                                 src="/assets/browser/content/experience/spring.png"/>
+                                 src="/assets/browser/content/experience/prof-experience/spring.png"/>
                         </div>
                         <div className="timeline-segment segment-medium season-winter"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-winter2026" alt="a"
-                                 src="/assets/browser/content/experience/winter.png"/>
+                                 src="/assets/browser/content/experience/prof-experience/winter.png"/>
                             <TimelineCard
                                 title="GirlMath"
                                 organization="ElleHacks · York University"
@@ -68,12 +68,12 @@ export default function Experience() {
                         <div className="timeline-segment segment-medium season-fall"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-fall2025 timeline-art" alt="a"
-                                 src="/assets/browser/content/experience/fall-2.png"/>
+                                 src="/assets/browser/content/experience/prof-experience/fall-2.png"/>
                         </div>
                         <div className="timeline-segment segment-medium season-summer"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-summer2025" alt="a"
-                                 src="/assets/browser/content/experience/summer.png"/>
+                                 src="/assets/browser/content/experience/prof-experience/summer.png"/>
                             <TimelineCard
                                 title="Dean’s List Scholar"
                                 organization="University of Toronto"
@@ -95,7 +95,7 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-fall"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-fall2024 timeline-art" alt="a"
-                                 src="/assets/browser/content/experience/fall-2.png"/>
+                                 src="/assets/browser/content/experience/prof-experience/fall-2.png"/>
                             <TimelineCard
                                 title="B.Sc. in Computer Science"
                                 organization="University of Toronto"
@@ -117,7 +117,7 @@ export default function Experience() {
                         <div className="timeline-segment season-spring"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-spring2024 timeline-art" alt="a"
-                                 src="/assets/browser/content/experience/spring.png"/>
+                                 src="/assets/browser/content/experience/prof-experience/spring.png"/>
                             <TimelineCard
                                 title="Graduating Toronto French School"
                                 organization="TFS - Canada’s International School"
@@ -146,7 +146,7 @@ export default function Experience() {
                         <div className="timeline-segment segment-xs season-winter"/>
                          <div className="timeline-insertion-point">
                             <img className="TLA-winter2023 timeline-art" alt="a"
-                                 src="/assets/browser/content/experience/winter-2.png"/>
+                                 src="/assets/browser/content/experience/prof-experience/winter-2.png"/>
                         </div>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2023</div>
@@ -155,7 +155,7 @@ export default function Experience() {
 
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-fall2022" alt="a"
-                                 src="/assets/browser/content/experience/fall-1.png"/>
+                                 src="/assets/browser/content/experience/prof-experience/fall-1.png"/>
                             <TimelineCard
                                 title="Physics Extended Essay"
                                 organization="International Baccalaureate"
@@ -176,7 +176,7 @@ export default function Experience() {
                         <div className="timeline-segment segment-small season-fall"/>
                         <div className="timeline-segment segment-medium season-summer"/>
                       <div className="timeline-insertion-point">
-                          <img className="TLA-summer2022 timeline-art" alt="a" src="/assets/browser/content/experience/summer.png"/>
+                          <img className="TLA-summer2022 timeline-art" alt="a" src="/assets/browser/content/experience/prof-experience/summer.png"/>
                       </div>
                         <div className="timeline-segment segment-medium season-spring"/>
                         <div className="timeline-segment segment-small season-winter"/>
@@ -209,7 +209,7 @@ export default function Experience() {
             {/*projects*/}
             <section className="projects-container">
                 <header className="section-header">
-                    <img className="section-image" alt="a" src="/assets/browser/content/experience/code.png"/>
+                    <img className="section-image" alt="a" src="/assets/browser/content/experience/project/code.png"/>
                     <div className="section-uppertext">My Code Babies</div>
                     <h2 className="section-title">Projects</h2>
                     <div className="section-accent"/>

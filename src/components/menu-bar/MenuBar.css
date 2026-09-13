@@ -6,6 +6,8 @@
     width: 100%;
     height: 30px;
     background-color: var(--color-smoky-charcoal);
+    z-index: 20;
+    position: relative;
 }
 
 .left-menu-bar {

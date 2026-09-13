@@ -5,10 +5,10 @@
 .browser-window {
     width: 97vw;
     left: 1.5vw;
-    height: 89vh;
+    height: 96%;
     z-index: 10;
     position: absolute;
-    top: 40px;
+    top: 30px;
     box-shadow: 7px 21px 0 rgba(5, 14, 3, 0.5);
     display: grid;
     grid-template-columns: 7px minmax(0, 1fr) 7px;
@@ -17,10 +17,10 @@
 
 .browser-window-big {
     width: 100vw;
-    height: 97vh;
+    height: 100vh;
     z-index: 15;
     position: absolute;
-    top: 30px;
+    top: 0px;
     box-shadow: 7px 21px 0 rgba(5, 14, 3, 0.5);
     display: grid;
     grid-template-columns: 7px minmax(0, 1fr) 7px;

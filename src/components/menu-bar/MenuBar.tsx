@@ -9,12 +9,7 @@ interface MenuBarProps {
     onOpenHelp: () => void
 }
 
-export default function MenuBar({
-                                    focusedAppName,
-                                    currentModeIsDark,
-                                    onToggleMode,
-                                    onOpenHelp,
-                                }: MenuBarProps) {
+export default function MenuBar({focusedAppName, currentModeIsDark, onToggleMode, onOpenHelp,}: MenuBarProps) {
     const [potatoIsSpeaking, setPotatoIsSpeaking] = useState(false)
     const [currentTimeString, setCurrentTimeString] = useState<string | null>("")
     const [miguIsSpeaking, setMiguIsSpeaking] = useState(false)

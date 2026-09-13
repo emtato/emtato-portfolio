@@ -43,7 +43,7 @@
 
 
 .section-header {
-    padding: calc(2.5 * var(--timeline-unit));
+    padding: calc(1.5 * var(--timeline-unit));
     position: relative;
     flex-shrink: 0;
     box-shadow: 0 4px 30px rgba(46, 20, 36, 0.05);
@@ -51,11 +51,11 @@
 
 .section-image {
     position: absolute;
-    top: calc(0.833 * var(--timeline-unit));
+    top: calc(0.5 * var(--timeline-unit));
     right: calc(2 * var(--timeline-unit));
-    width: min(27%, calc(16 * var(--timeline-unit)));
+    width: min(25%, calc(16 * var(--timeline-unit)));
     image-rendering: pixelated;
-    z-index: 2;
+    z-index: 20;
 }
 
 .section-uppertext {
@@ -266,7 +266,7 @@
 
 .TLA-fall2026 {
     left: 29.25cqw;
-    top: -1.295cqw;
+    top: -0.5cqw;
     transform: rotate(80deg) scale(130%);
 }
 

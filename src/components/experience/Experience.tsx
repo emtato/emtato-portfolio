@@ -17,7 +17,7 @@ export default function Experience() {
 
                 <div className="work-experience-timeline">
                     <div className="work-experience-timeline-line-container">
-                        <div className="timeline-segment segment-medium season-fall"/>
+                        <div className="timeline-segment segment-small season-fall"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-fall2026" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/fall-1.png"/>

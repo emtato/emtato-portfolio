@@ -134,12 +134,12 @@
 .aboutme-page1-name-intro {
     color: var(--color-bright-plum);
     font: 2.5cqw "Caveat";
-    line-height: 2.192cqw;
+    line-height: 2.2cqw;
 }
 
 .aboutme-page1-body-line {
     font: 1.6cqw "Arvo";
-    line-height: 2.192cqw; /* Matches the 64px rules in the 2906px notebook source */
+    line-height: 2.18cqw;
 }
 
 .aboutme-page1-tempo-link {

@@ -5,13 +5,13 @@
 .browser-window {
     width: 97vw;
     left: 1.5vw;
-    height: 96%;
+    height: 92%;
     z-index: 10;
     position: absolute;
     top: 30px;
-    box-shadow: 7px 21px 0 rgba(5, 14, 3, 0.5);
+    box-shadow: 6px 18px 0 rgba(5, 14, 3, 0.5);
     display: grid;
-    grid-template-columns: 7px minmax(0, 1fr) 7px;
+    grid-template-columns: 6px minmax(0, 1fr) 6px;
     grid-template-rows: auto minmax(0, 1fr) auto;
 }
 
@@ -21,9 +21,9 @@
     z-index: 15;
     position: absolute;
     top: 0px;
-    box-shadow: 7px 21px 0 rgba(5, 14, 3, 0.5);
+    box-shadow: 6px 18px 0 rgba(5, 14, 3, 0.5);
     display: grid;
-    grid-template-columns: 7px minmax(0, 1fr) 7px;
+    grid-template-columns: 6px minmax(0, 1fr) 6px;
     grid-template-rows: auto minmax(0, 1fr) auto;
 }
 
@@ -33,10 +33,10 @@
     position: relative;
 }
 
-.browser-window-render-top-row { /* dimensions of 1 pixel: height 63px -> 9 drawn pixels tall, 7px per big pixel */
+.browser-window-render-top-row { /* dimensions of 1 pixel: height 48px -> 8 drawn pixels tall, 6px per big pixel */
     position: relative;
     z-index: 10;
-    height: 56px;
+    height: 48px;
     image-rendering: pixelated;
     display: block;
 }
@@ -44,19 +44,19 @@
 .browser-window-traffic-lights {
     display: flex;
     position: absolute;
-    top: 23px;
+    top: 19.71px;
     z-index: 15;
-    left: 27px;
+    left: 23.14px;
     image-rendering: pixelated;
-    gap: 15px;
+    gap: 12.86px;
 }
 
 .circle-button {
     background-color: transparent;
     border: none;
     padding: 0;
-    width: 22px;
-    height: 22px;
+    width: 18.86px;
+    height: 18.86px;
     border-radius: 50%;
 }
 
@@ -67,17 +67,17 @@
 
 .browser-window-traffic-light {
     display: block;
-    width: 22px;
-    height: 22px;
+    width: 18.86px;
+    height: 18.86px;
 }
 
 .browser-window-top {
-    height: 56px;
-    margin-inline: 7px;
+    height: 48px;
+    margin-inline: 6px;
 
     background-image: url("/assets/browser/frame/top-side-browser.png");
     background-repeat: repeat-x;
-    background-size: 8px 56px;
+    background-size: 6.86px 48px;
     image-rendering: pixelated;
 }
 
@@ -92,36 +92,36 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 77px;
-    height: 56px;
+    width: 66px;
+    height: 48px;
     pointer-events: none;
 
     background-image: url("/assets/browser/frame/top-right-corner-browser.png");
-    background-size: 77px 56px;
+    background-size: 66px 48px;
     image-rendering: pixelated;
-    filter: drop-shadow(7px 0 0 rgba(5, 14, 3, 0.5));
-    clip-path: inset(0 -7px 35px 0);
+    filter: drop-shadow(6px 0 0 rgba(5, 14, 3, 0.5));
+    clip-path: inset(0 -6px 30px 0);
 }
 
 /* -------------------------------- browser window middle row + toolbar -------------------------------- */
 
 .browser-window-left {
-    width: 7px;
+    width: 6px;
 
     background-image: url("/assets/browser/frame/left-side-browser.png");
     background-repeat: repeat-y;
-    background-size: 7px 7px;
+    background-size: 6px 6px;
     image-rendering: pixelated;
 }
 
 .browser-window-center {
     height: 100%;
     display: grid;
-    grid-template-rows: 42px minmax(0, 1fr); /* dvide centre space into two stacked rows: 42px toolbar height, rest for page content */
+    grid-template-rows: 36px minmax(0, 1fr); /* dvide centre space into two stacked rows: 36px toolbar height, rest for page content */
 }
 
 .browser-window-search-layer {
-    height: 42px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,7 +129,7 @@
 
     background-image: url("/assets/browser/toolbar/browser-search-bar-layer.png");
     background-repeat: repeat-x;
-    background-size: 7px 42px;
+    background-size: 6px 36px;
     image-rendering: pixelated;
 }
 
@@ -137,9 +137,9 @@
     z-index: 15;
     display: flex;
     position: absolute;
-    top: 3.3px;
-    left: 5px;
-    right: 15px;
+    top: 2.83px;
+    left: 4.29px;
+    right: 12.86px;
 }
 
 .browser-nav-button {
@@ -154,9 +154,9 @@
 }
 
 .browser-nav-icon {
-    width: 30px;
-    height: 30px;
-    margin-left: 15px;
+    width: 25.71px;
+    height: 25.71px;
+    margin-left: 12.86px;
 }
 
 /* -------------------------------- tabs  --------------------------------------- */
@@ -164,28 +164,28 @@
     display: flex;
     position: absolute;
     width: 100%;
-    left: 150px;
-    top: 4px;
-    gap: 20px;
+    left: 128.57px;
+    top: 3.43px;
+    gap: 17.14px;
 }
 
 .browser-tab-button {
     position: relative;
-    width: 150px;
-    height: 50px;
+    width: 128.57px;
+    height: 42.86px;
     background-color: transparent;
     border: none;
     z-index: 16;
-    top: 10px;
-    left: 10px;
+    top: 8.57px;
+    left: 8.57px;
 }
 
 .browser-tab-label {
     color: var(--colour-peach);
-    font: 14px "Emtato Pixel";
+    font: 12px "Emtato Pixel";
     z-index: 17;
     position: relative;
-    top: 3px;
+    top: 2.57px;
 
 }
 
@@ -199,8 +199,8 @@
 }
 
 .browser-tab-img {
-    width: 150px;
-    top: -3px;
+    width: 128.57px;
+    top: -2.57px;
     position: absolute;
     z-index: 16;
     left: 0;
@@ -213,9 +213,9 @@
     position: relative;
     width: 100%;
     gap: 0;
-    top: -0.5px;
-    margin-left: 15px;
-    height: 30px;
+    top: -0.43px;
+    margin-left: 12.86px;
+    height: 25.71px;
 }
 
 .browser-search-bar-bounds { /*1x15 -> 36/15 =2.4: 1pixel is 2.4px*/
@@ -226,42 +226,42 @@
     position: relative;
     background-image: url("/assets/browser/toolbar/search-bar.png");
     background-repeat: repeat-x;
-    background-size: 4px 36px;
+    background-size: 3.43px 30.86px;
     image-rendering: pixelated;
     z-index: 15;
 }
 
 .browser-search-icon {
     position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 25px;
-    height: 25px;
+    top: 5.14px;
+    left: 5.14px;
+    width: 21.43px;
+    height: 21.43px;
     z-index: 16;
     image-rendering: pixelated;
 }
 
 .browser-window-right {
-    width: 7px;
+    width: 6px;
     justify-self: end;
 
     background-image: url("/assets/browser/frame/right-side-browser.png");
     background-repeat: repeat-y;
-    background-size: 7px 7px;
+    background-size: 6px 6px;
     image-rendering: pixelated;
 }
 
 .browser-search-bar-text {
     position: absolute;
     top: 35%;
-    left: 30px;
+    left: 25.71px;
     width: 100%;
     height: 100%;
     background-color: transparent;
     border: none;
     outline: none;
     color: var(--color-smoky-charcoal);
-    font: 14px "Emtato Pixel";
+    font: 12px "Emtato Pixel";
     z-index: 16;
 }
 
@@ -270,7 +270,7 @@
 ----------------------------------------------------------------------------------------------- -o- */
 
 .browser-window-page-content {
-    height: calc(100% + 14px); /* add 14 px to the page content's height to account for the bottom row's space taken */
+    height: calc(100% + 12px); /* add 12 px to the page content's height to account for the bottom row's space taken */
 
 }
 
@@ -294,19 +294,19 @@
 .browser-window-render-bottom-row {
     position: relative;
     z-index: 10;
-    height: 21px;
+    height: 18px;
     image-rendering: pixelated;
     display: block;
 }
 
 .browser-window-bottom {
-    height: 7px;
+    height: 6px;
     align-self: end;
-    margin-inline: 7px;
+    margin-inline: 6px;
 
     background-image: url("/assets/browser/frame/right-side-browser.png");
     background-repeat: repeat-x;
-    background-size: 7px 7px;
+    background-size: 6px 6px;
     image-rendering: pixelated;
 }
 
@@ -328,13 +328,13 @@
     }
 
     .browser-tabs-list {
-        left: 95px;
-        gap: 7px;
+        left: 81.43px;
+        gap: 6px;
     }
 
     .browser-window-traffic-lights {
-        gap: 8px;
-        left:16px;
+        gap: 6.86px;
+        left:13.71px;
     }
 
     .browser-window-traffic-light {
@@ -344,29 +344,29 @@
 
     .browser-tab-button {
         position: relative;
-        width: 95px;
-        height: 30px;
+        width: 81.43px;
+        height: 25.71px;
         background-color: transparent;
         border: none;
         z-index: 16;
-        top: 10px;
-        left: 10px;
+        top: 8.57px;
+        left: 8.57px;
     }
 
     .browser-tab-label {
         color: var(--colour-peach);
-        font: 10px "Emtato Pixel";
+        font: 8.57px "Emtato Pixel";
         z-index: 17;
         position: relative;
-        top: 8px;
+        top: 6.86px;
         margin-left: -4%;
 
     }
 
     .browser-tab-img {
-        width: 95px;
-        height: 50px;
-        top: -3px;
+        width: 81.43px;
+        height: 42.86px;
+        top: -2.57px;
         position: absolute;
         z-index: 16;
         left: 0;
@@ -375,14 +375,14 @@
     .browser-search-bar-text {
         position: absolute;
         top: 45%;
-        left: 30px;
+        left: 25.71px;
         width: 100%;
         height: 100%;
         background-color: transparent;
         border: none;
         outline: none;
         color: var(--color-smoky-charcoal);
-        font: 8px "Emtato Pixel";
+        font: 6.86px "Emtato Pixel";
         z-index: 16;
     }
 

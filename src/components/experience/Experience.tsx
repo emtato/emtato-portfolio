@@ -224,12 +224,15 @@ export default function Experience() {
                 </header>
                 <div className="projects-grid">
                     <div className="project-column">
-                        <ProjectCard title="" shortDesc="" stack={[]} standout="" description="" cardImgs=""
+                        <ProjectCard title="" shortDesc="" stack={[]} standout="" description="" cardImg=""
                                      expandedImgs={[]} timeInfo="" github=""/>
+                        <ProjectCard title="titel" shortDesc="desc" stack={[]} standout="im standin" description="long"
+                                     cardImg="" expandedImgs={[]} timeInfo="" github=""/>
                     </div>
                     <div className="project-column">
-                        <ProjectCard title="titel" shortDesc="desc" stack={[]} standout="im standin" description="long" cardImgs=""
-                                     expandedImgs={[]} timeInfo="" github=""/>
+                        <ProjectCard title="TITLE" shortDesc="desc" stack={["a","c","html"]} standout="im standin" description="long"
+                                     cardImg="/assets/browser/content/experience/project/tempo/img1.png" expandedImgs={[]} timeInfo="now" github="aa" projectLink="link" />
+
                     </div>
                 </div>
             </section>

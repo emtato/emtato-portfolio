@@ -568,15 +568,19 @@
 .project-column {
     display: flex;
     flex-direction: column;
-    gap: 0.5vh;
+    gap: 1vh;
 }
 
 /* ————————————————————————————————————project card —————————————————————————————————————————————————*/
 .project-card {
+    --project-card-accent: var(--color-bright-plum);
+    --project-card-accent-dark: var(--color-deep-plum);
+    --project-card-link-hover: #3e78da;
     width: 100%;
     box-sizing: border-box;
-    background: #ffeeee;
-    border: 2px solid var(--color-bright-plum);
+    font-size: var(--timeline-unit);
+    background: #fff8f4;
+    border: 2px solid var(--project-card-accent);
     border-radius: 1.5cqmin;
     box-shadow: 0 7px 16px -10px lightslategrey;
     display: flex;
@@ -588,9 +592,10 @@
 
 .project-card-image-wrapper {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16.6/ 10;
+    background: var(--colour-pale-lavender);
+    border-bottom: 1px solid var(--project-card-accent-dark);
     overflow: hidden;
-    /*flex-shrink: 0;*/
 }
 
 .project-card-image {
@@ -599,11 +604,122 @@
     height: 100%;
     object-fit: cover; /*crop*/
 }
+
+
 .project-card-text-wrapper {
     display: flex;
     flex-direction: column;
     padding: 4cqw;
     gap: 2cqw;
+}
+
+.project-card-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3cqw;
+}
+
+.project-card-title-group {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 2cqw;
+}
+
+.project-card-title {
+    min-width: 0;
+    color: var(--color-dark-plum);
+    font: 700 5.6cqw "Arvo";
+    margin: 0;
+}
+
+.project-card-links {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 1.5cqw;
+}
+
+.project-card-link-button {
+    width: 7cqw;
+    aspect-ratio: 1;
+    border: 1px solid var(--color-blush);
+    border-radius: 2cqw;
+    background: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.project-card-link-button-gh {
+    width: 7cqw;
+    aspect-ratio: 1;
+    border: 1px solid var(--color-blush);
+    border-radius: 2cqw;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background: black;
+}
+
+.project-card-link-button-gh:hover {
+    border-color: var(--project-card-link-hover);
+    transform: translateY(-1px);
+}
+
+.project-card-link-button:hover {
+    background: #e6f2ff;
+    border-color: var(--project-card-link-hover);
+    transform: translateY(-1px);
+}
+
+.project-card-link-icon {
+    width: 4cqw;
+    aspect-ratio: 1;
+    image-rendering: pixelated;
+}
+
+.project-card-github-icon {
+    width: 6cqw;
+    aspect-ratio: 1;
+    image-rendering: pixelated;
+}
+
+.project-card-timeInfo {
+    flex-shrink: 0;
+    padding: 1.3cqw 2.1cqw;
+    color: var(--color-plum);
+    background: white;
+    border: 1px solid var(--color-deep-plum);
+    border-radius: 999px;
+    font: 400 2.35cqw/1.2 "Emtato Pixel";
+    text-transform: uppercase;
+}
+
+.project-card-shortDesc {
+    color: var(--color-smoky-charcoal);
+    font: 400 1em "Arvo";
+    line-height: 1.55;
+    margin: 0;
+}
+
+.project-card-stack-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.35em;
+}
+
+.project-card-stack-tag {
+    padding: 4px 9px;
+    color: var(--color-plum);
+    background: white;
+    border: 1px solid rgba(184, 92, 138, 0.55);
+    border-radius: 999px;
+    font: 400 0.7em "Emtato Pixel";
+    line-height: 1.2;
 }
 
 /* TODO: fix rules for this new layout for timeline behaviour*/
@@ -632,6 +748,16 @@
     .work-experience-timeline,
     .projects-grid {
         overflow-y: visible;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .project-column {
+        gap: 12px;
     }
 
     .section-header {

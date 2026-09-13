@@ -254,6 +254,17 @@ export default function Experience() {
                             projectLink="https://ems.lol"
                         />
                         <ProjectCard
+                            title="Steam Game Recommender"
+                            shortDesc="Graph-based recommendation system that ranks Steam games from multiple selections using weighted similarity across player preferences."
+                            stack={["Python", "Streamlit", "Steam Web API", "Graph Algorithms", "HTML/CSS", "CSV"]}
+                            standout="Built an API-to-CSV caching pipeline for 2,000+ games despite Steam API rate limits."
+                            description="Created the Steam data collection and local caching pipeline, built the custom scrollable recommendation interface, contributed to the Streamlit UI, integrated multi-game selections with the graph recommender, and refined its similarity scoring."
+                            cardImg={`${mediaFilePath}steam-rec/img1.png`}
+                            expandedImgs={[]}
+                            timeInfo="2025"
+                            github="https://github.com/emtato/steam-recommendation-project"
+                        />
+                        <ProjectCard
                             title="Columns"
                             shortDesc="Classic Columns puzzle game rendered pixel by pixel in MIPS assembly with real-time input and cascading match logic."
                             stack={["MIPS Assembly", "MARS", "Bitmap Display", "Memory-Mapped I/O", "Recursion"]}

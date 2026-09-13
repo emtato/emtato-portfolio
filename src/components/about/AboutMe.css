@@ -6,6 +6,20 @@
     width: 100%;
     height: 100%;
     overflow-y: auto;
+    overscroll-behavior-y: none;
+}
+.aboutme-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE and Edge */
+.aboutme-scroll-container {
+    -ms-overflow-style: none;
+}
+
+/* For Firefox */
+.aboutme-scroll-container {
+    scrollbar-width: none;
 }
 
 .aboutme-scroll-space {

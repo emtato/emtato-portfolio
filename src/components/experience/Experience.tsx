@@ -224,15 +224,36 @@ export default function Experience() {
                 </header>
                 <div className="projects-grid">
                     <div className="project-column">
-                        <ProjectCard title="" shortDesc="" stack={[]} standout="" description="" cardImg=""
-                                     expandedImgs={[]} timeInfo="" github=""/>
-                        <ProjectCard title="titel" shortDesc="desc" stack={[]} standout="im standin" description="long"
-                                     cardImg="" expandedImgs={[]} timeInfo="" github=""/>
+                        <ProjectCard
+                            title="Tempo"
+                            shortDesc="Full-stack calendar focused on making scheduling faster and more intuitive through streamlined interactions."
+                            stack={["React", "TypeScript", "FullCalendar", "Node.js", "Express", "MongoDB", "Better Auth", "Railway"]}
+                            standout="Independently designed, developed, and deployed end to end."
+                            description="Combines responsive calendar views with deterministic natural-language date and time parsing, account authentication, user-scoped event storage, and a one-click time-entry workflow with instant AM/PM toggling."
+                            cardImg="/assets/browser/content/experience/project/tempo/img1.png"
+                            expandedImgs={[
+                                "/assets/browser/content/experience/project/tempo/img2.png",
+                                "/assets/browser/content/experience/project/tempo/img3.png",
+                                "/assets/browser/content/experience/project/tempo/img4.png"
+                            ]}
+                            timeInfo="2026 - Present"
+                            github="https://github.com/emtato/tempo."
+                            projectLink="https://calendar.ems.lol"
+                        />
                     </div>
                     <div className="project-column">
-                        <ProjectCard title="TITLE" shortDesc="desc" stack={["a","c","html"]} standout="im standin" description="long"
-                                     cardImg="/assets/browser/content/experience/project/tempo/img1.png" expandedImgs={[]} timeInfo="now" github="aa" projectLink="link" />
-
+                        <ProjectCard
+                            title="GirlMath"
+                            shortDesc="AI-powered journaling app supporting girls in STEM by tracking confidence, motivation, and learning trends."
+                            stack={["Python", "FastAPI", "React Native", "Expo", "TypeScript", "MongoDB", "DigitalOcean", "Gemini API"]}
+                            standout="Led backend development in a 36-hour hackathon."
+                            description="Built FastAPI logic and REST endpoints for a four-person team, integrated Gemini to derive trends from journal entries, created the frontend API client, and deployed the service to DigitalOcean."
+                            cardImg="/assets/browser/content/experience/project/girlmath/girlmath.png"
+                            expandedImgs={[]}
+                            timeInfo="2026"
+                            github="https://github.com/emtato/girlmath"
+                            projectLink="https://devpost.com/software/girlmath-b5y7ao"
+                        />
                     </div>
                 </div>
             </section>

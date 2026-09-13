@@ -560,7 +560,7 @@
     min-height: 0;
     display: grid;
     padding: 1vw;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5vw;
     overflow-y: scroll;
 }
@@ -577,6 +577,7 @@
     --project-card-accent-dark: var(--color-deep-plum);
     --project-card-link-hover: #3e78da;
     width: 100%;
+    min-width: 0;
     box-sizing: border-box;
     font-size: var(--timeline-unit);
     background: #fff8f4;

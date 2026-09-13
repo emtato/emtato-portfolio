@@ -215,6 +215,7 @@ export default function Experience() {
                 </div>
             </section>
             {/*projects*/}
+
             <section className="projects-container">
                 <header className="section-header">
                     <img className="section-image" alt="a" src="/assets/browser/content/experience/project/code.png"/>
@@ -240,6 +241,18 @@ export default function Experience() {
                             github="https://github.com/emtato/tempo."
                             projectLink="https://calendar.ems.lol"
                         />
+                        <ProjectCard
+                            title="Emportfolio"
+                            shortDesc="Interactive personal portfolio presented through a custom Mac-inspired, pixel-art browser interface."
+                            stack={["React", "TypeScript", "HTML/CSS", "Vite", "GitHub Pages"]}
+                            standout="Reduced five large media assets by 94%, cutting initial load time to under one second."
+                            description="Features original pixel art, custom animations, and responsive React components inside a playful desktop and browser interface designed to remain recruiter-readable."
+                            cardImg="/assets/browser/content/experience/project/emportfolio/portfolio.png"
+                            expandedImgs={[]}
+                            timeInfo="2026 - Present"
+                            github="https://github.com/emtato/emtato-portfolio"
+                            projectLink="https://ems.lol"
+                        />
                     </div>
                     <div className="project-column">
                         <ProjectCard
@@ -253,6 +266,20 @@ export default function Experience() {
                             timeInfo="2026"
                             github="https://github.com/emtato/girlmath"
                             projectLink="https://devpost.com/software/girlmath-b5y7ao"
+                        />
+                        <ProjectCard
+                            title="Munchables"
+                            shortDesc="Four-person Java Swing social platform created with Clean Architecture and JUnit-tested domain logic."
+                            stack={["Java", "Swing", "OkHttp", "JSON", "Spoonacular API", "HTML/CSS", "JUnit"]}
+                            standout="Designed a reusable post component used across every post view."
+                            description="Centralized image rendering, comments, likes, and interaction logic; integrated Spoonacular nutrition data; and isolated domain logic from storage through repository interfaces."
+                            cardImg="https://github.com/user-attachments/assets/0df8e097-8150-4fb9-917c-766c011ef027"
+                            expandedImgs={[
+                                "https://github.com/user-attachments/assets/aeac076b-7e8a-461c-b101-459d615db1f1",
+                                "https://github.com/user-attachments/assets/bab91924-794d-41ac-ab5f-863a4b645341"
+                            ]}
+                            timeInfo="2025"
+                            github="https://github.com/emtato/munchables"
                         />
                     </div>
                 </div>

@@ -8,7 +8,7 @@ import {browser} from "globals";
 export default function App() {
     const [loading, setLoading] = useState(true)
     const [browserOpen, setBrowserOpen] = useState(true)
-    const [focusedAppName, setFocusedAppName] = useState<string | null>("placeholder")
+    const [focusedAppName, setFocusedAppName] = useState<string | null>("potato browser")
     const [helpOpen, setHelpOpen] = useState(false)
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
     const [isMaximized, setIsMaximized] = useState(false)

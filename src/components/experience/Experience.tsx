@@ -1,5 +1,6 @@
 import "./Experience.css"
 import TimelineCard from "./TimelineCard.tsx";
+import ProjectCard from "./ProjectCard.tsx";
 
 export default function Experience() {
 
@@ -222,7 +223,14 @@ export default function Experience() {
                     <div className="section-accent"/>
                 </header>
                 <div className="projects-grid">
-
+                    <div className="project-column">
+                        <ProjectCard title="" shortDesc="" stack={[]} standout="" description="" cardImgs=""
+                                     expandedImgs={[]} timeInfo="" github=""/>
+                    </div>
+                    <div className="project-column">
+                        <ProjectCard title="titel" shortDesc="desc" stack={[]} standout="im standin" description="long" cardImgs=""
+                                     expandedImgs={[]} timeInfo="" github=""/>
+                    </div>
                 </div>
             </section>
         </div>

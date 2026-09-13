@@ -1,16 +1,37 @@
 import './AboutMe.css'
-import {useState} from "react";
+import {useRef, useState} from "react"
 
 interface AboutMeProps {
     nextTab: () => void //automatically goed to experience tab upon continuous scrolling/button
 }
 
 export default function AboutMe({nextTab}: AboutMeProps) {
+    const [scrollProgress, setScrollProgress] = useState(0)
     const [pageNumber, setPageNumber] = useState(1) /* 1,2,3*/
-    return <div className="aboutme-scroll-container">
+    const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+    const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
+        /* scroll handler that measures progress of scrollable container */
+        const container = event.currentTarget
+        const scrollableDistance = container.scrollHeight - container.clientHeight
+        let progress
+        if (scrollableDistance > 0) progress = container.scrollTop / scrollableDistance
+        else progress = 0
+
+        setScrollProgress(progress)  //useful ot save progress (no lnoger local var that poofs after scrolling stops)
+    }
+
+    const translateX = -50 * scrollProgress //calculate scroll progress from current pos to page 2:
+    const translateY = -18 * scrollProgress
+
+    return <div className="aboutme-scroll-container" onScroll={handleScroll} ref={scrollContainerRef}>
         <div className="aboutme-scene">
             <img className="aboutme-desk-background" alt="" src="/assets/browser/content/about-me/desk.webp"/>
-            <div className={`aboutme-notebook-pan aboutme-notebook-pan-page-${pageNumber}`}>
+            <div
+                className={`aboutme-notebook-pan aboutme-notebook-pan-page-${pageNumber}`}
+                style={{
+                    transform: `translate(${translateX}%, ${translateY}%)`
+                }}>
                 <div className="aboutme-notebook">
                     <img className="aboutme-notebook-background" alt=""
                          src="/assets/browser/content/about-me/Notebook.webp"/>
@@ -51,12 +72,22 @@ export default function AboutMe({nextTab}: AboutMeProps) {
                         </div>
                         <button className="aboutme-page1-next-button" onClick={() => {
                             setPageNumber(2)
+                            const container = scrollContainerRef.current
+
+                            if (container) {
+                                const scrollableDistance = container.scrollHeight - container.clientHeight
+
+                                container.scrollTo({top: scrollableDistance, behavior: "smooth"})
+                            }
                         }}><span className="aboutme-page1-next-desktop-label">next page (press or scroll) -&gt;</span>
                             <span className="aboutme-page1-next-mobile-label">more about me! (press) -&gt;</span>
                         </button>
                         <div className="aboutme-page1-footer">... or explore the rest of my website freely :)</div>
-                        <div className="page1-note-formobile">if youre seeing this, you might be confused ( ꩜ ᯅ ꩜;) <br/>
-                        why only half page? computer screen dimensions <br/> can only see the top half. i did warn you! </div>
+                        <div className="page1-note-formobile">if youre seeing this, you might be confused ( ꩜ ᯅ
+                            ꩜;) <br/>
+                            why only half page? computer screen dimensions <br/> can only see the top half. i did warn
+                            you!
+                        </div>
                     </div>
                     {/* page 2 */}
 
@@ -65,6 +96,7 @@ export default function AboutMe({nextTab}: AboutMeProps) {
                             <button className="back-next-button" onClick={
                                 () => {
                                     setPageNumber(1)
+                                    scrollContainerRef.current?.scrollTo({top: 0, behavior: "smooth"})
                                 }}>&lt;</button>
                             <button className="back-next-button" onClick={nextTab}>&gt;</button>
                         </div>

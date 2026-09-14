@@ -252,7 +252,7 @@ scenarios, recognizing multi-day and combined date-time ranges (with “now” e
                             title="Emportfolio"
                             shortDesc="Interactive personal portfolio presented through a custom Mac-inspired, pixel-art browser interface."
                             stack={["React", "TypeScript", "HTML/CSS", "Vite", "GitHub Pages"]}
-                            shortHighlight="test"
+                            shortHighlight="woah inception"
                             highlight="Reduced five large media assets by 94%, cutting initial load time to under one second."
                             description="coming soon"
                             myContribution="coming soon"
@@ -267,6 +267,7 @@ scenarios, recognizing multi-day and combined date-time ranges (with “now” e
                             title="Steam Game Recommender"
                             shortDesc="Graph-based recommendation system that ranks Steam games from multiple selections using weighted similarity across player preferences."
                             stack={["Python", "Streamlit", "Steam Web API", "Graph Algorithms", "HTML/CSS", "CSV"]}
+                            shortHighlight="2000+ games"
                             highlight="Built an API-to-CSV caching pipeline for 2,000+ games despite Steam API rate limits."
                             description="coming soon"
                             myContribution="coming soon"
@@ -280,6 +281,7 @@ scenarios, recognizing multi-day and combined date-time ranges (with “now” e
                             title="Columns"
                             shortDesc="Classic Columns puzzle game rendered pixel by pixel in MIPS assembly with real-time input and cascading match logic."
                             stack={["MIPS Assembly", "MARS", "Bitmap Display", "Memory-Mapped I/O", "Recursion"]}
+                            shortHighlight="all MIPS"
                             highlight="Implemented recursive eight-direction match detection and cascade resolution."
                             description="coming soon"
                             myContribution="coming soon"

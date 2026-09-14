@@ -1,41 +1,76 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
+import {createPortal} from "react-dom";
 
 interface ProjectProps {
     title: string
-    shortDesc: string
+    shortHighlight?: string
+    highlight: string
     stack: string[]
-    standout: string
+    shortDesc: string
     description: string
+    myContribution: string
     cardImg: string
     expandedImgs: string[]
     timeInfo: string
+    detailedTimeInfo: string
     projectLink?: string
     github: string
 }
 
 
 export default function ProjectCard({
-                                        title, shortDesc, stack, cardImg, timeInfo, projectLink, github
+                                        title, shortDesc, shortHighlight, stack, highlight, description, cardImg,
+                                        expandedImgs, timeInfo, projectLink, github, detailedTimeInfo, myContribution
                                     }: ProjectProps) {
     const [isHovered, setIsHovered] = useState(false) /* TODO: hover effects*/
     const [isOpen, setisOpen] = useState(false)
-    const cardRef = useRef<HTMLElement>(null)
+    const [activeImageIndex, setActiveImageIndex] = useState(0)
+    const projectImages = [cardImg, ...expandedImgs].filter((image) => image.length > 0)
+    const portalTarget = document.querySelector(".browser-window-page")
 
     useEffect(() => {
-        function handleOutsideClick(event: MouseEvent) {
-            if (cardRef.current && !cardRef.current.contains(event.target as Node)) {
+        function handleEscape(event: KeyboardEvent) {
+            if (event.key === "Escape") {
                 setisOpen(false)
             }
         }
 
-        document.addEventListener("mousedown", handleOutsideClick)
+        document.addEventListener("keydown", handleEscape)
         return () => {
-            document.removeEventListener("mousedown", handleOutsideClick)
+            document.removeEventListener("keydown", handleEscape)
         }
     }, [])
 
+    function openProject() {
+        setActiveImageIndex(0)
+        setisOpen(true)
+    }
+
+    function showPreviousImage() {
+        setActiveImageIndex((currentIndex) =>
+            currentIndex === 0 ? projectImages.length - 1 : currentIndex - 1
+        )
+    }
+
+    function showNextImage() {
+        setActiveImageIndex((currentIndex) =>
+            currentIndex === projectImages.length - 1 ? 0 : currentIndex + 1
+        )
+    }
+
+    function addCommaSpacing(text: string) {
+        return text.replace(/, /g, ",\u200A ")
+    }
+
+    //TODO: change descriptions, maybe shortdesc, implement achievementbanner, maybe change title font,and reorganizeview:
+    //TODO:images carrouseltakes bottom left corner, bigger.description maybe moved down below line, longer and more informative.
+    //project highlightand what i built in flex row layout above image.stack can be vertical column (shown in screeshot)
+    //TODO: figure out how to organize "long description" vs "what i built" vs "highlight".
+    //short highlight will be the achievement on the banner
+    //decide if format will be short desc will be displayed at top under title, while long desc populateswhat i built section.
+    //missing personal part: motivation
     return <>
-        <article className="project-card" onClick={() => setisOpen(true)} ref={cardRef}>
+        <article className="project-card" onClick={openProject}>
             <div className="project-card-image-wrapper">
                 {cardImg && <img className="project-card-image" alt='a' src={cardImg}/>}
             </div>
@@ -56,10 +91,9 @@ export default function ProjectCard({
                             </a>}
                         </div>
                     </div>
-
                     {timeInfo && <div className="project-card-timeInfo">{timeInfo}</div>}
                 </div>
-                <p className="project-card-shortDesc">{shortDesc}</p>
+                <p className="project-card-shortDesc">{addCommaSpacing(shortDesc)}</p>
 
                 {stack.length > 0 && <div className="project-card-stack-wrapper">
                     {stack.map((technology) =>
@@ -67,11 +101,97 @@ export default function ProjectCard({
                     )}
                 </div>}
             </div>
-
         </article>
-        {isOpen && <div className="opened-project-card">
-            detailed project view coming soon!
-            <div className="opened-card-x">×</div>
-        </div>}
+
+        {/*opened card*/}
+        {isOpen && portalTarget && createPortal( /* escape current parent container (projects container) bounds)*/
+            <div className="opened-project-overlay" onMouseDown={() => setisOpen(false)}>
+                <section className="opened-project-card" onMouseDown={(event) => event.stopPropagation()}>
+                    <button className="opened-card-x" type="button" onClick={() => setisOpen(false)}> ×
+                    </button>
+                    <div className="opened-project-header-two-sections">
+
+                        <header className="opened-project-header">
+                            <div className="opened-project-title-row">
+
+                                <h2 className="opened-project-title">{title}</h2>
+                                <div className="opened-project-links">
+                                    {projectLink &&
+                                        <a className="project-card-link-button opened-project-link-button"
+                                           href={projectLink} target="_blank">
+                                            <img className="project-card-link-icon opened-project-link-icon" alt=""
+                                                 src="/assets/system/link-icon-hover.png"/>
+                                        </a>}
+                                    {github && <a className="project-card-link-button-gh opened-project-link-button"
+                                                  href={github} target="_blank">
+                                        <img className="project-card-github-icon opened-project-github-icon" alt=""
+                                             src="/assets/browser/content/experience/github.png"/>
+                                    </a>}
+                                </div>
+
+                            </div>
+                            <p className="opened-project-desc">{addCommaSpacing(description)}</p>
+                        </header>
+                        <div className="project-card-right-group">
+                            <span className="opened-project-time">{detailedTimeInfo}</span>
+                            {highlight && <div className="opened-project-highlight">
+                                {addCommaSpacing(highlight)}</div>}
+                        </div>
+                    </div>
+
+                    <div className="opened-project-body">
+                        <div className="opened-project-body-row1">
+                            <section className="opened-project-myContribution-section">
+                                <div className="opened-project-myContribution-title">What I built</div>
+                                <div
+                                    className="opened-project-detail-myContribution">{addCommaSpacing(myContribution)}</div>
+                            </section>
+                        </div>
+                        <div className="opened-project-body-row2">
+                            <div className="opened-project-gallery-column">
+                                {projectImages.length > 0 && <>
+                                    <div className="opened-project-gallery">
+                                        <img className="opened-project-image" src={projectImages[activeImageIndex]}
+                                             alt="a"/>
+
+                                        {projectImages.length > 1 && <>
+                                            <button className="opened-project-gallery-button gallery-button-previous"
+                                                    type="button"
+                                                    onClick={showPreviousImage}>
+                                                <img className="opened-project-gallery-button-image"
+                                                     src="/assets/browser/toolbar/back.png" alt=""/>
+                                            </button>
+                                            <button className="opened-project-gallery-button gallery-button-next"
+                                                    type="button" onClick={showNextImage}>
+                                                <div className="opened-project-gallery-button-image"
+                                                > &gt;</div>
+                                            </button>
+                                        </>}
+
+                                        <span className="opened-project-image-count">
+                                        {activeImageIndex + 1} / {projectImages.length}
+                                    </span>
+                                    </div>
+
+                                    {projectImages.length > 1 && <div className="opened-project-gallery-dots"></div>}
+                                </>}
+                            </div>
+                            {stack.length > 0 &&
+                                <section className="opened-project-detail-section opened-project-stack-section">
+                                    <h3 className="opened-project-section-label">Built with</h3>
+                                    <div className="opened-project-stack">
+                                        {stack.map((technology) =>
+                                            <span className="opened-project-stack-tag"
+                                                  key={technology}>{technology}</span>
+                                        )}
+                                    </div>
+                                </section>}
+                        </div>
+                    </div>
+                </section>
+            </div>,
+            portalTarget
+        )}
     </>
 }
+//TODO: achievement/emphasis baner diagonal across

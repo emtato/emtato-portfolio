@@ -60,7 +60,7 @@
 
 .section-uppertext {
     color: var(--section-colour);
-    font: 700 clamp(10px, calc(0.9 * var(--timeline-unit)), 15px) "Arvo";
+    font: 700 calc(0.9 * var(--timeline-unit)) "Arvo";
     letter-spacing: 0.16em;
     text-transform: uppercase;
     margin-bottom: calc(0.625 * var(--timeline-unit));
@@ -68,7 +68,7 @@
 
 .section-title {
     color: var(--color-dark-plum);
-    font: 700 clamp(29px, calc(3.6 * var(--timeline-unit)), 64px) "Arvo";
+    font: 700 calc(3.6 * var(--timeline-unit)) "Arvo";
     line-height: 1;
     letter-spacing: -0.035em;
     margin: 0;
@@ -76,8 +76,8 @@
 }
 
 .section-accent {
-    width: clamp(48px, calc(5.4 * var(--timeline-unit)), 96px);
-    height: clamp(3px, calc(0.278 * var(--timeline-unit)), 5px);
+    width: calc(5.4 * var(--timeline-unit));
+    height: calc(0.278 * var(--timeline-unit));
     background: var(--section-colour);
     margin-top: calc(0.833 * var(--timeline-unit));
     border-radius: 100px;
@@ -593,6 +593,7 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -664,6 +665,18 @@
     cursor: pointer;
 }
 
+.project-card-link-button:hover {
+    background: #e6f2ff;
+    border-color: var(--project-card-link-hover);
+    transform: translateY(-1px);
+}
+
+.project-card-link-icon {
+    width: 4cqw;
+    aspect-ratio: 1;
+    image-rendering: pixelated;
+}
+
 .project-card-link-button-gh {
     width: 7cqw;
     aspect-ratio: 1;
@@ -678,18 +691,6 @@
 .project-card-link-button-gh:hover {
     border-color: var(--project-card-link-hover);
     transform: translateY(-1px);
-}
-
-.project-card-link-button:hover {
-    background: #e6f2ff;
-    border-color: var(--project-card-link-hover);
-    transform: translateY(-1px);
-}
-
-.project-card-link-icon {
-    width: 4cqw;
-    aspect-ratio: 1;
-    image-rendering: pixelated;
 }
 
 .project-card-github-icon {
@@ -727,23 +728,29 @@
     padding: 4px 9px;
     color: var(--color-plum);
     background: white;
-    border: 1px solid rgba(184, 92, 138, 0.55);
+    border: 1px solid var(--color-plum);
     border-radius: 999px;
     font: 400 0.7em "Emtato Pixel";
     line-height: 1.2;
 }
 
 /* ————————————————————————————————————opened project card —————————————————————————————————————————————————*/
+.opened-project-overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(180, 150, 180, 0.2); /*grey tint*/
+    z-index: 1000;
+}
+
 .opened-project-card {
     position: absolute;
-
-    top: 0.5cqw;
-    left: 0.5cqw;
-    right: 0.5cqw;
-    bottom: 0.5cqw;
-    width: auto;
-    height: auto;
-    padding: 1.5cqw;
+    top: 3vh;
+    left: 40vw;
+    right: 1.7vw;
+    bottom: 1.5vh;
+    padding: 1cqw;
     box-sizing: border-box;
     background: var(--colour-pale-lavender);
     border: 2px solid var(--color-deep-plum);
@@ -751,14 +758,336 @@
     box-shadow: 0 18px 45px grey;
     display: flex;
     flex-direction: column;
+    gap: 1.15cqw;
+    overflow: hidden;
+    container-type: inline-size;
+    isolation: isolate;
+    font-size: 0.9cqw;
     z-index: 20;
 }
-.opened-card-x{
+
+.opened-project-card::after {
+    content: "";
+    width: 108cqmin;
+    height: 108cqmin;
+    border: 7px solid var(--color-plum);
+    opacity: 0.1;
+    border-radius: 50%;
+    position: absolute;
+    right: -50cqmin;
+    bottom: -50cqmin;
+    z-index: -1;
+}
+
+.opened-card-x {
+    width: 3.5cqw;
+    aspect-ratio: 1;
     right: 1.5cqw;
     top: 1.5cqw;
+    font-size: 3cqw;
     position: absolute;
+    border-radius: 50%;
+    background: transparent;
     cursor: pointer;
-    font-size: 2.5cqw;
+    z-index: 4;
+    border: none;
+}
+
+.opened-card-x:hover {
+    color: lightslategrey;
+    transform: translateY(-1px);
+}
+
+.opened-project-header-two-sections {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    position: relative;
+    padding-left: 0.5cqw;
+    border-bottom: 1px solid rgba(106, 62, 87, 0.28);
+}
+
+.opened-project-header {
+    padding-right: 0;
+    padding-bottom: 1cqw;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.opened-project-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.opened-project-title {
+    min-width: 0;
+    color: var(--color-dark-plum);
+    font: 700 4.7cqw "Arvo";
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    margin: 0;
+}
+
+.opened-project-links {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.55em;
+}
+
+.opened-project-link-button {
+    width: 3.8cqw;
+    border-radius: 0.7em;
+}
+
+.opened-project-link-icon {
+    width: 54%;
+}
+
+.opened-project-github-icon {
+    width: 78%;
+}
+
+
+.opened-project-desc {
+    max-width: 88%;
+    color: var(--color-smoky-charcoal);
+    font: 400 1.05em "Arvo";
+    line-height: 1.5;
+    margin: 0.65em 0 0;
+}
+
+.project-card-right-group {
+    right: 3cqw;
+    top: 1cqw;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    gap: 1em;
+}
+
+.opened-project-time {
+    padding: 0.45em 0.8em;
+    width: fit-content;
+    margin-left: auto;
+    color: var(--color-plum);
+    background: white;
+    border: 1px solid var(--color-deep-plum);
+    border-radius: 999px;
+
+    font: 400 0.72em/1.2 "Emtato Pixel";
+    text-transform: uppercase;
+}
+
+.opened-project-highlight {
+    padding: 0.5em;
+    background: #F7F1EF;
+    border: 1px solid var(--color-plum);
+    border-radius: 1em;
+    border-left: 5px solid var(--color-bright-plum);
+    color: var(--color-bright-plum);
+    font: 400 1em "Arvo";
+    letter-spacing: 0.07em;
+    margin: 0;
+}
+
+.opened-project-body {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7cqw;
+
+    position: relative;
+    z-index: 1;
+}
+
+.opened-project-body-row1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.opened-project-myContribution-section {
+    width: 100%;
+    padding: 0.75em 0.9em;
+    box-sizing: border-box;
+    background: #F7F1EF;
+    border: 1px solid var(--color-plum);
+    border-radius: 1em;
+    border-left: 5px solid var(--color-bright-plum);
+    box-shadow: 0 5px 14px rgba(85, 64, 78, 0.08);
+}
+
+.opened-project-myContribution-title {
+    color: var(--color-bright-plum);
+    font: 600 1.9em "Caveat";
+    line-height: 1;
+}
+
+.opened-project-detail-myContribution {
+    color: var(--color-smoky-charcoal);
+    font: 400 0.95em "Arvo";
+    line-height: 1.55;
+    margin: 0.45em 0 0;
+}
+
+.opened-project-body-row2 {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 1fr);
+    align-items: stretch;
+    gap: 0.7cqw;
+    position: relative;
+    overflow-y: auto;
+}
+
+.opened-project-gallery-column {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.7em;
+}
+
+.opened-project-gallery {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #F7F1EF;
+    border: 2px solid var(--color-bright-plum);
+    border-radius: 1.5cqmin;
+}
+
+.opened-project-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.opened-project-gallery-button {
+    width: 3.5cqw;
+    aspect-ratio: 1;
+    top: 50%;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    background: white;
+    border: 1px solid var(--color-deep-plum);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.opened-project-gallery-button:hover {
+    background: #fff0f5;
+    border-color: var(--color-bright-plum);
+}
+
+.opened-project-gallery-button-image {
+    width: 56%;
+    image-rendering: pixelated;
+}
+
+.gallery-button-previous {
+    left: 0.75em;
+}
+
+.gallery-button-next {
+    right: 0.75em;
+}
+
+.opened-project-image-count {
+    right: 0.8em;
+    bottom: 0.7em;
+    position: absolute;
+    padding: 0.45em 0.7em;
+    color: var(--color-plum);
+    background: white;
+    border: 1px solid var(--color-deep-plum);
+    border-radius: 999px;
+    font: 400 0.66em "Emtato Pixel";
+}
+
+.opened-project-gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.45em;
+}
+
+.opened-project-gallery-dots:empty {
+    display: none;
+}
+
+.opened-project-gallery-dot {
+    width: 0.65em;
+    aspect-ratio: 1;
+    padding: 0;
+    background: white;
+    border: 1px solid var(--color-deep-plum);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.gallery-dot-active {
+    background: var(--color-bright-plum);
+    transform: scale(1.18);
+}
+
+.opened-project-stack-section {
+    min-width: 0;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F7F1EF;
+    border: 1px solid var(--color-plum);
+    border-radius: 1em;
+    box-shadow: 0 5px 14px rgba(85, 64, 78, 0.08);
+    text-align: center;
+}
+
+.opened-project-section-label {
+    color: var(--color-dark-plum);
+    font: 700 1.2em "Arvo";
+    line-height: 1.2;
+    margin: 0;
+}
+
+.opened-project-stack {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55em;
+    margin-top: 0.75em;
+}
+
+.opened-project-stack-tag {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.48em 0.8em;
+    box-sizing: border-box;
+    color: var(--color-plum);
+    background: white;
+    border: 1px solid var(--color-deep-plum);
+    border-radius: 999px;
+    font: 400 0.72em "Emtato Pixel";
+    line-height: 1.2;
+    text-align: center;
 }
 
 /* TODO: fix rules for this new layout for timeline behaviour*/

@@ -229,8 +229,13 @@ export default function Experience() {
                             title="Tempo"
                             shortDesc="Full-stack calendar focused on making scheduling faster and more intuitive through streamlined interactions."
                             stack={["React", "TypeScript", "FullCalendar", "Node.js", "Express", "MongoDB", "Better Auth", "Railway"]}
-                            standout="Independently designed, developed, and deployed end to end."
-                            description="Combines responsive calendar views with deterministic natural-language date and time parsing, account authentication, user-scoped event storage, and a one-click time-entry workflow with instant AM/PM toggling."
+                            highlight="Independently designed, developed, and deployed"
+                            description="Tired of slow, clunky scheduling in my regular calendar app, I decided to build my own, with convenience embedded into every feature. Smarter parsing, less clicks, and more to come."
+                            myContribution="Independently designed, developed, and deployed Tempo end to end, implementing account authentica-
+tion and user-scoped event storage so users can access their own calendars across sessions and devices.
+• Engineered a regex parser that outperforms Google and Apple Calendar across 3+ tested scheduling
+scenarios, recognizing multi-day and combined date-time ranges (with “now” endpoints) in one field.
+• Devised a one-click time entry workflow with instant AM/PM toggling for faster event creation."
                             cardImg={`${mediaFilePath}tempo/img1.png`}
                             expandedImgs={[
                                 `${mediaFilePath}tempo/img2.png`,
@@ -238,6 +243,7 @@ export default function Experience() {
                                 `${mediaFilePath}tempo/img4.png`
                             ]}
                             timeInfo="2026 - Present"
+                            detailedTimeInfo="July 2026 - Present"
                             github="https://github.com/emtato/tempo."
                             projectLink="https://calendar.ems.lol"
                         />
@@ -245,11 +251,13 @@ export default function Experience() {
                             title="Emportfolio"
                             shortDesc="Interactive personal portfolio presented through a custom Mac-inspired, pixel-art browser interface."
                             stack={["React", "TypeScript", "HTML/CSS", "Vite", "GitHub Pages"]}
-                            standout="Reduced five large media assets by 94%, cutting initial load time to under one second."
-                            description="Features original pixel art, custom animations, and responsive React components inside a playful desktop and browser interface designed to remain recruiter-readable."
+                            highlight="Reduced five large media assets by 94%, cutting initial load time to under one second."
+                            description="coming soon"
+                            myContribution="coming soon"
                             cardImg={`${mediaFilePath}emportfolio/portfolio.png`}
                             expandedImgs={[]}
                             timeInfo="2026 - Present"
+                            detailedTimeInfo="September 2026 - Present"
                             github="https://github.com/emtato/emtato-portfolio"
                             projectLink="https://ems.lol"
                         />
@@ -257,22 +265,26 @@ export default function Experience() {
                             title="Steam Game Recommender"
                             shortDesc="Graph-based recommendation system that ranks Steam games from multiple selections using weighted similarity across player preferences."
                             stack={["Python", "Streamlit", "Steam Web API", "Graph Algorithms", "HTML/CSS", "CSV"]}
-                            standout="Built an API-to-CSV caching pipeline for 2,000+ games despite Steam API rate limits."
-                            description="Created the Steam data collection and local caching pipeline, built the custom scrollable recommendation interface, contributed to the Streamlit UI, integrated multi-game selections with the graph recommender, and refined its similarity scoring."
+                            highlight="Built an API-to-CSV caching pipeline for 2,000+ games despite Steam API rate limits."
+                            description="coming soon"
+                            myContribution="coming soon"
                             cardImg={`${mediaFilePath}steam-rec/img1.png`}
                             expandedImgs={[]}
                             timeInfo="2025"
+                            detailedTimeInfo="March 2025"
                             github="https://github.com/emtato/steam-recommendation-project"
                         />
                         <ProjectCard
                             title="Columns"
                             shortDesc="Classic Columns puzzle game rendered pixel by pixel in MIPS assembly with real-time input and cascading match logic."
                             stack={["MIPS Assembly", "MARS", "Bitmap Display", "Memory-Mapped I/O", "Recursion"]}
-                            standout="Implemented recursive eight-direction match detection and cascade resolution."
-                            description="Rendered the board, gems, interface, and animations directly to bitmap memory while handling keyboard input, gravity, tile rotation, randomized pieces, scoring, increasing difficulty, and sound effects."
+                            highlight="Implemented recursive eight-direction match detection and cascade resolution."
+                            description="coming soon"
+                            myContribution="coming soon"
                             cardImg={`${mediaFilePath}columns/img1.png`}
                             expandedImgs={[]}
                             timeInfo="2025"
+                            detailedTimeInfo="November 2025"
                             github="https://github.com/amansdali/Columns"
                         />
                     </div>
@@ -281,37 +293,43 @@ export default function Experience() {
                             title="GirlMath"
                             shortDesc="AI-powered journaling app supporting girls in STEM by tracking confidence, motivation, and learning trends."
                             stack={["Python", "FastAPI", "React Native", "Expo", "TypeScript", "MongoDB", "DigitalOcean", "Gemini API"]}
-                            standout="Led backend development in a 36-hour hackathon."
-                            description="Built FastAPI logic and REST endpoints for a four-person team, integrated Gemini to derive trends from journal entries, created the frontend API client, and deployed the service to DigitalOcean."
+                            highlight="Led backend development in a 36-hour hackathon."
+                            description="coming soon"
+                            myContribution="coming soon"
                             cardImg={`${mediaFilePath}girlmath/girlmath.png`}
                             expandedImgs={[]}
                             timeInfo="2026"
                             github="https://github.com/emtato/girlmath"
                             projectLink="https://devpost.com/software/girlmath-b5y7ao"
+                            detailedTimeInfo="January - February 2026"
                         />
                         <ProjectCard
                             title="Munchables"
                             shortDesc="Four-person Java Swing social platform created with Clean Architecture and JUnit-tested domain logic."
                             stack={["Java", "Swing", "OkHttp", "JSON", "Spoonacular API", "HTML/CSS", "JUnit"]}
-                            standout="Designed a reusable post component used across every post view."
-                            description="Centralized image rendering, comments, likes, and interaction logic; integrated Spoonacular nutrition data; and isolated domain logic from storage through repository interfaces."
+                            highlight="Designed a reusable post component used across every post view."
+                            description="coming soon"
+                            myContribution="coming soon"
                             cardImg={`${mediaFilePath}munchables/img1.png`}
                             expandedImgs={[
                                 "https://github.com/user-attachments/assets/aeac076b-7e8a-461c-b101-459d615db1f1",
                                 "https://github.com/user-attachments/assets/bab91924-794d-41ac-ab5f-863a4b645341"
                             ]}
                             timeInfo="2025"
+                            detailedTimeInfo="July - August 2025"
                             github="https://github.com/emtato/munchables"
                         />
                         <ProjectCard
                             title="Networked Connect 4"
                             shortDesc="Terminal-based multiplayer Connect 4 game that synchronizes two players and an optional spectator over TCP sockets."
                             stack={["C", "TCP Sockets", "Client-Server", "select()", "Makefile", "Recursion"]}
-                            standout="Built a select()-driven server supporting players, spectators, disconnects, and rematches."
-                            description="Uses a text protocol to validate turns, serialize and broadcast board state, handle disconnect and rejoin flows, restart matches, and detect wins or ties through recursive directional checks."
+                            highlight="Built a select()-driven server supporting players, spectators, disconnects, and rematches."
+                            description="coming soon"
+                            myContribution="coming soon"
                             cardImg={`${mediaFilePath}connect4/img1.png`}
                             expandedImgs={[]}
                             timeInfo="2026"
+                            detailedTimeInfo="April 2026"
                             github="https://github.com/nyu24/Connect4"
                         />
                     </div>

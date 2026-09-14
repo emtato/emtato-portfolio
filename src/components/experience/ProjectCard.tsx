@@ -22,7 +22,6 @@ export default function ProjectCard({
                                         title, shortDesc, shortHighlight, stack, highlight, description, cardImg,
                                         expandedImgs, timeInfo, projectLink, github, detailedTimeInfo, myContribution
                                     }: ProjectProps) {
-    const [isHovered, setIsHovered] = useState(false) /* TODO: hover effects*/
     const [isOpen, setisOpen] = useState(false)
     const [activeImageIndex, setActiveImageIndex] = useState(0)
     const projectImages = [cardImg].concat(expandedImgs)
@@ -158,11 +157,11 @@ export default function ProjectCard({
                                             <button className="opened-project-gallery-button gallery-button-previous"
                                                     type="button"
                                                     onClick={showPreviousImage}>
-                                                <div className="">&lt;</div>
+                                                &lt;
                                             </button>
                                             <button className="opened-project-gallery-button gallery-button-next"
                                                     type="button" onClick={showNextImage}>
-                                                <div className=""> &gt;</div>
+                                                &gt;
                                             </button>
                                         </>}
 
@@ -173,7 +172,7 @@ export default function ProjectCard({
                                 </>}
                             </div>
                             {stack.length > 0 &&
-                                <section className="opened-project-detail-section opened-project-stack-section">
+                                <section className="opened-project-stack-section">
                                     <h3 className="opened-project-section-label">I used..</h3>
                                     <div className="opened-project-stack">
                                         {stack.map((technology) =>

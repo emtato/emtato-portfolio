@@ -920,7 +920,6 @@
     border: 1px solid var(--color-plum);
     border-radius: 1em;
     border-left: 5px solid var(--color-bright-plum);
-    box-shadow: 0 5px 14px rgba(85, 64, 78, 0.08);
 }
 
 .opened-project-myContribution-title {
@@ -952,8 +951,6 @@
     min-height: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 0.7em;
 }
 
 .opened-project-gallery {
@@ -994,7 +991,6 @@
 
 .opened-project-gallery-button:hover {
     background: #fff0f5;
-    border-color: var(--color-bright-plum);
 }
 
 .gallery-button-previous {
@@ -1029,7 +1025,6 @@
     background: #F7F1EF;
     border: 1px solid var(--color-plum);
     border-radius: 1em;
-    box-shadow: 0 5px 14px rgba(85, 64, 78, 0.08);
     text-align: center;
 }
 

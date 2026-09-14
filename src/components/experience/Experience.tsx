@@ -225,18 +225,18 @@ export default function Experience() {
                 </header>
                 <div className="projects-grid">
                     <div className="project-column">
+                        {/*TODO:Revisit Highlight after scheduling assistant is implemented. */}
+
                         <ProjectCard
                             title="Tempo"
                             shortDesc="Full-stack calendar focused on making scheduling faster and more intuitive through streamlined interactions."
                             stack={["React", "TypeScript", "FullCalendar", "Node.js", "Express", "MongoDB", "Better Auth", "Railway"]}
                             shortHighlight="solo fullstack"
-                            highlight="Independently designed, developed, and deployed"
-                            description="Tired of slow, clunky scheduling in my regular calendar app, I decided to build my own, with convenience embedded into every feature. Smarter parsing, less clicks, and more to come."
-                            myContribution="Independently designed, developed, and deployed Tempo end to end, implementing account authentica-
-tion and user-scoped event storage so users can access their own calendars across sessions and devices.
-• Engineered a regex parser that outperforms Google and Apple Calendar across 3+ tested scheduling
-scenarios, recognizing multi-day and combined date-time ranges (with “now” endpoints) in one field.
-• Devised a one-click time entry workflow with instant AM/PM toggling for faster event creation."
+                            highlight="Independently designed, developed, and deployed as a full-stack product."
+                            description="Tired of how many steps it took to schedule simple events, I built Tempo around the small conveniences I wished my calendar had. It keeps familiar calendar views while making everyday tasks faster and more intuitive. I plan to expand Tempo with AI-assisted schedule planning and smarter, more flexible recurring events."
+                            myContribution="• Built and tested a regex-based event parser that handled 3+ scheduling inputs Google Calendar and Apple Calendar missed, including multi-day and combined date-time ranges with “now” endpoints in one field.
+• Extended FullCalendar into a continuous, scrollable month view and built custom React date and time controls, carrying Tempo’s convenience-first philosophy into the interface itself.
+• Tempo was my first time integrating a React and TypeScript frontend with authentication, user-scoped storage, and deployment, teaching me how the pieces of a full-stack product fit together."
                             cardImg={`${mediaFilePath}tempo/img1.png`}
                             expandedImgs={[
                                 `${mediaFilePath}tempo/img2.png`,

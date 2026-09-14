@@ -105,8 +105,6 @@ export default function ProjectCard({
         {isOpen && portalTarget && createPortal( /* escape current parent container (projects container) bounds)*/
             <div className="opened-project-overlay" onMouseDown={() => setisOpen(false)}>
                 <section className="opened-project-card" onMouseDown={(event) => event.stopPropagation()}>
-                    <button className="opened-card-x" type="button" onClick={() => setisOpen(false)}> ×
-                    </button>
                     <div className="opened-project-header-two-sections">
 
                         <header className="opened-project-header">
@@ -142,7 +140,7 @@ export default function ProjectCard({
                             <section className="opened-project-myContribution-section">
                                 <div className="opened-project-myContribution-title">Engineering highlights</div>
                                 <div
-                                    className="opened-project-detail-myContribution">{addCommaSpacing(myContribution)}</div>
+                                    className="opened-project-detail-myContribution opened-project-detail-myContribution">{addCommaSpacing(myContribution)}</div>
                             </section>
                         </div>
                         <div className="opened-project-body-row2">

@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react'
 import './App.css'
 import MenuBar from './components/menu-bar/MenuBar'
 import BrowserWindow from './components/browser/BrowserWindow'
-import {browser} from "globals";
 
 
 export default function App() {

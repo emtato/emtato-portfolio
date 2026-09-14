@@ -893,13 +893,14 @@
     margin: 0;
 }
 
+/* ---------------------------opened project body------------------------------*/
+
 .opened-project-body {
     flex: 1;
     min-height: 0;
     display: flex;
     flex-direction: column;
     gap: 0.7cqw;
-
     position: relative;
     z-index: 1;
 }
@@ -975,15 +976,17 @@
 }
 
 .opened-project-gallery-button {
-    width: 3.5cqw;
+    width: 4cqw;
     aspect-ratio: 1;
     top: 50%;
     position: absolute;
     display: grid;
     place-items: center;
     padding: 0;
-    background: white;
-    border: 1px solid var(--color-deep-plum);
+    background: transparent;
+    font: 700 2em "Arvo";
+    color: var(--color-bright-plum);
+    border: none;
     border-radius: 50%;
     cursor: pointer;
     transform: translateY(-50%);
@@ -994,17 +997,12 @@
     border-color: var(--color-bright-plum);
 }
 
-.opened-project-gallery-button-image {
-    width: 56%;
-    image-rendering: pixelated;
-}
-
 .gallery-button-previous {
-    left: 0.75em;
+    left: 0.5em;
 }
 
 .gallery-button-next {
-    right: 0.75em;
+    right: 0.5em;
 }
 
 .opened-project-image-count {
@@ -1019,30 +1017,6 @@
     font: 400 0.66em "Emtato Pixel";
 }
 
-.opened-project-gallery-dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.45em;
-}
-
-.opened-project-gallery-dots:empty {
-    display: none;
-}
-
-.opened-project-gallery-dot {
-    width: 0.65em;
-    aspect-ratio: 1;
-    padding: 0;
-    background: white;
-    border: 1px solid var(--color-deep-plum);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.gallery-dot-active {
-    background: var(--color-bright-plum);
-    transform: scale(1.18);
-}
 
 .opened-project-stack-section {
     min-width: 0;

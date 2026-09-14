@@ -25,7 +25,7 @@ export default function ProjectCard({
     const [isHovered, setIsHovered] = useState(false) /* TODO: hover effects*/
     const [isOpen, setisOpen] = useState(false)
     const [activeImageIndex, setActiveImageIndex] = useState(0)
-    const projectImages = [cardImg, ...expandedImgs].filter((image) => image.length > 0)
+    const projectImages = [cardImg].concat(expandedImgs)
     const portalTarget = document.querySelector(".browser-window-page")
 
     useEffect(() => {
@@ -142,7 +142,7 @@ export default function ProjectCard({
                     <div className="opened-project-body">
                         <div className="opened-project-body-row1">
                             <section className="opened-project-myContribution-section">
-                                <div className="opened-project-myContribution-title">What I built</div>
+                                <div className="opened-project-myContribution-title">Engineering highlights</div>
                                 <div
                                     className="opened-project-detail-myContribution">{addCommaSpacing(myContribution)}</div>
                             </section>
@@ -158,13 +158,11 @@ export default function ProjectCard({
                                             <button className="opened-project-gallery-button gallery-button-previous"
                                                     type="button"
                                                     onClick={showPreviousImage}>
-                                                <img className="opened-project-gallery-button-image"
-                                                     src="/assets/browser/toolbar/back.png" alt=""/>
+                                                <div className="">&lt;</div>
                                             </button>
                                             <button className="opened-project-gallery-button gallery-button-next"
                                                     type="button" onClick={showNextImage}>
-                                                <div className="opened-project-gallery-button-image"
-                                                > &gt;</div>
+                                                <div className=""> &gt;</div>
                                             </button>
                                         </>}
 
@@ -172,13 +170,11 @@ export default function ProjectCard({
                                         {activeImageIndex + 1} / {projectImages.length}
                                     </span>
                                     </div>
-
-                                    {projectImages.length > 1 && <div className="opened-project-gallery-dots"></div>}
                                 </>}
                             </div>
                             {stack.length > 0 &&
                                 <section className="opened-project-detail-section opened-project-stack-section">
-                                    <h3 className="opened-project-section-label">Built with</h3>
+                                    <h3 className="opened-project-section-label">I used..</h3>
                                     <div className="opened-project-stack">
                                         {stack.map((technology) =>
                                             <span className="opened-project-stack-tag"

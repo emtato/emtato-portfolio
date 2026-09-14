@@ -610,6 +610,36 @@
     overflow: hidden;
 }
 
+.project-card-banner {
+    width: 1.6em;
+    height: 20em;
+    position: absolute;
+    left: calc(100% - 6cqw);
+    top: 6cqw;
+    right: auto;
+    display: grid;
+    place-items: center;
+
+    background: linear-gradient(90deg, #315d36 0%, #284928 55%, #203c23 100%);
+    border-left: 1px solid rgba(255, 255, 255, 0.32);
+    border-right: 1px solid rgba(18, 43, 22, 0.55);
+    box-shadow: 0 4px 10px rgba(45, 35, 43, 0.28);
+    transform: translate(-40%, -40%) rotate(-45deg);
+    z-index: 1;
+}
+
+.project-card-banner-text {
+    font: 600 0.9em "Arvo";
+    color: white;
+    letter-spacing: 0.035em;
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    white-space: nowrap;
+    margin: 0;
+}
+
 .project-card-image {
     display: block;
     width: 100%;

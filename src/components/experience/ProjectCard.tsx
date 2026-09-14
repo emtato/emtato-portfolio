@@ -62,14 +62,13 @@ export default function ProjectCard({
     }
 
     //TODO: change descriptions, maybe shortdesc, implement achievementbanner, maybe change title font,and reorganizeview:
-    //TODO:images carrouseltakes bottom left corner, bigger.description maybe moved down below line, longer and more informative.
-    //project highlightand what i built in flex row layout above image.stack can be vertical column (shown in screeshot)
-    //TODO: figure out how to organize "long description" vs "what i built" vs "highlight".
-    //short highlight will be the achievement on the banner
-    //decide if format will be short desc will be displayed at top under title, while long desc populateswhat i built section.
-    //missing personal part: motivation
+
     return <>
         <article className="project-card" onClick={openProject}>
+            {shortHighlight && <div className="project-card-banner">
+                <div className="project-card-banner-text">{shortHighlight}</div>
+            </div>}
+
             <div className="project-card-image-wrapper">
                 {cardImg && <img className="project-card-image" alt='a' src={cardImg}/>}
             </div>

@@ -229,6 +229,7 @@ export default function Experience() {
                             title="Tempo"
                             shortDesc="Full-stack calendar focused on making scheduling faster and more intuitive through streamlined interactions."
                             stack={["React", "TypeScript", "FullCalendar", "Node.js", "Express", "MongoDB", "Better Auth", "Railway"]}
+                            shortHighlight="solo fullstack"
                             highlight="Independently designed, developed, and deployed"
                             description="Tired of slow, clunky scheduling in my regular calendar app, I decided to build my own, with convenience embedded into every feature. Smarter parsing, less clicks, and more to come."
                             myContribution="Independently designed, developed, and deployed Tempo end to end, implementing account authentica-
@@ -251,6 +252,7 @@ scenarios, recognizing multi-day and combined date-time ranges (with “now” e
                             title="Emportfolio"
                             shortDesc="Interactive personal portfolio presented through a custom Mac-inspired, pixel-art browser interface."
                             stack={["React", "TypeScript", "HTML/CSS", "Vite", "GitHub Pages"]}
+                            shortHighlight="test"
                             highlight="Reduced five large media assets by 94%, cutting initial load time to under one second."
                             description="coming soon"
                             myContribution="coming soon"
@@ -293,6 +295,7 @@ scenarios, recognizing multi-day and combined date-time ranges (with “now” e
                             title="GirlMath"
                             shortDesc="AI-powered journaling app supporting girls in STEM by tracking confidence, motivation, and learning trends."
                             stack={["Python", "FastAPI", "React Native", "Expo", "TypeScript", "MongoDB", "DigitalOcean", "Gemini API"]}
+                            shortHighlight="36h hackathon"
                             highlight="Led backend development in a 36-hour hackathon."
                             description="coming soon"
                             myContribution="coming soon"

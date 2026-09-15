@@ -776,10 +776,10 @@
 
 .opened-project-card {
     position: absolute;
-    top: 2vh;
-    left: 35vw;
+    top: 0.5vh;
+    left: 40vw;
     right: 1vw;
-    bottom: 1vh;
+    bottom: 0.5vh;
     padding: 1cqw;
     box-sizing: border-box;
     background: var(--colour-pale-lavender);
@@ -788,7 +788,7 @@
     box-shadow: 0 18px 45px grey;
     display: flex;
     flex-direction: column;
-    gap: 1.15cqw;
+    gap: 0.75cqw;
     overflow: hidden;
     container-type: inline-size;
     isolation: isolate;
@@ -830,17 +830,18 @@
 
 .opened-project-header-two-sections {
     display: grid;
-    grid-template-columns: 3.5fr 1fr;
-    position: relative;
-    padding-left: 0.5cqw;
-    border-bottom: 1px solid rgba(106, 62, 87, 0.28);
+    grid-template-columns: 3.2fr 1fr;
+    gap: 1em;
+    align-items: start;
 }
 
 .opened-project-header {
+    padding-left: 0.5cqw;
     padding-right: 0;
     padding-bottom: 1cqw;
-    flex-shrink: 0;
     position: relative;
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(106, 62, 87, 0.28);
     z-index: 1;
 }
 
@@ -883,25 +884,17 @@
 .opened-project-desc {
     max-width: 98%;
     color: var(--color-smoky-charcoal);
-    font: 400 1.05em "Arvo";
+    font: 400 1em "Arvo";
     line-height: 1.5;
     margin: 0.65em 0 0;
 }
 
-.project-card-right-group {
-
-    top: 1.4cqw;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    min-width: 0;
-    gap: 1em;
-}
-
 .opened-project-time {
+    top: 1.4cqw;
+    right: 0;
+    position: absolute;
     padding: 0.45em 0.8em;
     width: fit-content;
-    margin-left: auto;
     color: var(--color-plum);
     background: white;
     border: 1px solid var(--color-deep-plum);
@@ -909,6 +902,7 @@
 
     font: 400 0.72em/1.2 "Emtato Pixel";
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .opened-project-highlight {
@@ -960,13 +954,18 @@
 
 .opened-project-detail-myContribution {
     color: var(--color-smoky-charcoal);
-    font: 400 0.95em "Arvo";
+    font: 400 0.94em "Arvo";
     line-height: 1.55;
     margin: 0.45em 0 0;
 }
 
 .opened-project-detail-myContribution {
     white-space: pre-line;
+}
+
+.opened-project-detail-myContribution ul {
+    margin: 0;
+    padding-inline-start: 0.5em;
 }
 
 .opened-project-body-row2 {
@@ -995,7 +994,7 @@
     overflow: hidden;
     box-sizing: border-box;
     background: #F7F1EF;
-    border: 2px solid var(--color-bright-plum);
+    border: 1px solid var(--color-plum);
     border-radius: 1.5cqmin;
 }
 
@@ -1046,7 +1045,6 @@
     border-radius: 999px;
     font: 400 0.66em "Emtato Pixel";
 }
-
 
 .opened-project-stack-section {
     min-width: 0;

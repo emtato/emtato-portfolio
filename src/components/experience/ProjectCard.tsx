@@ -8,7 +8,7 @@ interface ProjectProps {
     stack: string[]
     shortDesc: string
     description: string
-    myContribution: string
+    myContribution: string[]
     cardImg: string
     expandedImgs: string[]
     timeInfo: string
@@ -105,42 +105,44 @@ export default function ProjectCard({
         {isOpen && portalTarget && createPortal( /* escape current parent container (projects container) bounds)*/
             <div className="opened-project-overlay" onMouseDown={() => setisOpen(false)}>
                 <section className="opened-project-card" onMouseDown={(event) => event.stopPropagation()}>
-                    <div className="opened-project-header-two-sections">
+                    <header className="opened-project-header">
+                        <div className="opened-project-title-row">
 
-                        <header className="opened-project-header">
-                            <div className="opened-project-title-row">
-
-                                <h2 className="opened-project-title">{title}</h2>
-                                <div className="opened-project-links">
-                                    {projectLink &&
-                                        <a className="project-card-link-button opened-project-link-button"
-                                           href={projectLink} target="_blank">
-                                            <img className="project-card-link-icon opened-project-link-icon" alt=""
-                                                 src="/assets/system/link-icon-hover.png"/>
-                                        </a>}
-                                    {github && <a className="project-card-link-button-gh opened-project-link-button"
-                                                  href={github} target="_blank">
-                                        <img className="project-card-github-icon opened-project-github-icon" alt=""
-                                             src="/assets/browser/content/experience/github.png"/>
+                            <h2 className="opened-project-title">{title}</h2>
+                            <div className="opened-project-links">
+                                {projectLink &&
+                                    <a className="project-card-link-button opened-project-link-button"
+                                       href={projectLink} target="_blank">
+                                        <img className="project-card-link-icon opened-project-link-icon" alt=""
+                                             src="/assets/system/link-icon-hover.png"/>
                                     </a>}
-                                </div>
-
+                                {github && <a className="project-card-link-button-gh opened-project-link-button"
+                                              href={github} target="_blank">
+                                    <img className="project-card-github-icon opened-project-github-icon" alt=""
+                                         src="/assets/browser/content/experience/github.png"/>
+                                </a>}
                             </div>
+
+                        </div>
+                        <span className="opened-project-time">{detailedTimeInfo}</span>
+
+                        <div className="opened-project-header-two-sections">
                             <p className="opened-project-desc">{addCommaSpacing(description)}</p>
-                        </header>
-                        <div className="project-card-right-group">
-                            <span className="opened-project-time">{detailedTimeInfo}</span>
                             {highlight && <div className="opened-project-highlight">
                                 {addCommaSpacing(highlight)}</div>}
                         </div>
-                    </div>
+                    </header>
 
                     <div className="opened-project-body">
                         <div className="opened-project-body-row1">
                             <section className="opened-project-myContribution-section">
                                 <div className="opened-project-myContribution-title">Engineering highlights</div>
                                 <div
-                                    className="opened-project-detail-myContribution opened-project-detail-myContribution">{addCommaSpacing(myContribution)}</div>
+                                    className="opened-project-detail-myContribution opened-project-detail-myContribution">
+                                    <ul>
+                                        {myContribution.map((bullet) => <li>{addCommaSpacing(bullet)}</li>)}
+                                    </ul>
+                                </div>
                             </section>
                         </div>
                         <div className="opened-project-body-row2">

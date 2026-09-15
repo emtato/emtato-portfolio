@@ -26,6 +26,7 @@ export default function ProjectCard({
     const [activeImageIndex, setActiveImageIndex] = useState(0)
     const projectImages = [cardImg].concat(expandedImgs)
     const portalTarget = document.querySelector(".browser-window-page")
+    const [imageFit, setImageFit] = useState<"stretch" | "contain">("stretch");
 
     useEffect(() => {
         function handleEscape(event: KeyboardEvent) {
@@ -60,6 +61,20 @@ export default function ProjectCard({
     function addCommaSpacing(text: string) {
         return text.replace(/, /g, ",\u200A ")
     }
+
+    //determine if aspect ratio is close to the image display's
+    const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
+        const image = event.currentTarget;
+
+        const imageRatio = image.naturalWidth / image.naturalHeight;
+        const cardRatio = image.clientWidth / image.clientHeight;
+        const difference = Math.abs(imageRatio - cardRatio) / cardRatio;
+        if (difference > 0.15) {//hopeless
+            setImageFit("contain")
+        } else {
+            setImageFit("stretch")
+        }
+    };
 
     //TODO: change descriptions, maybe shortdesc, implement achievementbanner, maybe change title font,and reorganizeview:
 
@@ -149,8 +164,8 @@ export default function ProjectCard({
                             <div className="opened-project-gallery-column">
                                 {projectImages.length > 0 && <>
                                     <div className="opened-project-gallery">
-                                        <img className="opened-project-image" src={projectImages[activeImageIndex]}
-                                             alt="a"/>
+                                        <img className={`opened-project-image opened-project-image-${imageFit}`} src={projectImages[activeImageIndex]}
+                                             alt="a" onLoad={handleImageLoad}/>
 
                                         {projectImages.length > 1 && <>
                                             <button className="opened-project-gallery-button gallery-button-previous"

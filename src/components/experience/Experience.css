@@ -1112,10 +1112,32 @@
         --timeline-unit: 2.75cqw;
     }
 
+    .section-header {
+        padding: 25px 23px 18px;
+    }
+
+    .section-image {
+        width: min(22%, calc(14 * var(--timeline-unit)));
+    }
+
+    .section-title {
+
+        font: 700 calc(3.2 * var(--timeline-unit)) "Arvo";
+
+    }
+
+    /* ------------------------------------------------------------------------------------------- -v-
+      work experience
+    ----------------------------------------------------------------------------------------------- -o- */
     .work-experience-container,
     .projects-container {
         overflow-y: scroll;
         height: 60vh;
+    }
+
+    .work-experience-timeline,
+    .projects-grid {
+        overflow-y: visible;
     }
 
     .work-experience-timeline-line-container {
@@ -1130,25 +1152,33 @@
         height: calc(var(--timeline-length) * var(--timeline-unit));
     }
 
-    .section-title {
+    /* timeline segments */
+    .timeline-segment {
+        margin-right: 3%;
+    }
 
-        font: 700 calc(3.2 * var(--timeline-unit)) "Arvo";
+    .segment-custom-mobile {
+        height: 4%;
+    }
+
+    /* timeline points of interest */
+    .timeline-marker {
+        margin-right: 2.5%;
 
     }
 
-    .section-image {
-        width: min(22%, calc(14 * var(--timeline-unit)));
+    .timeline-dot {
+        margin-right: 2.85%;
     }
 
-    .timeline-card {
-        right: calc(4% + 2cqw);
+    .timeline-year-text {
+        transform: translateX(84.5%) translateY(-1.15em);
+
+        font: calc(1.6 * var(--timeline-unit)) "Arvo";
+        color: darkblue;
     }
 
-    .work-experience-timeline,
-    .projects-grid {
-        overflow-y: visible;
-    }
-
+    /* timeline decorative pixel art placements*/
     .TLA-fall2026 {
         left: 87cqw;
         top: -3cqw;
@@ -1171,8 +1201,14 @@
     }
 
     .TLA-fall2024 {
-        left: 38.15cqw;
+        left: 38.75cqw;
         top: 15.67cqw;
+        transform: rotate(10deg) scale(110%) scaleX(-1);
+    }
+
+    .TLA-spring2024 {
+        left: 55cqw;
+        top: -5cqw;
         transform: rotate(10deg) scale(110%) scaleX(-1);
     }
 
@@ -1184,31 +1220,14 @@
         display: none;
     }
 
-    .timeline-year-text {
-        transform: translateX(84.5%) translateY(-1.15em);
-
-        font: calc(1.6 * var(--timeline-unit)) "Arvo";
-        color: darkblue;
+    /* ————————————————————————————————————expeirnece card styles ——————————————————————————————————————————— */
+    .timeline-card {
+        right: calc(4% + 2cqw);
     }
 
-    /* decrease timeline segment lengths*/
-    .timeline-segment {
-        margin-right: 3%;
-    }
-
-    .timeline-marker {
-        margin-right: 2.5%;
-
-    }
-
-    .timeline-dot {
-            margin-right: 2.85%;
-    }
-    .segment-custom-mobile{
-        height: 4%;
-    }
-
-
+    /* ------------------------------------------------------------------------------------------- -v-
+       projects
+    ----------------------------------------------------------------------------------------------- -o- */
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -1217,10 +1236,6 @@
 
     .project-column {
         gap: 12px;
-    }
-
-    .section-header {
-        padding: 25px 23px 18px;
     }
 
 }

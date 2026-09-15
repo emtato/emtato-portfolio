@@ -226,17 +226,17 @@ export default function Experience() {
                 <div className="projects-grid">
                     <div className="project-column">
                         {/*TODO:Revisit Highlight after scheduling assistant is implemented. */}
-
+                        {/*TODO:implement button that directs to specific page of image wheel? */}
                         <ProjectCard
                             title="Tempo"
-                            shortDesc="Full-stack calendar focused on making scheduling faster and more intuitive through streamlined interactions."
+                            shortDesc="Full-stack calendar focused on making scheduling faster and more intuitive through simpler interactions."
                             stack={["React", "TypeScript", "FullCalendar", "Node.js", "Express", "MongoDB", "Better Auth", "Railway"]}
                             shortHighlight="solo fullstack"
                             highlight="Independently designed, developed, and deployed as a full-stack product."
-                            description="Tired of how many steps it took to schedule simple events, I built Tempo around the small conveniences I wished my calendar had. It keeps familiar calendar views while making everyday tasks faster and more intuitive. I plan to expand Tempo with AI-assisted schedule planning and smarter, more flexible recurring events."
-                            myContribution="• Built and tested a regex-based event parser that handled 3+ scheduling inputs Google Calendar and Apple Calendar missed, including multi-day and combined date-time ranges with “now” endpoints in one field.
-• Extended FullCalendar into a continuous, scrollable month view and built custom React date and time controls, carrying Tempo’s convenience-first philosophy into the interface itself.
-• Tempo was my first time integrating a React and TypeScript frontend with authentication, user-scoped storage, and deployment, teaching me how the pieces of a full-stack product fit together."
+                            description="Tired of how many steps it took to schedule simple events, I built Tempo around the small conveniences I wished my calendar had. It keeps calendar views uncluttered while making everyday tasks faster and more intuitive. I plan to expand Tempo with an AI assistant to tackle schedule planning and more flexible recurring events."
+                            myContribution={["Designed and implemented a regex-based event parser that handles 3+ scheduling input types Google and Apple Calendar miss, such as multi-day ranges and expressions combining dates, times, and “now” in one field.",
+                                "Built a scrollable month view for natural cross-month navigation & custom React date/time controls for faster event entry.",
+                                "Building Tempo alone taught me to think across a full-stack system, from React state and responsive layouts to authenticated APIs and user-scoped persistence. This was where those separate layers finally became one connected flow."]}
                             cardImg={`${mediaFilePath}tempo/img1.png`}
                             expandedImgs={[
                                 `${mediaFilePath}tempo/img2.png`,
@@ -255,7 +255,7 @@ export default function Experience() {
                             shortHighlight="woah inception"
                             highlight="Reduced five large media assets by 94%, cutting initial load time to under one second."
                             description="coming soon"
-                            myContribution="coming soon"
+                            myContribution={["coming soon"]}
                             cardImg={`${mediaFilePath}emportfolio/portfolio.png`}
                             expandedImgs={[]}
                             timeInfo="2026 - Present"
@@ -270,7 +270,7 @@ export default function Experience() {
                             shortHighlight="2000+ games"
                             highlight="Built an API-to-CSV caching pipeline for 2,000+ games despite Steam API rate limits."
                             description="coming soon"
-                            myContribution="coming soon"
+                            myContribution={["coming soon"]}
                             cardImg={`${mediaFilePath}steam-rec/img1.png`}
                             expandedImgs={[]}
                             timeInfo="2025"
@@ -284,7 +284,7 @@ export default function Experience() {
                             shortHighlight="all MIPS"
                             highlight="Implemented recursive eight-direction match detection and cascade resolution."
                             description="coming soon"
-                            myContribution="coming soon"
+                            myContribution={["coming soon"]}
                             cardImg={`${mediaFilePath}columns/img1.png`}
                             expandedImgs={[]}
                             timeInfo="2025"
@@ -299,8 +299,8 @@ export default function Experience() {
                             stack={["Python", "FastAPI", "React Native", "Expo", "TypeScript", "MongoDB", "DigitalOcean", "Gemini API"]}
                             shortHighlight="36h hackathon"
                             highlight="Led backend development in a 36-hour hackathon."
-                            description="coming soon"
-                            myContribution="coming soon"
+                            description="Growing up, I've always found coding daunting "
+                            myContribution={["coming soon"]}
                             cardImg={`${mediaFilePath}girlmath/girlmath.png`}
                             expandedImgs={[]}
                             timeInfo="2026"
@@ -314,7 +314,7 @@ export default function Experience() {
                             stack={["Java", "Swing", "OkHttp", "JSON", "Spoonacular API", "HTML/CSS", "JUnit"]}
                             highlight="Designed a reusable post component used across every post view."
                             description="coming soon"
-                            myContribution="coming soon"
+                            myContribution={["coming soon"]}
                             cardImg={`${mediaFilePath}munchables/img1.png`}
                             expandedImgs={[
                                 "https://github.com/user-attachments/assets/aeac076b-7e8a-461c-b101-459d615db1f1",
@@ -330,7 +330,7 @@ export default function Experience() {
                             stack={["C", "TCP Sockets", "Client-Server", "select()", "Makefile", "Recursion"]}
                             highlight="Built a select()-driven server supporting players, spectators, disconnects, and rematches."
                             description="coming soon"
-                            myContribution="coming soon"
+                            myContribution={["coming soon"]}
                             cardImg={`${mediaFilePath}connect4/img1.png`}
                             expandedImgs={[]}
                             timeInfo="2026"

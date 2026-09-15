@@ -234,7 +234,7 @@ export default function Experience() {
                             shortHighlight="solo fullstack"
                             highlight="Independently designed, developed, and deployed as a full-stack product."
                             description="Tired of how many steps it took to schedule simple events, I built Tempo around the small conveniences I wished my calendar had. It keeps calendar views uncluttered while making everyday tasks faster and more intuitive. I plan to expand Tempo with an AI assistant to tackle schedule planning and more flexible recurring events."
-                            myContribution={["Designed and implemented a regex-based event parser that handles 3+ scheduling input types Google and Apple Calendar miss, such as multi-day ranges and expressions combining dates, times, and “now” in one field.",
+                            myContribution={["Designed and implemented a regex-based event parser that handles 3+ scheduling input types Google and Apple Calendar miss, such as multi-day ranges and expressions combining dates, times, and relative dates (now, yesterday, etc) in one field.",
                                 "Built a scrollable month view for natural cross-month navigation & custom React date/time controls for faster event entry.",
                                 "Building Tempo alone taught me to think across a full-stack system, from React state and responsive layouts to authenticated APIs and user-scoped persistence. This was where those separate layers finally became one connected flow."]}
                             cardImg={`${mediaFilePath}tempo/img1.png`}

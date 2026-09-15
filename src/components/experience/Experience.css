@@ -808,25 +808,6 @@
     z-index: -1;
 }
 
-.opened-card-x {
-    width: 3.5cqw;
-    aspect-ratio: 1;
-    right: 1.5cqw;
-    top: 1.5cqw;
-    font-size: 3cqw;
-    position: absolute;
-    border-radius: 50%;
-    background: transparent;
-    cursor: pointer;
-    z-index: 4;
-    border: none;
-}
-
-.opened-card-x:hover {
-    color: lightslategrey;
-    transform: translateY(-1px);
-}
-
 .opened-project-header-two-sections {
     display: grid;
     grid-template-columns: 3.2fr 1fr;
@@ -1271,5 +1252,82 @@
 
     .project-column:first-child .project-card:nth-child(4) {
         order: 7; /* Columns */
+    }
+
+    /* ———————————————————————————————————— opened project card  ——————————————————————————————————————————— */
+    .opened-project-card {
+        top: 10vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1cqw;
+    }
+
+    .opened-project-title {
+        font: 700 7cqw "Arvo";
+        margin-right: 1.5cqw;
+    }
+
+    .opened-project-link-button {
+        width: 6cqw;
+        border-radius: 2em;
+    }
+
+    .opened-project-desc {
+        font: 400 2.5em "Arvo";
+
+    }
+
+    .opened-project-time {
+        top: 4cqw;
+        padding: 0.5em 1em;
+        font: 400 1.72em "Emtato Pixel";
+    }
+
+    .opened-project-highlight {
+        font: 400 2.1em "Arvo";
+    }
+
+    .opened-project-myContribution-title {
+        font: 600 4.4em "Caveat";
+    }
+
+    .opened-project-detail-myContribution {
+        font: 400 2em "Arvo";
+    }
+
+    .opened-project-detail-myContribution ul {
+        padding-inline-start: 1em;
+    }
+
+    .opened-project-body-row2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opened-project-stack-section {
+        min-width: 0;
+        padding: 1em;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .opened-project-section-label {
+        font: 700 1.75em "Arvo";
+        width: 100%;
+    }
+
+    .opened-project-stack {
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .opened-project-stack-tag {
+        font: 400 1.3em "Emtato Pixel";
+        line-height: 1.2;
+        text-align: center;
     }
 }

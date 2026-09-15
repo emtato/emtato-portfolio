@@ -1,0 +1,19 @@
+LKJJT web subset
+
+The original font.ttf is retained in this directory as the full source font.
+
+75 common characters, ordered by character frequency in SUBTLEX-CH:
+我的你是了不们这一他么在有个好来人那要会就什没到说吗为想能上去道她很看可知得过吧还对里以都事子生时样也和下真现做大啊怎出点起天把开让给但谢着只些如家后
+
+Greeting-specific character:
+嗨
+
+Included punctuation and spacing:
+space ( ) : ！ ：
+
+Frequency source:
+SUBTLEX-CH: Chinese Word and Character Frequencies Based on Film Subtitles
+Cai, Q., & Brysbaert, M. (2010), Ghent University
+https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch
+
+Generated from font.ttf with HarfBuzz hb-subset and hinting removed.

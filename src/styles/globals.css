@@ -27,6 +27,11 @@
     src: url("/assets/fonts/Caveat/static/Caveat-Regular.ttf") format("truetype");
     font-weight: 600;
 }
+@font-face {
+    font-family: "LKJJT";
+    src: url("/assets/fonts/栗壳坚坚体/font.ttf") format("truetype");
+    font-weight: 700;
+}
 
 html,
 body,

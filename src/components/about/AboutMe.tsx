@@ -1,5 +1,5 @@
 import './AboutMe.css'
-import {useRef, useState} from "react"
+import {useEffect, useRef, useState} from "react"
 
 interface AboutMeProps {
     nextTab: () => void //automatically goed to experience tab upon continuous scrolling/button
@@ -9,6 +9,45 @@ export default function AboutMe({nextTab}: AboutMeProps) {
     const [scrollProgress, setScrollProgress] = useState(0)
     const [pageNumber, setPageNumber] = useState(1) /* 1,2,3*/
     const scrollContainerRef = useRef<HTMLDivElement>(null)
+    const [charactersDisplayed, setCharactersDisplayed] = useState(0);
+    const [greetingLanguage, setGreetingLanguage] = useState(0); //eng, fr, cn
+    const greetingsList = ["hello! :)", "salut! :)", " 嗨！ ：)"]
+    const [increasingLetters, setincreasingLetters] = useState(true)
+
+    function greetingLanguageLoop() {
+
+        if (increasingLetters) {
+            if (charactersDisplayed < greetingsList[greetingLanguage].length) {
+                setCharactersDisplayed(charactersDisplayed + 1)
+            } else {
+                setCharactersDisplayed(charactersDisplayed - 1)
+                setincreasingLetters(false)
+            }
+        } else {
+            if (charactersDisplayed > 0) {
+                setCharactersDisplayed(charactersDisplayed - 1)
+            } else {
+                setCharactersDisplayed(charactersDisplayed + 1)
+                setincreasingLetters(true)
+                setGreetingLanguage((greetingLanguage + 1) % 3)
+            }
+        }
+    }
+
+    useEffect(() => {
+        let delay = 225
+        if(!increasingLetters) delay = 125 //quicker deletion than increasing letters
+        if (increasingLetters && charactersDisplayed === greetingsList[greetingLanguage].length) { //typing reached last letter
+            delay = 1500
+        }
+        const timeoutId = window.setTimeout(() => {
+            greetingLanguageLoop();
+        }, delay)
+
+        return () => { // clear timeout if user leaves page so we dont need to keep track of this anymore
+            window.clearTimeout(timeoutId)
+        }
+    }, [charactersDisplayed])
 
     const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
         /* scroll handler that measures progress of scrollable container */
@@ -33,7 +72,8 @@ export default function AboutMe({nextTab}: AboutMeProps) {
                     <img className="aboutme-notebook-background" alt=""
                          src="/assets/browser/content/about-me/Notebook.webp"/>
                     <div className="aboutme-page1-container">
-                        <div className="aboutme-page1-greeting"> hello! :)</div>
+                        <div
+                            className={`language-${greetingLanguage} aboutme-page1-greeting`}>{greetingsList[greetingLanguage].substring(0, charactersDisplayed)}</div>
                         <div className="aboutme-page1-name-intro">i'm emilia ☆</div>
                         <img className="aboutme-page1-portrait-photo"
                              alt=""

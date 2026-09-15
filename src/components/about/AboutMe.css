@@ -131,6 +131,15 @@
     font: 5cqw "NYCD";
 }
 
+.language-1 {
+    left: 31.5%;
+}
+
+.language-2 { /* edit font size and placement for chinese greeting*/
+    top: 2%;
+    font: 4.5cqw "LKJJT";
+}
+
 .aboutme-page1-name-intro {
     color: var(--color-bright-plum);
     font: 2.5cqw "Caveat";

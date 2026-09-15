@@ -1210,6 +1210,11 @@
         right: calc(4% + 2cqw);
     }
 
+    .timeline-card-wrapper-mini {
+        left: 7cqw;
+        right: calc(4% + 2cqw);
+    }
+
     /* ------------------------------------------------------------------------------------------- -v-
        projects
     ----------------------------------------------------------------------------------------------- -o- */
@@ -1256,7 +1261,7 @@
 
     /* ———————————————————————————————————— opened project card  ——————————————————————————————————————————— */
     .opened-project-card {
-        top: 10vh;
+        top: 18vh;
         left: 0;
         right: 0;
         bottom: 0;
@@ -1297,7 +1302,7 @@
     }
 
     .opened-project-detail-myContribution ul {
-        padding-inline-start: 1em;
+        padding-inline-start: 1.3em;
     }
 
     .opened-project-body-row2 {
@@ -1311,7 +1316,6 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
-
     }
 
     .opened-project-section-label {
@@ -1320,7 +1324,6 @@
     }
 
     .opened-project-stack {
-
         display: flex;
         flex-direction: row;
     }

@@ -1140,6 +1140,10 @@
         overflow-y: visible;
     }
 
+    .experience-container::after { /* change dark circle psition to fix spacing error*/
+        bottom: 0;
+    }
+
     .work-experience-timeline-line-container {
         width: 100%;
         margin-right: 0;
@@ -1232,10 +1236,40 @@
         grid-template-columns: 1fr;
         gap: 12px;
         padding: 12px;
+        grid-auto-rows: max-content;
     }
 
     .project-column {
         gap: 12px;
+        display: contents;
     }
 
+    /* custom ordering of cards for mobile */
+    .project-column:first-child .project-card:nth-child(1) {
+        order: 1; /* Tempo */
+    }
+
+    .project-column:last-child .project-card:nth-child(1) {
+        order: 2; /* GirlMath */
+    }
+
+    .project-column:first-child .project-card:nth-child(2) {
+        order: 3; /* Emportfolio */
+    }
+
+    .project-column:last-child .project-card:nth-child(2) {
+        order: 4; /* Munchables */
+    }
+
+    .project-column:first-child .project-card:nth-child(3) {
+        order: 5; /* Steam */
+    }
+
+    .project-column:last-child .project-card:nth-child(3) {
+        order: 6; /* Connect 4 */
+    }
+
+    .project-column:first-child .project-card:nth-child(4) {
+        order: 7; /* Columns */
+    }
 }

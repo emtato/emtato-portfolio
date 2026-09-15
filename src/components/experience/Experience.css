@@ -768,7 +768,7 @@
     position: absolute;
     inset: 0;
     backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(2px);
     background-color: rgba(180, 150, 180, 0.2); /*grey tint*/
     z-index: 1000;
 }
@@ -1310,10 +1310,12 @@
         flex-direction: column;
     }
 
+    .opened-project-gallery-button {
+        width: 10cqw;
+        font: 700 7em "Arvo";
+    }
+
     .opened-project-stack-section {
-        min-width: 0;
-        padding: 1em;
-        box-sizing: border-box;
         display: flex;
         flex-direction: row;
     }

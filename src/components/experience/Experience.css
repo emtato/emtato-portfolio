@@ -126,7 +126,6 @@
     scrollbar-width: none;
 }
 
-
 .work-experience-timeline-line-container {
     width: 100%;
     margin-right: 0;
@@ -1109,23 +1108,106 @@
         overflow-y: auto;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-        padding: 14px;
+        padding: 5px;
+        --timeline-unit: 2.75cqw;
     }
 
     .work-experience-container,
     .projects-container {
-        height: auto;
-        min-height: 430px;
+        overflow-y: scroll;
+        height: 60vh;
     }
 
-    .work-experience-container {
-        min-height: 510px;
+    .work-experience-timeline-line-container {
+        width: 100%;
+        margin-right: 0;
+        align-items: stretch;
+
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        --timeline-length: 186;
+        height: calc(var(--timeline-length) * var(--timeline-unit));
+    }
+
+    .section-title {
+
+        font: 700 calc(3.2 * var(--timeline-unit)) "Arvo";
+
+    }
+
+    .section-image {
+        width: min(22%, calc(14 * var(--timeline-unit)));
+    }
+
+    .timeline-card {
+        right: calc(4% + 2cqw);
     }
 
     .work-experience-timeline,
     .projects-grid {
         overflow-y: visible;
     }
+
+    .TLA-fall2026 {
+        left: 87cqw;
+        top: -3cqw;
+    }
+
+    .TLA-spring2026 {
+        display: none;
+    }
+
+    .TLA-winter2026 {
+        left: 88cqw;
+        top: 7.4cqw;
+        transform: rotate(15deg) scale(110%);
+    }
+
+    .TLA-fall2025 {
+        left: 1cqw;
+        top: -65.32cqw;
+        transform: rotate(-10deg) scale(130%);
+    }
+
+    .TLA-fall2024 {
+        left: 38.15cqw;
+        top: 15.67cqw;
+        transform: rotate(10deg) scale(110%) scaleX(-1);
+    }
+
+    .TLA-winter2023 {
+        display: none;
+    }
+
+    .TLA-summer2022 {
+        display: none;
+    }
+
+    .timeline-year-text {
+        transform: translateX(84.5%) translateY(-1.15em);
+
+        font: calc(1.6 * var(--timeline-unit)) "Arvo";
+        color: darkblue;
+    }
+
+    /* decrease timeline segment lengths*/
+    .timeline-segment {
+        margin-right: 3%;
+    }
+
+    .timeline-marker {
+        margin-right: 2.5%;
+
+    }
+
+    .timeline-dot {
+            margin-right: 2.85%;
+    }
+    .segment-custom-mobile{
+        height: 4%;
+    }
+
 
     .projects-grid {
         grid-template-columns: 1fr;
@@ -1141,7 +1223,4 @@
         padding: 25px 23px 18px;
     }
 
-    .section-number {
-        right: 23px;
-    }
 }

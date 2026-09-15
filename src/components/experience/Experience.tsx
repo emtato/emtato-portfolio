@@ -191,7 +191,7 @@ export default function Experience() {
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2022</div>
                         <div className="timeline-segment segment-small season-winter"/>
-                        <div className="timeline-segment segment-small season-fall"/>
+                        <div className="timeline-segment segment-small segment-custom-mobile season-fall"/>
 
                         <div className="timeline-insertion-point">
                             <TimelineCard

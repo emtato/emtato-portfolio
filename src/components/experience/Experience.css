@@ -984,6 +984,13 @@
     border-radius: 1.5cqmin;
 }
 
+.opened-project-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
 .opened-project-image {
     width: 100%;
     height: 100%;
@@ -1155,7 +1162,8 @@
     .segment-custom-mobile {
         height: 4%;
     }
-    .segment-custom-mobile-long{
+
+    .segment-custom-mobile-long {
         height: 6%
     }
 

@@ -302,7 +302,7 @@ export default function Experience() {
                             description="Because coding once felt complex and unreachable to me, I proposed GirlMath to help younger girls build STEM confidence before self-doubt becomes ingrained. The app combines quick learning check-ins, journals, progress visualizations, and confidence focused AI guidance; supporting, rather than replacing, teachers, mentors, and parents."
                             myContribution={["Built the FastAPI logic, REST endpoints, connected them to the React Native client, & deployed the service to DigitalOcean.", "Designed Gemini prompts that combined users’ journal and questionnaire histories, giving the model broader context to generate more informed, personalized guidance around confidence, motivation, and learning patterns.", "As the deadline approached, I expanded beyond my backend responsibilities to implement the AI interface and parts of the check-in flow, helping keep development moving so we could deliver a functional end-to-end prototype within 36 hours."]}
                             cardImg={`${mediaFilePath}girlmath/girlmath.png`}
-                            expandedImgs={[]}
+                            expandedImgs={["0 girlmath vid"]}
                             timeInfo="2026"
                             github="https://github.com/emtato/girlmath"
                             projectLink="https://devpost.com/software/girlmath-b5y7ao"

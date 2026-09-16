@@ -27,7 +27,8 @@ export default function ProjectCard({
     const projectImages = [cardImg].concat(expandedImgs)
     const portalTarget = document.querySelector(".browser-window-page")
     const [imageFit, setImageFit] = useState<"stretch" | "contain">("stretch");
-
+    //video list: girlmath, columns (soon), ?
+    const youtubeVideoLinks = ["https://www.youtube.com/embed/r2qMN9JFBvw?si=WOh8RaFYPKvXcnd4"]
     useEffect(() => {
         function handleEscape(event: KeyboardEvent) {
             if (event.key === "Escape") {
@@ -164,8 +165,16 @@ export default function ProjectCard({
                             <div className="opened-project-gallery-column">
                                 {projectImages.length > 0 && <>
                                     <div className="opened-project-gallery">
-                                        <img className={`opened-project-image opened-project-image-${imageFit}`} src={projectImages[activeImageIndex]}
-                                             alt="a" onLoad={handleImageLoad}/>
+                                        {projectImages[activeImageIndex].includes("girlmath vid") &&
+                                            <iframe className="opened-project-video"
+                                                    src={`${youtubeVideoLinks[parseInt(projectImages[activeImageIndex].charAt(0))]}`}
+                                                    title="YouTube video player"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            ></iframe>}
+                                        {!projectImages[activeImageIndex].includes("vid") &&
+                                            <img className={`opened-project-image opened-project-image-${imageFit}`}
+                                                 src={projectImages[activeImageIndex]}
+                                                 alt="a" onLoad={handleImageLoad}/>}
 
                                         {projectImages.length > 1 && <>
                                             <button className="opened-project-gallery-button gallery-button-previous"
@@ -177,7 +186,8 @@ export default function ProjectCard({
                                                     type="button" onClick={showNextImage}>
                                                 &gt;
                                             </button>
-                                        </>}
+                                        </>
+                                        }
 
                                         <span className="opened-project-image-count">
                                         {activeImageIndex + 1} / {projectImages.length}

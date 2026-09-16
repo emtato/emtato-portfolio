@@ -578,7 +578,7 @@
     }
 
     .aboutme-notebook-pan { /*calculate scroll progress from current pos to page 2:*/
-        --pan-end-x: -98%;
+        --pan-end-x: -100%;
         --pan-end-y: -8%;
     }
 

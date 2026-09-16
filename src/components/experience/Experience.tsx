@@ -27,7 +27,7 @@ export default function Experience() {
                                 organization="Ontario Public Service"
                                 context="Digital Solutions Branch · 4-8 month internship"
                                 description="Working on the Java backend behind Ontario’s driver and vehicle services, with a focus on system modernization, testing, and core business logic."
-                                tags={["Java", "Backend", "E2E testing", "Playwright"]}
+                                tags={["Java", "Backend", "E2E testing", "Edge case", "Playwright"]}
                                 dateRange="Sept 2026 - Present"
                                 season="fall"
                                 bullets={["i barely got onboarded yet ill do something soon!"]}
@@ -299,8 +299,9 @@ export default function Experience() {
                             stack={["Python", "FastAPI", "React Native", "Expo", "TypeScript", "MongoDB", "DigitalOcean", "Gemini API"]}
                             shortHighlight="36h hackathon"
                             highlight="Led backend development in a 36-hour hackathon."
-                            description="Growing up, I've always found coding daunting "
-                            myContribution={["coming soon"]}
+                            description="Because coding once felt complex and unreachable to me, I proposed GirlMath to help younger girls build STEM confidence before self-doubt becomes ingrained. The app combines quick learning check-ins, journals, progress visualizations, and confidence focused AI guidance; supporting, rather than replacing, teachers, mentors, and parents."
+                            myContribution={["Led backend development by building FastAPI logic and REST endpoints, connecting them to the React Native client, and deploying the service on DigitalOcean. This helped our four-person team deliver a working end-to-end prototype within the 36-hour hackathon.",
+                            "Designed Gemini prompts that synthesized users’ journal and questionnaire histories—not isolated entries—into confidence-focused guidance, then stepped into the frontend to implement the AI chat window and interactions.","When the frontend fell behind schedule, I implemented the AI chat and some check in menus, so we could finish on time."]}
                             cardImg={`${mediaFilePath}girlmath/girlmath.png`}
                             expandedImgs={[]}
                             timeInfo="2026"

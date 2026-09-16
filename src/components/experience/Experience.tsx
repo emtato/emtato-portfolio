@@ -257,7 +257,7 @@ export default function Experience() {
                             description="After gaining more React experience through Tempo, I wanted a personal site that demonstrated my skills while still feeling unmistakably like me. Emportfolio became a frontend-focused project where I dreamt up my ideal design language and aesthetic, then brought it to life through a hand drawn pixel art interface and animations: a process that rounded out my full-stack skill set and helped me discover how much I enjoy creating visually expressive experiences."
                             myContribution={["Built a scroll driven notebook that maps vertical scroll progress into two axis CSS transforms across one responsive canvas, keeping text, photos, and decorations aligned as users move between pages on desktop and mobile.", "Constructed a responsive pixel art browser from tiled frame assets and stateful React components, with functional tabs, window controls, and layouts that preserve the interface’s proportions across desktop and mobile.", "Resizing and WebP conversion reduced five big media assets by 94%, cutting initial load from 5–6 seconds to <1 second."]}
                             cardImg={`${mediaFilePath}emportfolio/portfolio.png`}
-                            expandedImgs={[]}
+                            expandedImgs={[`${mediaFilePath}emportfolio/img2.png`]}
                             timeInfo="2026 - Present"
                             detailedTimeInfo="September 2026 - Present"
                             github="https://github.com/emtato/emtato-portfolio"
@@ -317,8 +317,12 @@ export default function Experience() {
                             myContribution={["coming soon"]}
                             cardImg={`${mediaFilePath}munchables/img1.png`}
                             expandedImgs={[
-                                "https://github.com/user-attachments/assets/aeac076b-7e8a-461c-b101-459d615db1f1",
-                                "https://github.com/user-attachments/assets/bab91924-794d-41ac-ab5f-863a4b645341"
+                                `${mediaFilePath}munchables/img2.png`,
+                                `${mediaFilePath}munchables/img3.png`,
+                                `${mediaFilePath}munchables/img4.png`,
+                                `${mediaFilePath}munchables/img5.png`,
+                                `${mediaFilePath}munchables/img6.png`,
+                                `${mediaFilePath}munchables/img7.png`
                             ]}
                             timeInfo="2025"
                             detailedTimeInfo="July - August 2025"

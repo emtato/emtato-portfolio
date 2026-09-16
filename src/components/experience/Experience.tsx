@@ -286,7 +286,7 @@ export default function Experience() {
                             description="coming soon"
                             myContribution={["coming soon"]}
                             cardImg={`${mediaFilePath}columns/img1.png`}
-                            expandedImgs={[]}
+                            expandedImgs={["1 columns vid"]}
                             timeInfo="2025"
                             detailedTimeInfo="November 2025"
                             github="https://github.com/amansdali/Columns"
@@ -332,7 +332,7 @@ export default function Experience() {
                             description="coming soon"
                             myContribution={["coming soon"]}
                             cardImg={`${mediaFilePath}connect4/img1.png`}
-                            expandedImgs={[]}
+                            expandedImgs={["2 connect 4 vid"]}
                             timeInfo="2026"
                             detailedTimeInfo="April 2026"
                             github="https://github.com/nyu24/Connect4"

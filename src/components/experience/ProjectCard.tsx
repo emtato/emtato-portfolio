@@ -28,7 +28,7 @@ export default function ProjectCard({
     const portalTarget = document.querySelector(".browser-window-page")
     const [imageFit, setImageFit] = useState<"stretch" | "contain">("stretch");
     //video list: girlmath, columns (soon), ?
-    const youtubeVideoLinks = ["https://www.youtube.com/embed/r2qMN9JFBvw?si=WOh8RaFYPKvXcnd4"]
+    const youtubeVideoLinks = ["https://www.youtube.com/embed/r2qMN9JFBvw?si=WOh8RaFYPKvXcnd4", "https://www.youtube.com/embed/FYLlxZZtz4Y?si=xhGk72zlQ73a6W2s", "https://www.youtube.com/embed/EZ3oZ-FG4FA?si=HOP-3OMz8RQ4QA1J"]
     useEffect(() => {
         function handleEscape(event: KeyboardEvent) {
             if (event.key === "Escape") {
@@ -165,7 +165,7 @@ export default function ProjectCard({
                             <div className="opened-project-gallery-column">
                                 {projectImages.length > 0 && <>
                                     <div className="opened-project-gallery">
-                                        {projectImages[activeImageIndex].includes("girlmath vid") &&
+                                        {projectImages[activeImageIndex].includes("vid") &&
                                             <iframe className="opened-project-video"
                                                     src={`${youtubeVideoLinks[parseInt(projectImages[activeImageIndex].charAt(0))]}`}
                                                     title="YouTube video player"

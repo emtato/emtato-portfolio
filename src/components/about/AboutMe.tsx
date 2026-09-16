@@ -102,7 +102,6 @@ export default function AboutMe({nextTab}: AboutMeProps) {
                         <div className="aboutme-page1-values-line">i love making things that feel <span
                             className="aboutme-page1-handwritten-emphasis">fun & meaningful</span> to me,
                         </div>
-                        <div className="aboutme-page1-body-line"></div>
                         <div className="aboutme-page1-body-line">
                             <span> and nothing beats seeing it all come together</span>
                             <span className="aboutme-page1-closing-star">‎ ☆</span>

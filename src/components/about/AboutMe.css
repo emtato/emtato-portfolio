@@ -269,7 +269,7 @@
     font: 1.6cqw "Arvo";
     position: absolute;
     bottom: 20%;
-    left: 16.5%;
+    left: 15%;
     z-index: 5;
     line-height: 2.192cqw;
 }
@@ -573,12 +573,12 @@
 @media (max-width: 910px) {
     /* Notebook canvas and page panning */
     .aboutme-notebook {
-        left: -13%;
+        left: -8%;
         top: 10%;
     }
 
     .aboutme-notebook-pan { /*calculate scroll progress from current pos to page 2:*/
-        --pan-end-x: -99%;
+        --pan-end-x: -86%;
         --pan-end-y: -8%;
     }
 
@@ -592,9 +592,15 @@
         line-height: 2.2cqw;
     }
 
-    .aboutme-page1-internship-highlight{
-        top: 27%;
+    .aboutme-page1-internship-highlight {
+        top: 27.5%;
     }
+
+    .aboutme-page1-values-line {
+        margin-top: -0.4cqw;
+        line-height: 1cqw;
+    }
+
     .aboutme-page1-closing-star {
         color: var(--color-bright-plum);
         font: 1.6cqw "Arvo";

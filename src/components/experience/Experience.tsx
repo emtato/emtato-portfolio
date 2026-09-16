@@ -237,11 +237,11 @@ export default function Experience() {
                             myContribution={["Designed and implemented a regex-based event parser that handles 3+ scheduling input types Google and Apple Calendar miss, such as multi-day ranges and expressions combining dates, times, and relative dates (now, yesterday, etc) in one field.",
                                 "Built a scrollable month view for natural cross-month navigation & custom React date/time controls for faster event entry.",
                                 "Building Tempo alone taught me to think across a full-stack system, from React state and responsive layouts to authenticated APIs and user-scoped persistence. This was where those separate layers finally became one connected flow."]}
-                            cardImg={`${mediaFilePath}tempo/img1.png`}
+                            cardImg={`${mediaFilePath}tempo/img1.webp`}
                             expandedImgs={[
-                                `${mediaFilePath}tempo/img2.png`,
-                                `${mediaFilePath}tempo/img3.png`,
-                                `${mediaFilePath}tempo/img4.png`
+                                `${mediaFilePath}tempo/img2.webp`,
+                                `${mediaFilePath}tempo/img3.webp`,
+                                `${mediaFilePath}tempo/img4.webp`
                             ]}
                             timeInfo="2026 - Present"
                             detailedTimeInfo="July 2026 - Present"
@@ -256,8 +256,8 @@ export default function Experience() {
                             highlight="Reduced five large media assets by 94%, cutting initial load time to under one second."
                             description="After gaining more React experience through Tempo, I wanted a personal site that demonstrated my skills while still feeling unmistakably like me. Emportfolio became a frontend-focused project where I dreamt up my ideal design language and aesthetic, then brought it to life through a hand drawn pixel art interface and animations: a process that rounded out my full-stack skill set and helped me discover how much I enjoy creating visually expressive experiences."
                             myContribution={["Built a scroll driven notebook that maps vertical scroll progress into two axis CSS transforms across one responsive canvas, keeping text, photos, and decorations aligned as users move between pages on desktop and mobile.", "Constructed a responsive pixel art browser from tiled frame assets and stateful React components, with functional tabs, window controls, and layouts that preserve the interface’s proportions across desktop and mobile.", "Resizing and WebP conversion reduced five big media assets by 94%, cutting initial load from 5–6 seconds to <1 second."]}
-                            cardImg={`${mediaFilePath}emportfolio/portfolio.png`}
-                            expandedImgs={[`${mediaFilePath}emportfolio/img2.png`]}
+                            cardImg={`${mediaFilePath}emportfolio/portfolio.webp`}
+                            expandedImgs={[`${mediaFilePath}emportfolio/img2.webp`]}
                             timeInfo="2026 - Present"
                             detailedTimeInfo="September 2026 - Present"
                             github="https://github.com/emtato/emtato-portfolio"
@@ -271,7 +271,7 @@ export default function Experience() {
                             highlight="Built an API-to-CSV caching pipeline for 2,000+ games despite Steam API rate limits."
                             description="coming soon"
                             myContribution={["coming soon"]}
-                            cardImg={`${mediaFilePath}steam-rec/img1.png`}
+                            cardImg={`${mediaFilePath}steam-rec/img1.webp`}
                             expandedImgs={[]}
                             timeInfo="2025"
                             detailedTimeInfo="March 2025"
@@ -285,7 +285,7 @@ export default function Experience() {
                             highlight="Implemented recursive eight-direction match detection and cascade resolution."
                             description="coming soon"
                             myContribution={["coming soon"]}
-                            cardImg={`${mediaFilePath}columns/img1.png`}
+                            cardImg={`${mediaFilePath}columns/img1.webp`}
                             expandedImgs={["1 columns vid"]}
                             timeInfo="2025"
                             detailedTimeInfo="November 2025"
@@ -301,7 +301,7 @@ export default function Experience() {
                             highlight="Led backend development in a 36-hour hackathon."
                             description="Because coding once felt complex and unreachable to me, I proposed GirlMath to help younger girls build STEM confidence before self-doubt becomes ingrained. The app combines quick learning check-ins, journals, progress visualizations, and confidence focused AI guidance; supporting, rather than replacing, teachers, mentors, and parents."
                             myContribution={["Built the FastAPI logic, REST endpoints, connected them to the React Native client, & deployed the service to DigitalOcean.", "Designed Gemini prompts that combined users’ journal and questionnaire histories, giving the model broader context to generate more informed, personalized guidance around confidence, motivation, and learning patterns.", "As the deadline approached, I expanded beyond my backend responsibilities to implement the AI interface and parts of the check-in flow, helping keep development moving so we could deliver a functional end-to-end prototype within 36 hours."]}
-                            cardImg={`${mediaFilePath}girlmath/girlmath.png`}
+                            cardImg={`${mediaFilePath}girlmath/girlmath.webp`}
                             expandedImgs={["0 girlmath vid"]}
                             timeInfo="2026"
                             github="https://github.com/emtato/girlmath"
@@ -315,14 +315,14 @@ export default function Experience() {
                             highlight="Designed a reusable post component used across every post view."
                             description="coming soon"
                             myContribution={["coming soon"]}
-                            cardImg={`${mediaFilePath}munchables/img1.png`}
+                            cardImg={`${mediaFilePath}munchables/img1.webp`}
                             expandedImgs={[
-                                `${mediaFilePath}munchables/img2.png`,
-                                `${mediaFilePath}munchables/img3.png`,
-                                `${mediaFilePath}munchables/img4.png`,
-                                `${mediaFilePath}munchables/img5.png`,
-                                `${mediaFilePath}munchables/img6.png`,
-                                `${mediaFilePath}munchables/img7.png`
+                                `${mediaFilePath}munchables/img2.webp`,
+                                `${mediaFilePath}munchables/img3.webp`,
+                                `${mediaFilePath}munchables/img4.webp`,
+                                `${mediaFilePath}munchables/img5.webp`,
+                                `${mediaFilePath}munchables/img6.webp`,
+                                `${mediaFilePath}munchables/img7.webp`
                             ]}
                             timeInfo="2025"
                             detailedTimeInfo="July - August 2025"
@@ -335,7 +335,7 @@ export default function Experience() {
                             highlight="Built a select()-driven server supporting players, spectators, disconnects, and rematches."
                             description="coming soon"
                             myContribution={["coming soon"]}
-                            cardImg={`${mediaFilePath}connect4/img1.png`}
+                            cardImg={`${mediaFilePath}connect4/img1.webp`}
                             expandedImgs={["2 connect 4 vid"]}
                             timeInfo="2026"
                             detailedTimeInfo="April 2026"

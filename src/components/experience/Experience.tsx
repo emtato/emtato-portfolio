@@ -9,7 +9,7 @@ export default function Experience() {
         <div className="experience-container">
             <section className="work-experience-container">
                 <header className="section-header">
-                    <img className="section-image" alt="a"
+                    <img className="section-image section-image-work" alt="a"
                          src="/assets/browser/content/experience/prof-experience/work.png"/>
                     <div className="section-uppertext">My Career so far</div>
                     <h2 className="section-title">Experience</h2>

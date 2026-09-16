@@ -58,9 +58,9 @@
     z-index: 20;
 }
 
-.section-image.section-image-work { /*test*/
-    width: 105px;
-    height: 109.5px;
+.section-image.section-image-work { /*test 2*/
+    width: 98px;
+    height: 102px;
 }
 
 .section-uppertext {
@@ -1155,6 +1155,10 @@
     .segment-custom-mobile {
         height: 4%;
     }
+    .segment-custom-mobile-long{
+        height: 6%
+    }
+
 
     /* timeline points of interest */
     .timeline-marker {
@@ -1189,9 +1193,9 @@
         transform: rotate(15deg) scale(110%);
     }
 
-    .TLA-fall2025 {
+    .TLA-fall2025 { /* moved to fall2026 custom for mobile only*/
         left: 1cqw;
-        top: -65.32cqw;
+        top: -61.32cqw;
         transform: rotate(-10deg) scale(130%);
     }
 

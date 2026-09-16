@@ -59,8 +59,8 @@
 }
 
 .section-image.section-image-work {
-    width: 105px;
-    height: 109.5px;
+    width: 122.5px;
+    height: 127.75px;
 }
 
 .section-uppertext {
@@ -1347,14 +1347,14 @@
     }
 }
 
-@media (min-width: 855px) {
+@media (min-width: 855px) { /* display phone -> laptop*/
     .section-image.section-image-work {
         width: 140px;
         height: 146px;
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1920px) { /* display big screen*/
     .section-image.section-image-work {
         width: 210px;
         height: 219px;

@@ -58,6 +58,11 @@
     z-index: 20;
 }
 
+.section-image.section-image-work {
+    width: 70px;
+    height: 73px;
+}
+
 .section-uppertext {
     color: var(--section-colour);
     font: 700 calc(0.9 * var(--timeline-unit)) "Arvo";
@@ -1101,6 +1106,11 @@
         width: min(22%, calc(14 * var(--timeline-unit)));
     }
 
+    .section-image.section-image-work {
+        top: calc(2.7 * var(--timeline-unit));
+        right: 23px;
+    }
+
     .section-title {
 
         font: 700 calc(3.2 * var(--timeline-unit)) "Arvo";
@@ -1334,5 +1344,19 @@
         font: 400 1.3em "Emtato Pixel";
         line-height: 1.2;
         text-align: center;
+    }
+}
+
+@media (min-width: 855px) {
+    .section-image.section-image-work {
+        width: 140px;
+        height: 146px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .section-image.section-image-work {
+        width: 210px;
+        height: 219px;
     }
 }

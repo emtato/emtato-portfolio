@@ -592,6 +592,9 @@
         line-height: 2.2cqw;
     }
 
+    .aboutme-page1-internship-highlight{
+        top: 27%;
+    }
     .aboutme-page1-closing-star {
         color: var(--color-bright-plum);
         font: 1.6cqw "Arvo";

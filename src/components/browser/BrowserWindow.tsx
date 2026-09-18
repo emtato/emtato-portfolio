@@ -1,9 +1,10 @@
 import './BrowserWindow.css'
-import {useState} from "react";
+import {useRef, useState} from "react";
 import BrowserTab from "./BrowserTab.tsx";
 import AboutMe from "../about/AboutMe.tsx";
 import Experience from "../experience/Experience.tsx";
 import Contact from "../contact/Contact.tsx";
+import {Stack} from "./tabHistory.ts";
 
 export interface BrowserWindowProps {
     isOpen: boolean
@@ -13,12 +14,52 @@ export interface BrowserWindowProps {
     minimize: () => void
 }
 
+const tabIDs = new Map<string, number>([
+    ["emtato://about-me", 0],
+    ["emtato://experience", 1],
+    ["emtato://contact", 2]
+]);
 export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize, minimize}: BrowserWindowProps) {
     const [activeTab, setActiveTab] = useState(0) //0 -> about me, 1 -> projects, 2 -> contact
     const [url, setUrl] = useState("emtato://about-me")
+    const backHistory = useRef(new Stack<string>());
+    const forwardHistory = useRef(new Stack<string>());
+
+    function prevTab() {
+        console.log("prevtab", "back history", backHistory.current.toString())
+
+        if (!backHistory.current.isEmpty()) {
+            const prevUrl = backHistory.current.pop()
+            setUrl(prevUrl)
+            if (tabIDs.get(prevUrl) == undefined) { //prev url was a search query
+                //TODO
+            } else {
+                setActiveTab(tabIDs.get(prevUrl)!)
+            }
+            forwardHistory.current.push(url)
+        }
+    }
+
+    function nextTab() {
+        console.log("next", "forward history", forwardHistory.current.toString())
+
+        if (!forwardHistory.current.isEmpty()) {
+            const nextUrl = forwardHistory.current.pop()
+            if (tabIDs.get(nextUrl) == undefined) {
+                //TODO
+            } else {
+                setActiveTab(tabIDs.get(nextUrl)!)
+            }
+            setUrl(nextUrl)
+            backHistory.current.push(url)
+        }
+    }
 
     function changeTab(tab: number) {
+        if(tab == activeTab) return
         setActiveTab(tab)
+        backHistory.current.push(url)
+        console.log("pushed history", url, "back history", backHistory.current.toString())
         if (tab === 0) {
             setUrl("emtato://about-me")
         } else if (tab === 1) {
@@ -62,10 +103,10 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
         <div className="browser-window-center">
             <div className="browser-window-search-layer">
                 <div className="browser-window-toolbar">
-                    <button className="browser-nav-button">
+                    <button className="browser-nav-button" onClick={prevTab}>
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/back.png"/>
                     </button>
-                    <button className="browser-nav-button">
+                    <button className="browser-nav-button" onClick={nextTab}>
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/next.png"/>
                     </button>
                     <button className="browser-nav-button">
@@ -82,7 +123,9 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                         <div className="browser-tiled-search-bar"></div>
                         <img className="browser-search-icon" alt=""
                              src="/assets/browser/toolbar/search-icon.png"/>
-                        <input value={url} onClick={()=> {setUrl("")}}
+                        <input value={url} onClick={() => {
+                            setUrl("")
+                        }}
                                onChange={(event) => setUrl(event.currentTarget.value)} onKeyDown={(event) => {
                             if (event.key === "Enter") {
                                 window.open("https://www.google.com/search?q=" + event.currentTarget.value, "_blank")

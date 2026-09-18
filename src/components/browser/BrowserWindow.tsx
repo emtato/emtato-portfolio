@@ -24,16 +24,13 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
     const [url, setUrl] = useState("emtato://about-me")
     const backHistory = useRef(new Stack<string>());
     const forwardHistory = useRef(new Stack<string>());
+    const [newTabError, setNewTabError] = useState(false)
 
     function prevTab() {
-        console.log("prevtab", "back history", backHistory.current.toString())
-
         if (!backHistory.current.isEmpty()) {
             const prevUrl = backHistory.current.pop()
             setUrl(prevUrl)
-            if (tabIDs.get(prevUrl) == undefined) { //prev url was a search query
-                //TODO
-            } else {
+            if (tabIDs.get(prevUrl) != undefined) {
                 setActiveTab(tabIDs.get(prevUrl)!)
             }
             forwardHistory.current.push(url)
@@ -41,13 +38,9 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
     }
 
     function nextTab() {
-        console.log("next", "forward history", forwardHistory.current.toString())
-
         if (!forwardHistory.current.isEmpty()) {
             const nextUrl = forwardHistory.current.pop()
-            if (tabIDs.get(nextUrl) == undefined) {
-                //TODO
-            } else {
+            if (tabIDs.get(nextUrl) != undefined) {
                 setActiveTab(tabIDs.get(nextUrl)!)
             }
             setUrl(nextUrl)
@@ -56,10 +49,9 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
     }
 
     function changeTab(tab: number) {
-        if(tab == activeTab) return
+        if (tab == activeTab) return
         setActiveTab(tab)
         backHistory.current.push(url)
-        console.log("pushed history", url, "back history", backHistory.current.toString())
         if (tab === 0) {
             setUrl("emtato://about-me")
         } else if (tab === 1) {
@@ -68,6 +60,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
             setUrl("emtato://contact")
         }
     }
+
 
     /* main browser window render
     * top row */
@@ -133,11 +126,18 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                         }}
                                className="browser-search-bar-text"></input>
                     </div>
-                    <button className="browser-nav-button">
+                    <button className="browser-nav-button" onClick={() => setNewTabError(true)}>
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>
                     </button>
                 </div>
             </div>
+            {newTabError &&
+                <div className="newTabError">
+                    <img className="newTabError-img" alt="a" src="/assets/system/error-window.png"/>
+                    <div className="newTabError-header">error :&lt;</div>
+                    <div className="newTabError-text">sorry i dont have enough ram for 4 tabs .-. <br/><br/> have u seen the prices ? :o</div>
+                    <img className="newTabError-close-button" alt="a" src="/assets/system/close-icon.png" onClick={() => setNewTabError(false)}/>
+                </div>}
             <div className="browser-window-page-content">
                 {/* render pages*/}
                 <div className="browser-window-page">

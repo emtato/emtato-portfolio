@@ -18,7 +18,7 @@
     position: absolute;
     display: flex;
     inset: 0;
-
+    width: 100%;
 }
 
 .dock-left {
@@ -45,15 +45,6 @@
     image-rendering: pixelated;
 }
 
-.dock-tip-text {
-    font: 14px "Emtato Pixel";
-    color: var(--color-warm-cream);
-    position: absolute;
-    bottom: 8px;
-    left: 10%;
-    z-index: 1;
-}
-
 @media (max-width: 910px) {
     .mobile-tip {
         display: block;
@@ -61,10 +52,6 @@
         bottom: 20%;
         color: var(--color-warm-cream);
         font: 13px "Emtato Pixel";
-    }
-
-    .dock-tip-text {
-        bottom: 5px;
     }
 }
 

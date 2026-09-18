@@ -48,6 +48,13 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
         }
     }
 
+    function fakeRefreshTab(tab: number) {
+        setActiveTab(3)
+        const timeoutId = window.setTimeout(() => {
+            setActiveTab(tab);
+        }, 345)
+    }
+
     function changeTab(tab: number) {
         if (tab == activeTab) return
         setActiveTab(tab)
@@ -103,7 +110,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/next.png"/>
                     </button>
                     <button className="browser-nav-button">
-                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/reload.png"/>
+                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/reload.png" onClick={() => {fakeRefreshTab(activeTab)}}/>
                     </button>
                     <button className="browser-nav-button" onClick={() => {
                         changeTab(0)
@@ -135,8 +142,11 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                 <div className="newTabError">
                     <img className="newTabError-img" alt="a" src="/assets/system/error-window.png"/>
                     <div className="newTabError-header">error :&lt;</div>
-                    <div className="newTabError-text">sorry i dont have enough ram for 4 tabs .-. <br/><br/> have u seen the prices ? :o</div>
-                    <img className="newTabError-close-button" alt="a" src="/assets/system/close-icon.png" onClick={() => setNewTabError(false)}/>
+                    <div className="newTabError-text">sorry i dont have enough ram for 4 tabs .-. <br/><br/> have u seen
+                        the prices ? :o
+                    </div>
+                    <img className="newTabError-close-button" alt="a" src="/assets/system/close-icon.png"
+                         onClick={() => setNewTabError(false)}/>
                 </div>}
             <div className="browser-window-page-content">
                 {/* render pages*/}
@@ -144,6 +154,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                     {activeTab === 0 && <AboutMe nextTab={() => changeTab(1)}/>}
                     {activeTab === 1 && <Experience/>}
                     {activeTab === 2 && <Contact/>}
+                    {activeTab == 3 && <div className="browser-tab-empty"/>}
                 </div>
             </div>
         </div>

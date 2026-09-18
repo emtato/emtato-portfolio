@@ -2,8 +2,8 @@ import {useEffect, useState} from 'react'
 import './App.css'
 import MenuBar from './components/menu-bar/MenuBar'
 import BrowserWindow from './components/browser/BrowserWindow'
-import Dock from "./components/Dock/dock.tsx";
-
+import Dock from "./components/dock/Dock.tsx";
+import Desktop from "./components/desktop/Desktop.tsx";
 
 export default function App() {
     const [loading, setLoading] = useState(true)
@@ -54,8 +54,8 @@ export default function App() {
                 minimize={() => setIsMaximized(false)}
 
             />}
-            <Dock
-            openBrowserCallback={() => setBrowserOpen(true)}/>
+            <Dock openBrowserCallback={() => setBrowserOpen(true)}/>
+            <Desktop openBrowserCallback={() => setBrowserOpen(true)}/>
         </div>
     </>
 }

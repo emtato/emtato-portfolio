@@ -1,0 +1,42 @@
+.desktop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    inset: 0;
+
+}
+
+.apps-list {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0.25vw;
+    top: 6vh;
+}
+
+/* APPS!!*/
+
+.app-wrapper {
+
+}
+
+.dsk-app-button {
+    width: 100px;
+    height: 100px;
+
+}
+
+.dsk-app-icon {
+    image-rendering: pixelated;
+    width: 4vw;
+    height: 4vw;
+}
+
+.dsk-app-label {
+    color: var(--color-warm-cream);
+    font: 8px "Emtato Pixel";
+
+    transform: translate(-22%);
+}

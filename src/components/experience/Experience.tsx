@@ -268,9 +268,9 @@ export default function Experience() {
                             shortDesc="Graph-based recommendation system that ranks Steam games from multiple selections using weighted similarity across player preferences."
                             stack={["Python", "Streamlit", "Steam Web API", "Graph Algorithms", "HTML/CSS", "CSV"]}
                             shortHighlight="2000+ games"
-                            highlight="Built an API-to-CSV caching pipeline for 2,000+ games despite Steam API rate limits."
-                            description="coming soon"
-                            myContribution={["coming soon"]}
+                            highlight="Recommendations evolve as users add new discoveries back into their selected games."
+                            description="With thousands of games on Steam, our team built a recommendation tool for players who know what they enjoy but not what to try next. Users complete a questionnaire to generate an initial list, then refine future recommendations by adding games they like and prioritizing factors such as genre, price, platform, and language."
+                            myContribution={["Helped implement a weighted graph that compares 2,000+ Steam games across price, language, developer, platform, category, and genre, ranking candidates by their average similarity to multiple selected games.","Built the interactive recommendation workflow and custom CSS presentation, ranking top results, displaying detailed game information, and letting users add suggestions before recalculating recommendations around their updated list.","- Created an API to CSV storage pipeline that collected and cleaned metadata for 2,000+ Steam games, working around API rate limits and caching the dataset for faster, repeatable recommendations."]}
                             cardImg={`${mediaFilePath}steam-rec/img1.webp`}
                             expandedImgs={[]}
                             timeInfo="2025"
@@ -282,9 +282,9 @@ export default function Experience() {
                             shortDesc="Classic Columns puzzle game rendered pixel by pixel in MIPS assembly with real-time input and cascading match logic."
                             stack={["MIPS Assembly", "MARS", "Bitmap Display", "Memory-Mapped I/O", "Recursion"]}
                             shortHighlight="all MIPS"
-                            highlight="Implemented recursive eight-direction match detection and cascade resolution."
-                            description="coming soon"
-                            myContribution={["coming soon"]}
+                            highlight="Implemented recursive eight-direction match detection entirely in MIPS assembly."
+                            description="Columns was a two person project to build a complete puzzle game entirely in MIPS assembly, without a game engine or graphics library. Players position and reorder falling stacks of three coloured gems as the game accelerates; matches are animated and cleared, remaining gems collapse, and the board is rechecked for cascading combinations."
+                            myContribution={["Designed a recursive directional search algorithm that checks all eight neighbouring directions, combines opposite paths, and records groups of three or more matching gems for removal. (later adapted this logic for Connect 4’s win detection)", "Built the bitmap rendering layer in MIPS, converting coordinates into display memory addresses and drawing the background and shaded gems pixel by pixel, along with clearing and game over animations.","- Implemented collisions, gravity and progressively increasing fall speed, using bitmap memory checks and loop counters to move gem stacks safely while updating an on-screen speed indicator as difficulty increased."]}
                             cardImg={`${mediaFilePath}columns/img1.webp`}
                             expandedImgs={["1 columns vid"]}
                             timeInfo="2025"
@@ -311,10 +311,10 @@ export default function Experience() {
                         <ProjectCard
                             title="Munchables"
                             shortDesc="Four-person Java Swing social platform created with Clean Architecture and JUnit-tested domain logic."
-                            stack={["Java", "Swing", "OkHttp", "JSON", "Spoonacular API", "HTML/CSS", "JUnit"]}
+                            stack={["Java", "Swing", "Clean Architecture", "JSON", "Spoonacular API", "HTML/CSS", "JUnit"]}
                             highlight="Designed a reusable post component used across every post view."
-                            description="coming soon"
-                            myContribution={["coming soon"]}
+                            description="Built from our shared love of food, Munchables is a social platform for sharing recipes and other posts, discovering restaurants and joining communities. Created for a course requiring Java Swing, it challenged us to build an accessible, fully functional experience using reusable interfaces, Clean Architecture, and thoroughly tested application logic."
+                            myContribution={["Designed a reusable Swing post component shared across home, profile, and club feeds, consistently handling media, recipe details, custom styling, likes, and navigation to full posts without duplicating view or interaction logic.", "Implemented post creation, likes, and comments through controllers, use cases, presenters, and persistence, using dependency inversion to separate business logic from the UI and database, allowing use cases to be tested independently.", "Integrated Spoonacular recipe analysis by transforming post data into API requests and presenting returned nutritional insights with custom HTML/CSS, while isolating the external service behind an interface."]}
                             cardImg={`${mediaFilePath}munchables/img1.webp`}
                             expandedImgs={[
                                 `${mediaFilePath}munchables/img2.webp`,
@@ -331,10 +331,10 @@ export default function Experience() {
                         <ProjectCard
                             title="Networked Connect 4"
                             shortDesc="Terminal-based multiplayer Connect 4 game that synchronizes two players and an optional spectator over TCP sockets."
-                            stack={["C", "TCP Sockets", "Client-Server", "select()", "Makefile", "Recursion"]}
+                            stack={["C", "TCP Sockets", "Client-Server", "select()", "I/O Multiplexing", "Recursion"]}
                             highlight="Built a select()-driven server supporting players, spectators, disconnects, and rematches."
-                            description="coming soon"
-                            myContribution={["coming soon"]}
+                            description="This terminal based Connect 4 game uses low-level C socket programming. Two remote players share a synchronized match while an optional third client spectates, with the server coordinating turns, validating moves, handling disconnects, and supporting rematches."
+                            myContribution={["Implemented the core game state and rules in C, including move validation, gravity-based piece placement, turn alternation, tie detection, and converting the board between its in-memory grid and network message format.","Designed recursive win detection that begins at the newest piece, searches outward in eight directions, and combines opposing paths to detect horizontal, vertical, and diagonal connections.","Helped build the TCP client and server event loops around select(), multiplexing player and spectator sockets." ]}
                             cardImg={`${mediaFilePath}connect4/img1.webp`}
                             expandedImgs={["2 connect 4 vid"]}
                             timeInfo="2026"

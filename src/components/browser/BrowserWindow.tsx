@@ -82,8 +82,13 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                         <div className="browser-tiled-search-bar"></div>
                         <img className="browser-search-icon" alt=""
                              src="/assets/browser/toolbar/search-icon.png"/>
-                        <span className="browser-search-bar-text">{url}</span> {/*TODO eventually into input->gogole*/}
-
+                        <input value={url} onClick={()=> {setUrl("")}}
+                               onChange={(event) => setUrl(event.currentTarget.value)} onKeyDown={(event) => {
+                            if (event.key === "Enter") {
+                                window.open("https://www.google.com/search?q=" + event.currentTarget.value, "_blank")
+                            }
+                        }}
+                               className="browser-search-bar-text"></input>
                     </div>
                     <button className="browser-nav-button">
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>

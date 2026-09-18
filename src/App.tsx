@@ -13,6 +13,16 @@ export default function App() {
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
     const [isMaximized, setIsMaximized] = useState(false)
 
+    function closeBrowser() {
+        setBrowserOpen(false)
+        setFocusedAppName("potato OS")
+    }
+
+    function openBrowser() {
+    setBrowserOpen(true)
+        setFocusedAppName("potato browser")
+    }
+
     //TODO: modify things for dark/light mode visually
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -48,14 +58,14 @@ export default function App() {
             <img className="os-main-background" alt="a" src="/assets/system/desktop/toronto.jpg"/>
             {browserOpen && <BrowserWindow
                 isOpen={browserOpen}
-                onClose={() => setBrowserOpen(false)}
+                onClose={closeBrowser}
                 isBig={isMaximized}
                 maximize={() => setIsMaximized(true)}
                 minimize={() => setIsMaximized(false)}
 
             />}
-            <Dock openBrowserCallback={() => setBrowserOpen(true)}/>
-            <Desktop openBrowserCallback={() => setBrowserOpen(true)}/>
+            <Dock openBrowserCallback={openBrowser}/>
+            <Desktop openBrowserCallback={openBrowser}/>
         </div>
     </>
 }

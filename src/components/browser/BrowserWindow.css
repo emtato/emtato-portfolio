@@ -253,7 +253,7 @@
 
 .browser-search-bar-text {
     position: absolute;
-    top: 35%;
+    top: 5%;
     left: 25.71px;
     width: 100%;
     height: 100%;
@@ -263,6 +263,11 @@
     color: var(--color-smoky-charcoal);
     font: 12px "Emtato Pixel";
     z-index: 16;
+}
+
+.browser-search-bar-text::placeholder {
+    color: var(--color-smoky-charcoal);
+    opacity: 1;
 }
 
 /* ------------------------------------------------------------------------------------------- -v-
@@ -334,7 +339,7 @@
 
     .browser-window-traffic-lights {
         gap: 6.86px;
-        left:13.71px;
+        left: 13.71px;
     }
 
     .browser-window-traffic-light {

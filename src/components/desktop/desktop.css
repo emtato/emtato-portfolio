@@ -12,8 +12,9 @@
     display: flex;
     flex-direction: row;
     position: absolute;
-    right: 0.25vw;
+    right: 0.5vw;
     top: 6vh;
+    gap: 1vw;
 }
 
 /* APPS!!*/
@@ -25,7 +26,11 @@
 .dsk-app-button {
     width: 100px;
     height: 100px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vw;
+    cursor: pointer;
 }
 
 .dsk-app-icon {
@@ -37,6 +42,5 @@
 .dsk-app-label {
     color: var(--color-warm-cream);
     font: 8px "Emtato Pixel";
-
-    transform: translate(-22%);
+    align-self: center;
 }

@@ -1,0 +1,94 @@
+/* ------------------------------------------------------------------------------------------- -v-
+                                        dock
+----------------------------------------------------------------------------------------------- -o- */
+
+.dock {
+    --dock-height: clamp(42px, 5vh, 58px);
+    height: var(--dock-height);
+    width: 80vw;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.dock-background {
+    position: absolute;
+    display: flex;
+    inset: 0;
+
+}
+
+.dock-left {
+    height: var(--dock-height);
+    flex: 0 0 round(nearest, calc(var(--dock-height) * 5 / 9), 1px); /* Preserve the end caps' 5:9 aspect ratio */
+    image-rendering: pixelated;
+}
+
+.dock-middle {
+    min-width: 0;
+    height: var(--dock-height);
+    flex: 1;
+
+    background-image: url("/assets/system/dock/dock-middle.png");
+    background-repeat: repeat-x;
+    background-size: calc(var(--dock-height) * 0.127) var(--dock-height);
+
+    image-rendering: pixelated;
+}
+
+.dock-right {
+    height: var(--dock-height);
+    flex: 0 0 calc(var(--dock-height) * 5 / 9);
+    image-rendering: pixelated;
+}
+
+.dock-tip-text {
+    font: 14px "Emtato Pixel";
+    color: var(--color-warm-cream);
+    position: absolute;
+    bottom: 8px;
+    left: 10%;
+    z-index: 1;
+}
+
+@media (max-width: 910px) {
+    .mobile-tip {
+        display: block;
+        position: absolute;
+        bottom: 20%;
+        color: var(--color-warm-cream);
+        font: 13px "Emtato Pixel";
+    }
+
+    .dock-tip-text {
+        bottom: 5px;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------- -v-
+                                        apps
+----------------------------------------------------------------------------------------------- -o- */
+
+.dock-apps-container {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 1px;
+    left: 2vw;
+}
+
+.app-button {
+    height: var(--dock-height);
+    aspect-ratio: 1;
+    border: none;
+    background-color: transparent;
+}
+
+.app-icon {
+    image-rendering: pixelated;
+    height: var(--dock-height);
+    aspect-ratio: 1;
+}

@@ -1,0 +1,31 @@
+import './dock.css'
+
+interface DockProps {
+    openBrowserCallback: () => void
+}
+export default function Dock({openBrowserCallback}: DockProps) {
+
+    function openBrowser() {
+        openBrowserCallback()
+    }
+
+    return <div className="dock">
+        <div className="dock-background">
+            <img className="dock-left" alt="doc" src="/assets/system/dock/dock-left.png"/>
+            <div className="dock-middle"></div>
+            <img className="dock-right" alt="doc" src="/assets/system/dock/dock-right.png"/>
+            <div className="dock-tip-text">note: this website is still under construction. buttons that don't work/tabs
+                that
+                don't load aren't completed yet
+            </div>
+        </div>
+        {/* apps*/}
+        <div className="dock-apps-container">
+            <div className="app-button" onClick={openBrowser}>
+                <img className="app-icon" alt="a" src="/assets/app-icons/potato-browser.png"/>
+                {/*TODO: onhover, show app name and outline icon white or make it highlighted idk*/}
+            </div>
+
+        </div>
+    </div>
+}

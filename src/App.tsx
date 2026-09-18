@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 import './App.css'
 import MenuBar from './components/menu-bar/MenuBar'
 import BrowserWindow from './components/browser/BrowserWindow'
+import Dock from "./components/Dock/dock.tsx";
 
 
 export default function App() {
@@ -53,12 +54,8 @@ export default function App() {
                 minimize={() => setIsMaximized(false)}
 
             />}
-            <div className="dock">
-                <img className="dock-left" alt="doc" src="/assets/system/dock/dock-left.png"/>
-                <div className="dock-middle"></div>
-                <img className="dock-right" alt="doc" src="/assets/system/dock/dock-right.png"/>
-                <div className="dock-tip-text">note: this website is still under construction. buttons that don't work/tabs that don't load aren't completed yet</div>
-            </div>
+            <Dock
+            openBrowserCallback={() => setBrowserOpen(true)}/>
         </div>
     </>
 }

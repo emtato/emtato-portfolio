@@ -229,7 +229,7 @@ export default function Experience() {
                         {/*TODO:implement button that directs to specific page of image wheel? */}
                         <ProjectCard
                             title="Tempo"
-                            shortDesc="Full-stack calendar focused on making scheduling faster and more intuitive through simpler interactions."
+                            shortDesc="Full-stack calendar designed to make event creation faster through flexible date/time parsing and custom date/time controls."
                             stack={["React", "TypeScript", "FullCalendar", "Node.js", "Express", "MongoDB", "Better Auth", "Railway"]}
                             shortHighlight="solo fullstack"
                             highlight="Independently designed, developed, and deployed as a full-stack product."
@@ -246,11 +246,11 @@ export default function Experience() {
                             timeInfo="2026 - Present"
                             detailedTimeInfo="July 2026 - Present"
                             github="https://github.com/emtato/tempo."
-                            projectLink="https://calendar.ems.lol"
+                            projectLink="https://tempo.ems.lol"
                         />
                         <ProjectCard
                             title="Emportfolio"
-                            shortDesc="Interactive personal portfolio presented through a custom Mac-inspired, pixel-art browser interface."
+                            shortDesc="Responsive personal portfolio built as a Mac inspired pixel art browser, combining a hand drawn visual language with functional tabs, window controls, and custom animations."
                             stack={["React", "TypeScript", "HTML/CSS", "Vite", "GitHub Pages"]}
                             shortHighlight="woah inception"
                             highlight="Reduced five large media assets by 94%, cutting initial load time to under one second."
@@ -265,10 +265,10 @@ export default function Experience() {
                         />
                         <ProjectCard
                             title="Steam Game Recommender"
-                            shortDesc="Graph-based recommendation system that ranks Steam games from multiple selections using weighted similarity across player preferences."
+                            shortDesc="Graph based recommender that ranks Steam games by weighted similarity to multiple selected titles and user controlled preferences."
                             stack={["Python", "Streamlit", "Steam Web API", "Graph Algorithms", "HTML/CSS", "CSV"]}
                             shortHighlight="2000+ games"
-                            highlight="Recommendations evolve as users add new discoveries back into their selected games."
+                            highlight="Users iteratively refine future recs by adding more games into their list."
                             description="With thousands of games on Steam, our team built a recommendation tool for players who know what they enjoy but not what to try next. Users complete a questionnaire to generate an initial list, then refine future recommendations by adding games they like and prioritizing factors such as genre, price, platform, and language."
                             myContribution={["Helped implement a weighted graph that compares 2,000+ Steam games across price, language, developer, platform, category, and genre, ranking candidates by their average similarity to multiple selected games.","Built the interactive recommendation workflow and custom CSS presentation, ranking top results, displaying detailed game information, and letting users add suggestions before recalculating recommendations around their updated list.","- Created an API to CSV storage pipeline that collected and cleaned metadata for 2,000+ Steam games, working around API rate limits and caching the dataset for faster, repeatable recommendations."]}
                             cardImg={`${mediaFilePath}steam-rec/img1.webp`}
@@ -295,7 +295,7 @@ export default function Experience() {
                     <div className="project-column">
                         <ProjectCard
                             title="GirlMath"
-                            shortDesc="AI-powered journaling app supporting girls in STEM by tracking confidence, motivation, and learning trends."
+                            shortDesc="AI-powered journaling app helping girls in STEM build confidence through learning check-ins, trend visualizations, and personalized guidance."
                             stack={["Python", "FastAPI", "React Native", "Expo", "TypeScript", "MongoDB", "DigitalOcean", "Gemini API"]}
                             shortHighlight="36h hackathon"
                             highlight="Led backend development in a 36-hour hackathon."
@@ -310,9 +310,9 @@ export default function Experience() {
                         />
                         <ProjectCard
                             title="Munchables"
-                            shortDesc="Four-person Java Swing social platform created with Clean Architecture and JUnit-tested domain logic."
+                            shortDesc="Java Swing social platform for sharing recipes, joining food communities, and discovering restaurants, structured with Clean Architecture and JUnit tests."
                             stack={["Java", "Swing", "Clean Architecture", "JSON", "Spoonacular API", "HTML/CSS", "JUnit"]}
-                            highlight="Designed a reusable post component used across every post view."
+                            highlight="Made a reusable post component shared across home, profile, and club feeds."
                             description="Built from our shared love of food, Munchables is a social platform for sharing recipes and other posts, discovering restaurants and joining communities. Created for a course requiring Java Swing, it challenged us to build an accessible, fully functional experience using reusable interfaces, Clean Architecture, and thoroughly tested application logic."
                             myContribution={["Designed a reusable Swing post component shared across home, profile, and club feeds, consistently handling media, recipe details, custom styling, likes, and navigation to full posts without duplicating view or interaction logic.", "Implemented post creation, likes, and comments through controllers, use cases, presenters, and persistence, using dependency inversion to separate business logic from the UI and database, allowing use cases to be tested independently.", "Integrated Spoonacular recipe analysis by transforming post data into API requests and presenting returned nutritional insights with custom HTML/CSS, while isolating the external service behind an interface."]}
                             cardImg={`${mediaFilePath}munchables/img1.webp`}
@@ -332,7 +332,7 @@ export default function Experience() {
                             title="Networked Connect 4"
                             shortDesc="Terminal-based multiplayer Connect 4 game that synchronizes two players and an optional spectator over TCP sockets."
                             stack={["C", "TCP Sockets", "Client-Server", "select()", "I/O Multiplexing", "Recursion"]}
-                            highlight="Built a select()-driven server supporting players, spectators, disconnects, and rematches."
+                            highlight="Implemented game logic for a select() driven multiplayer server."
                             description="This terminal based Connect 4 game uses low-level C socket programming. Two remote players share a synchronized match while an optional third client spectates, with the server coordinating turns, validating moves, handling disconnects, and supporting rematches."
                             myContribution={["Implemented the core game state and rules in C, including move validation, gravity-based piece placement, turn alternation, tie detection, and converting the board between its in-memory grid and network message format.","Designed recursive win detection that begins at the newest piece, searches outward in eight directions, and combines opposing paths to detect horizontal, vertical, and diagonal connections.","Helped build the TCP client and server event loops around select(), multiplexing player and spectator sockets." ]}
                             cardImg={`${mediaFilePath}connect4/img1.webp`}

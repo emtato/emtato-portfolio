@@ -59,6 +59,7 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
         if (tab == activeTab) return
         setActiveTab(tab)
         backHistory.current.push(url)
+        forwardHistory.current.clear()
         if (tab === 0) {
             setUrl("emtato://about-me")
         } else if (tab === 1) {

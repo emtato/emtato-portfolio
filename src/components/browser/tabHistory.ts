@@ -14,6 +14,10 @@ export class Stack<T> {
         delete this.items[this.top];
         return item;
     }
+    clear(): void {
+        this.items = {};
+        this.top = 0;
+    }
 
     isEmpty(): boolean {
         return this.size === 0;

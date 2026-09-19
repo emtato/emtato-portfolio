@@ -15,7 +15,12 @@
     width: min(100cqw, calc(100cqh * 107 / 52));
     aspect-ratio: 107 / 52;
     container-type: inline-size;
+}
 
+.contact-content {
+    position: absolute;
+    inset: 0;
+    font: 1cqw "Emtato Pixel";
 }
 
 .contact-container-background {
@@ -28,10 +33,10 @@
 }
 
 /* placed items */
+/* email section */
 
 .contact-email-section { /* topleft = topleft of email popup*/
     position: absolute;
-    font: 1cqw "Emtato Pixel";
     right: 0;
     top: 27%;
     width: 30.5%;
@@ -96,14 +101,12 @@
 
 
 .contact-email-button-text {
-    font: 1cqw "Emtato Pixel";
     color: var(--color-smoky-charcoal);
     position: absolute;
 }
 
 /* silly mail section*/
 .contact-email-inbox-wrapper {
-    font: 1cqw "Emtato Pixel";
     color: #9a8e96;
     line-height: 2.8;
     position: absolute;
@@ -127,4 +130,94 @@
     position: absolute;
     top: 78.3%;
     left: 25%;
+}
+
+/* contact card section */
+
+.contact-card-section {
+    position: absolute;
+    top: 1.8%;
+    left: 0.9%;
+    width: 22.4%;
+    height: 96%;
+    z-index: 1;
+    border: 1px solid var(--color-smoky-charcoal);
+}
+
+.contact-card-img {
+    width: 40%;
+    aspect-ratio: 1;
+    top: 7%;
+    left: 30%;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid var(--color-grey-plum);
+}
+
+.contact-card-name {
+    color: var(--color-smoky-charcoal);
+    position: absolute;
+    top: 29.3%;
+    left: -4%;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.contact-current-time {
+    color: var(--color-smoky-charcoal);
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.contact-card-links {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5cqw;
+    font-size: 1.25em;
+}
+
+.contact-card-links a {
+    color: #0000ee;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contact-card-details {
+    position: absolute;
+    left: 0;
+    bottom: 1.5%;
+    width: 100%;
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35cqw;
+    color: var(--color-smoky-charcoal);
+    font-size: 0.9em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.contact-card-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35cqw;
+}
+
+.contact-card-location img {
+    width: auto;
+    height: 1.6cqw;
+    image-rendering: pixelated;
 }

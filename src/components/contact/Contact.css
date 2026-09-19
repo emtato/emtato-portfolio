@@ -1,0 +1,53 @@
+.contact-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: #737373;
+    z-index: 100;
+    container-type: size;
+}
+
+.contact-ratio-box {
+    position: relative;
+    width: min(100cqw, calc(100cqh * 107 / 52));
+    aspect-ratio: 107 / 52;
+}
+
+.contact-container-background {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    image-rendering: pixelated;
+
+}
+
+/* placed items */
+
+.contact-email-section { /* topleft = topleft of email popup*/
+    position: absolute;
+    font-size: 1cqw;
+    right: 0;
+    top: 27%;
+    width: 30.5%;
+
+}
+
+.contact-emailto-text {
+    color: var(--color-smoky-charcoal);
+    font: 1em "Emtato Pixel";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact-emailfrom-text {
+    color: var(--color-smoky-charcoal);
+    font: 1em "Emtato Pixel";
+    position: absolute;
+    top: 3.7cqw;
+    left: 0;
+}

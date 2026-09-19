@@ -110,7 +110,10 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/next.png"/>
                     </button>
                     <button className="browser-nav-button">
-                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/reload.png" onClick={() => {fakeRefreshTab(activeTab)}}/>
+                        <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/reload.png"
+                             onClick={() => {
+                                 fakeRefreshTab(activeTab)
+                             }}/>
                     </button>
                     <button className="browser-nav-button" onClick={() => {
                         changeTab(0)
@@ -123,15 +126,14 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
                         <div className="browser-tiled-search-bar"></div>
                         <img className="browser-search-icon" alt=""
                              src="/assets/browser/toolbar/search-icon.png"/>
-                        <input value={url} onClick={() => {
+                        <input className="browser-search-bar-text" value={url} onClick={() => {
                             setUrl("")
                         }}
                                onChange={(event) => setUrl(event.currentTarget.value)} onKeyDown={(event) => {
                             if (event.key === "Enter") {
                                 window.open("https://www.google.com/search?q=" + event.currentTarget.value, "_blank")
                             }
-                        }}
-                               className="browser-search-bar-text"></input>
+                        }}></input>
                     </div>
                     <button className="browser-nav-button" onClick={() => setNewTabError(true)}>
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>

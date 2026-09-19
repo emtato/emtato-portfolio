@@ -428,7 +428,7 @@
 
     .browser-search-bar-text {
         position: absolute;
-        top: 45%;
+        top: 5%;
         left: 25.71px;
         width: 100%;
         height: 100%;
@@ -436,7 +436,7 @@
         border: none;
         outline: none;
         color: var(--color-smoky-charcoal);
-        font: 6.86px "Emtato Pixel";
+        font: 9px "Emtato Pixel";
         z-index: 16;
     }
 

@@ -14,6 +14,8 @@
     position: relative;
     width: min(100cqw, calc(100cqh * 107 / 52));
     aspect-ratio: 107 / 52;
+    container-type: inline-size;
+
 }
 
 .contact-container-background {
@@ -29,25 +31,100 @@
 
 .contact-email-section { /* topleft = topleft of email popup*/
     position: absolute;
-    font-size: 1cqw;
+    font: 1cqw "Emtato Pixel";
     right: 0;
     top: 27%;
     width: 30.5%;
-
+    height: 73%;
+    z-index: 1;
 }
 
 .contact-emailto-text {
     color: var(--color-smoky-charcoal);
-    font: 1em "Emtato Pixel";
+    font: inherit;
+    border: none;
     position: absolute;
     top: 0;
     left: 0;
+    cursor: pointer;
 }
 
-.contact-emailfrom-text {
+.contact-email-copied {
+    position: absolute;
+    top: 1.5cqw;
+    left: 0;
+    color: var(--color-grey-plum);
+    font-size: 0.7em;
+}
+
+.contact-emailsubject-text {
     color: var(--color-smoky-charcoal);
-    font: 1em "Emtato Pixel";
     position: absolute;
     top: 3.7cqw;
     left: 0;
+}
+
+.contact-email-body {
+    top: 7.3cqw;
+    font-size: 0.8em;
+    position: absolute;
+    color: var(--color-grey-plum);
+}
+
+.contact-email-button {
+    image-rendering: pixelated;
+    width: 8cqw;
+    height: 3cqw;
+    position: absolute;
+    bottom: 2cqw;
+    right: 2cqw;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.contact-email-button-img {
+    image-rendering: pixelated;
+    width: 8cqw;
+    height: 3cqw;
+    position: absolute;
+}
+
+.contact-email-button-img:hover {
+    filter: brightness(1.2);
+}
+
+
+.contact-email-button-text {
+    font: 1cqw "Emtato Pixel";
+    color: var(--color-smoky-charcoal);
+    position: absolute;
+}
+
+/* silly mail section*/
+.contact-email-inbox-wrapper {
+    font: 1cqw "Emtato Pixel";
+    color: #9a8e96;
+    line-height: 2.8;
+    position: absolute;
+    top: 13.5%;
+    left: 28%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-email-inbox-text {
+
+}
+
+.contact-email-inbox-star {
+
+    image-rendering: pixelated;
+    width: 1.5cqw;
+    height: 1.5cqw;
+    position: absolute;
+    top: 78.3%;
+    left: 25%;
 }

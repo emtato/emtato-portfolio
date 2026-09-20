@@ -34,10 +34,6 @@ Pixel-drawn arrows and doodles
 Pixelated tape, stickers, or photo borders
 Pixel navigation controls
 
-TODO: page 3 about me
-TODO: about me scroll
-TODO: scroll connects about me, projects, contact? once reach bottom of about me, switch to projects automatically with maybe a colour gradient to transition colour to not make it jarring
-TODO:
 
 timeline:  tutoring, ib ee, tfs, shad, chess club co lead, uot, ops
 
@@ -56,14 +52,15 @@ future: 2026 sumer dean's list
 
 
 mobile work to do:
-make section image bigger
-set position of timeline art properly
-make timeline cards bigger
-fix timeline card's date bubble and stakc bubble
-reduce spacing between timeline cards
-
-fix container for projects; make it one column
 
 
-c: https://youtu.be/EZ3oZ-FG4FA
+
+
+calendar in dock -> open tempo full project card
+camera/photo app ? just random for fun. open -> cat selfie you look great diva + show my photo gallery
+
+maps: where am i? ("probably around here")
+
+
+
 

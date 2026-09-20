@@ -39,8 +39,8 @@ export default function Experience() {
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-medium season-fall"/>
-                        <div className="timeline-segment segment-custom-mobile-long season-summer"/>
+                        <div className="timeline-segment segment-medium segment-custom-mobile-long season-fall"/>
+                        <div className="timeline-segment season-summer"/>
                         <div className="timeline-segment season-spring"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-spring2026 timeline-art" alt="a"
@@ -118,7 +118,7 @@ export default function Experience() {
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-medium season-fall"/>
+                        <div className="timeline-segment segment-medium segment-custom-mobile-long season-fall"/>
                         <div className="timeline-segment season-summer"/>
                         <div className="timeline-segment season-spring"/>
                         <div className="timeline-insertion-point">

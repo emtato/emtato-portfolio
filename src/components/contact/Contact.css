@@ -8,6 +8,7 @@
     background-color: #737373;
     z-index: 1;
     container-type: size;
+    overflow: hidden;
 }
 
 .contact-ratio-box {
@@ -220,4 +221,14 @@
     width: auto;
     height: 1.6cqw;
     image-rendering: pixelated;
+}
+
+
+/* mobeel*/
+@media (max-width: 800px) {
+
+    .contact-ratio-box {
+        transform: rotate(90deg) scale(1.7);
+    }
+
 }

@@ -127,7 +127,10 @@ export default function BrowserWindow({
                     }}>
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/home-icon.png"/>
                     </button>
-                    <div className="browser-search-bar-combined">
+                    <form className="browser-search-bar-combined" onSubmit={(event) => {
+                        event.preventDefault() //for phones
+                        window.open("https://lmgtfy.com/?q=" + url, "_blank")
+                    }}>
                         <img className="browser-search-bar-bounds" alt="a"
                              src="/assets/browser/toolbar/search-bar-bound.png"/>
                         <div className="browser-tiled-search-bar"></div>
@@ -135,13 +138,8 @@ export default function BrowserWindow({
                              src="/assets/browser/toolbar/search-icon.png"/>
                         <input className="browser-search-bar-text" value={url} onClick={() => {
                             setUrl("")
-                        }}
-                               onChange={(event) => setUrl(event.currentTarget.value)} onKeyDown={(event) => {
-                            if (event.key === "Enter") {
-                                window.open("https://lmgtfy.com/?q=" + event.currentTarget.value, "_blank")
-                            }
-                        }}></input>
-                    </div>
+                        }} onChange={(event) => setUrl(event.currentTarget.value)}></input>
+                    </form>
                     <button className="browser-nav-button" onClick={() => setNewTabError(true)}>
                         <img className="browser-nav-icon" alt="a" src="/assets/browser/toolbar/new-tab.png"/>
                     </button>

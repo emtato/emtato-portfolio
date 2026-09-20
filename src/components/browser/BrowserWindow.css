@@ -426,19 +426,11 @@
         z-index: 16;
         left: 0;
     }
-
     .browser-search-bar-text {
-        position: absolute;
-        top: 5%;
-        left: 25.71px;
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        color: var(--color-smoky-charcoal);
-        font: 9px "Emtato Pixel";
-        z-index: 16;
+        font: 10px "Emtato Pixel";
+        width: 90%;
     }
-
+    .newTabError{
+        width: 80%;
+    }
 }

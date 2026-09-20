@@ -5,7 +5,7 @@
 .dock {
     --dock-height: clamp(42px, 5vh, 58px);
     height: var(--dock-height);
-    width: 70vw;
+    width: 55vw;
     bottom: 0;
     left: 50%;
     position: absolute;
@@ -61,7 +61,7 @@
 
 .dock-apps-container {
     display: flex;
-    gap: 10px;
+    gap: 1vw;
     position: relative;
     top: 1px;
     left: 2vw;

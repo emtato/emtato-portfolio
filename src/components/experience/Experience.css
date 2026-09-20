@@ -113,7 +113,6 @@
     overflow-y: scroll;
     height: 100%;
     overflow-x: hidden;
-
     width: 100%;
 }
 
@@ -139,7 +138,7 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    --timeline-length: 196.875;
+    --timeline-length: 200;
     height: calc(var(--timeline-length) * var(--timeline-unit));
 }
 

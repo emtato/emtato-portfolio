@@ -12,6 +12,7 @@ export interface BrowserWindowProps {
     isBig: boolean
     maximize: () => void //maximize window
     minimize: () => void
+    selectedActiveTab: number //if parent wants to pick a tab (mail in dock pressed)
 }
 
 const tabIDs = new Map<string, number>([
@@ -19,9 +20,21 @@ const tabIDs = new Map<string, number>([
     ["emtato://experience", 1],
     ["emtato://contact", 2]
 ]);
-export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize, minimize}: BrowserWindowProps) {
-    const [activeTab, setActiveTab] = useState(0) //0 -> about me, 1 -> projects, 2 -> contact
-    const [url, setUrl] = useState("emtato://about-me")
+const tabNames = new Map<number, string>([
+    [0, "emtato://about-me"],
+    [1, "emtato://experience"],
+    [2, "emtato://contact"]
+])
+export default function BrowserWindow({
+                                          isOpen: boolean,
+                                          onClose,
+                                          isBig,
+                                          maximize,
+                                          minimize,
+                                          selectedActiveTab
+                                      }: BrowserWindowProps) {
+    const [activeTab, setActiveTab] = useState(selectedActiveTab ? selectedActiveTab : 0) //0 -> about me, 1 -> projects, 2 -> contact
+    const [url, setUrl] = useState(tabNames.get(activeTab) ? tabNames.get(activeTab)! : "emtato://about-me")
     const backHistory = useRef(new Stack<string>());
     const forwardHistory = useRef(new Stack<string>());
     const [newTabError, setNewTabError] = useState(false)
@@ -60,15 +73,8 @@ export default function BrowserWindow({isOpen: boolean, onClose, isBig, maximize
         setActiveTab(tab)
         backHistory.current.push(url)
         forwardHistory.current.clear()
-        if (tab === 0) {
-            setUrl("emtato://about-me")
-        } else if (tab === 1) {
-            setUrl("emtato://experience")
-        } else if (tab === 2) {
-            setUrl("emtato://contact")
-        }
+        setUrl(tabNames.get(tab)!)
     }
-
 
     /* main browser window render
     * top row */

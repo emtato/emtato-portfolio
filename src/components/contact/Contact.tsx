@@ -111,7 +111,7 @@ export default function Contact() {
                                 <img src="/assets/browser/content/contact/pin.png" alt=""/>
                                 <span>based in Toronto, Ontario</span>
                             </div>
-                            <div>open to summer opportunities</div>
+                            <div>open to summer 27 opportunities</div>
 
                         </div>
                     </div>

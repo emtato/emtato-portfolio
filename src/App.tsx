@@ -12,15 +12,22 @@ export default function App() {
     const [helpOpen, setHelpOpen] = useState(false)
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
     const [isMaximized, setIsMaximized] = useState(false)
+    const [selectedActiveTab, setSelectedActiveTab] = useState(0)
 
     function closeBrowser() {
         setBrowserOpen(false)
         setFocusedAppName("potato OS")
+        setSelectedActiveTab(0)
     }
 
     function openBrowser() {
-    setBrowserOpen(true)
+        setBrowserOpen(true)
         setFocusedAppName("potato browser")
+    }
+
+    function openContact() {
+        setSelectedActiveTab(2)
+        openBrowser()
     }
 
     //TODO: modify things for dark/light mode visually
@@ -62,9 +69,10 @@ export default function App() {
                 isBig={isMaximized}
                 maximize={() => setIsMaximized(true)}
                 minimize={() => setIsMaximized(false)}
+                selectedActiveTab={selectedActiveTab}
 
             />}
-            <Dock openBrowserCallback={openBrowser}/>
+            <Dock openBrowserCallback={openBrowser} openContact={openContact}/>
             <Desktop openBrowserCallback={openBrowser}/>
         </div>
     </>

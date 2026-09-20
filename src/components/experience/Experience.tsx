@@ -23,21 +23,25 @@ export default function Experience() {
                             <img className="timeline-art TLA-fall2026" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/fall-1.png"/>
                             <TimelineCard
-                                title="Backend developer / Junior Technical Analyst"
+                                title="Backend Developer / Junior Technical Analyst"
                                 organization="Ontario Public Service"
-                                context="Digital Solutions Branch · 4-8 month internship"
-                                description="Working on the Java backend behind Ontario’s driver and vehicle services, with a focus on system modernization, testing, and core business logic."
-                                tags={["Java", "Backend", "E2E testing", "Edge case", "Playwright"]}
+                                context="Digital Solutions Branch · 8-month internship"
+                                achievement="Reduced failing local E2E workflows from 19 to 1"
+                                description="Improving the reliability of the Java/Spring backend supporting Ontario’s driver and vehicle services through end-to-end testing and failure-path debugging."
+                                tags={["Java", "Spring Boot", "Python", "Bruno", "E2E testing"]}
                                 dateRange="Sept 2026 - Present"
                                 season="fall"
-                                bullets={["i barely got onboarded yet ill do something soon!"]}
+                                bullets={[
+                                    "Fixed invalid backouts of mocked transactions by querying Spring Boot Actuator to check whether calls were real or mocked, and only reversing confirmed real transactions.",
+                                    "Replaced Bruno’s old OAuth setup with a Python token script, fixing authentication for four test workflows."
+                                ]}
                                 mini={false}
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
                         <div className="timeline-segment segment-medium season-fall"/>
-                        <div className="timeline-segment segment-medium segment-custom-mobile-long season-summer"/>
-                        <div className="timeline-segment segment-medium season-spring"/>
+                        <div className="timeline-segment segment-custom-mobile-long season-summer"/>
+                        <div className="timeline-segment season-spring"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-spring2026 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/spring.png"/>

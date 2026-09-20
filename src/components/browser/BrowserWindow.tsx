@@ -138,7 +138,7 @@ export default function BrowserWindow({
                         }}
                                onChange={(event) => setUrl(event.currentTarget.value)} onKeyDown={(event) => {
                             if (event.key === "Enter") {
-                                window.open("https://www.google.com/search?q=" + event.currentTarget.value, "_blank")
+                                window.open("https://lmgtfy.com/?q=" + event.currentTarget.value, "_blank")
                             }
                         }}></input>
                     </div>

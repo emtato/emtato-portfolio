@@ -26,13 +26,13 @@ export default function Experience() {
                                 title="Backend Developer / Junior Technical Analyst"
                                 organization="Ontario Public Service"
                                 context="Digital Solutions Branch · 8-month internship"
-                                achievement="Reduced failing local E2E workflows from 19 to 1"
-                                description="Improving the reliability of the Java/Spring backend supporting Ontario’s driver and vehicle services through end-to-end testing and failure-path debugging."
-                                tags={["Java", "Spring Boot", "Python", "Bruno", "E2E testing"]}
+                                achievement="Restored Bruno backend test suite from 19 failing scripts to 0"
+                                description="Improving the reliability of the Java/Spring backend supporting Ontario’s driver and vehicle services through backend workflow testing and failure-path debugging."
+                                tags={["Java", "Spring Boot", "Python", "Bruno", "Backend testing"]}
                                 dateRange="Sept 2026 - Present"
                                 season="fall"
                                 bullets={[
-                                    "Fixed invalid backouts of mocked transactions by querying Spring Boot Actuator to check whether calls were real or mocked, and only reversing confirmed real transactions.",
+                                    "Queried a Spring Boot Actuator endpoint for configuration resolved from active profiles and ran transaction reversal only for confirmed real downstream calls, skipping mocked and unknown cases.",
                                     "Replaced Bruno’s old OAuth setup with a Python token script, fixing authentication for four test workflows."
                                 ]}
                                 mini={false}

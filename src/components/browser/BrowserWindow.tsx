@@ -15,11 +15,6 @@ export interface BrowserWindowProps {
     selectedActiveTab: number //if parent wants to pick a tab (mail in dock pressed)
 }
 
-const tabIDs = new Map<string, number>([
-    ["emtato://about-me", 0],
-    ["emtato://experience", 1],
-    ["emtato://contact", 2]
-]);
 const tabNames = new Map<number, string>([
     [0, "emtato://about-me"],
     [1, "emtato://experience"],
@@ -35,29 +30,25 @@ export default function BrowserWindow({
                                       }: BrowserWindowProps) {
     const [activeTab, setActiveTab] = useState(selectedActiveTab ? selectedActiveTab : 0) //0 -> about me, 1 -> projects, 2 -> contact
     const [url, setUrl] = useState(tabNames.get(activeTab) ? tabNames.get(activeTab)! : "emtato://about-me")
-    const backHistory = useRef(new Stack<string>());
-    const forwardHistory = useRef(new Stack<string>());
+    const backHistory = useRef(new Stack<number>());
+    const forwardHistory = useRef(new Stack<number>());
     const [newTabError, setNewTabError] = useState(false)
 
     function prevTab() {
         if (!backHistory.current.isEmpty()) {
-            const prevUrl = backHistory.current.pop()
-            setUrl(prevUrl)
-            if (tabIDs.get(prevUrl) != undefined) {
-                setActiveTab(tabIDs.get(prevUrl)!)
-            }
-            forwardHistory.current.push(url)
+            const prevTab = backHistory.current.pop()
+            forwardHistory.current.push(activeTab) //save current tab in future history
+            setUrl(tabNames.get(prevTab)!)
+            setActiveTab(prevTab)
         }
     }
 
     function nextTab() {
         if (!forwardHistory.current.isEmpty()) {
-            const nextUrl = forwardHistory.current.pop()
-            if (tabIDs.get(nextUrl) != undefined) {
-                setActiveTab(tabIDs.get(nextUrl)!)
-            }
-            setUrl(nextUrl)
-            backHistory.current.push(url)
+            const nextTab = forwardHistory.current.pop()
+            backHistory.current.push(activeTab)
+            setActiveTab(nextTab)
+            setUrl(tabNames.get(nextTab)!)
         }
     }
 
@@ -70,8 +61,9 @@ export default function BrowserWindow({
 
     function changeTab(tab: number) {
         if (tab == activeTab) return
+        backHistory.current.push(activeTab)
+
         setActiveTab(tab)
-        backHistory.current.push(url)
         forwardHistory.current.clear()
         setUrl(tabNames.get(tab)!)
     }

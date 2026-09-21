@@ -426,11 +426,14 @@
         z-index: 16;
         left: 0;
     }
+
     .browser-search-bar-text {
         font: 10px "Emtato Pixel";
-        width: 90%;
+        width: 85%;
+        left: 22px
     }
-    .newTabError{
+
+    .newTabError {
         width: 80%;
     }
 }

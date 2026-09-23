@@ -189,8 +189,13 @@
     height: 4%;
 }
 
+
 .segment-medium-long {
     height: 6%;
+}
+
+.segment-7percent {
+    height: 7.2%;
 }
 
 .segment-long {
@@ -1166,6 +1171,9 @@
         height: 6%
     }
 
+    .segment-7percent {
+        height: 8%;
+    }
 
     /* timeline points of interest */
     .timeline-marker {

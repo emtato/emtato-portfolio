@@ -13,11 +13,13 @@ export default function App() {
     const [currentModeIsDark, setCurrentModeIsDark] = useState(true) //dark mode by default
     const [isMaximized, setIsMaximized] = useState(false)
     const [selectedActiveTab, setSelectedActiveTab] = useState(0)
+    const [dockOpenTempo, setOpenTempo] = useState(false)
 
     function closeBrowser() {
         setBrowserOpen(false)
         setFocusedAppName("potato OS")
         setSelectedActiveTab(0)
+        setOpenTempo(false)
     }
 
     function openBrowser() {
@@ -30,6 +32,15 @@ export default function App() {
         openBrowser()
     }
 
+    function openTempoCard() {
+        setSelectedActiveTab(1)
+        setOpenTempo(true)
+        openBrowser()
+        setTimeout(() => {
+            setOpenTempo(false)
+        }, 300) //reset state so tempo card doesnt open by itself next time
+    }
+
     //TODO: modify things for dark/light mode visually
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -38,9 +49,6 @@ export default function App() {
 
         return () => clearTimeout(timer)
     }, []) //empty dependency array means this effect runs only once, not every react render
-    //TODO: fix backgrund image dimensions upon window resize
-    //TODO: remeber to add website to resume and cover letter and github and linkedin when done
-
 
     return <>  {loading &&
         <div className="loading-main">
@@ -70,9 +78,10 @@ export default function App() {
                 maximize={() => setIsMaximized(true)}
                 minimize={() => setIsMaximized(false)}
                 selectedActiveTab={selectedActiveTab}
-
+                appSaysOpen={dockOpenTempo}
+                onTabChange={setSelectedActiveTab}
             />}
-            <Dock openBrowserCallback={openBrowser} openContact={openContact}/>
+            <Dock openBrowserCallback={openBrowser} openContact={openContact} openTempo={openTempoCard}/>
             <Desktop openBrowserCallback={openBrowser}/>
         </div>
     </>

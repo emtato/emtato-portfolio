@@ -15,20 +15,29 @@ interface ProjectProps {
     detailedTimeInfo: string
     projectLink?: string
     github: string
+    parentSaysOpen?: boolean
 }
 
 
 export default function ProjectCard({
                                         title, shortDesc, shortHighlight, stack, highlight, description, cardImg,
-                                        expandedImgs, timeInfo, projectLink, github, detailedTimeInfo, myContribution
+                                        expandedImgs, timeInfo, projectLink, github, detailedTimeInfo, myContribution,
+                                        parentSaysOpen
                                     }: ProjectProps) {
     const [isOpen, setisOpen] = useState(false)
+    const portalTarget = document.querySelector(".browser-window-page")
     const [activeImageIndex, setActiveImageIndex] = useState(0)
     const projectImages = [cardImg].concat(expandedImgs)
-    const portalTarget = document.querySelector(".browser-window-page")
     const [imageFit, setImageFit] = useState<"stretch" | "contain">("stretch");
-    //video list: girlmath, columns (soon), ?
     const youtubeVideoLinks = ["https://www.youtube.com/embed/r2qMN9JFBvw?si=WOh8RaFYPKvXcnd4", "https://www.youtube.com/embed/FYLlxZZtz4Y?si=xhGk72zlQ73a6W2s", "https://www.youtube.com/embed/EZ3oZ-FG4FA?si=HOP-3OMz8RQ4QA1J"]
+
+    useEffect(() => {
+        if (parentSaysOpen) {
+            setActiveImageIndex(0)
+            setisOpen(true)
+        }
+    }, [parentSaysOpen])
+
     useEffect(() => {
         function handleEscape(event: KeyboardEvent) {
             if (event.key === "Escape") {
@@ -213,4 +222,3 @@ export default function ProjectCard({
         )}
     </>
 }
-//TODO: achievement/emphasis baner diagonal across

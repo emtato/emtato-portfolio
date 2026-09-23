@@ -2,7 +2,11 @@ import "./Experience.css"
 import TimelineCard from "./TimelineCard.tsx";
 import ProjectCard from "./ProjectCard.tsx";
 
-export default function Experience() {
+interface ExperienceProps {
+    BrowserSaysOpen: boolean
+}
+
+export default function Experience({BrowserSaysOpen}: ExperienceProps) {
     const mediaFilePath = "/assets/browser/content/experience/project/"
     return (
 
@@ -251,6 +255,7 @@ export default function Experience() {
                             detailedTimeInfo="July 2026 - Present"
                             github="https://github.com/emtato/tempo."
                             projectLink="https://tempo.ems.lol"
+                            parentSaysOpen={BrowserSaysOpen}
                         />
                         <ProjectCard
                             title="Emportfolio"
@@ -274,7 +279,7 @@ export default function Experience() {
                             shortHighlight="2000+ games"
                             highlight="Users iteratively refine future recs by adding more games into their list."
                             description="With thousands of games on Steam, our team built a recommendation tool for players who know what they enjoy but not what to try next. Users complete a questionnaire to generate an initial list, then refine future recommendations by adding games they like and prioritizing factors such as genre, price, platform, and language."
-                            myContribution={["Helped implement a weighted graph that compares 2,000+ Steam games across price, language, developer, platform, category, and genre, ranking candidates by their average similarity to multiple selected games.","Built the interactive recommendation workflow and custom CSS presentation, ranking top results, displaying detailed game information, and letting users add suggestions before recalculating recommendations around their updated list.","- Created an API to CSV storage pipeline that collected and cleaned metadata for 2,000+ Steam games, working around API rate limits and caching the dataset for faster, repeatable recommendations."]}
+                            myContribution={["Helped implement a weighted graph that compares 2,000+ Steam games across price, language, developer, platform, category, and genre, ranking candidates by their average similarity to multiple selected games.", "Built the interactive recommendation workflow and custom CSS presentation, ranking top results, displaying detailed game information, and letting users add suggestions before recalculating recommendations around their updated list.", "- Created an API to CSV storage pipeline that collected and cleaned metadata for 2,000+ Steam games, working around API rate limits and caching the dataset for faster, repeatable recommendations."]}
                             cardImg={`${mediaFilePath}steam-rec/img1.webp`}
                             expandedImgs={[]}
                             timeInfo="2025"
@@ -288,7 +293,7 @@ export default function Experience() {
                             shortHighlight="all MIPS"
                             highlight="Implemented recursive eight-direction match detection entirely in MIPS assembly."
                             description="Columns was a two person project to build a complete puzzle game entirely in MIPS assembly, without a game engine or graphics library. Players position and reorder falling stacks of three coloured gems as the game accelerates; matches are animated and cleared, remaining gems collapse, and the board is rechecked for cascading combinations."
-                            myContribution={["Designed a recursive directional search algorithm that checks all eight neighbouring directions, combines opposite paths, and records groups of three or more matching gems for removal. (later adapted this logic for Connect 4’s win detection)", "Built the bitmap rendering layer in MIPS, converting coordinates into display memory addresses and drawing the background and shaded gems pixel by pixel, along with clearing and game over animations.","- Implemented collisions, gravity and progressively increasing fall speed, using bitmap memory checks and loop counters to move gem stacks safely while updating an on-screen speed indicator as difficulty increased."]}
+                            myContribution={["Designed a recursive directional search algorithm that checks all eight neighbouring directions, combines opposite paths, and records groups of three or more matching gems for removal. (later adapted this logic for Connect 4’s win detection)", "Built the bitmap rendering layer in MIPS, converting coordinates into display memory addresses and drawing the background and shaded gems pixel by pixel, along with clearing and game over animations.", "- Implemented collisions, gravity and progressively increasing fall speed, using bitmap memory checks and loop counters to move gem stacks safely while updating an on-screen speed indicator as difficulty increased."]}
                             cardImg={`${mediaFilePath}columns/img1.webp`}
                             expandedImgs={["1 columns vid"]}
                             timeInfo="2025"
@@ -338,7 +343,7 @@ export default function Experience() {
                             stack={["C", "TCP Sockets", "Client-Server", "select()", "I/O Multiplexing", "Recursion"]}
                             highlight="Implemented game logic for a select() driven multiplayer server."
                             description="This terminal based Connect 4 game uses low-level C socket programming. Two remote players share a synchronized match while an optional third client spectates, with the server coordinating turns, validating moves, handling disconnects, and supporting rematches."
-                            myContribution={["Implemented the core game state and rules in C, including move validation, gravity-based piece placement, turn alternation, tie detection, and converting the board between its in-memory grid and network message format.","Designed recursive win detection that begins at the newest piece, searches outward in eight directions, and combines opposing paths to detect horizontal, vertical, and diagonal connections.","Helped build the TCP client and server event loops around select(), multiplexing player and spectator sockets." ]}
+                            myContribution={["Implemented the core game state and rules in C, including move validation, gravity-based piece placement, turn alternation, tie detection, and converting the board between its in-memory grid and network message format.", "Designed recursive win detection that begins at the newest piece, searches outward in eight directions, and combines opposing paths to detect horizontal, vertical, and diagonal connections.", "Helped build the TCP client and server event loops around select(), multiplexing player and spectator sockets."]}
                             cardImg={`${mediaFilePath}connect4/img1.webp`}
                             expandedImgs={["2 connect 4 vid"]}
                             timeInfo="2026"

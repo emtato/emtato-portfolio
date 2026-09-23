@@ -1,5 +1,5 @@
 import './BrowserWindow.css'
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import BrowserTab from "./BrowserTab.tsx";
 import AboutMe from "../about/AboutMe.tsx";
 import Experience from "../experience/Experience.tsx";
@@ -13,6 +13,8 @@ export interface BrowserWindowProps {
     maximize: () => void //maximize window
     minimize: () => void
     selectedActiveTab: number //if parent wants to pick a tab (mail in dock pressed)
+    appSaysOpen: boolean
+    onTabChange: (tab: number) => void
 }
 
 const tabNames = new Map<number, string>([
@@ -21,18 +23,20 @@ const tabNames = new Map<number, string>([
     [2, "emtato://contact"]
 ])
 export default function BrowserWindow({
-                                          isOpen: boolean,
-                                          onClose,
-                                          isBig,
-                                          maximize,
-                                          minimize,
-                                          selectedActiveTab
+                                          onClose, isBig, maximize, minimize, selectedActiveTab, appSaysOpen,
+                                          onTabChange
                                       }: BrowserWindowProps) {
-    const [activeTab, setActiveTab] = useState(selectedActiveTab ? selectedActiveTab : 0) //0 -> about me, 1 -> projects, 2 -> contact
+    const [activeTab, setActiveTab] = useState(selectedActiveTab) //0 -> about me, 1 -> projects, 2 -> contact
     const [url, setUrl] = useState(tabNames.get(activeTab) ? tabNames.get(activeTab)! : "emtato://about-me")
     const backHistory = useRef(new Stack<number>());
     const forwardHistory = useRef(new Stack<number>());
     const [newTabError, setNewTabError] = useState(false)
+
+    useEffect(() => {
+        if (selectedActiveTab !== activeTab) {
+            changeTab(selectedActiveTab)
+        }
+    }, [selectedActiveTab]) //browser alr open, still, parent wants us to switch tabs (dock button pressed)
 
     function prevTab() {
         if (!backHistory.current.isEmpty()) {
@@ -40,6 +44,7 @@ export default function BrowserWindow({
             forwardHistory.current.push(activeTab) //save current tab in future history
             setUrl(tabNames.get(prevTab)!)
             setActiveTab(prevTab)
+            onTabChange(prevTab)
         }
     }
 
@@ -49,6 +54,7 @@ export default function BrowserWindow({
             backHistory.current.push(activeTab)
             setActiveTab(nextTab)
             setUrl(tabNames.get(nextTab)!)
+            onTabChange(nextTab)
         }
     }
 
@@ -66,6 +72,7 @@ export default function BrowserWindow({
         setActiveTab(tab)
         forwardHistory.current.clear()
         setUrl(tabNames.get(tab)!)
+        onTabChange(tab) //update App.tsx with new tab number
     }
 
     /* main browser window render
@@ -151,7 +158,7 @@ export default function BrowserWindow({
                 {/* render pages*/}
                 <div className="browser-window-page">
                     {activeTab === 0 && <AboutMe nextTab={() => changeTab(1)}/>}
-                    {activeTab === 1 && <Experience/>}
+                    {activeTab === 1 && <Experience BrowserSaysOpen={appSaysOpen}/>}
                     {activeTab === 2 && <Contact/>}
                     {activeTab == 3 && <div className="browser-tab-empty"/>}
                 </div>

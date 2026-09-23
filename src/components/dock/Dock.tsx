@@ -3,8 +3,10 @@ import './dock.css'
 interface DockProps {
     openBrowserCallback: () => void
     openContact: () => void
+    openTempo: () => void
 }
-export default function Dock({openBrowserCallback, openContact}: DockProps) {
+
+export default function Dock({openBrowserCallback, openContact, openTempo}: DockProps) {
 
     function openBrowser() {
         openBrowserCallback()
@@ -26,7 +28,12 @@ export default function Dock({openBrowserCallback, openContact}: DockProps) {
             <div className="app-button" onClick={openContact}>
                 <img className="app-icon" alt="a" src="/assets/app-icons/mail.png"/>
             </div>
-
+            <a className="app-button" href="https://linkedin.com/in/emilia-ma" target="_blank">
+                <img className="app-icon" alt="a" src="/assets/app-icons/linkedin.png"/>
+            </a>
+            <div className="app-button" onClick={openTempo}>
+                <img className="app-icon" alt="a" src="/assets/app-icons/Calendar.png"/>
+            </div>
         </div>
     </div>
 }

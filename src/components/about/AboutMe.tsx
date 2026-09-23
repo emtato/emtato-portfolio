@@ -36,7 +36,7 @@ export default function AboutMe({nextTab}: AboutMeProps) {
 
     useEffect(() => {
         let delay = 225
-        if(!increasingLetters) delay = 125 //quicker deletion than increasing letters
+        if (!increasingLetters) delay = 125 //quicker deletion than increasing letters
         if (increasingLetters && charactersDisplayed === greetingsList[greetingLanguage].length) { //typing reached last letter
             delay = 1500
         }
@@ -75,6 +75,7 @@ export default function AboutMe({nextTab}: AboutMeProps) {
                         <div
                             className={`language-${greetingLanguage} aboutme-page1-greeting`}>{greetingsList[greetingLanguage].substring(0, charactersDisplayed)}</div>
                         <div className="aboutme-page1-name-intro">i'm emilia ☆</div>
+                        <div className="aboutme-page1-note">all pixel art & graphics handmade by me :)</div>
                         <img className="aboutme-page1-portrait-photo"
                              alt=""
                              src="/assets/browser/content/about-me/me-2.webp"/>

@@ -131,6 +131,13 @@
     font: 5cqw "NYCD";
 }
 
+.aboutme-page1-note {
+    top: 1.5%;
+    left: 70%;
+    position: absolute;
+    font: 1.5cqw "Caveat";
+}
+
 .language-1 {
     left: 31.5%;
 }
@@ -600,6 +607,7 @@
     .aboutme-page1-values-line {
         margin-top: -0.4cqw;
     }
+
     .aboutme-page1-mobile-fix {
         line-height: 1.8cqw;
     }

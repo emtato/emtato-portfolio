@@ -103,6 +103,53 @@
     clip-path: inset(0 -6px 30px 0);
 }
 
+/* -------------------------------- tabs  --------------------------------------- */
+.browser-tabs-list {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    left: 128.57px;
+    top: 3.43px;
+    gap: 17.14px;
+}
+
+.browser-tab-button {
+    position: relative;
+    width: 128.57px;
+    height: 42.86px;
+    background-color: transparent;
+    border: none;
+    z-index: 16;
+    top: 8.57px;
+    left: 8.57px;
+}
+
+.browser-tab-label {
+    color: var(--colour-peach);
+    font: 13px "Emtato Pixel";
+    z-index: 17;
+    position: relative;
+    top: 2.57px;
+
+}
+
+.browser-tab-button:hover {
+    cursor: pointer;
+}
+
+.browser-tab-button:hover .browser-tab-label {
+    color: var(--color-warm-cream);
+    cursor: pointer;
+}
+
+.browser-tab-img {
+    width: 128.57px;
+    top: -2.57px;
+    position: absolute;
+    z-index: 16;
+    left: 0;
+}
+
 /* -------------------------------- browser window middle row + toolbar -------------------------------- */
 
 .browser-window-left {
@@ -157,53 +204,6 @@
     width: 25.71px;
     height: 25.71px;
     margin-left: 12.86px;
-}
-
-/* -------------------------------- tabs  --------------------------------------- */
-.browser-tabs-list {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    left: 128.57px;
-    top: 3.43px;
-    gap: 17.14px;
-}
-
-.browser-tab-button {
-    position: relative;
-    width: 128.57px;
-    height: 42.86px;
-    background-color: transparent;
-    border: none;
-    z-index: 16;
-    top: 8.57px;
-    left: 8.57px;
-}
-
-.browser-tab-label {
-    color: var(--colour-peach);
-    font: 13px "Emtato Pixel";
-    z-index: 17;
-    position: relative;
-    top: 2.57px;
-
-}
-
-.browser-tab-button:hover {
-    cursor: pointer;
-}
-
-.browser-tab-button:hover .browser-tab-label {
-    color: var(--color-warm-cream);
-    cursor: pointer;
-}
-
-.browser-tab-img {
-    width: 128.57px;
-    top: -2.57px;
-    position: absolute;
-    z-index: 16;
-    left: 0;
 }
 
 /* -------------------------------- toolbar search bar + page content --------------------------------------- */
@@ -425,6 +425,20 @@
         position: absolute;
         z-index: 16;
         left: 0;
+    }
+
+    .browser-window-toolbar {
+        left: 3px;
+    }
+
+    .browser-nav-icon {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .browser-search-bar-combined {
+        margin-left: 3px;
+        margin-right: 3px;
     }
 
     .browser-search-bar-text {

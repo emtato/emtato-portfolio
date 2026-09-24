@@ -1,4 +1,5 @@
 import './dock.css'
+import DockApp from './dockApp/dockapp.tsx'
 
 interface DockProps {
     openBrowserCallback: () => void
@@ -21,31 +22,15 @@ export default function Dock({openBrowserCallback, openContact, openTempo}: Dock
         </div>
         {/* apps*/}
         <div className="dock-apps-container">
-            <div className="app-button" onClick={openBrowser}>
-                <img className="app-icon" alt="a" src="/assets/app-icons/potato-browser.png"/>
-                {/*TODO: onhover, show app name and outline icon white or make it highlighted idk*/}
-            </div>
-            <div className="app-button" onClick={openContact}>
-                <img className="app-icon" alt="a" src="/assets/app-icons/mail.png"/>
-            </div>
-            <a className="app-button" href="https://linkedin.com/in/emilia-ma" target="_blank">
-                <img className="app-icon" alt="a" src="/assets/app-icons/linkedin.png"/>
-            </a>
-            <div className="app-button" onClick={openTempo}>
-                <img className="app-icon" alt="a" src="/assets/app-icons/Calendar.png"/>
-            </div>
-            <div className="app-button">
-                <img className="app-icon" alt="a" src="/assets/app-icons/uwucord.png"/>
-            </div>
-            <div className="app-button">
-                <img className="app-icon" alt="a" src="/assets/app-icons/map.png"/>
-            </div>
-            <div className="app-button">
-                <img className="app-icon app-icon-rotate" alt="a" src="/assets/app-icons/photos.png"/>
-            </div>
-            <div className="app-button">
-                <img className="app-icon" alt="a" src="/assets/app-icons/duosion.png"/>
-            </div>
+            <DockApp src="/assets/app-icons/potato-browser.png" onClick={openBrowser}/>
+            {/*TODO: onhover, show app name and outline icon white or make it highlighted idk*/}
+            <DockApp src="/assets/app-icons/mail.png" onClick={openContact}/>
+            <DockApp src="/assets/app-icons/linkedin.png" href="https://linkedin.com/in/emilia-ma"/>
+            <DockApp src="/assets/app-icons/Calendar.png" onClick={openTempo}/>
+            <DockApp src="/assets/app-icons/uwucord.png"/>
+            <DockApp src="/assets/app-icons/map.png"/>
+            <DockApp src="/assets/app-icons/photos.png" rotate/>
+            <DockApp src="/assets/app-icons/duosion.png"/>
         </div>
     </div>
 }

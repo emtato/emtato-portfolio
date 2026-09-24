@@ -54,34 +54,3 @@
         font: 13px "Emtato Pixel";
     }
 }
-
-/* ------------------------------------------------------------------------------------------- -v-
-                                        apps
------------------------------------------------------------------------------------------------ -o- */
-
-.dock-apps-container {
-    display: flex;
-    gap: 1.5vw;
-    position: relative;
-    top: 1px;
-    justify-content: center;
-    width: 100%;
-}
-
-.app-button {
-    height: var(--dock-height);
-    aspect-ratio: 1;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.app-icon {
-    image-rendering: pixelated;
-    height: var(--dock-height);
-    aspect-ratio: 1;
-}
-
-.app-icon-rotate {
-    transform: rotate(10deg);
-}

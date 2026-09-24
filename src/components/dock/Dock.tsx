@@ -44,7 +44,7 @@ export default function Dock({openBrowserCallback, openContact, openTempo}: Dock
             <DockApp src="/assets/app-icons/uwucord.png" hoverText="uwucord" onClick={copyDiscord}/>
             {copied && <span className="dock-app-copied">copied!</span>}
 
-            <DockApp src="/assets/app-icons/map.png" hoverText="map (coming soon)"/>
+            <DockApp src="/assets/app-icons/map.png" hoverText="map (coming soon)" mobileHide={true}/>
             <DockApp src="/assets/app-icons/photos.png" rotate={true} hoverText="photos (coming soon)"/>
             <DockApp src="/assets/app-icons/contacts.png" hoverText="contacts" onClick={openContact}/>
             <DockApp src="/assets/app-icons/music.png" hoverText="peak" href="https://www.youtube.com/watch?v=kgAVoL49H3M"/>

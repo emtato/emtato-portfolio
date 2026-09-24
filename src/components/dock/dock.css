@@ -46,11 +46,8 @@
 }
 
 @media (max-width: 910px) {
-    .mobile-tip {
-        display: block;
-        position: absolute;
-        bottom: 20%;
-        color: var(--color-warm-cream);
-        font: 13px "Emtato Pixel";
+
+    .dock {
+        width: 100vw;
     }
 }

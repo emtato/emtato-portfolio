@@ -5,6 +5,13 @@
     overflow: hidden;
 }
 
+.os-main-background {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 75% center;
+}
+
 /* loading */
 
 .loading-main {
@@ -75,24 +82,6 @@
 
 .mobile-tip {
     display: none;
-}
-
-/* ------------------------------------------------------------------------------------------- -v-
-
-                                        main contents
-
------------------------------------------------------------------------------------------------ -o- */
-
-.os-main {
-    width: 100vw;
-    height: 100vh;
-}
-
-.os-main-background {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    object-position: 75% center;
 }
 
 

@@ -44,3 +44,10 @@
     transform: translateX(-50%);
     color: var(--color-dark-brown);
 }
+
+.dock-app-copied {
+    position: absolute;
+    top: -70%;
+    color: var(--color-dark-brown);
+    font: 10px "Emtato Pixel";
+}

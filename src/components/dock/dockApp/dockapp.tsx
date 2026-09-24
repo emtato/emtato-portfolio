@@ -8,9 +8,13 @@ interface DockAppProps {
     rotate?: boolean
     mobileHide?: boolean
     hoverText: string
+    browserOpen: boolean
 }
 
-export default function DockApp({src, onClick, href, hoverText, rotate = false, mobileHide}: DockAppProps) {
+export default function DockApp({
+                                    src, onClick, href, hoverText,
+                                    rotate = false, mobileHide, browserOpen
+                                }: DockAppProps) {
     const icon = <img className={rotate ? "app-icon app-icon-rotate" : "app-icon"} alt="a" src={src}/>
     const [isHovered, setIsHovered] = useState(false)
 
@@ -25,6 +29,6 @@ export default function DockApp({src, onClick, href, hoverText, rotate = false, 
         {!href &&
             <div className="app-button" onClick={onClick}
             >{icon}</div>}
-        {isHovered && <div className="app-icon-hoverText">{hoverText}</div>}
+        {isHovered && <div className={`app-icon-hoverText browserOpen-${browserOpen}`}>{hoverText}</div>}
     </div>
 }

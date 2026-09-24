@@ -45,6 +45,10 @@
     color: var(--color-dark-brown);
 }
 
+.browserOpen-false { /* browser closed -> dark background -> light tet colour */
+    color: var(--color-warm-cream);
+}
+
 .dock-app-copied {
     position: absolute;
     top: -70%;

@@ -81,7 +81,7 @@ export default function App() {
                 appSaysOpen={dockOpenTempo}
                 onTabChange={setSelectedActiveTab}
             />}
-            <Dock openBrowserCallback={openBrowser} openContact={openContact} openTempo={openTempoCard}/>
+            <Dock openBrowserCallback={openBrowser} openContact={openContact} openTempo={openTempoCard} browserOpen={browserOpen}/>
             <Desktop openBrowserCallback={openBrowser}/>
         </div>
     </>

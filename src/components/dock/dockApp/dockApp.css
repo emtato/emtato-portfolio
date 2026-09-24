@@ -62,4 +62,7 @@
     .dock-apps-container {
         gap: 1vw;
     }
+    .mobileHide-true{
+        display: none
+    }
 }

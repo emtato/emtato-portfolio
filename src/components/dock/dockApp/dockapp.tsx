@@ -18,10 +18,7 @@ export default function DockApp({
     const icon = <img className={rotate ? "app-icon app-icon-rotate" : "app-icon"} alt="a" src={src}/>
     const [isHovered, setIsHovered] = useState(false)
 
-    if (mobileHide) {
-        return <></>
-    }
-    return <div className="app-wrapper" onMouseEnter={() => setIsHovered(true)}
+    return <div className={`app-wrapper mobileHide-${mobileHide}`} onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}>
         {href &&
             <a className="app-button" href={href} target="_blank"

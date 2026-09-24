@@ -45,15 +45,16 @@
     color: var(--color-dark-brown);
 }
 
-.browserOpen-false { /* browser closed -> dark background -> light tet colour */
-    color: var(--color-warm-cream);
-}
-
 .dock-app-copied {
     position: absolute;
     top: -70%;
     color: var(--color-dark-brown);
     font: 10px "Emtato Pixel";
+    transform: translateX(-50%);
+}
+
+.browserOpen-false { /* browser closed -> dark background -> light tet colour */
+    color: var(--color-warm-cream);
 }
 
 /* mobile: hide some apps since no space*/
@@ -62,7 +63,8 @@
     .dock-apps-container {
         gap: 1vw;
     }
-    .mobileHide-true{
+
+    .mobileHide-true {
         display: none
     }
 }

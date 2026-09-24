@@ -1,4 +1,5 @@
 import './dock.css'
+import './dockApp/dockApp.css'
 import DockApp from './dockApp/dockapp.tsx'
 import {useEffect, useState} from "react";
 
@@ -46,7 +47,7 @@ export default function Dock({openBrowserCallback, openContact, openTempo, brows
                      browserOpen={browserOpen}/>
             <DockApp src="/assets/app-icons/uwucord.png" hoverText="uwucord" onClick={copyDiscord}
                      browserOpen={browserOpen}/>
-            {copied && <span className="dock-app-copied">copied!</span>}
+            {copied && <span className={`dock-app-copied browserOpen-${browserOpen}`}>copied!</span>}
 
             <DockApp src="/assets/app-icons/map.png" hoverText="map (coming soon)" mobileHide={true}
                      browserOpen={browserOpen}/>

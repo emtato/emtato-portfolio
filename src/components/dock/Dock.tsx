@@ -41,7 +41,10 @@ export default function Dock({openBrowserCallback, openContact, openTempo}: Dock
                 <img className="app-icon" alt="a" src="/assets/app-icons/map.png"/>
             </div>
             <div className="app-button">
-                <img className="app-icon" alt="a" src="/assets/app-icons/photos.png"/>
+                <img className="app-icon app-icon-rotate" alt="a" src="/assets/app-icons/photos.png"/>
+            </div>
+            <div className="app-button">
+                <img className="app-icon" alt="a" src="/assets/app-icons/duosion.png"/>
             </div>
         </div>
     </div>

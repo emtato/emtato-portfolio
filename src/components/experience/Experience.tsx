@@ -37,15 +37,16 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                                 season="fall"
                                 bullets={[
                                     "Queried a Spring Boot Actuator endpoint for configuration resolved from active profiles and ran transaction reversal only for confirmed real downstream calls, skipping mocked and unknown cases.",
-                                    "Replaced Bruno’s old OAuth setup with a Python token script, fixing authentication for four test workflows."
+                                    "Replaced Bruno’s old OAuth setup with a Python token script, fixing authentication for four test workflows.",
+                                    "Created fault-injection profiles and JUnit tests across successive Order Orchestrator stages: from refund through MTO/SO status updates to financial notification, verifying business error handling, system retries, status-update failures, and recovery."
                                 ]}
                                 mini={false}
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-7percent segment-custom-mobile-long season-fall"/>
-                        <div className="timeline-segment segment-7percent season-summer"/>
-                        <div className="timeline-segment segment-7percent season-spring"/>
+                        <div className="timeline-segment segment-medium-long season-fall"/>
+                        <div className="timeline-segment segment-medium-long season-summer"/>
+                        <div className="timeline-segment segment-medium-long season-spring"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-spring2026 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/spring.png"/>
@@ -122,7 +123,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-medium segment-custom-mobile-long season-fall"/>
+                        <div className="timeline-segment segment-medium segment-custom-mobile-medium season-fall"/>
                         <div className="timeline-segment season-summer"/>
                         <div className="timeline-segment season-spring"/>
                         <div className="timeline-insertion-point">

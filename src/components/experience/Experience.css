@@ -138,7 +138,7 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    --timeline-length: 200;
+    --timeline-length: 210;
     height: calc(var(--timeline-length) * var(--timeline-unit));
 }
 
@@ -191,11 +191,7 @@
 
 
 .segment-medium-long {
-    height: 6%;
-}
-
-.segment-7percent {
-    height: 7.2%;
+    height: 9%;
 }
 
 .segment-long {
@@ -1153,7 +1149,7 @@
         display: flex;
         flex-direction: column;
         margin-left: auto;
-        --timeline-length: 188;
+        --timeline-length: 190;
         height: calc(var(--timeline-length) * var(--timeline-unit));
     }
 
@@ -1166,12 +1162,12 @@
         height: 4%;
     }
 
-    .segment-custom-mobile-long {
+    .segment-custom-mobile-medium {
         height: 6%
     }
 
-    .segment-7percent {
-        height: 8%;
+    .segment-medium-long {
+        height: 10%;
     }
 
     /* timeline points of interest */
@@ -1209,7 +1205,7 @@
 
     .TLA-fall2025 { /* moved to fall2026 custom for mobile only*/
         left: 1cqw;
-        top: -56.32cqw;
+        top: -55.32cqw;
         transform: rotate(-10deg) scale(130%);
     }
 

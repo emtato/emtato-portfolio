@@ -16,7 +16,7 @@ export default function Desktop({openBrowserCallback}: DesktopProps) {
             </div>
             <div className="app-wrapper">
                 <a className="dsk-app-button" href="https://tempo.ems.lol" target="_blank">
-                    <img className="dsk-app-icon" alt="a" src="/assets/app-icons/Calendar.png"/>
+                    <img className="dsk-app-icon" alt="a" src="/assets/app-icons/calendar.png"/>
                     <div className="dsk-app-label">tempo</div>
                 </a>
             </div>

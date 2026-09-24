@@ -11,6 +11,10 @@
     width: 100%;
 }
 
+.app-wrapper {
+    position: relative;
+}
+
 .app-button {
     height: var(--dock-height);
     aspect-ratio: 1;
@@ -27,4 +31,16 @@
 
 .app-icon-rotate {
     transform: rotate(10deg);
+}
+
+.app-icon-hoverText {
+    position: absolute;
+    top: -40%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    font: 10px "Emtato Pixel";
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-dark-brown);
 }

@@ -22,15 +22,15 @@ export default function Dock({openBrowserCallback, openContact, openTempo}: Dock
         </div>
         {/* apps*/}
         <div className="dock-apps-container">
-            <DockApp src="/assets/app-icons/potato-browser.png" onClick={openBrowser}/>
+            <DockApp src="/assets/app-icons/potato-browser.png" onClick={openBrowser} hoverText="potato browser"/>
             {/*TODO: onhover, show app name and outline icon white or make it highlighted idk*/}
-            <DockApp src="/assets/app-icons/mail.png" onClick={openContact}/>
-            <DockApp src="/assets/app-icons/linkedin.png" href="https://linkedin.com/in/emilia-ma"/>
-            <DockApp src="/assets/app-icons/Calendar.png" onClick={openTempo}/>
-            <DockApp src="/assets/app-icons/uwucord.png"/>
-            <DockApp src="/assets/app-icons/map.png"/>
-            <DockApp src="/assets/app-icons/photos.png" rotate/>
-            <DockApp src="/assets/app-icons/duosion.png"/>
+            <DockApp src="/assets/app-icons/mail.png" onClick={openContact} hoverText="contact me"/>
+            <DockApp src="/assets/app-icons/linkedin.png" href="https://linkedin.com/in/emilia-ma" hoverText="linkedin"/>
+            <DockApp src="/assets/app-icons/calendar.png" onClick={openTempo} hoverText="tempo"/>
+            <DockApp src="/assets/app-icons/uwucord.png" hoverText="uwucord"/>
+            <DockApp src="/assets/app-icons/map.png" hoverText="map"/>
+            <DockApp src="/assets/app-icons/photos.png" rotate={true} hoverText="photos"/>
+            <DockApp src="/assets/app-icons/contacts.png" hoverText="contacts"/>
         </div>
     </div>
 }

@@ -34,6 +34,15 @@ export default function Dock({openBrowserCallback, openContact, openTempo}: Dock
             <div className="app-button" onClick={openTempo}>
                 <img className="app-icon" alt="a" src="/assets/app-icons/Calendar.png"/>
             </div>
+            <div className="app-button">
+                <img className="app-icon" alt="a" src="/assets/app-icons/uwucord.png"/>
+            </div>
+            <div className="app-button">
+                <img className="app-icon" alt="a" src="/assets/app-icons/map.png"/>
+            </div>
+            <div className="app-button">
+                <img className="app-icon" alt="a" src="/assets/app-icons/photos.png"/>
+            </div>
         </div>
     </div>
 }

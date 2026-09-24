@@ -61,7 +61,7 @@
 
 .dock-apps-container {
     display: flex;
-    gap: 1vw;
+    gap: 1.5vw;
     position: relative;
     top: 1px;
     left: 2vw;

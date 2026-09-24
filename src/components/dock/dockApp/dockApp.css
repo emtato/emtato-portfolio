@@ -58,7 +58,7 @@
 
 /* mobile: hide some apps since no space*/
 
-@media (max-width: 910px) {
+@media (max-width: 510px) {
     .dock-apps-container {
         gap: 1vw;
     }

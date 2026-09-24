@@ -1105,12 +1105,12 @@
         overflow-y: auto;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-        padding: 5px;
-        --timeline-unit: 2.75cqw;
+        padding: 3px;
+        --timeline-unit: 2.5cqw;
     }
 
     .section-header {
-        padding: 25px 23px 18px;
+        padding: 20px 20px 18px;
     }
 
     .section-image {
@@ -1123,7 +1123,6 @@
     }
 
     .section-title {
-
         font: 700 calc(3.2 * var(--timeline-unit)) "Arvo";
 
     }
@@ -1134,7 +1133,7 @@
     .work-experience-container,
     .projects-container {
         overflow-y: scroll;
-        height: 60vh;
+        height: 59vh;
     }
 
     .work-experience-timeline,
@@ -1154,7 +1153,7 @@
         display: flex;
         flex-direction: column;
         margin-left: auto;
-        --timeline-length: 186;
+        --timeline-length: 188;
         height: calc(var(--timeline-length) * var(--timeline-unit));
     }
 
@@ -1210,7 +1209,7 @@
 
     .TLA-fall2025 { /* moved to fall2026 custom for mobile only*/
         left: 1cqw;
-        top: -61.32cqw;
+        top: -56.32cqw;
         transform: rotate(-10deg) scale(130%);
     }
 

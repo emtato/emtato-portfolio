@@ -51,3 +51,11 @@
     color: var(--color-dark-brown);
     font: 10px "Emtato Pixel";
 }
+
+/* mobile: hide some apps since no space*/
+
+@media (max-width: 910px) {
+    .dock-apps-container {
+        gap: 1vw;
+    }
+}

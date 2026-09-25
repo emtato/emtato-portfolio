@@ -374,7 +374,7 @@
                                     mobile browser window
 ----------------------------------------------------------------------------------------------- -o- */
 
-@media (max-width: 910px) {
+@media (max-width: 600px) {
     .browser-window {
         width: 95vw;
         left: 5vw;

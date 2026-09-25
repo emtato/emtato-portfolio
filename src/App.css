@@ -84,4 +84,13 @@
     display: none;
 }
 
-
+@media (max-width: 800px) {
+    .mobile-tip {
+        font: 13px "Emtato Pixel";
+        color: var(--color-warm-cream);
+        position: absolute;
+        z-index: 15;
+        bottom: 20%;
+        display: block;
+    }
+}

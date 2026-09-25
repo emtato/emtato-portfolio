@@ -376,8 +376,8 @@
 
 @media (max-width: 600px) {
     .browser-window {
-        width: 95vw;
-        left: 5vw;
+        width: 96vw;
+        left: 4vw;
         top: 30px;
         height: 84vh;
     }
@@ -399,7 +399,7 @@
 
     .browser-tab-button {
         position: relative;
-        width: 81.43px;
+        width: 20vw;
         height: 25.71px;
         background-color: transparent;
         border: none;
@@ -410,7 +410,7 @@
 
     .browser-tab-label {
         color: var(--colour-peach);
-        font: 8.57px "Emtato Pixel";
+        font: 2vw "Emtato Pixel";
         z-index: 17;
         position: relative;
         top: 6.86px;
@@ -419,7 +419,7 @@
     }
 
     .browser-tab-img {
-        width: 81.43px;
+        width: 20vw;
         height: 42.86px;
         top: -2.57px;
         position: absolute;

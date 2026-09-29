@@ -203,6 +203,11 @@ export default function AboutMe({nextTab}: AboutMeProps) {
                             i love cats and 2d men &lt;3
                         </div>
                         <img className="page2-signature" alt="" src="/assets/browser/content/about-me/Signature.png"/>
+                        <button className="end-sticky-note" onClick={nextTab}>
+                            <img className='end-sticky-note-img' alt=""
+                                 src="/assets/browser/content/about-me/sticky-note.png"/>
+                            <div className="end-sticky-note-text">View my experiences! <br/> -&gt;</div>
+                        </button>
                     </div>
                 </div>
             </div>

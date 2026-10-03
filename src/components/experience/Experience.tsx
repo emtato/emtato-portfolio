@@ -338,6 +338,20 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             detailedTimeInfo="January - February 2026"
                         />
                         <ProjectCard
+                            title="Cookkeeping"
+                            shortDesc="A recipe, meal-planning, and grocery app designed to bridge the gap between planning and shopping. Very early stages, in progress!"
+                            stack={["React Native", "Expo", "TypeScript", "React Native Web", "Java", "Spring Boot", "PostgreSQL", "AWS"]}
+                            stackHeading="Current + planned stack"
+                            shortHighlight=""
+                            highlight="Very early stages · In progress!"
+                            description="Cookkeeping is a recipe, meal-planning, and grocery app in its early stages. The planned core flow connects saved recipes and a meal schedule to one shopping list, combining shared ingredients and adjusting quantities for servings."
+                            myContribution={[]}
+                            expandedImgs={[]}
+                            timeInfo="2026 - Present"
+                            detailedTimeInfo="October 2026 - Present"
+                            github="https://github.com/emtato/cookkeeping"
+                        />
+                        <ProjectCard
                             title="Munchables"
                             shortDesc="Java Swing social platform for sharing recipes, joining food communities, and discovering restaurants, structured with Clean Architecture and JUnit tests."
                             stack={["Java", "Swing", "Clean Architecture", "JSON", "Spoonacular API", "HTML/CSS", "JUnit"]}

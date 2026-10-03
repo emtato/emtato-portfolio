@@ -9,12 +9,13 @@ interface ProjectProps {
     shortDesc: string
     description: string
     myContribution: string[]
-    cardImg: string
+    cardImg?: string
     expandedImgs: string[]
     timeInfo: string
     detailedTimeInfo: string
     projectLink?: string
     github: string
+    stackHeading?: string
     parentSaysOpen?: boolean
 }
 
@@ -22,12 +23,12 @@ interface ProjectProps {
 export default function ProjectCard({
                                         title, shortDesc, shortHighlight, stack, highlight, description, cardImg,
                                         expandedImgs, timeInfo, projectLink, github, detailedTimeInfo, myContribution,
-                                        parentSaysOpen
+                                        stackHeading = "I used..", parentSaysOpen
                                     }: ProjectProps) {
     const [isOpen, setisOpen] = useState(false)
     const portalTarget = document.querySelector(".browser-window-page")
     const [activeImageIndex, setActiveImageIndex] = useState(0)
-    const projectImages = [cardImg].concat(expandedImgs)
+    const projectImages = [cardImg, ...expandedImgs].filter((image): image is string => Boolean(image))
     const [imageFit, setImageFit] = useState<"stretch" | "contain">("stretch");
     const youtubeVideoLinks = ["https://www.youtube.com/embed/r2qMN9JFBvw?si=WOh8RaFYPKvXcnd4", "https://www.youtube.com/embed/FYLlxZZtz4Y?si=xhGk72zlQ73a6W2s", "https://www.youtube.com/embed/EZ3oZ-FG4FA?si=HOP-3OMz8RQ4QA1J"]
 
@@ -95,7 +96,8 @@ export default function ProjectCard({
             </div>}
 
             <div className="project-card-image-wrapper">
-                {cardImg && <img className="project-card-image" alt='a' src={cardImg}/>}
+                {cardImg ? <img className="project-card-image" alt='a' src={cardImg}/>
+                    : <div className="project-card-image-placeholder">Preview in progress</div>}
             </div>
             <div className="project-card-text-wrapper">
                 <div className="project-card-heading">
@@ -159,7 +161,7 @@ export default function ProjectCard({
                     </header>
 
                     <div className="opened-project-body">
-                        <div className="opened-project-body-row1">
+                        {myContribution.length > 0 && <div className="opened-project-body-row1">
                             <section className="opened-project-myContribution-section">
                                 <div className="opened-project-myContribution-title">Engineering highlights</div>
                                 <div
@@ -169,7 +171,7 @@ export default function ProjectCard({
                                     </ul>
                                 </div>
                             </section>
-                        </div>
+                        </div>}
                         <div className="opened-project-body-row2">
                             <div className="opened-project-gallery-column">
                                 {projectImages.length > 0 && <>
@@ -203,10 +205,13 @@ export default function ProjectCard({
                                     </span>
                                     </div>
                                 </>}
+                                {projectImages.length === 0 && <div className="opened-project-gallery">
+                                    <div className="project-card-image-placeholder">Preview in progress</div>
+                                </div>}
                             </div>
                             {stack.length > 0 &&
                                 <section className="opened-project-stack-section">
-                                    <h3 className="opened-project-section-label">I used..</h3>
+                                    <h3 className="opened-project-section-label">{stackHeading}</h3>
                                     <div className="opened-project-stack">
                                         {stack.map((technology) =>
                                             <span className="opened-project-stack-tag"

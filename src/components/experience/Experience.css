@@ -654,6 +654,17 @@
     object-fit: cover; /*crop*/
 }
 
+.project-card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: repeating-linear-gradient(0deg, #f7f1ef 0 23px, #efe3e2 24px);
+    color: var(--color-deep-plum);
+    font: 400 clamp(13px, 1.6vw, 22px) "Emtato Pixel";
+    text-transform: uppercase;
+}
+
 
 .project-card-text-wrapper {
     display: flex;
@@ -1211,7 +1222,7 @@
 
     .TLA-winter2026 {
         left: 88cqw;
-        top: 7.4cqw;
+        top: 18cqw;
         transform: rotate(15deg) scale(110%);
     }
 
@@ -1280,7 +1291,7 @@
     }
 
     .project-column:last-child .project-card:nth-child(2) {
-        order: 4; /* Munchables */
+        order: 4; /* Cookkeeping */
     }
 
     .project-column:first-child .project-card:nth-child(3) {
@@ -1288,11 +1299,15 @@
     }
 
     .project-column:last-child .project-card:nth-child(3) {
-        order: 6; /* Connect 4 */
+        order: 6; /* Munchables */
     }
 
     .project-column:first-child .project-card:nth-child(4) {
         order: 7; /* Columns */
+    }
+
+    .project-column:last-child .project-card:nth-child(4) {
+        order: 8; /* Connect 4 */
     }
 
     /* ———————————————————————————————————— opened project card  ——————————————————————————————————————————— */

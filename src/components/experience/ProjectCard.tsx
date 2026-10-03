@@ -96,8 +96,7 @@ export default function ProjectCard({
             </div>}
 
             <div className="project-card-image-wrapper">
-                {cardImg ? <img className="project-card-image" alt='a' src={cardImg}/>
-                    : <div className="project-card-image-placeholder">Preview in progress</div>}
+                {cardImg && <img className="project-card-image" alt='a' src={cardImg}/>}
             </div>
             <div className="project-card-text-wrapper">
                 <div className="project-card-heading">

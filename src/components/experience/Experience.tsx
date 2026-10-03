@@ -258,7 +258,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                         <ProjectCard
                             title="Tempo"
                             shortDesc="Full-stack calendar designed to make event creation faster through flexible date/time parsing and custom date/time controls."
-                            stack={["React", "TypeScript", "FullCalendar", "Node.js", "Express", "MongoDB", "Better Auth", "Railway"]}
+                            stack={["Node.js", "Express", "MongoDB", "TypeScript", "React", "FullCalendar", "Better Auth", "Railway"]}
                             shortHighlight="solo fullstack"
                             highlight="Independently designed, developed, and deployed as a full-stack product."
                             description="Tired of how many steps it took to schedule simple events, I built Tempo around the small conveniences I wished my calendar had. It keeps calendar views uncluttered while making everyday tasks faster and more intuitive. I plan to expand Tempo with an AI assistant to tackle schedule planning and more flexible recurring events."
@@ -325,7 +325,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                         <ProjectCard
                             title="GirlMath"
                             shortDesc="AI-powered journaling app helping girls in STEM build confidence through learning check-ins, trend visualizations, and personalized guidance."
-                            stack={["Python", "FastAPI", "React Native", "Expo", "TypeScript", "MongoDB", "DigitalOcean", "Gemini API"]}
+                            stack={["Python", "FastAPI", "MongoDB", "Gemini API", "React Native", "TypeScript", "Expo", "DigitalOcean"]}
                             shortHighlight="36h hackathon"
                             highlight="Led backend development in a 36-hour hackathon."
                             description="Because coding once felt complex and unreachable to me, I proposed GirlMath to help younger girls build STEM confidence before self-doubt becomes ingrained. The app combines quick learning check-ins, journals, progress visualizations, and confidence focused AI guidance; supporting, rather than replacing, teachers, mentors, and parents."
@@ -340,13 +340,14 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                         <ProjectCard
                             title="Cookkeeping"
                             shortDesc="A recipe, meal-planning, and grocery app designed to bridge the gap between planning and shopping. Very early stages, in progress!"
-                            stack={["React Native", "Expo", "TypeScript", "React Native Web", "Java", "Spring Boot", "PostgreSQL", "AWS"]}
+                            stack={["Java", "Spring Boot", "PostgreSQL", "React Native", "TypeScript", "Expo", "React Native Web", "AWS"]}
                             stackHeading="Current + planned stack"
                             shortHighlight=""
+                            cardImg={`${mediaFilePath}cookkeeping/img1.webp`}
                             highlight="Very early stages · In progress!"
                             description="Cookkeeping is a recipe, meal-planning, and grocery app in its early stages. The planned core flow connects saved recipes and a meal schedule to one shopping list, combining shared ingredients and adjusting quantities for servings."
                             myContribution={[]}
-                            expandedImgs={[]}
+                            expandedImgs={[`${mediaFilePath}cookkeeping/img2.webp`]}
                             timeInfo="2026 - Present"
                             detailedTimeInfo="October 2026 - Present"
                             github="https://github.com/emtato/cookkeeping"

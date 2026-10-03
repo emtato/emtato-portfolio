@@ -27,18 +27,39 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             <img className="timeline-art TLA-fall2026" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/fall-1.png"/>
                             <TimelineCard
+                                title="AI Trainer — Software Engineering"
+                                organization="DataAnnotation"
+                                context="Part-time independent contractor · Project details confidential"
+                                achievement="Evaluate coding agents on real software engineering tasks"
+                                description="Coding-focused AI training through agentic software tasks and technical evaluation of model-generated solutions."
+                                bullets={[
+                                    "Run agentic coding sessions on bug fixes, API extensions, and feature work to probe model capabilities.",
+                                    "Review generated code against production standards, checking correctness, edge cases, unsafe changes, and unreliable tests.",
+                                    "Document implementation failures and assess the model’s reasoning to provide actionable evaluation feedback."
+                                ]}
+                                tags={["Software engineering", "Debugging", "Code review", "AI evaluation"]}
+                                dateRange="october 2026 - Present"
+                                season="fall"
+                                mini={false}
+                            />
+                            <div className="timeline-marker season-fall"/>
+                        </div>
+                        <div className="timeline-segment segment-xxl season-fall"/>
+                        <div className="timeline-insertion-point">
+                            <img className="TLA-fall2026-2 timeline-art" alt="a"
+                                 src="/assets/browser/content/experience/prof-experience/fall-2.png"/>
+                            <TimelineCard
                                 title="Backend Developer / Junior Technical Analyst"
                                 organization="Ontario Public Service"
                                 context="Digital Solutions Branch · 8-month internship"
-                                achievement="Restored Bruno backend test suite from 19 failing scripts to 0"
                                 description="Improving the reliability of the Java/Spring backend supporting Ontario’s driver and vehicle services through backend workflow testing and failure-path debugging."
                                 tags={["Java", "Spring Boot", "Python", "Bruno", "Backend testing"]}
                                 dateRange="Sept 2026 - Present"
                                 season="fall"
                                 bullets={[
-                                    "Queried a Spring Boot Actuator endpoint for configuration resolved from active profiles and ran transaction reversal only for confirmed real downstream calls, skipping mocked and unknown cases.",
-                                    "Replaced Bruno’s old OAuth setup with a Python token script, fixing authentication for four test workflows.",
-                                    "Created fault-injection profiles and JUnit tests across successive Order Orchestrator stages: from refund through MTO/SO status updates to financial notification, verifying business error handling, system retries, status-update failures, and recovery."
+                                    "Restored the order orchestrator’s Bruno backend test suite from 19 failing scripts to 0 across order creation, driver licence, cross domain, and payment workflows.",
+                                    "Implemented test-runner logic that queries a Spring Boot Actuator endpoint for configuration resolved from active profiles and runs transaction reversal only for confirmed real downstream calls, skipping mocked and unknown cases to prevent false failures from mock-generated transaction IDs.",
+                                    "Created fault-injection profiles and JUnit tests across successive stages from refund to financial notification, verifying business error handling, system retries, status-update failures, and recovery."
                                 ]}
                                 mini={false}
                             />
@@ -51,7 +72,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             <img className="TLA-spring2026 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/spring.png"/>
                         </div>
-                        <div className="timeline-segment segment-medium season-winter"/>
+                        <div className="timeline-segment segment-small segment-custom-mobile season-winter"/>
                         <div className="timeline-insertion-point">
                             <img className="timeline-art TLA-winter2026" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/winter.png"/>
@@ -72,14 +93,12 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             />
                             <div className="timeline-marker season-winter"/>
                         </div>
-                        <div className="timeline-segment segment-medium season-winter"/>
+                        <div className="timeline-segment segment-small season-winter"/>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2026</div>
                         <div className="timeline-segment segment-medium season-winter"/>
-                        <div className="timeline-segment segment-medium season-fall"/>
+                        <div className="timeline-segment segment-medium segment-custom-mobile-medium season-fall"/>
                         <div className="timeline-insertion-point">
-                            <img className="TLA-fall2025 timeline-art" alt="a"
-                                 src="/assets/browser/content/experience/prof-experience/fall-2.png"/>
                         </div>
                         <div className="timeline-segment segment-medium season-summer"/>
                         <div className="timeline-insertion-point">

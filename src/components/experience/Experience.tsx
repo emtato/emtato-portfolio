@@ -30,21 +30,22 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                                 title="AI Trainer — Software Engineering"
                                 organization="DataAnnotation"
                                 context="Part-time independent contractor · Project details confidential"
-                                achievement="Evaluate coding agents on real software engineering tasks"
-                                description="Coding-focused AI training through agentic software tasks and technical evaluation of model-generated solutions."
+                                achievement="Design and evaluate challenging coding-agent tasks"
+                                description="Creating realistic software engineering evaluations and assessing whether coding agents can reason through them and deliver correct, well tested solutions."
                                 bullets={[
-                                    "Run agentic coding sessions on bug fixes, API extensions, and feature work to probe model capabilities.",
-                                    "Review generated code against production standards, checking correctness, edge cases, unsafe changes, and unreliable tests.",
-                                    "Document implementation failures and assess the model’s reasoning to provide actionable evaluation feedback."
+                                    "Design bug fix, API extension, and feature development tasks that expose coding agent failure modes.",
+                                    "Develop reference implementations and automated test suites to establish expected behavior and evaluate agent-generated solutions.",
+                                    "Review generated code against task requirements, identifying subtle logic errors, flawed implementation decisions, missed edge cases, and unsafe changes.",
+                                    "Assess agent reasoning and test reliability, then document failures and provide actionable evaluation feedback."
                                 ]}
-                                tags={["Software engineering", "Debugging", "Code review", "AI evaluation"]}
+                                tags={["Software engineering", "Debugging", "Code review"]}
                                 dateRange="october 2026 - Present"
                                 season="fall"
                                 mini={false}
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-xxl season-fall"/>
+                        <div className="timeline-segment segment-xxxl season-fall"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-fall2026-2 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/fall-2.png"/>
@@ -65,9 +66,23 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment segment-medium-long season-fall"/>
-                        <div className="timeline-segment segment-medium-long season-summer"/>
-                        <div className="timeline-segment segment-medium-long season-spring"/>
+                        <div className="timeline-segment segment-xxl season-fall"/>
+                        <div className="timeline-segment segment-small season-summer segment-custom-mobile"/>
+                        <div className="timeline-insertion-point">
+                            <div className="timeline-marker season-summer"/>
+                            <TimelineCard
+                                title="Dean’s List Scholar"
+                                organization="University of Toronto"
+                                context="Academic distinction"
+                                achievement="3.75+ cumulative GPA · 3.5 required"
+                                description="Earned after completing my tenth U of T credit."
+                                dateRange="Summer 2026"
+                                season="summer"
+                                mini={true}
+                            />
+                        </div>
+                        <div className="timeline-segment segment-small season-summer"/>
+                        <div className="timeline-segment segment-slightly-bigger-than-medium season-spring"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-spring2026 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/spring.png"/>

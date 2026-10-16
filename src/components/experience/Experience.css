@@ -154,7 +154,6 @@
     width: 1.2%;
     margin-left: auto;
     margin-right: 10%;
-    height: 8%;
     border-radius: 9999px;
     margin-bottom: calc(0.5 * var(--timeline-unit));
 }
@@ -177,43 +176,80 @@
     background: #638eff;
 }
 
-.segment-xs {
+.seg-length-1 {
     height: 1%;
 }
 
-.segment-small {
+.seg-length-2 {
     height: 2%;
 }
 
-.segment-medium {
+.seg-length-4 {
     height: 4%;
 }
-.segment-slightly-bigger-than-medium {
+
+.seg-length-5 {
     height: 5%;
 }
 
-.segment-medium-long {
+.seg-length-6 {
+    height: 6%;
+}
+
+.seg-length-7 {
+    height: 7%;
+}
+
+.seg-length-8 {
+    height: 8%;
+}
+
+.seg-length-9 {
     height: 9%;
 }
 
-.segment-long {
+.seg-length-10 {
     height: 10%;
 }
 
-.segment-xl {
+.seg-length-12 {
+    height: 12%;
+}
+
+.seg-length-14 {
+    height: 14%;
+}
+
+.seg-length-16 {
     height: 16%;
 }
 
-.segment-xxl {
+.seg-length-17 {
+    height: 17%;
+}
+
+.seg-length-19 {
+    height: 19%;
+}
+
+.seg-length-21 {
+    height: 21%;
+}
+
+.seg-length-23 {
+    height: 23%;
+}
+
+.seg-length-25 {
     height: 25%;
 }
-.segment-xxxl {
+
+.seg-length-27 {
     height: 27%;
 }
 
 /* Condenses two full years into one continuous seasonal ribbon */
 .segment-condensed-years {
-    height: 6%;
     background: repeating-linear-gradient(
             to bottom,
             #e06f3a 0 25%,
@@ -1097,6 +1133,7 @@
     line-height: 1.2;
     text-align: center;
 }
+
 /* ————————————————————————————————————mobile rules —————————————————————————————————————————————————*/
 
 @media (max-width: 710px) {
@@ -1177,14 +1214,15 @@
         height: 6%
     }
 
-    .segment-medium-long {
+    .seg-length-9 { /* not exact but we will use the css class rules that apply to normal width*/
         height: 10%;
     }
-    .segment-xxl{
+
+    .seg-length-25 {
         height: 28%;
     }
 
-    .segment-xxxl {
+    .seg-length-27 {
         height: 32%;
     }
 

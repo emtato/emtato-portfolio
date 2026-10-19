@@ -181,14 +181,14 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             <div className="timeline-marker season-spring"/>
                         </div>
                         <div className="timeline-segment seg-length-4 season-spring"/>
-                        <div className="timeline-segment seg-length-2 season-winter"/>
+                        <div className="timeline-segment seg-length-1-5 season-winter"/>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2024</div>
-                        <div className="timeline-segment seg-length-2 season-winter"/>
-                        <div className="timeline-segment seg-length-2 season-fall"/>
-                        <div className="timeline-segment seg-length-2 season-summer"/>
-                        <div className="timeline-segment seg-length-2 season-spring"/>
-                        <div className="timeline-segment seg-length-1 season-winter"/>
+                        <div className="timeline-segment seg-length-1-5 season-winter"/>
+                        <div className="timeline-segment seg-length-1-5 season-fall"/>
+                        <div className="timeline-segment seg-length-1-5 season-summer"/>
+                        <div className="timeline-segment seg-length-1-5 season-spring"/>
+                        <div className="timeline-segment seg-length-1-5 season-winter"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-winter2023 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/winter-2.png"/>
@@ -257,7 +257,8 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                     </div>
                 </div>
             </section>
-            {/*projects*/}
+
+            {/*—————————————————projects————————————————————*/}
 
             <section className="projects-container">
                 <header className="section-header">

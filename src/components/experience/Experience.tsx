@@ -45,7 +45,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment seg-length-27 season-fall"/>
+                        <div className="timeline-segment seg-length-26-5 season-fall"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-fall2026-2 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/fall-2.png"/>
@@ -94,7 +94,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             <TimelineCard
                                 title="GirlMath"
                                 organization="ElleHacks · York University"
-                                context="36-hour hackathon · 4-person team"
+                                context="My first hackathon · 36 hours · 4-person team"
                                 achievement="Led backend development"
                                 description="Built an AI-powered journaling app that helps girls in STEM track confidence, motivation, and learning patterns."
                                 tags={["Python", "FastAPI", "Gemini API", "MongoDB"]}
@@ -112,7 +112,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2026</div>
                         <div className="timeline-segment seg-length-4 season-winter"/>
-                        <div className="timeline-segment seg-length-4 segment-custom-mobile-medium season-fall"/>
+                        <div className="timeline-segment seg-length-4-5 segment-custom-mobile-medium season-fall"/>
                         <div className="timeline-insertion-point">
                         </div>
                         <div className="timeline-segment seg-length-4 season-summer"/>
@@ -131,9 +131,9 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             />
                             <div className="timeline-marker season-summer"/>
                         </div>
-                        <div className="timeline-segment seg-length-2 season-summer"/>
+                        <div className="timeline-segment seg-length-1 season-summer"/>
                         <div className="timeline-segment seg-length-2 season-spring"/>
-                        <div className="timeline-segment seg-length-2 season-winter"/>
+                        <div className="timeline-segment seg-length-1 season-winter"/>
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2025</div>
                         <div className="timeline-segment seg-length-2 season-winter"/>
@@ -159,7 +159,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                         </div>
                         <div className="timeline-segment seg-length-4 segment-custom-mobile-medium season-fall"/>
                         <div className="timeline-segment seg-length-8 season-summer"/>
-                        <div className="timeline-segment seg-length-8 season-spring"/>
+                        <div className="timeline-segment seg-length-7 season-spring"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-spring2024 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/spring.png"/>
@@ -196,7 +196,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2023</div>
                         <div className="timeline-segment seg-length-1 season-winter"/>
-                        <div className="timeline-segment seg-length-2 season-fall"/>
+                        <div className="timeline-segment seg-length-1 season-fall"/>
 
                         <div className="timeline-insertion-point">
                             <div className="timeline-card-wrapper timeline-card-wrapper-mini">

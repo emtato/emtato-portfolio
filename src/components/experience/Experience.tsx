@@ -131,7 +131,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             />
                             <div className="timeline-marker season-summer"/>
                         </div>
-                        <div className="timeline-segment seg-length-1 season-summer"/>
+                        <div className="timeline-segment seg-length-1 segment-custom-mobile-small season-summer"/>
                         <div className="timeline-segment seg-length-2 season-spring"/>
                         <div className="timeline-segment seg-length-1 season-winter"/>
                         <div className="timeline-dot season-winter"/>
@@ -234,7 +234,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                         <div className="timeline-dot season-winter"/>
                         <div className="timeline-year-text TYT-right">2022</div>
                         <div className="timeline-segment seg-length-2 season-winter"/>
-                        <div className="timeline-segment seg-length-2 segment-custom-mobile season-fall"/>
+                        <div className="timeline-segment seg-length-2 segment-custom-mobile-small season-fall"/>
 
                         <div className="timeline-insertion-point">
                             <TimelineCard

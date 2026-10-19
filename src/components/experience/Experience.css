@@ -1211,7 +1211,7 @@
 
     @media (max-width: 450px) {
         .work-experience-timeline-line-container {
-            --timeline-length: 240;
+            --timeline-length: 230;
         }
     }
 
@@ -1219,7 +1219,9 @@
     .timeline-segment {
         margin-right: 3%;
     }
-
+    .segment-custom-mobile-small{
+        height: 2%;
+    }
     .segment-custom-mobile {
         height: 4%;
     }
@@ -1235,7 +1237,9 @@
     .seg-length-25 {
         height: 28%;
     }
-
+    .seg-length-26-5{
+        height: 31%;
+    }
     .seg-length-27 {
         height: 32%;
     }

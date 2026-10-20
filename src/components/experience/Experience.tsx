@@ -67,7 +67,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             <div className="timeline-marker season-fall"/>
                         </div>
                         <div className="timeline-segment seg-length-25 season-fall"/>
-                        <div className="timeline-segment seg-length-2 season-summer segment-custom-mobile"/>
+                        <div className="timeline-segment seg-length-2-5 season-summer segment-custom-mobile"/>
                         <div className="timeline-insertion-point">
                             <div className="timeline-marker season-summer"/>
                             <TimelineCard
@@ -96,7 +96,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                                 organization="ElleHacks · York University"
                                 context="My first hackathon · 36 hours · 4-person team"
                                 achievement="Led backend development"
-                                description="Built an AI-powered journaling app that helps girls in STEM track confidence, motivation, and learning patterns."
+                                description="Built an AI-powered journaling app that helps girls in STEM track confidence, motivation, and learning patterns. Check its project card for more details →"
                                 tags={["Python", "FastAPI", "Gemini API", "MongoDB"]}
                                 dateRange="Jan 30 - Feb 1, 2026"
                                 season="winter"
@@ -271,7 +271,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                     <div className="project-column">
                         <ProjectCard
                             title="Urbanova"
-                            shortDesc="Neighbourhood exploration and transit simulation prototype showing how proposed Toronto housing could affect skylines, sunlight, and streetcar commutes."
+                            shortDesc="Built at Hack the Valley 11, Urbanova shows how proposed Toronto housing could affect skylines, sunlight, and streetcar commutes."
                             stack={["Python", "Mapbox", "Gemini API", "PostgreSQL", "Express", "TypeScript", "React", "Railway"]}
                             shortHighlight="streetcars in 3D"
                             highlight="Made transit sim & 3D visualization into streetcars& riders on an interactive map"
@@ -282,7 +282,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                                 "Built the full 3D simulation replay: streetcars moving with realistic operational behaviour, passengers walking from homes to stops, streetcar and station passenger counts, and visible crowding indicators, all driven by recorded simulation events."
                             ]}
                             cardImg={`${mediaFilePath}urbanova/img1.webp`}
-                            expandedImgs={[`${mediaFilePath}urbanova/img2.webp`,"3 urbanova vid", "4 urbanova vid2", `${mediaFilePath}urbanova/img3.webp`,`${mediaFilePath}urbanova/img4.webp`]}
+                            expandedImgs={[`${mediaFilePath}urbanova/img2.webp`, "3 urbanova vid", "4 urbanova vid2", `${mediaFilePath}urbanova/img3.webp`, `${mediaFilePath}urbanova/img4.webp`]}
                             timeInfo="2026"
                             detailedTimeInfo="October 2026"
                             github="https://github.com/emtato/Urbanova"
@@ -351,7 +351,7 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             github="https://github.com/nyu24/Connect4"
                         />
                     </div>
-                                                            {/* ————————colun 2 –———————— */}
+                    {/* ————————colun 2 –———————— */}
                     <div className="project-column">
                         {/*TODO:Revisit Highlight after scheduling assistant is implemented. */}
                         {/*TODO:implement button that directs to specific page of image wheel? */}

@@ -269,89 +269,24 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                 </header>
                 <div className="projects-grid">
                     <div className="project-column">
-                        {/*TODO:Revisit Highlight after scheduling assistant is implemented. */}
-                        {/*TODO:implement button that directs to specific page of image wheel? */}
                         <ProjectCard
-                            title="Tempo"
-                            shortDesc="Full-stack calendar designed to make event creation faster through flexible date/time parsing and custom date/time controls."
-                            stack={["Node.js", "Express", "MongoDB", "TypeScript", "React", "FullCalendar", "Better Auth", "Railway"]}
-                            shortHighlight="solo fullstack"
-                            highlight="Independently designed, developed, and deployed as a full-stack product."
-                            description="Tired of how many steps it took to schedule simple events, I built Tempo around the small conveniences I wished my calendar had. It keeps calendar views uncluttered while making everyday tasks faster and more intuitive. I plan to expand Tempo with an AI assistant to tackle schedule planning and more flexible recurring events."
-                            myContribution={["Designed and implemented a regex-based event parser that handles 3+ scheduling input types Google and Apple Calendar miss, such as multi-day ranges and expressions combining dates, times, and relative dates (now, yesterday, etc) in one field.",
-                                "Built a scrollable month view for natural cross-month navigation & custom React date/time controls for faster event entry.",
-                                "Building Tempo alone taught me to think across a full-stack system, from React state and responsive layouts to authenticated APIs and user-scoped persistence. This was where those separate layers finally became one connected flow."]}
-                            cardImg={`${mediaFilePath}tempo/img1.webp`}
-                            expandedImgs={[
-                                `${mediaFilePath}tempo/img2.webp`,
-                                `${mediaFilePath}tempo/img3.webp`,
-                                `${mediaFilePath}tempo/img4.webp`
+                            title="Urbanova"
+                            shortDesc="Neighbourhood exploration and transit simulation prototype showing how proposed Toronto housing could affect skylines, sunlight, and streetcar commutes."
+                            stack={["Python", "Mapbox", "Gemini API", "PostgreSQL", "Express", "TypeScript", "React", "Railway"]}
+                            shortHighlight="streetcars in 3D"
+                            highlight="Made transit sim & 3D visualization into streetcars& riders on an interactive map"
+                            description="A construction notice says 30 storeys. What does that mean for your street? Envisioned at Hack the Valley 11, Urbanova shows Toronto residents how a proposed building could reshape their street view, park sunlight, and streetcar commute in one place. Its core simulation tracks how new housing affects crowding along the 505 Dundas corridor."
+                            myContribution={[
+                                "Led the design and integration of the simulation's end-to-end data flow, defining input/output schemas and coordinating backend/frontend data contracts, including implementing changes across both systems to keep them compatible.",
+                                "Developed the core transit simulation, modelling passenger demand, streetcar frequency, headways, variable delays, and crowding, with passenger origins and destinations informed by residential locations and Toronto's workplace distribution.",
+                                "Built the full 3D simulation replay: streetcars moving with realistic operational behaviour, passengers walking from homes to stops, streetcar and station passenger counts, and visible crowding indicators, all driven by recorded simulation events."
                             ]}
-                            timeInfo="2026 - Present"
-                            detailedTimeInfo="July 2026 - Present"
-                            github="https://github.com/emtato/tempo."
-                            projectLink="https://tempo.ems.lol"
-                            parentSaysOpen={BrowserSaysOpen}
-                        />
-                        <ProjectCard
-                            title="Emportfolio"
-                            shortDesc="Responsive personal portfolio built as a Mac inspired pixel art browser, combining a hand drawn visual language with functional tabs, window controls, and custom animations."
-                            stack={["React", "TypeScript", "HTML/CSS", "Vite", "GitHub Pages"]}
-                            shortHighlight="woah inception"
-                            highlight="Reduced five large media assets by 94%, cutting initial load time to under one second."
-                            description="After gaining more React experience through Tempo, I wanted a personal site that demonstrated my skills while still feeling unmistakably like me. Emportfolio became a frontend-focused project where I dreamt up my ideal design language and aesthetic, then brought it to life through a hand drawn pixel art interface and animations: a process that rounded out my full-stack skill set and helped me discover how much I enjoy creating visually expressive experiences."
-                            myContribution={["Built a scroll driven notebook that maps vertical scroll progress into two axis CSS transforms across one responsive canvas, keeping text, photos, and decorations aligned as users move between pages on desktop and mobile.", "Created a responsive pixel art browser from hand-drawn frame assets and stateful React components, with functional tabs, window controls, and layouts that preserve the interface’s proportions across desktop and mobile.", "Resizing and WebP conversion reduced five big media assets by 94%, cutting initial load from 5–6 seconds to <1 second."]}
-                            cardImg={`${mediaFilePath}emportfolio/portfolio.webp`}
-                            expandedImgs={[`${mediaFilePath}emportfolio/img2.webp`]}
-                            timeInfo="2026 - Present"
-                            detailedTimeInfo="September 2026 - Present"
-                            github="https://github.com/emtato/emtato-portfolio"
-                            projectLink="https://ems.lol"
-                        />
-                        <ProjectCard
-                            title="Steam Game Recommender"
-                            shortDesc="Graph based recommender that ranks Steam games by weighted similarity to multiple selected titles and user controlled preferences."
-                            stack={["Python", "Streamlit", "Steam Web API", "Graph Algorithms", "HTML/CSS", "CSV"]}
-                            shortHighlight="2000+ games"
-                            highlight="Users iteratively refine future recs by adding more games into their list."
-                            description="With thousands of games on Steam, our team built a recommendation tool for players who know what they enjoy but not what to try next. Users complete a questionnaire to generate an initial list, then refine future recommendations by adding games they like and prioritizing factors such as genre, price, platform, and language."
-                            myContribution={["Helped implement a weighted graph that compares 2,000+ Steam games across price, language, developer, platform, category, and genre, ranking candidates by their average similarity to multiple selected games.", "Built the interactive recommendation workflow and custom CSS presentation, ranking top results, displaying detailed game information, and letting users add suggestions before recalculating recommendations around their updated list.", "- Created an API to CSV storage pipeline that collected and cleaned metadata for 2,000+ Steam games, working around API rate limits and caching the dataset for faster, repeatable recommendations."]}
-                            cardImg={`${mediaFilePath}steam-rec/img1.webp`}
-                            expandedImgs={[]}
-                            timeInfo="2025"
-                            detailedTimeInfo="March 2025"
-                            github="https://github.com/emtato/steam-recommendation-project"
-                        />
-                        <ProjectCard
-                            title="Columns"
-                            shortDesc="Classic Columns puzzle game rendered pixel by pixel in MIPS assembly with real-time input and cascading match logic."
-                            stack={["MIPS Assembly", "MARS", "Bitmap Display", "Memory-Mapped I/O", "Recursion"]}
-                            shortHighlight="all MIPS"
-                            highlight="Implemented recursive eight-direction match detection entirely in MIPS assembly."
-                            description="Columns was a two person project to build a complete puzzle game entirely in MIPS assembly, without a game engine or graphics library. Players position and reorder falling stacks of three coloured gems as the game accelerates; matches are animated and cleared, remaining gems collapse, and the board is rechecked for cascading combinations."
-                            myContribution={["Designed a recursive directional search algorithm that checks all eight neighbouring directions, combines opposite paths, and records groups of three or more matching gems for removal. (later adapted this logic for Connect 4’s win detection)", "Built the bitmap rendering layer in MIPS, converting coordinates into display memory addresses and drawing the background and shaded gems pixel by pixel, along with clearing and game over animations.", "- Implemented collisions, gravity and progressively increasing fall speed, using bitmap memory checks and loop counters to move gem stacks safely while updating an on-screen speed indicator as difficulty increased."]}
-                            cardImg={`${mediaFilePath}columns/img1.webp`}
-                            expandedImgs={["1 columns vid"]}
-                            timeInfo="2025"
-                            detailedTimeInfo="November 2025"
-                            github="https://github.com/amansdali/Columns"
-                        />
-                    </div>
-                    <div className="project-column">
-                        <ProjectCard
-                            title="GirlMath"
-                            shortDesc="AI-powered journaling app helping girls in STEM build confidence through learning check-ins, trend visualizations, and personalized guidance."
-                            stack={["Python", "FastAPI", "MongoDB", "Gemini API", "React Native", "TypeScript", "Expo", "DigitalOcean"]}
-                            shortHighlight="36h hackathon"
-                            highlight="Led backend development in a 36-hour hackathon."
-                            description="Because coding once felt complex and unreachable to me, I proposed GirlMath to help younger girls build STEM confidence before self-doubt becomes ingrained. The app combines quick learning check-ins, journals, progress visualizations, and confidence focused AI guidance; supporting, rather than replacing, teachers, mentors, and parents."
-                            myContribution={["Built the FastAPI logic, REST endpoints, connected them to the React Native client, & deployed the service to DigitalOcean.", "Designed Gemini prompts that combined users’ journal and questionnaire histories, giving the model broader context to generate more informed, personalized guidance around confidence, motivation, and learning patterns.", "As the deadline approached, I expanded beyond my backend responsibilities to implement the AI interface and parts of the check-in flow, helping keep development moving so we could deliver a functional end-to-end prototype within 36 hours."]}
-                            cardImg={`${mediaFilePath}girlmath/girlmath.webp`}
-                            expandedImgs={["0 girlmath vid"]}
+                            cardImg={`${mediaFilePath}urbanova/img1.webp`}
+                            expandedImgs={[`${mediaFilePath}urbanova/img2.webp`,"3 urbanova vid", "4 urbanova vid2", `${mediaFilePath}urbanova/img3.webp`,`${mediaFilePath}urbanova/img4.webp`]}
                             timeInfo="2026"
-                            github="https://github.com/emtato/girlmath"
-                            projectLink="https://devpost.com/software/girlmath-b5y7ao"
-                            detailedTimeInfo="January - February 2026"
+                            detailedTimeInfo="October 2026"
+                            github="https://github.com/emtato/Urbanova"
+                            projectLink="https://urbanova.ems.lol"
                         />
                         <ProjectCard
                             title="Cookkeeping"
@@ -389,6 +324,20 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             github="https://github.com/emtato/munchables"
                         />
                         <ProjectCard
+                            title="Steam Game Recommender"
+                            shortDesc="Graph based recommender that ranks Steam games by weighted similarity to multiple selected titles and user controlled preferences."
+                            stack={["Python", "Streamlit", "Steam Web API", "Graph Algorithms", "HTML/CSS", "CSV"]}
+                            shortHighlight="2000+ games"
+                            highlight="Users iteratively refine future recs by adding more games into their list."
+                            description="With thousands of games on Steam, our team built a recommendation tool for players who know what they enjoy but not what to try next. Users complete a questionnaire to generate an initial list, then refine future recommendations by adding games they like and prioritizing factors such as genre, price, platform, and language."
+                            myContribution={["Helped implement a weighted graph that compares 2,000+ Steam games across price, language, developer, platform, category, and genre, ranking candidates by their average similarity to multiple selected games.", "Built the interactive recommendation workflow and custom CSS presentation, ranking top results, displaying detailed game information, and letting users add suggestions before recalculating recommendations around their updated list.", "- Created an API to CSV storage pipeline that collected and cleaned metadata for 2,000+ Steam games, working around API rate limits and caching the dataset for faster, repeatable recommendations."]}
+                            cardImg={`${mediaFilePath}steam-rec/img1.webp`}
+                            expandedImgs={[]}
+                            timeInfo="2025"
+                            detailedTimeInfo="March 2025"
+                            github="https://github.com/emtato/steam-recommendation-project"
+                        />
+                        <ProjectCard
                             title="Networked Connect 4"
                             shortDesc="Terminal-based multiplayer Connect 4 game that synchronizes two players and an optional spectator over TCP sockets."
                             stack={["C", "TCP Sockets", "Client-Server", "select()", "I/O Multiplexing", "Recursion"]}
@@ -400,6 +349,77 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                             timeInfo="2026"
                             detailedTimeInfo="April 2026"
                             github="https://github.com/nyu24/Connect4"
+                        />
+                    </div>
+                                                            {/* ————————colun 2 –———————— */}
+                    <div className="project-column">
+                        {/*TODO:Revisit Highlight after scheduling assistant is implemented. */}
+                        {/*TODO:implement button that directs to specific page of image wheel? */}
+                        <ProjectCard
+                            title="Tempo"
+                            shortDesc="Full-stack calendar designed to make event creation faster through flexible date/time parsing and custom date/time controls."
+                            stack={["Node.js", "Express", "MongoDB", "TypeScript", "React", "FullCalendar", "Better Auth", "Railway"]}
+                            shortHighlight="solo fullstack"
+                            highlight="Independently designed, developed, and deployed as a full-stack product."
+                            description="Tired of how many steps it took to schedule simple events, I built Tempo around the small conveniences I wished my calendar had. It keeps calendar views uncluttered while making everyday tasks faster and more intuitive. I plan to expand Tempo with an AI assistant to tackle schedule planning and more flexible recurring events."
+                            myContribution={["Designed and implemented a regex-based event parser that handles 3+ scheduling input types Google and Apple Calendar miss, such as multi-day ranges and expressions combining dates, times, and relative dates (now, yesterday, etc) in one field.",
+                                "Built a scrollable month view for natural cross-month navigation & custom React date/time controls for faster event entry.",
+                                "Building Tempo alone taught me to think across a full-stack system, from React state and responsive layouts to authenticated APIs and user-scoped persistence. This was where those separate layers finally became one connected flow."]}
+                            cardImg={`${mediaFilePath}tempo/img1.webp`}
+                            expandedImgs={[
+                                `${mediaFilePath}tempo/img2.webp`,
+                                `${mediaFilePath}tempo/img3.webp`,
+                                `${mediaFilePath}tempo/img4.webp`
+                            ]}
+                            timeInfo="2026 - Present"
+                            detailedTimeInfo="July 2026 - Present"
+                            github="https://github.com/emtato/tempo."
+                            projectLink="https://tempo.ems.lol"
+                            parentSaysOpen={BrowserSaysOpen}
+                        />
+                        <ProjectCard
+                            title="GirlMath"
+                            shortDesc="AI-powered journaling app helping girls in STEM build confidence through learning check-ins, trend visualizations, and personalized guidance."
+                            stack={["Python", "FastAPI", "MongoDB", "Gemini API", "React Native", "TypeScript", "Expo", "DigitalOcean"]}
+                            shortHighlight="first hackathon"
+                            highlight="Led backend development in a 36-hour hackathon."
+                            description="Because coding once felt complex and unreachable to me, I proposed GirlMath to help younger girls build STEM confidence before self-doubt becomes ingrained. The app combines quick learning check-ins, journals, progress visualizations, and confidence focused AI guidance; supporting, rather than replacing, teachers, mentors, and parents."
+                            myContribution={["Built the FastAPI logic, REST endpoints, connected them to the React Native client, & deployed the service to DigitalOcean.", "Designed Gemini prompts that combined users’ journal and questionnaire histories, giving the model broader context to generate more informed, personalized guidance around confidence, motivation, and learning patterns.", "As the deadline approached, I expanded beyond my backend responsibilities to implement the AI interface and parts of the check-in flow, helping keep development moving so we could deliver a functional end-to-end prototype within 36 hours."]}
+                            cardImg={`${mediaFilePath}girlmath/girlmath.webp`}
+                            expandedImgs={["0 girlmath vid"]}
+                            timeInfo="2026"
+                            github="https://github.com/emtato/girlmath"
+                            projectLink="https://devpost.com/software/girlmath-b5y7ao"
+                            detailedTimeInfo="January 2026"
+                        />
+                        <ProjectCard
+                            title="Emportfolio"
+                            shortDesc="Responsive personal portfolio built as a Mac inspired pixel art browser, combining a hand drawn visual language with functional tabs, window controls, and custom animations."
+                            stack={["React", "TypeScript", "HTML/CSS", "Vite", "GitHub Pages"]}
+                            shortHighlight="woah inception"
+                            highlight="Reduced five large media assets by 94%, cutting initial load time to under one second."
+                            description="After gaining more React experience through Tempo, I wanted a personal site that demonstrated my skills while still feeling unmistakably like me. Emportfolio became a frontend-focused project where I dreamt up my ideal design language and aesthetic, then brought it to life through a hand drawn pixel art interface and animations: a process that rounded out my full-stack skill set and helped me discover how much I enjoy creating visually expressive experiences."
+                            myContribution={["Built a scroll driven notebook that maps vertical scroll progress into two axis CSS transforms across one responsive canvas, keeping text, photos, and decorations aligned as users move between pages on desktop and mobile.", "Created a responsive pixel art browser from hand-drawn frame assets and stateful React components, with functional tabs, window controls, and layouts that preserve the interface’s proportions across desktop and mobile.", "Resizing and WebP conversion reduced five big media assets by 94%, cutting initial load from 5–6 seconds to <1 second."]}
+                            cardImg={`${mediaFilePath}emportfolio/portfolio.webp`}
+                            expandedImgs={[`${mediaFilePath}emportfolio/img2.webp`, `${mediaFilePath}emportfolio/img3.webp`, "10 emportfolio vid that doesnt exist but is a cool bug thing that makes it so it loads a mini emportfolio"]}
+                            timeInfo="2026 - Present"
+                            detailedTimeInfo="September 2026 - Present"
+                            github="https://github.com/emtato/emtato-portfolio"
+                            projectLink="https://ems.lol"
+                        />
+                        <ProjectCard
+                            title="Columns"
+                            shortDesc="Classic Columns puzzle game rendered pixel by pixel in MIPS assembly with real-time input and cascading match logic."
+                            stack={["MIPS Assembly", "MARS", "Bitmap Display", "Memory-Mapped I/O", "Recursion"]}
+                            shortHighlight="all MIPS"
+                            highlight="Implemented recursive eight-direction match detection entirely in MIPS assembly."
+                            description="Columns was a two person project to build a complete puzzle game entirely in MIPS assembly, without a game engine or graphics library. Players position and reorder falling stacks of three coloured gems as the game accelerates; matches are animated and cleared, remaining gems collapse, and the board is rechecked for cascading combinations."
+                            myContribution={["Designed a recursive directional search algorithm that checks all eight neighbouring directions, combines opposite paths, and records groups of three or more matching gems for removal. (later adapted this logic for Connect 4’s win detection)", "Built the bitmap rendering layer in MIPS, converting coordinates into display memory addresses and drawing the background and shaded gems pixel by pixel, along with clearing and game over animations.", "- Implemented collisions, gravity and progressively increasing fall speed, using bitmap memory checks and loop counters to move gem stacks safely while updating an on-screen speed indicator as difficulty increased."]}
+                            cardImg={`${mediaFilePath}columns/img1.webp`}
+                            expandedImgs={["1 columns vid"]}
+                            timeInfo="2025"
+                            detailedTimeInfo="November 2025"
+                            github="https://github.com/amansdali/Columns"
                         />
                     </div>
                 </div>

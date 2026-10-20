@@ -30,7 +30,7 @@ export default function ProjectCard({
     const [activeImageIndex, setActiveImageIndex] = useState(0)
     const projectImages = [cardImg, ...expandedImgs].filter((image): image is string => Boolean(image))
     const [imageFit, setImageFit] = useState<"stretch" | "contain">("stretch");
-    const youtubeVideoLinks = ["https://www.youtube.com/embed/r2qMN9JFBvw?si=WOh8RaFYPKvXcnd4", "https://www.youtube.com/embed/FYLlxZZtz4Y?si=xhGk72zlQ73a6W2s", "https://www.youtube.com/embed/EZ3oZ-FG4FA?si=HOP-3OMz8RQ4QA1J"]
+    const youtubeVideoLinks = ["https://www.youtube.com/embed/r2qMN9JFBvw?si=WOh8RaFYPKvXcnd4", "https://www.youtube.com/embed/FYLlxZZtz4Y?si=xhGk72zlQ73a6W2s", "https://www.youtube.com/embed/EZ3oZ-FG4FA?si=HOP-3OMz8RQ4QA1J", "https://www.youtube.com/embed/6nNaElvU8c4", "https://www.youtube.com/embed/tKwuqTcveEI"]
 
     useEffect(() => {
         if (parentSaysOpen) {

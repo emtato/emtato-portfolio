@@ -45,12 +45,11 @@ export default function Dock({openBrowserCallback, openContact, openTempo, brows
                      hoverText="linkedin" browserOpen={browserOpen}/>
             <DockApp src="/assets/app-icons/calendar.png" onClick={openTempo} hoverText="tempo"
                      browserOpen={browserOpen}/>
+             <DockApp src="/assets/app-icons/map.png" hoverText="urbanova" mobileHide={true} href="https://urbanova.ems.lol"
+                     browserOpen={browserOpen}/>
             <DockApp src="/assets/app-icons/uwucord.png" hoverText="uwucord" onClick={copyDiscord}
                      browserOpen={browserOpen}/>
             {copied && <span className={`dock-app-copied browserOpen-${browserOpen}`}>copied!</span>}
-
-            <DockApp src="/assets/app-icons/map.png" hoverText="map (coming soon)" mobileHide={true}
-                     browserOpen={browserOpen}/>
             <DockApp src="/assets/app-icons/photos.png" rotate={true} hoverText="photos (coming soon)"
                      browserOpen={browserOpen}/>
             <DockApp src="/assets/app-icons/contacts.png" hoverText="contacts" onClick={openContact}

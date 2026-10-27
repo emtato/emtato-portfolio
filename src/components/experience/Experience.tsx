@@ -31,21 +31,21 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                                 organization="DataAnnotation"
                                 context="Part-time independent contractor · Project details confidential"
                                 achievement="Design and evaluate challenging coding-agent tasks"
-                                description="Creating realistic software engineering evaluations and assessing whether coding agents can reason through them and deliver correct, well tested solutions."
+                                description="Evaluating whether coding agents can handle realistic software engineering work and deliver dependable solutions."
                                 bullets={[
-                                    "Design bug fix, API extension, and feature development tasks that expose coding agent failure modes.",
-                                    "Develop reference implementations and automated test suites to establish expected behavior and evaluate agent-generated solutions.",
-                                    "Review generated code against task requirements, identifying subtle logic errors, flawed implementation decisions, missed edge cases, and unsafe changes.",
-                                    "Assess agent reasoning and test reliability, then document failures and provide actionable evaluation feedback."
+                                    "Design bug-fix, API extension, and feature development tasks with clear requirements and edge cases that expose where coding agents struggle.",
+                                    "Build reference implementations and automated test suites to define expected behavior and verify generated solutions.",
+                                    "Review agent code and reasoning for subtle logic errors, flawed implementation choices, missed edge cases, and unsafe changes.",
+                                    "Document failure patterns and provide actionable feedback."
                                 ]}
-                                tags={["Software engineering", "Debugging", "Code review"]}
+                                tags={["Software engineering", "Testing", "Code review"]}
                                 dateRange="october 2026 - Present"
                                 season="fall"
                                 mini={false}
                             />
                             <div className="timeline-marker season-fall"/>
                         </div>
-                        <div className="timeline-segment seg-length-26-5 season-fall"/>
+                        <div className="timeline-segment seg-length-25-5 segment-custom-mobile-large season-fall"/>
                         <div className="timeline-insertion-point">
                             <img className="TLA-fall2026-2 timeline-art" alt="a"
                                  src="/assets/browser/content/experience/prof-experience/fall-2.png"/>
@@ -53,14 +53,14 @@ export default function Experience({BrowserSaysOpen}: ExperienceProps) {
                                 title="Backend Developer / Junior Technical Analyst"
                                 organization="Ontario Public Service"
                                 context="Digital Solutions Branch · 8-month internship"
-                                description="Improving the reliability of the Java/Spring backend supporting Ontario’s driver and vehicle services through backend workflow testing and failure-path debugging."
-                                tags={["Java", "Spring Boot", "Python", "Bruno", "Backend testing"]}
+                                description="Developing and testing Java/Spring backend workflows for Ontario’s driver and vehicle services."
+                                tags={["Java", "Spring Boot", "Python", "Bruno", "Backend development"]}
                                 dateRange="Sept 2026 - Present"
                                 season="fall"
                                 bullets={[
-                                    "Restored the order orchestrator’s Bruno backend test suite from 19 failing scripts to 0 across order creation, driver licence, cross domain, and payment workflows.",
-                                    "Implemented test-runner logic that queries a Spring Boot Actuator endpoint for configuration resolved from active profiles and runs transaction reversal only for confirmed real downstream calls, skipping mocked and unknown cases to prevent false failures from mock-generated transaction IDs.",
-                                    "Created fault-injection profiles and JUnit tests across successive stages from refund to financial notification, verifying business error handling, system retries, status-update failures, and recovery."
+                                    "Restored the order orchestrator’s Bruno backend test suite from 19 failing scripts to 0 across 4+ workflows by updating the test runner to detect active configuration and avoid false failures from mocked transaction IDs.",
+                                    "Implemented Java backend fixes for driver licence application generation, updating data sent to the document template to correct name and address formatting and corrected date logic to use the order’s business date. Added JUnit tests and coordinated the paired template change.",
+                                    "Developed fault-injection profiles and JUnit tests across successive stages from refund to financial notification, verifying business error handling, system retries, status-update failures, and recovery."
                                 ]}
                                 mini={false}
                             />

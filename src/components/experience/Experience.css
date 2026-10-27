@@ -179,9 +179,11 @@
 .seg-length-1 {
     height: 1%;
 }
+
 .seg-length-1-5 {
     height: 1.5%;
 }
+
 .seg-length-2 {
     height: 2%;
 }
@@ -252,6 +254,10 @@
 
 .seg-length-25 {
     height: 25%;
+}
+
+.seg-length-25-5 {
+    height: 25.5%;
 }
 
 .seg-length-26-5 {
@@ -1219,9 +1225,11 @@
     .timeline-segment {
         margin-right: 3%;
     }
-    .segment-custom-mobile-small{
+
+    .segment-custom-mobile-small {
         height: 2%;
     }
+
     .segment-custom-mobile {
         height: 4%;
     }
@@ -1230,6 +1238,11 @@
         height: 6%
     }
 
+    .segment-custom-mobile-large {
+        height: 26%
+    }
+
+
     .seg-length-9 { /* not exact but we will use the css class rules that apply to normal width*/
         height: 10%;
     }
@@ -1237,9 +1250,12 @@
     .seg-length-25 {
         height: 28%;
     }
-    .seg-length-26-5{
+
+
+    .seg-length-26-5 {
         height: 31%;
     }
+
     .seg-length-27 {
         height: 32%;
     }
